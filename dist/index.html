@@ -186,7 +186,7 @@ let W = 0, H = 0, DPR = 1, G = {}, LAYOUT = [];
 function geom() {
   const sky = Math.round(H * 0.07);
   const axisH = 26, floorTop = H - axisH - Math.round(H * 0.07);
-  const yTop = sky + Math.round(H * 0.24), yBot = Math.round(H * 0.62);
+  const yTop = sky + Math.round(H * 0.22), yBot = Math.round(H * 0.55);
   const cx = Math.round(W * 0.5);
   const monthPx = Math.max(46, Math.min(90, W / 13));
   const rMax = Math.min(H * 0.19, W * 0.17);
@@ -234,6 +234,7 @@ function pack(list) {
   return { list, top, bot, R };
 }
 const MIN_R = 0.7;
+const GAP = 34;        // px between the diver and the nearest edge of each cluster
 function layoutMonth(mi) {
   const m = M[mi], up = [], dn = [];
   m.r.forEach((row, i) => {
@@ -259,17 +260,29 @@ function resize() {
   // the surface and the date axis at that month's depth. Estimated from each
   // cluster's total area (packing fills about 62% of its circle); months are
   // packed only when drawn, and the rest in the background.
-  let need = 1;
-  M.forEach((m, i) => {
+  // The estimate runs a little large, so the tightest months are then packed
+  // for real and the scale set from their actual heights. Packing scales with
+  // the radius, so a ratio of heights gives the ratio of radii.
+  const room = (m) => { const y = depthY(m.pub); return [H - G.axisH - 6 - y - GAP, y - GAP - G.sky * 0.4]; };
+  const est = M.map((m, i) => {
     let up = Math.max(m.gap, 0), dn = Math.max(-m.gap, 0);
     for (const r of m.r) if (r) { if (r[1] > 0) up += r[1]; else dn -= r[1]; }
-    const y = depthY(m.pub);
+    const [roomB, roomA] = room(m);
     const hB = 2.15 * Math.sqrt(G.k * up / (Math.PI * 0.62)), hA = 2.15 * Math.sqrt(G.k * dn / (Math.PI * 0.62));
-    const roomB = H - G.axisH - 6 - y - 34, roomA = y - 34 - G.sky * 0.4;
-    if (hB > roomB) need = Math.min(need, roomB / hB);
-    if (hA > roomA) need = Math.min(need, roomA / hA);
-  });
-  if (need < 1) G.k *= Math.max(0.05, need) ** 2;
+    return [Math.min(hB ? roomB / hB : 9, hA ? roomA / hA : 9), i];
+  }).sort((a, b) => a[0] - b[0]);
+  let need = Math.min(1, est[0][0]);
+  G.k *= Math.max(0.05, need) ** 2;
+  // One pass on the four tightest months (about 40 ms each). The 1px spacing
+  // between circles does not scale, hence the small margin; the build checks
+  // that every month fits.
+  let f = Infinity;
+  for (const [, i] of est.slice(0, 4)) {
+    const L = layoutMonth(i), [roomB, roomA] = room(M[i]);
+    const hB = L.up.bot - L.up.top, hA = L.dn.bot - L.dn.top;
+    f = Math.min(f, hB > 0 ? roomB / hB : Infinity, hA > 0 ? roomA / hA : Infinity);
+  }
+  G.k *= Math.min(f * 0.98, 4) ** 2;
   LAYOUT = new Array(N).fill(null);
   clearTimeout(bgTimer); bgNext = 0; bgTimer = setTimeout(background, 400);
 }
@@ -484,7 +497,7 @@ function drawClusters(dx, dy) {
   const labels = [];
   for (const [side, sgn] of sides) {
     const A = lay(i0)[side], B = lay(i1)[side];
-    const offA = sgn > 0 ? 34 - A.top : -34 - A.bot, offB = sgn > 0 ? 34 - B.top : -34 - B.bot;
+    const offA = sgn > 0 ? GAP - A.top : -GAP - A.bot, offB = sgn > 0 ? GAP - B.top : -GAP - B.bot;
     const mapB = new Map(B.list.map(c => [c.i, c]));
     const mapA = new Map(A.list.map(c => [c.i, c]));
     const circles = [];

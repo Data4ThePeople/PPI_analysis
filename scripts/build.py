@@ -168,9 +168,11 @@ def write_page(payload, filename, description):
             ms = int(re.search(r'data-ms="(\d+)"', dom).group(1))
             assert ms < 1000, f"page script took {ms} ms before first draw"
             # Playback must not resize the scene: a resize repacks every month and flashes.
-            step = ('<script>{const hs=new Set();for(let k=0;k<N;k++){pos=target=k;lastReadout=-1;updateReadout();'
-                    'hs.add(Math.round(document.getElementById("stage").getBoundingClientRect().height))}'
-                    'document.body.setAttribute("data-heights",[...hs].join(","))}</script>')
+            # Every month's clusters must fit between the surface and the date axis.
+            step = ('<script>{const hs=new Set();let over="";for(let k=0;k<N;k++){pos=target=k;lastReadout=-1;updateReadout();'
+                    'hs.add(Math.round(document.getElementById("stage").getBoundingClientRect().height));'
+                    'const L=lay(k),y=depthY(M[k].pub);if(y+GAP+L.up.bot-L.up.top>H-G.axisH-4||y-GAP-(L.dn.bot-L.dn.top)<G.sky*0.4-2)over+=ORDER[k]+" "}'
+                    'document.body.setAttribute("data-heights",[...hs].join(","));document.body.setAttribute("data-over",over)}</script>')
             for width in (1100, 700, 500):
                 open(f"{tmp}/steps.html", "w").write(probe.replace("</body>", step + "</body>"))
                 dom = subprocess.run([chrome, "--headless=new", "--disable-gpu", f"--window-size={width},800",
@@ -178,7 +180,9 @@ def write_page(payload, filename, description):
                                      capture_output=True, text=True, timeout=120).stdout
                 hs = re.search(r'data-heights="([^"]*)"', dom).group(1)
                 assert "," not in hs, f"scene height changes during playback at width {width}: {hs}"
-        print(f"dist/{filename}: runs in Chrome (full, embedded, July 2022) without errors; script ready in {ms} ms; scene height steady through all months")
+                over = re.search(r'data-over="([^"]*)"', dom).group(1).strip()
+                assert not over, f"clusters overflow the scene at width {width}: {over}"
+        print(f"dist/{filename}: runs in Chrome (full, embedded, July 2022) without errors; script ready in {ms} ms; scene height steady and every month fits")
     return full
 
 
