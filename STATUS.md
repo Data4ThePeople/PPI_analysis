@@ -31,3 +31,4 @@ None.
 - 2026-10-17 Step 1 opened. Topic: PPI version of the CPI hot air balloon. Animated scuba diver of PPI final demand (WPUFD4) 12-month change by item contribution, CPI_analysis method.
 - 2026-10-17 Built dist/index.html (PPI scuba diver), July 2022 to September 2026, 51 months; tie-out in TIEOUT.md.
 - 2026-10-17 Extended to all 120 months (Oct 2016-Sep 2026); months that miss the strict tie-out are shown and flagged, per Eric.
+- 2026-10-17 Independent tie-out (fresh agent): all 120 months match. Fixed what it raised: estimated items now show their borrowed change with a dashed ring (was contribution / weight), seasonal items show their own change, DATASETS.md defines the merge, color, filled share and DN.

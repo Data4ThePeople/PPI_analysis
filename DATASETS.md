@@ -41,10 +41,22 @@ equipment wholesaling (about 4% of weight, no published index 2014-2018).
 index database while the weight files kept the 04 codes through December 2024.
 Hides and the three footwear items are matched to their 159F series by name
 (`chain.SERIES_ALIAS`). Finished leather, luggage and other leather goods have
-no index under either code. Eleven more codes with no series of their own match
-exactly one series at the same code length with the same name (BLS recoded the
-item and carried its history), for example small arms 151301 to 151401. These
-are found automatically in `indexes.py` and printed when it runs.
+no index under either code. Eleven more codes with no series of their own (nine
+items and two parent groups) match exactly one series at the same code length
+with the same name (BLS recoded the item and carried its history), for example
+small arms 151301 to 151401. These are found automatically in `indexes.py` and
+printed when it runs.
+
+Separately, the page shows an item as one row when its code left the weight
+tree in one December and a code with the same name entered it the next (21
+pairs across the window, including the four leather items and the alias pairs
+above). None of the old codes has an index of its own, so no price history is
+mixed. The row's base weight is the old code's, because the base month is in
+the old tree; the weight can differ a lot from the new code's (for example
+159A09 rolled to January 2025 is 0.067; its successor 159A11 is 0.009 in
+December 2025, after BLS's weight update). Some new codes have an index that
+starts too late for the first term (027B01, 094A01, 101712, 131108, 336101,
+371205), so they are estimated for part of the year; the page says so.
 
 **Missing data.** None for FD4 in the window. October 2025 was published
 (unlike the CPI).
@@ -87,8 +99,9 @@ and one that entered with the same name (the leather recode) are shown as one.
 year before, and the table then falls short of 100: December 2019 (99.78),
 December 2021 (99.80), December 2024 (99.96). The missing weight is farm
 tractors, locomotives, nonpropelled ships and a few small items. When a
-December falls short by more than 0.03, those items get their prior December
-weight rolled forward with BLS's formula and are filled like any item without
+December falls short by more than 0.03, those items get their weight from the
+December a year earlier (as used for that year, the second column of the
+following file), rolled forward a year with BLS's formula and are filled like any item without
 an index. Checked against what BLS printed for the same December a year
 later: tractors 0.1195 (BLS later 0.116), locomotives 0.0730 (0.073), ships
 0.0216 (0.023). December 2021 was never reprinted with values. `TIEOUT.md`
@@ -107,12 +120,16 @@ matter.
 
 **Chained contribution** (`scripts/chain.py`), the same structure as the CPI
 balloon. For target month T, base B a year earlier, DP the December two years
-before T's year and DN the December just before T:
+before T's year and DN the December of the year before T's year (so for
+T = December 2025, DN is December 2024, not December 2025):
 
     c = w_B x (I_DN/I_B - 1) + (FD_DN/FD_B) x RI_DN x (I_T/I_DN - 1)
 
 w_B = RI_DP x (I_B/I_DP) / (FD_B/FD_DP), BLS's roll-forward. When T is a
-December, the first term is zero. The terms add to the published 12-month
+December, B is DN and the first term is zero. An item that is only in the DN
+tree (new in January) has only the second term; its base weight on the page
+and in the filled share is K x RI_DN, its second-term weight. An item only in
+the DP tree has only the first term. The terms add to the published 12-month
 change exactly if the items and weights are complete.
 
 **Filling items without an index: borrowed change, not residual.** A leaf
@@ -132,8 +149,28 @@ mean 0.013 points against 0.029 with the residual.) `FILL = "residual"` in
 
 Leaves with no published index anywhere above them (finished leather,
 luggage, other leather goods; computer training schools through 2019) take
-the change of final demand goods or services. Using final demand's own
+the change of final demand goods, services or construction, chosen by the
+first two digits of the code (80 is construction; 01-15 goods; the rest
+services). Using final demand's own
 residual would force every month to tie out and hide the error.
+
+**The price change shown (the color).** For an item with an index at both B
+and T, it is that index's own 12-month change. This includes seasonal items
+such as melons, which BLS publishes in June but not December: the contribution
+must borrow (the chain needs December), but the color is the item's own change.
+For an item without its own index for those months, it is the changes the item
+was given in each term, linked: (1 + term-1 change) x (1 + term-2 change) - 1.
+That is the parent's 12-month change when one parent is used throughout. The
+page marks these with a dashed ring and calls them estimated. It is never
+contribution divided by weight: the weight resets at DN, so that ratio is not a
+price change (it gave +252% for other metal ores in March 2026, whose parent
+rose 79.9%). An item that entered or left final demand at DN shows its change
+since or through December, and the tooltip says so.
+
+**The filled share.** The sum of base weights (as above) of every item that is
+estimated in either term, including items estimated for only part of the
+year, as a percent of final demand. Rule 3 of the tie-out and the large-miss
+note use it.
 
 **What the gap is.** Items with no published index (1-2% of weight) are
 estimated, and the published indexes are rounded. Their combined error is the
@@ -153,7 +190,8 @@ The strict tie-out, fixed before looking at results. A month passes when:
    (base month July 2021 or later);
 2. the items add up to the published change within 0.05 points, half of the
    0.1 precision BLS publishes 12-month changes at;
-3. filled items carry 10% of weight or less.
+3. filled items carry 10% of weight or less (the filled share, defined under
+   Method).
 
 **Result.** 51 months pass, July 2022 to September 2026: mean absolute gap
 0.013 points, largest 0.040 (May 2026), 42 within 0.02. 69 months are flagged,

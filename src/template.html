@@ -160,8 +160,9 @@ function legend() {
   // swatch j spans [20j, 20j+20); boundaries: 25,10,5,2,1 | 0.5 | mid | 0.5 | 1,2,5,10,25
   const ticks = [...s.slice().reverse().map((v, j) => [20 * (j + 1), '−' + v]), [130, '0'],
                  ...s.map((v, j) => [20 * (j + 8), '+' + v])];
-  $('#legend').innerHTML = `<span class="lbl">Color: the item's own price change over 12 months, %</span>
+  $('#legend').innerHTML = `<span class="lbl">Color: the item's price change over 12 months, %</span>
     <span style="position:relative;display:inline-block;padding-bottom:14px"><span class="bar">${bar}</span>${ticks.map(([x, l]) => `<span style="position:absolute;top:14px;left:${x - 12}px;width:24px;text-align:center;font-size:10.5px;color:var(--muted)">${l}</span>`).join('')}</span>
+    <span class="gapkey"><i style="background:transparent;border:1.5px dashed var(--muted)"></i>Estimated: BLS publishes no index, so it uses its parent category's change</span>
     <span class="gapkey"><i></i>Not explained by the items</span>
     <span class="gapkey"><i style="background:#fab219"></i>Month misses our tie-out</span>`;
 }
@@ -488,12 +489,17 @@ function drawClusters(dx, dy) {
       if (c.r < 0.5) continue;
       const X = dx + c.x, Y = dy + c.y;
       const row = c.i >= 0 ? m.r[c.i] : null;
-      const yoy = c.i >= 0 ? (row ? row[0] : (M[i0].r[c.i] || M[i1].r[c.i] || [null])[0]) : null;
+      const src = c.i >= 0 ? (row || M[i0].r[c.i] || M[i1].r[c.i]) : null;
+      const yoy = src ? src[0] : null, est = src && (src[4] & 8);
       ctx.fillStyle = c.i < 0 ? RAMP.gap : colorFor(yoy);
       ctx.beginPath(); ctx.arc(X, Y, c.r, 0, Math.PI * 2); ctx.fill();
       const hov = hover && hover.i === c.i && hover.side === side, warn = c.i < 0 && !m.pass;
       ctx.strokeStyle = hov ? '#ffffff' : warn ? '#fab219' : 'rgba(8,24,40,.55)';
       ctx.lineWidth = hov ? 2 : warn ? 2.5 : 0.8; ctx.stroke();
+      if (est && !hov && c.r > 4) {                   // estimated change: dashed ring
+        ctx.setLineDash([3, 2.5]); ctx.strokeStyle = 'rgba(255,255,255,.9)'; ctx.lineWidth = 1.3;
+        ctx.beginPath(); ctx.arc(X, Y, Math.max(2, c.r - 2), 0, Math.PI * 2); ctx.stroke(); ctx.setLineDash([]);
+      }
       if (sgn > 0 && c.r > 11 && c.i >= 0) anchorGlyph(X, Y, c.r);
       if (sgn < 0 && c.r > 6) {                       // buoy highlight
         ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(X - c.r * 0.35, Y - c.r * 0.35, c.r * 0.22, 0, Math.PI * 2); ctx.fill();
@@ -586,17 +592,34 @@ function topName(mi, sgn) {
 let sortKey = 'contrib', sortDir = -1;
 function table() {
   const mi = curIndex(), m = M[mi];
-  const rows = m.r.map((r, i) => r && { i, name: ITEMS[i][1], group: ITEMS[i][2], yoy: r[0], w: r[2], contrib: r[1], filled: r[3] >= 0 ? DATA.parents[r[3]] : '' }).filter(Boolean);
+  const rows = m.r.map((r, i) => r && { i, name: ITEMS[i][1], group: ITEMS[i][2], yoy: r[0], est: r[4] & 8, w: r[2], contrib: r[1], filled: r[3] >= 0 ? DATA.parents[r[3]] + (r[4] & 1 ? ' (part of the year)' : '') : '' }).filter(Boolean);
   rows.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (typeof x === 'string' ? x.localeCompare(y) : ((x ?? -1e9) - (y ?? -1e9))) * sortDir; });
-  const head = [['name', 'Item'], ['group', 'Type'], ['yoy', 'Own 12-month change, %'], ['w', 'Weight, % of final demand'], ['contrib', 'Contribution, points'], ['filled', 'No own index: uses']];
+  const head = [['name', 'Item'], ['group', 'Type'], ['yoy', '12-month price change, % (est. = estimated)'], ['w', 'Weight, % of final demand'], ['contrib', 'Contribution, points'], ['filled', 'Contribution estimated from']];
   $('#table').innerHTML = `<caption>${m.label}: ${rows.length} items. Final demand ${pct1(m.pub)}; items add up to ${fmt(m.sum)}; not explained ${fmt(m.gap, 3)} points.</caption>
     <thead><tr>${head.map(([k, l]) => `<th data-k="${k}" tabindex="0" aria-sort="${k === sortKey ? (sortDir < 0 ? 'descending' : 'ascending') : 'none'}">${l}</th>`).join('')}</tr></thead>
-    <tbody>${rows.map(r => `<tr><td><span class="sw" style="background:${colorFor(r.yoy)}"></span>${r.name}</td><td>${r.group}</td><td>${r.yoy == null ? '' : fmt(r.yoy, 1)}</td><td>${r.w.toFixed(3)}</td><td>${fmt(r.contrib, 4)}</td><td>${r.filled}</td></tr>`).join('')}
+    <tbody>${rows.map(r => `<tr><td><span class="sw" style="background:${colorFor(r.yoy)}"></span>${r.name}</td><td>${r.group}</td><td>${r.yoy == null ? '' : fmt(r.yoy, 1) + (r.est ? ' est.' : '')}</td><td>${r.w.toFixed(3)}</td><td>${fmt(r.contrib, 4)}</td><td>${r.filled}</td></tr>`).join('')}
     <tr><td><span class="sw" style="background:${RAMP.gap}"></span>Not explained by the items</td><td></td><td></td><td></td><td>${fmt(m.gap, 4)}</td><td></td></tr></tbody>`;
   $('#table').querySelectorAll('th').forEach(th => {
     const go = () => { const k = th.dataset.k; sortDir = k === sortKey ? -sortDir : (k === 'name' || k === 'group' || k === 'filled' ? 1 : -1); sortKey = k; table(); };
     th.onclick = go; th.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
   });
+}
+// What the price change in a row is. r[4] flags: 1 own index for part of the
+// year only, 2 in final demand only since December, 4 only through December,
+// 8 the change is borrowed from the parent category (estimated).
+function priceLabel(row) {
+  const f = row[4], when = f & 2 ? ' since December' : f & 4 ? ' through December' : ' over 12 months';
+  return (f & 8 ? 'Price change used, estimated' : 'Its own price change') + when;
+}
+function priceNote(row) {
+  const f = row[4], p = row[3] >= 0 ? DATA.parents[row[3]] : '';
+  const parts = [];
+  if (f & 2) parts.push('This item entered final demand in January, so it counts only from December on.');
+  if (f & 4) parts.push('This item left final demand in January, so it counts only through December.');
+  if (p && f & 1) parts.push(`BLS publishes this item's index for only part of these months. For the rest, it uses the change for ${p}.`);
+  else if (p && f & 8) parts.push(`BLS does not publish this item's index for these months. It uses the change for ${p}, so this change is an estimate.`);
+  else if (p) parts.push(`BLS skips this item's December index, which the weights need, so its contribution uses the change for ${p}.`);
+  return parts.length ? `<div class="note">${parts.join(' ')}</div>` : '';
 }
 const tip = $('#tip');
 cv.addEventListener('mousemove', e => {
@@ -614,9 +637,9 @@ cv.addEventListener('mousemove', e => {
     if (!row) { tip.style.display = 'none'; return; }
     tip.innerHTML = `<b>${it[1]}</b><span class="k">${it[3]}</span><br>
       <span class="k">Added to the 12-month change:</span> ${fmt(row[1], 3)} points<br>
-      <span class="k">Its own price change:</span> ${row[0] == null ? 'n/a' : pct1(row[0])}<br>
+      <span class="k">${priceLabel(row)}:</span> ${row[0] == null ? 'n/a' : pct1(row[0])}<br>
       <span class="k">Weight:</span> ${row[2].toFixed(3)}% of final demand
-      ${row[3] >= 0 ? `<div class="note">BLS does not publish this item's index for these months. It uses the change for ${DATA.parents[row[3]]}.</div>` : ''}`;
+      ${priceNote(row)}`;
   }
   tip.style.display = 'block';
   const tw = tip.offsetWidth, th = tip.offsetHeight;

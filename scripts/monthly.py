@@ -72,11 +72,13 @@ def main():
                      "preliminary": r["fd_note"] == "P", "pass": ok, "why_out": "; ".join(reasons),
                      "precise": precise, "fd": r["fd"], "filled_share": filled,
                      "items": [{k: i[k] for k in ("code", "name", "group", "major", "own_index",
+                                                  "partly_own", "span", "yoy_source",
                                                   "filled_from", "yoy", "contrib", "w_base")}
                                for i in items]}
         for i in items:
             item_rows.append({"month": t, "code": i["code"], "old_code": i["old_code"] or "",
                               "name": i["name"], "group": i["group"], "own_index": i["own_index"],
+                              "partly_own": i["partly_own"], "span": i["span"], "yoy_source": i["yoy_source"],
                               "filled_from": i["filled_from"] or "",
                               "weight_base": round(i["w_base"], 5),
                               "yoy": None if i["yoy"] is None else round(i["yoy"], 4),

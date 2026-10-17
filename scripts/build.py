@@ -81,8 +81,14 @@ def encode(m):
                 if i["filled_from"] not in parents:
                     parents.append(i["filled_from"])
                 frm = parents.index(i["filled_from"])
+            # flags: 1 = own index for only part of the year (rest borrowed);
+            # 2 = in final demand only since December; 4 = only through December
+            # 8 = the change shown is borrowed (estimated), not the item's own
+            flags = ((1 if i["partly_own"] else 0) | (2 if i["span"] == "since December" else 0)
+                     | (4 if i["span"] == "through December" else 0)
+                     | (8 if i["yoy_source"] in ("borrowed", "partly borrowed") else 0))
             rows.append([None if i["yoy"] is None else round(i["yoy"], 3), round(i["contrib"], 5),
-                         round(i["w_base"], 4), frm])
+                         round(i["w_base"], 4), frm, flags])
             s += round(i["contrib"], 5)
         gap = round(M["published"] - s, 5)          # the gray piece: what the items do not explain
         months[t] = {"label": label(t), "short": date(int(t[:4]), int(t[5:]), 1).strftime("%b %Y"),
