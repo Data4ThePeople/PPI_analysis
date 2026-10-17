@@ -52,8 +52,10 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--focus);outline-
 #readout .v{font-size:14.5px;line-height:1.35;margin-top:2px}
 #readout .v b{font-size:17px}
 #readout .g{font-size:12px;line-height:1.35;margin-top:3px;color:#d6e2ec}
-#readout .flag{margin-top:6px;background:#fab219;color:#1f1a0e;text-shadow:none;border-radius:6px;padding:5px 8px;font-size:12px;line-height:1.35}
-#readout .flag b{font-weight:700}
+#readout .flag{margin-top:5px;font-size:12px;color:#fcd27a;font-weight:600}
+#note{font-size:12.5px;line-height:1.45;color:var(--ink-2);padding-top:8px;min-height:3.4em}
+#note b{color:var(--ink)}
+#note .mark{display:inline-block;width:9px;height:9px;border-radius:50%;background:#fab219;margin-right:5px;vertical-align:0}
 #readout .ok{margin-top:5px;font-size:12px;color:#bfe6c4}
 #table-wrap{position:absolute;inset:0;overflow:auto;display:none;background:var(--page)}
 #table-wrap.on{display:block}
@@ -82,7 +84,8 @@ footer a{color:inherit}
   header p{font-size:12.5px}
   #readout{max-width:62%}
   #readout .g,#readout .ok{display:none}
-  #readout .flag{font-size:11px;padding:4px 6px}
+  #readout .flag{font-size:11px}
+  #note{font-size:11.5px}
   header p,#source{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   #readout .m{font-size:17px}
   #readout .v{font-size:12.5px}
@@ -124,6 +127,7 @@ footer a{color:inherit}
     <div id="when"></div>
     <input id="slider" type="range" min="0" max="0" step="1" value="0" aria-label="Month">
   </div>
+  <div id="note" aria-live="polite"></div>
   <footer>
     <span id="source"></span>
     <span id="credit">Built by <a href="https://www.data4thepeople.com" target="_blank" rel="noopener">Data 4 The People</a></span>
@@ -579,11 +583,14 @@ function updateReadout() {
   const r1 = Math.round(m.sum * 10) / 10;
   const work = `BLS index ${ix(m.fdT, t)} vs ${ix(m.fdB, b)} a year earlier = ${fmt(m.pub, 3)}%. Items add up to ${fmt(m.sum, 3)}, so the gray piece is ${fmt(m.gap, 3)} to reach BLS's figure. Rounded: BLS ${pct1(m.pub)}, items ${pct1(r1)}.`;
   const flag = m.pass ? `<div class="ok">\u2713 Passes our tie-out (gap within 0.05 points).</div>`
-    : `<div class="flag">\u26A0 <b>Misses our tie-out.</b> ${m.precise ? 'The gap is over 0.05 points.'
+    : `<div class="flag">\u26A0 Misses our tie-out (see the note below)</div>`;
+  $('#note').innerHTML = m.pass
+    ? `<b>${m.label} passes our tie-out.</b> The items add up to BLS's 12-month change within 0.05 points (gap ${fmt(m.gap, 3)}), BLS published both index values to three decimals, and ${m.filled.toFixed(1)}% of final demand weight was estimated from parent categories.`
+    : `<span class="mark"></span><b>${m.label} misses our tie-out.</b> ${m.precise ? 'The gap is over 0.05 points.'
        : Math.abs(m.gap) <= 0.05
          ? `The items land within 0.05 points, but BLS published the index for ${m.base} to one decimal (${ix(m.fdB, b)}), so the headline is rounded and a close match can be luck.`
          : 'Before July 2021 BLS published its indexes to one decimal, so the headline itself is rounded and the items cannot match it closely.'}${
-       Math.abs(m.gap) > m.round_max ? ` This miss (${Math.abs(m.gap).toFixed(3)} points) is larger than rounding of BLS's headline index can cause this month (at most ${m.round_max.toFixed(3)}). The rest likely comes from items with no published index, plus rounding in the item indexes: ${m.filled.toFixed(1)}% of final demand weight was estimated from parent categories.` : ''}</div>`;
+       Math.abs(m.gap) > m.round_max ? ` This miss (${Math.abs(m.gap).toFixed(3)} points) is larger than rounding of BLS's headline index can cause this month (at most ${m.round_max.toFixed(3)}). The rest likely comes from items with no published index, plus rounding in the item indexes: ${m.filled.toFixed(1)}% of final demand weight was estimated from parent categories.` : ''}`;
   $('#readout').innerHTML = `<div class="m">${m.label}</div>
     <div class="v">Final demand prices: <b>${pct1(m.pub)}</b> from ${m.base}</div>
     <div class="g">${work}${m.prelim ? ' Preliminary: BLS revises the last four months.' : ''}</div>${flag}`;
