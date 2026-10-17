@@ -563,7 +563,8 @@ function updateReadout() {
     : `<div class="flag">\u26A0 <b>Misses our tie-out.</b> ${m.precise ? 'The gap is over 0.05 points.'
        : Math.abs(m.gap) <= 0.05
          ? `The items land within 0.05 points, but BLS published the index for ${m.base} to one decimal (${ix(m.fdB, b)}), so the headline is rounded and a close match can be luck.`
-         : 'Before July 2021 BLS published its indexes to one decimal, so the headline itself is rounded and the items cannot match it closely.'}</div>`;
+         : 'Before July 2021 BLS published its indexes to one decimal, so the headline itself is rounded and the items cannot match it closely.'}${
+       Math.abs(m.gap) > m.round_max ? ` This miss (${Math.abs(m.gap).toFixed(3)} points) is larger than rounding of BLS's headline index can cause this month (at most ${m.round_max.toFixed(3)}). The rest likely comes from items with no published index, plus rounding in the item indexes: ${m.filled.toFixed(1)}% of final demand weight was estimated from parent categories.` : ''}</div>`;
   $('#readout').innerHTML = `<div class="m">${m.label}</div>
     <div class="v">Final demand prices: <b>${pct1(m.pub)}</b> from ${m.base}</div>
     <div class="g">${work}${m.prelim ? ' Preliminary: BLS revises the last four months.' : ''}</div>${flag}`;

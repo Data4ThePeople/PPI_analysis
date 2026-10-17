@@ -47,6 +47,17 @@ def label(ym):
     return date(y, m, 1).strftime("%B %Y")
 
 
+def rounding_bound(t, M):
+    """Largest change in the 12-month rate that rounding of the two published
+    index values can cause: half of the last published digit on each (one
+    decimal before July 2021, three from then on)."""
+    b = f"{int(t[:4]) - 1}{t[4:]}"
+    hT = 0.05 if t < "2021-07" else 0.0005
+    hB = 0.05 if b < "2021-07" else 0.0005
+    T, B = M["fd"]["T"], M["fd"]["B"]
+    return 100 * (hT / B + T * hB / B ** 2)
+
+
 def encode(m):
     order = m["order"]
     codes, meta = [], {}
@@ -78,7 +89,8 @@ def encode(m):
                      "base": label(M["base"]), "pub": round(M["published"], 4), "sum": round(s, 4),
                      "gap": gap, "prelim": M["preliminary"], "pass": M["pass"], "why": M["why_out"],
                      "precise": M["precise"], "fdT": M["fd"]["T"], "fdB": M["fd"]["B"],
-                     "pub1": round(M["published"], 1), "r": rows}
+                     "pub1": round(M["published"], 1), "filled": round(M["filled_share"], 2),
+                     "round_max": round(rounding_bound(t, M), 4), "r": rows}
     pubs = [months[t]["pub"] for t in order]
     lo = min(0, math.floor(min(pubs)))
     hi = 2 * math.ceil(max(pubs) / 2)

@@ -172,5 +172,17 @@ October 2016, the ten-year limit.
 **What the page shows for each month.** BLS's index values (one or three
 decimals, as published), the 12-month change they give, what the items add
 up to, the gray piece needed to reach BLS's figure, both rounded to one
-decimal, and whether the month passes. The date axis shades the one-decimal
+decimal, and whether the month passes.
+
+**Large misses.** For each month the build computes the largest change in the
+12-month rate that rounding of BLS's two headline index values can cause:
+half of the last published digit on each (0.05 before July 2021, 0.0005
+after), carried through T/B. When a flagged month's gap is bigger than that,
+the flag says so and gives the share of weight estimated from parent
+categories. This happens in 21 months (November 2016 to January 2021, largest
+October 2019: 0.257 against a bound of 0.086, with 6.1% of weight
+estimated). The bound covers only the headline index; the item indexes were
+also rounded to one decimal in those years, which adds to the gap on the
+items side, so we attribute the excess to estimated items and item rounding
+together, not to either alone. The date axis shades the one-decimal
 months and marks every flagged month with an amber dot.

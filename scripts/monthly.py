@@ -70,7 +70,7 @@ def main():
         })
         months[t] = {"base": r["base"], "published": r["published"], "sum": r["sum"],
                      "preliminary": r["fd_note"] == "P", "pass": ok, "why_out": "; ".join(reasons),
-                     "precise": precise, "fd": r["fd"],
+                     "precise": precise, "fd": r["fd"], "filled_share": filled,
                      "items": [{k: i[k] for k in ("code", "name", "group", "major", "own_index",
                                                   "filled_from", "yoy", "contrib", "w_base")}
                                for i in items]}
