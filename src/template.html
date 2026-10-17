@@ -1,0 +1,614 @@
+<title>The PPI Scuba Diver</title>
+<meta charset="utf-8">
+<style>
+:root{
+  --page:#eef3f7; --panel:#ffffff; --ink:#1f2225; --ink-2:#4d5257; --muted:#6c7176; --grid:#dfe3e6;
+  --btn:#dbe2ea; --btn-on:#1f2225; --btn-on-ink:#ffffff; --tip-bg:#ffffff; --tip-edge:#d9d6d0; --focus:#3987e5;
+  --up-1:#fed4cf; --up-2:#f7aba2; --up-3:#ed8074; --up-4:#e14d45; --up-5:#ba332f; --up-6:#7d1716;
+  --dn-1:#cde2fb; --dn-2:#9ec5f4; --dn-3:#6da7ec; --dn-4:#3987e5; --dn-5:#256abf; --dn-6:#104281;
+  --mid:#d9d7d2; --gap:#9a9ea3;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --page:#181A1B; --panel:#1f2224; --ink:#e4e5e6; --ink-2:#BBBDC0; --muted:#8C9094; --grid:#2A2E31;
+    --btn:#2A2E31; --btn-on:#e4e5e6; --btn-on-ink:#181A1B; --tip-bg:#232628; --tip-edge:#3a3e41; --focus:#6da7ec;
+    --mid:#5a5a57; --gap:#8C9094;
+  }
+}
+:root[data-theme="dark"]{
+  --page:#181A1B; --panel:#1f2224; --ink:#e4e5e6; --ink-2:#BBBDC0; --muted:#8C9094; --grid:#2A2E31;
+  --btn:#2A2E31; --btn-on:#e4e5e6; --btn-on-ink:#181A1B; --tip-bg:#232628; --tip-edge:#3a3e41; --focus:#6da7ec;
+  --mid:#5a5a57; --gap:#8C9094;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--page);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;-webkit-font-smoothing:antialiased}
+body{container:page / inline-size}
+#app{width:100%;min-width:0;max-width:1180px;margin:0 auto;padding:16px 16px 8px;height:780px;display:flex;flex-direction:column;container-type:inline-size}
+body.is-embed #app{max-width:none;padding:10px 16px 6px;overflow:hidden}
+header h1{font-size:22px;line-height:1.2;margin:0 0 4px;font-weight:700}
+header p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.4;max-width:860px}
+#controls{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:8px 0 6px}
+.seg{display:inline-flex;background:var(--btn);border-radius:8px;padding:3px}
+.seg button{font:inherit;font-size:13px;border:0;background:transparent;color:var(--ink);padding:6px 12px;border-radius:6px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--btn-on);color:var(--btn-on-ink);font-weight:600}
+button:focus-visible,input:focus-visible{outline:2px solid var(--focus);outline-offset:2px}
+#legend{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--ink-2);flex-wrap:wrap}
+#legend .bar{display:flex;border-radius:3px;overflow:hidden}
+#legend .bar span{display:block;width:20px;height:12px}
+#legend .ticks{display:flex;font-size:11px;color:var(--muted)}
+#legend .ticks span{width:20px;text-align:center}
+#legend .gapkey{display:inline-flex;align-items:center;gap:5px}
+#legend .gapkey i{display:inline-block;width:11px;height:11px;border-radius:50%;background:var(--gap)}
+#stage{position:relative;flex:1;min-height:0;border-radius:10px;overflow:hidden}
+#scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+#readout{position:absolute;left:12px;top:8px;max-width:30%;color:#f2f6fa;text-shadow:0 1px 3px rgba(0,20,40,.7);pointer-events:none}
+#readout .m{font-size:22px;font-weight:700;line-height:1.15}
+#readout .v{font-size:14.5px;line-height:1.35;margin-top:2px}
+#readout .v b{font-size:17px}
+#readout .g{font-size:12px;line-height:1.35;margin-top:3px;color:#d6e2ec}
+#table-wrap{position:absolute;inset:0;overflow:auto;display:none;background:var(--page)}
+#table-wrap.on{display:block}
+table{border-collapse:collapse;width:100%;font-size:13px}
+caption{text-align:left;font-size:13px;color:var(--ink-2);padding:6px 8px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--grid);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left;white-space:normal}
+th{position:sticky;top:0;background:var(--page);color:var(--ink-2);font-weight:600;cursor:pointer;user-select:none}
+td .sw{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+#timeline{display:flex;align-items:center;gap:10px;padding-top:8px}
+#play{font:inherit;font-size:13px;font-weight:600;border:0;border-radius:8px;background:var(--btn-on);color:var(--btn-on-ink);
+  padding:7px 12px;cursor:pointer;min-width:70px}
+.step{font:inherit;font-size:14px;border:0;border-radius:8px;background:var(--btn);color:var(--ink);padding:6px 10px;cursor:pointer}
+#when{min-width:84px;font-size:14px;font-weight:700;white-space:nowrap}
+#slider{flex:1;min-width:0;accent-color:var(--btn-on)}
+footer{display:flex;justify-content:space-between;gap:12px;font-size:11px;color:var(--muted);padding-top:6px;flex-wrap:wrap}
+footer a{color:inherit}
+#source{flex:1;min-width:0}
+#tip{position:fixed;pointer-events:none;z-index:9;background:var(--tip-bg);border:1px solid var(--tip-edge);border-radius:8px;
+  padding:9px 11px;font-size:12.5px;line-height:1.45;color:var(--ink);box-shadow:0 4px 18px rgba(0,0,0,.25);max-width:290px;display:none}
+#tip b{display:block;font-size:13.5px;margin-bottom:3px}
+#tip .k{color:var(--muted)}
+#tip .note{color:var(--muted);font-size:11.5px;margin-top:4px}
+@container (max-width:620px){
+  header h1{font-size:18px}
+  header p{font-size:12.5px}
+  #readout{max-width:62%}
+  #readout .g{display:none}
+  #readout .m{font-size:17px}
+  #readout .v{font-size:12.5px}
+  #legend .lbl{display:none}
+  .seg button{padding:6px 9px;font-size:12.5px}
+  #timeline{flex-wrap:wrap;row-gap:6px}
+  #slider{flex:1 1 100%;order:5}
+}
+</style>
+<div id="app">
+  <header>
+    <h1 id="title"></h1>
+    <p id="dek"></p>
+  </header>
+  <div id="controls">
+    <div class="seg" role="group" aria-label="Display">
+      <button data-mode="scene" aria-pressed="true">Diver</button>
+      <button data-mode="table" aria-pressed="false">Table</button>
+    </div>
+    <div id="legend"></div>
+  </div>
+  <div id="stage">
+    <canvas id="scene" role="img"></canvas>
+    <div id="readout" aria-live="polite"></div>
+    <div id="table-wrap"><table id="table"></table></div>
+  </div>
+  <div id="timeline">
+    <button id="play" type="button">Play</button>
+    <button class="step" id="prev" type="button" aria-label="Previous month">&#8249;</button>
+    <button class="step" id="next" type="button" aria-label="Next month">&#8250;</button>
+    <div class="seg" id="speed" role="group" aria-label="Speed">
+      <button data-speed="1" aria-pressed="true">1x</button>
+      <button data-speed="2" aria-pressed="false">2x</button>
+      <button data-speed="4" aria-pressed="false">4x</button>
+    </div>
+    <div id="when"></div>
+    <input id="slider" type="range" min="0" max="0" step="1" value="0" aria-label="Month">
+  </div>
+  <footer>
+    <span id="source"></span>
+    <span id="credit">Built by <a href="https://www.data4thepeople.com" target="_blank" rel="noopener">Data 4 The People</a></span>
+  </footer>
+</div>
+<div id="tip" role="tooltip"></div>
+<script>
+const DATA = /*DATA*/{};
+const EMBED = (() => { if (location.hash.includes('embed=0')) return false; if (location.hash.includes('embed=1')) return true;
+  try { return window.self !== window.top; } catch (e) { return true; } })();
+if (EMBED) { document.documentElement.setAttribute('data-theme', 'light'); document.body.classList.add('is-embed'); }
+const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const $ = s => document.querySelector(s);
+const ORDER = DATA.order, N = ORDER.length, ITEMS = DATA.items;
+const M = ORDER.map(t => DATA.months[t]);
+const fmt = (v, d = 2) => (v > 0 ? '+' : v < 0 ? '−' : '') + Math.abs(v).toFixed(d);
+const pct1 = v => fmt(v, 1) + '%';
+
+$('#title').textContent = DATA.title;
+$('#dek').textContent = DATA.dek;
+$('#source').textContent = DATA.source;
+
+// ---------- color: the item's own 12-month change, fixed bins ----------
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+let RAMP;
+function readRamp() {
+  RAMP = { up: [1,2,3,4,5,6].map(k => css('--up-' + k)), dn: [1,2,3,4,5,6].map(k => css('--dn-' + k)),
+           mid: css('--mid'), gap: css('--gap') };
+}
+function colorFor(yoy) {
+  if (yoy == null) return RAMP.mid;
+  const a = Math.abs(yoy), s = DATA.color.steps;
+  let k = 0; while (k < s.length && a >= s[k]) k++;      // 0..5
+  if (a < 0.5) return RAMP.mid;
+  return (yoy > 0 ? RAMP.up : RAMP.dn)[k];
+}
+function legend() {
+  const s = DATA.color.steps, dn = RAMP.dn.slice().reverse();
+  const bar = [...dn, RAMP.mid, ...RAMP.up].map(c => `<span style="background:${c}"></span>`).join('');
+  // swatch j spans [20j, 20j+20); boundaries: 25,10,5,2,1 | 0.5 | mid | 0.5 | 1,2,5,10,25
+  const ticks = [...s.slice().reverse().map((v, j) => [20 * (j + 1), '−' + v]), [130, '0'],
+                 ...s.map((v, j) => [20 * (j + 8), '+' + v])];
+  $('#legend').innerHTML = `<span class="lbl">Color: the item's own price change over 12 months, %</span>
+    <span style="position:relative;display:inline-block;padding-bottom:14px"><span class="bar">${bar}</span>${ticks.map(([x, l]) => `<span style="position:absolute;top:14px;left:${x - 12}px;width:24px;text-align:center;font-size:10.5px;color:var(--muted)">${l}</span>`).join('')}</span>
+    <span class="gapkey"><i></i>Not explained by the items</span>`;
+}
+
+// ---------- geometry ----------
+const cv = $('#scene'), ctx = cv.getContext('2d');
+let W = 0, H = 0, DPR = 1, G = {}, LAYOUT = [];
+function geom() {
+  const sky = Math.round(H * 0.07);
+  const axisH = 26, floorTop = H - axisH - Math.round(H * 0.07);
+  const yTop = sky + Math.round(H * 0.24), yBot = Math.round(H * 0.62);
+  const cx = Math.round(W * 0.5);
+  const monthPx = Math.max(46, Math.min(90, W / 13));
+  const rMax = Math.min(H * 0.19, W * 0.17);
+  return { sky, axisH, floorTop, yTop, yBot, cx, monthPx, rMax,
+           k: Math.PI * 0.62 * rMax * rMax / Math.max(DATA.size.up, DATA.size.dn) };
+}
+const depthY = d => G.yTop + (d - DATA.axis.lo) / (DATA.axis.hi - DATA.axis.lo) * (G.yBot - G.yTop);
+
+// Pack circles: largest first on a sunflower spiral, then separate overlaps.
+// Deterministic, so a month always draws the same way.
+function pack(list) {
+  list.sort((a, b) => b.r - a.r);
+  let area = 0;
+  list.forEach((c, k) => {
+    area += Math.PI * c.r * c.r;
+    const rad = k ? Math.sqrt(area / (Math.PI * 0.72)) - c.r * 0.6 : 0, ang = k * 2.39996;
+    c.x = Math.cos(ang) * rad; c.y = Math.sin(ang) * rad;
+  });
+  const cell = Math.max(6, (list[0] ? list[0].r : 6));
+  for (let it = 0; it < 60; it++) {
+    const grid = new Map();
+    for (const c of list) { const k = Math.floor(c.x / cell) + ',' + Math.floor(c.y / cell); (grid.get(k) || grid.set(k, []).get(k)).push(c); }
+    let moved = 0;
+    for (const c of list) {
+      const gx = Math.floor(c.x / cell), gy = Math.floor(c.y / cell), span = Math.ceil(c.r * 2 / cell) + 1;
+      for (let i = -span; i <= span; i++) for (let j = -span; j <= span; j++) {
+        const b = grid.get((gx + i) + ',' + (gy + j)); if (!b) continue;
+        for (const d of b) {
+          if (d === c) continue;
+          let dx = d.x - c.x, dy = d.y - c.y, dist = Math.hypot(dx, dy); const m = c.r + d.r + 1;
+          if (dist >= m) continue;
+          if (dist < 1e-6) { dx = 1; dy = 0; dist = 1; }
+          const push = (m - dist) / 2, wc = d.r * d.r / (c.r * c.r + d.r * d.r);
+          c.x -= dx / dist * push * 2 * wc; c.y -= dy / dist * push * 2 * wc;
+          d.x += dx / dist * push * 2 * (1 - wc); d.y += dy / dist * push * 2 * (1 - wc);
+          moved++;
+        }
+      }
+    }
+    for (const c of list) { c.x *= 0.995; c.y *= 0.995; }       // gentle pull to the center
+    if (!moved) break;
+  }
+  let top = 0, bot = 0, R = 0;
+  for (const c of list) { top = Math.min(top, c.y - c.r); bot = Math.max(bot, c.y + c.r); R = Math.max(R, Math.hypot(c.x, c.y) + c.r); }
+  return { list, top, bot, R };
+}
+const MIN_R = 0.7;
+function layoutMonth(mi) {
+  const m = M[mi], up = [], dn = [];
+  m.r.forEach((row, i) => {
+    if (!row) return;
+    const r = Math.sqrt(G.k * Math.abs(row[1]) / Math.PI);
+    if (r < MIN_R) return;
+    (row[1] > 0 ? up : dn).push({ i, r });
+  });
+  if (Math.abs(m.gap) > 0) {
+    const r = Math.sqrt(G.k * Math.abs(m.gap) / Math.PI);
+    if (r >= MIN_R) (m.gap > 0 ? up : dn).push({ i: -1, r });
+  }
+  return { up: pack(up), dn: pack(dn) };
+}
+function resize() {
+  const rect = cv.getBoundingClientRect();
+  DPR = Math.min(2, window.devicePixelRatio || 1);
+  W = Math.max(320, rect.width); H = Math.max(300, rect.height);
+  cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+  ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+  G = geom();
+  // One size scale for all months, shrunk until every month's clusters fit
+  // between the surface and the date axis at that month's depth.
+  for (let pass = 0; pass < 4; pass++) {
+    LAYOUT = M.map((_, i) => layoutMonth(i));
+    let need = 1;
+    LAYOUT.forEach((L, i) => {
+      const y = depthY(M[i].pub);
+      const below = y + 34 + (L.up.bot - L.up.top), roomB = H - G.axisH - 6;
+      const above = y - 34 - (L.dn.bot - L.dn.top), roomA = G.sky * 0.4;
+      if (below > roomB) need = Math.min(need, (roomB - y - 34) / (below - y - 34));
+      if (above < roomA) need = Math.min(need, (y - 34 - roomA) / (y - 34 - above));
+    });
+    if (need >= 0.999) break;
+    G.k *= need * need * 0.98;
+  }
+}
+
+// ---------- scenery (world x in month units, deterministic) ----------
+function rnd(n) { const x = Math.sin(n * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); }
+function floorY(wx) {      // gentle seafloor contour in px offset
+  return Math.sin(wx * 0.9) * 6 + Math.sin(wx * 2.3 + 1) * 3;
+}
+const FISH = Array.from({ length: 6 }, (_, i) => ({ y: 0.16 + rnd(i + 1) * 0.36, sp: 0.35 + rnd(i + 9) * 0.4, ph: rnd(i + 3) * 40, s: 0.7 + rnd(i + 5) * 0.5 }));
+
+// ---------- state ----------
+let pos = N - 1, target = N - 1, playing = false, speed = 1, lastT = 0, clock = 0, hover = null, frameHits = [];
+const MS_PER_MONTH = 1300;
+const hashMonth = (location.hash.match(/month=(\d{4}-\d{2})/) || [])[1];
+if (hashMonth && ORDER.includes(hashMonth)) pos = target = ORDER.indexOf(hashMonth);
+
+function curIndex() { return Math.round(pos); }
+
+// ---------- drawing ----------
+function waterGradient() {
+  const g = ctx.createLinearGradient(0, G.sky, 0, H);
+  g.addColorStop(0, '#3f9fc8'); g.addColorStop(0.35, '#1f6e9c'); g.addColorStop(0.7, '#0f3f63'); g.addColorStop(1, '#061e33');
+  return g;
+}
+function drawBackground(scroll, depthNow) {
+  // sky and surface
+  const sk = ctx.createLinearGradient(0, 0, 0, G.sky);
+  sk.addColorStop(0, '#cfe8f6'); sk.addColorStop(1, '#a9d6ee');
+  ctx.fillStyle = sk; ctx.fillRect(0, 0, W, G.sky);
+  ctx.fillStyle = waterGradient(); ctx.fillRect(0, G.sky, W, H - G.sky);
+  // light rays near the surface
+  ctx.save(); ctx.globalAlpha = 0.07; ctx.fillStyle = '#ffffff';
+  for (let i = 0; i < 5; i++) {
+    const x = ((i * 0.23 + 0.05) * W - scroll * 0.15 * G.monthPx) % (W + 200);
+    const xx = x < -100 ? x + W + 200 : x;
+    ctx.beginPath(); ctx.moveTo(xx, G.sky); ctx.lineTo(xx + 60, G.sky); ctx.lineTo(xx - 40, H * 0.55); ctx.lineTo(xx - 120, H * 0.55); ctx.fill();
+  }
+  ctx.restore();
+  // waves on the surface
+  ctx.strokeStyle = 'rgba(255,255,255,.55)'; ctx.lineWidth = 1.5; ctx.beginPath();
+  for (let x = 0; x <= W; x += 8) { const y = G.sky + Math.sin((x + scroll * G.monthPx) * 0.03 + clock * 0.0015) * 2; x ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+  ctx.stroke();
+  // risk: the water darkens as the diver goes deeper (fixed scale)
+  const risk = Math.max(0, Math.min(1, (depthNow - DATA.axis.lo) / (DATA.axis.hi - DATA.axis.lo)));
+  const dark = ctx.createRadialGradient(G.cx, depthY(depthNow), 40, G.cx, depthY(depthNow), Math.max(W, H) * 0.8);
+  dark.addColorStop(0, `rgba(2,10,22,${0.05 + risk * 0.15})`); dark.addColorStop(1, `rgba(2,8,18,${0.15 + risk * 0.55})`);
+  ctx.fillStyle = dark; ctx.fillRect(0, G.sky, W, H - G.sky);
+}
+function drawFish(scroll, depthNow) {
+  for (const f of FISH) {
+    const wx = (f.ph + clock * 0.00004 * f.sp * 60 - scroll * 0.5) ;
+    let x = ((wx * 90) % (W + 120)); if (x < 0) x += W + 120; x -= 60;
+    const y = G.sky + f.y * (H - G.sky) + Math.sin(clock * 0.002 + f.ph) * 4;
+    ctx.save(); ctx.translate(x, y); ctx.scale(f.s, f.s);
+    ctx.fillStyle = 'rgba(255,214,120,.85)';
+    ctx.beginPath(); ctx.ellipse(0, 0, 9, 4.5, 0, 0, Math.PI * 2); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-8, 0); ctx.lineTo(-15, -5); ctx.lineTo(-15, 5); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#1b2a33'; ctx.beginPath(); ctx.arc(5, -1, 1.1, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+  }
+  // the shark: only when inflation runs high (deep water)
+  const deepAt = DATA.axis.lo + (DATA.axis.hi - DATA.axis.lo) * 0.5;
+  const a = Math.max(0, Math.min(1, (depthNow - deepAt) / 1.5));
+  if (a > 0.01) {
+    const period = 14000, ph = (clock % period) / period;
+    const x = W + 160 - ph * (W + 320);
+    const y = G.yBot + (G.floorTop - G.yBot) * 0.35 + Math.sin(clock * 0.0012) * 6;
+    ctx.save(); ctx.globalAlpha = 0.75 * a; ctx.translate(x, y); ctx.scale(-1, 1);
+    ctx.fillStyle = '#5c6f7d';
+    ctx.beginPath(); ctx.moveTo(-60, 0); ctx.quadraticCurveTo(-10, -22, 55, -4); ctx.quadraticCurveTo(62, 0, 55, 5);
+    ctx.quadraticCurveTo(0, 16, -60, 0); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(-8, -14); ctx.lineTo(4, -34); ctx.lineTo(14, -11); ctx.fill();              // dorsal fin
+    ctx.beginPath(); ctx.moveTo(-56, 0); ctx.lineTo(-82, -20 + Math.sin(clock * 0.008) * 4); ctx.lineTo(-72, 0); ctx.lineTo(-82, 18 + Math.sin(clock * 0.008) * 4); ctx.fill();
+    ctx.beginPath(); ctx.moveTo(10, 6); ctx.lineTo(0, 22); ctx.lineTo(24, 7); ctx.fill();
+    ctx.fillStyle = '#d9e1e6'; ctx.beginPath(); ctx.moveTo(-40, 4); ctx.quadraticCurveTo(10, 14, 52, 4); ctx.quadraticCurveTo(0, 9, -40, 4); ctx.fill();
+    ctx.fillStyle = '#0d1418'; ctx.beginPath(); ctx.arc(40, -3, 1.8, 0, Math.PI * 2); ctx.fill();
+    ctx.restore();
+  }
+}
+function drawFloor(scroll) {
+  const baseY = G.floorTop;
+  // sand
+  ctx.fillStyle = '#2a3b3f';
+  ctx.beginPath(); ctx.moveTo(0, H);
+  for (let x = 0; x <= W + 8; x += 8) { const wx = (x - G.cx) / G.monthPx + scroll; ctx.lineTo(x, baseY + floorY(wx)); }
+  ctx.lineTo(W, H); ctx.closePath(); ctx.fill();
+  // rocks and kelp, one decoration slot per half month of world x
+  const left = scroll + (0 - G.cx) / G.monthPx - 1, right = scroll + (W - G.cx) / G.monthPx + 1;
+  for (let s = Math.floor(left * 2); s <= right * 2; s++) {
+    const wx = s / 2 + rnd(s) * 0.4, x = G.cx + (wx - scroll) * G.monthPx, y = baseY + floorY(wx);
+    const r = rnd(s + 77);
+    if (r < 0.32) {                               // kelp
+      const h = 30 + rnd(s + 5) * 55;
+      ctx.strokeStyle = '#2f6b45'; ctx.lineWidth = 3; ctx.lineCap = 'round'; ctx.beginPath(); ctx.moveTo(x, y);
+      for (let k = 1; k <= 6; k++) ctx.lineTo(x + Math.sin(clock * 0.0016 + s + k * 0.7) * k * 1.4, y - h * k / 6);
+      ctx.stroke();
+    } else if (r < 0.55) {                        // rock
+      const w = 10 + rnd(s + 8) * 22;
+      ctx.fillStyle = '#3b4a4e'; ctx.beginPath(); ctx.ellipse(x, y + 2, w, w * 0.55, 0, Math.PI, 0); ctx.fill();
+    }
+  }
+}
+function drawAxes(scroll, mi) {
+  // depth scale on the left: fixed for every month
+  ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle';
+  for (let d = DATA.axis.lo; d <= DATA.axis.hi + 1e-9; d += DATA.axis.step) {
+    const y = depthY(d);
+    ctx.strokeStyle = 'rgba(220,235,245,.16)'; ctx.setLineDash([3, 5]); ctx.beginPath(); ctx.moveTo(40, y); ctx.lineTo(W, y); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.textAlign = 'left'; ctx.fillText(d + '%', 8, y);
+  }
+  ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(230,240,248,.7)';
+  ctx.fillText('PPI, 12-month change (deeper = more inflation)', 8, G.yTop - 16);
+  // trail: the diver's path through past months (real values only, at month points)
+  ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2; ctx.beginPath();
+  let started = false;
+  for (let i = 0; i <= mi; i++) {
+    const x = G.cx + (i - scroll) * G.monthPx; if (x < -20) continue;
+    const y = depthY(M[i].pub); started ? ctx.lineTo(x, y) : (ctx.moveTo(x, y), started = true);
+  }
+  if (started && pos > mi) ctx.lineTo(G.cx, depthY(M[mi].pub + (M[Math.min(N - 1, mi + 1)].pub - M[mi].pub) * (pos - mi)));
+  ctx.stroke();
+  // date axis at the bottom: months scroll past under the diver
+  const y0 = H - G.axisH;
+  ctx.fillStyle = 'rgba(4,16,28,.82)'; ctx.fillRect(0, y0, W, G.axisH);
+  ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+  for (let i = 0; i < N; i++) {
+    const x = G.cx + (i - scroll) * G.monthPx; if (x < -40 || x > W + 40) continue;
+    const isJan = ORDER[i].endsWith('-01');
+    ctx.strokeStyle = 'rgba(220,235,245,.5)'; ctx.beginPath(); ctx.moveTo(x, y0); ctx.lineTo(x, y0 + (isJan ? 7 : 4)); ctx.stroke();
+    if (i === curIndex()) continue;
+    if (isJan || G.monthPx > 70) {
+      ctx.fillStyle = isJan ? 'rgba(235,242,248,.9)' : 'rgba(200,215,228,.7)';
+      ctx.fillText(isJan ? ORDER[i].slice(0, 4) : M[i].short.slice(0, 3), x, y0 + 16);
+    }
+  }
+  ctx.fillStyle = '#ffffff'; ctx.font = '600 12px -apple-system,Helvetica,Arial,sans-serif';
+  ctx.fillText(M[curIndex()].short, G.cx, y0 + 15);
+  ctx.beginPath(); ctx.moveTo(G.cx - 5, y0); ctx.lineTo(G.cx + 5, y0); ctx.lineTo(G.cx, y0 + 5); ctx.closePath(); ctx.fill();
+}
+function drawDiver(x, y) {
+  const kick = REDUCED ? 0 : Math.sin(clock * 0.008);
+  ctx.save(); ctx.translate(x, y);
+  // bubbles
+  ctx.strokeStyle = 'rgba(255,255,255,.6)'; ctx.lineWidth = 1;
+  for (let b = 0; b < 4; b++) {
+    const t = ((clock * 0.0006 + b * 0.25) % 1);
+    ctx.beginPath(); ctx.arc(26 + Math.sin(t * 9 + b) * 3, -14 - t * 60, 2 + b * 0.6, 0, Math.PI * 2); ctx.stroke();
+  }
+  // fins and legs
+  ctx.fillStyle = '#f2b632';
+  ctx.save(); ctx.translate(-34, 2); ctx.rotate(0.25 * kick);
+  ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-22, -8); ctx.lineTo(-24, 2); ctx.closePath(); ctx.fill(); ctx.restore();
+  ctx.save(); ctx.translate(-34, 6); ctx.rotate(-0.25 * kick);
+  ctx.beginPath(); ctx.moveTo(0, 0); ctx.lineTo(-22, 4); ctx.lineTo(-20, 12); ctx.closePath(); ctx.fill(); ctx.restore();
+  ctx.fillStyle = '#1d2329';
+  ctx.beginPath(); ctx.ellipse(-22, 3, 14, 4.5, 0.05 * kick, 0, Math.PI * 2); ctx.fill();
+  // tank
+  ctx.fillStyle = '#d0d6db'; ctx.beginPath(); ctx.ellipse(-2, -8, 15, 4.5, 0, 0, Math.PI * 2); ctx.fill();
+  // body
+  ctx.fillStyle = '#20272e'; ctx.beginPath(); ctx.ellipse(0, 0, 18, 7.5, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#3d7bd0'; ctx.fillRect(-6, -1, 10, 3);
+  // arm
+  ctx.strokeStyle = '#20272e'; ctx.lineWidth = 4; ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.moveTo(8, 2); ctx.lineTo(20, 9 + kick * 2); ctx.stroke();
+  // head and mask
+  ctx.fillStyle = '#20272e'; ctx.beginPath(); ctx.arc(22, -2, 7, 0, Math.PI * 2); ctx.fill();
+  ctx.fillStyle = '#9fd8f2'; ctx.beginPath(); ctx.ellipse(26.5, -3, 3.5, 3, 0, 0, Math.PI * 2); ctx.fill();
+  ctx.strokeStyle = '#f2b632'; ctx.lineWidth = 1.4; ctx.beginPath(); ctx.ellipse(26.5, -3, 3.8, 3.3, 0, 0, Math.PI * 2); ctx.stroke();
+  ctx.restore();
+}
+function anchorGlyph(x, y, r) {
+  const s = r * 0.55;
+  ctx.save(); ctx.translate(x, y); ctx.strokeStyle = 'rgba(255,255,255,.9)'; ctx.lineWidth = Math.max(1.2, r * 0.09); ctx.lineCap = 'round';
+  ctx.beginPath(); ctx.arc(0, -s * 0.78, s * 0.2, 0, Math.PI * 2); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(0, -s * 0.58); ctx.lineTo(0, s * 0.85); ctx.stroke();
+  ctx.beginPath(); ctx.moveTo(-s * 0.4, -s * 0.3); ctx.lineTo(s * 0.4, -s * 0.3); ctx.stroke();
+  ctx.beginPath(); ctx.arc(0, s * 0.15, s * 0.7, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke();
+  ctx.restore();
+}
+function lerp(a, b, f) { return a + (b - a) * f; }
+function drawClusters(dx, dy) {
+  const i0 = Math.floor(pos), i1 = Math.min(N - 1, i0 + 1), f = pos - i0, mi = curIndex();
+  frameHits = [];
+  const sides = [['up', 1], ['dn', -1]];
+  const labels = [];
+  for (const [side, sgn] of sides) {
+    const A = LAYOUT[i0][side], B = LAYOUT[i1][side];
+    const offA = sgn > 0 ? 34 - A.top : -34 - A.bot, offB = sgn > 0 ? 34 - B.top : -34 - B.bot;
+    const mapB = new Map(B.list.map(c => [c.i, c]));
+    const mapA = new Map(A.list.map(c => [c.i, c]));
+    const circles = [];
+    for (const c of A.list) { const d = mapB.get(c.i); circles.push(d ? { i: c.i, x: lerp(c.x, d.x, f), y: lerp(c.y + offA, d.y + offB, f), r: lerp(c.r, d.r, f) } : { i: c.i, x: c.x, y: c.y + offA, r: c.r * (1 - f) }); }
+    for (const d of B.list) if (!mapA.has(d.i)) circles.push({ i: d.i, x: d.x, y: d.y + offB, r: d.r * f });
+    const cy = lerp(sgn > 0 ? offA + (A.top + A.bot) / 2 : offA + (A.top + A.bot) / 2, offB + (B.top + B.bot) / 2, f);
+    // tethers from the diver's belt to the cluster
+    if (circles.length) {
+      ctx.strokeStyle = 'rgba(235,240,245,.55)'; ctx.lineWidth = 1.2;
+      const tops = circles.filter(c => c.r > 3).sort((a, b) => b.r - a.r).slice(0, 5);
+      for (const c of tops) { ctx.beginPath(); ctx.moveTo(dx - 2, dy + sgn * 6); ctx.lineTo(dx + c.x, dy + c.y - sgn * c.r * 0.9); ctx.stroke(); }
+    }
+    const m = M[mi];
+    for (const c of circles) {
+      if (c.r < 0.5) continue;
+      const X = dx + c.x, Y = dy + c.y;
+      const row = c.i >= 0 ? m.r[c.i] : null;
+      const yoy = c.i >= 0 ? (row ? row[0] : (M[i0].r[c.i] || M[i1].r[c.i] || [null])[0]) : null;
+      ctx.fillStyle = c.i < 0 ? RAMP.gap : colorFor(yoy);
+      ctx.beginPath(); ctx.arc(X, Y, c.r, 0, Math.PI * 2); ctx.fill();
+      ctx.strokeStyle = (hover && hover.i === c.i && hover.side === side) ? '#ffffff' : 'rgba(8,24,40,.55)';
+      ctx.lineWidth = (hover && hover.i === c.i && hover.side === side) ? 2 : 0.8; ctx.stroke();
+      if (sgn > 0 && c.r > 11 && c.i >= 0) anchorGlyph(X, Y, c.r);
+      if (sgn < 0 && c.r > 6) {                       // buoy highlight
+        ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(X - c.r * 0.35, Y - c.r * 0.35, c.r * 0.22, 0, Math.PI * 2); ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,.75)'; ctx.lineWidth = Math.max(1, c.r * 0.12);
+        ctx.beginPath(); ctx.arc(X, Y, c.r * 0.62, 0.15 * Math.PI, 0.85 * Math.PI); ctx.stroke();
+      }
+      frameHits.push({ side, i: c.i, x: X, y: Y, r: Math.max(c.r, 3) });
+    }
+    // labels: the five largest of the current month, real values only
+    const cur = W < 620 ? [] : LAYOUT[mi][side].list.filter(c => c.i >= 0).slice(0, 5);
+    if (cur.length) labels.push({ side, sgn, cy: dy + cy, R: Math.max(A.R, B.R) * (1 - f) + B.R * f, items: cur.map(c => c.i) });
+  }
+  drawLabels(labels, dx, mi);
+}
+function drawLabels(groups, dx, mi) {
+  ctx.font = '12px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle';
+  for (const g of groups) {
+    const lines = g.items.map(i => [ITEMS[i][0], fmt(M[mi].r[i][1]) + ' pts']);
+    const lh = 16, h = lines.length * lh + 22;
+    let x = dx + g.R + 24, y = g.cy - h / 2;
+    const w = Math.min(250, Math.max(...lines.map(l => ctx.measureText(l[0]).width)) + 66);
+    if (x + w > W - 8) x = Math.max(8, dx - g.R - 24 - w);
+    y = Math.max(G.sky + 4, Math.min(H - G.axisH - h - 4, y));
+    ctx.fillStyle = 'rgba(4,18,32,.62)'; roundRect(x, y, w, h, 7); ctx.fill();
+    ctx.fillStyle = '#c9d8e4'; ctx.font = '600 11px -apple-system,Helvetica,Arial,sans-serif';
+    ctx.textAlign = 'left'; ctx.fillText(g.sgn > 0 ? 'Biggest anchors (pushed up)' : 'Biggest floats (pulled down)', x + 9, y + 11);
+    ctx.font = '12px -apple-system,Helvetica,Arial,sans-serif';
+    lines.forEach((l, k) => {
+      const yy = y + 26 + k * lh;
+      let name = l[0]; const maxw = w - 70;
+      while (ctx.measureText(name).width > maxw && name.length > 4) name = name.slice(0, -2);
+      if (name !== l[0]) name = name.trimEnd() + '…';
+      ctx.fillStyle = '#f2f6fa'; ctx.textAlign = 'left'; ctx.fillText(name, x + 9, yy);
+      ctx.textAlign = 'right'; ctx.fillText(l[1], x + w - 9, yy);
+    });
+  }
+}
+function roundRect(x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+
+function frame(ts) {
+  const dt = lastT ? Math.min(100, ts - lastT) : 16; lastT = ts; clock += dt;
+  if (playing) {
+    target = Math.min(N - 1, pos + dt * speed / MS_PER_MONTH);
+    pos = target;
+    if (pos >= N - 1) { pos = N - 1; setPlaying(false); }
+  } else if (pos !== target) {
+    const d = target - pos, stepv = Math.sign(d) * Math.min(Math.abs(d), dt / 260 * Math.max(1, Math.abs(d)));
+    pos = Math.abs(d) < 0.002 ? target : pos + stepv;
+  }
+  const i0 = Math.floor(pos), f = pos - i0, i1 = Math.min(N - 1, i0 + 1);
+  const depthNow = lerp(M[i0].pub, M[i1].pub, f);
+  const dx = G.cx, dy = depthY(depthNow);
+  drawBackground(pos, depthNow);
+  drawFish(pos, depthNow);
+  drawFloor(pos);
+  drawAxes(pos, i0);
+  drawClusters(dx, dy);
+  drawDiver(dx, dy);
+  updateReadout();
+  requestAnimationFrame(frame);
+}
+
+// ---------- readout, table, tooltip ----------
+let lastReadout = -1;
+function updateReadout() {
+  const mi = curIndex(); if (mi === lastReadout) return; lastReadout = mi;
+  const m = M[mi];
+  $('#readout').innerHTML = `<div class="m">${m.label}</div>
+    <div class="v">Final demand prices: <b>${pct1(m.pub)}</b> from ${m.base}</div>
+    <div class="g">Items add up to ${fmt(m.sum)} points; the gray piece (${fmt(m.gap, 3)}) is the part they do not explain.${m.prelim ? ' Preliminary: BLS revises the last four months.' : ''}</div>`;
+  $('#when').textContent = m.short;
+  $('#slider').value = mi;
+  cv.setAttribute('aria-label', `${m.label}: PPI final demand ${pct1(m.pub)} over 12 months. Largest push up: ${topName(mi, 1)}. Largest pull down: ${topName(mi, -1)}.`);
+  if ($('#table-wrap').classList.contains('on')) table();
+}
+function topName(mi, sgn) {
+  let best = null, bv = 0;
+  M[mi].r.forEach((r, i) => { if (r && r[1] * sgn > bv) { bv = r[1] * sgn; best = i; } });
+  return best == null ? 'none' : `${ITEMS[best][1]} (${fmt(M[mi].r[best][1])} points)`;
+}
+let sortKey = 'contrib', sortDir = -1;
+function table() {
+  const mi = curIndex(), m = M[mi];
+  const rows = m.r.map((r, i) => r && { i, name: ITEMS[i][1], group: ITEMS[i][2], yoy: r[0], w: r[2], contrib: r[1], filled: r[3] >= 0 ? DATA.parents[r[3]] : '' }).filter(Boolean);
+  rows.sort((a, b) => { const x = a[sortKey], y = b[sortKey]; return (typeof x === 'string' ? x.localeCompare(y) : ((x ?? -1e9) - (y ?? -1e9))) * sortDir; });
+  const head = [['name', 'Item'], ['group', 'Type'], ['yoy', 'Own 12-month change, %'], ['w', 'Weight, % of final demand'], ['contrib', 'Contribution, points'], ['filled', 'No own index: uses']];
+  $('#table').innerHTML = `<caption>${m.label}: ${rows.length} items. Final demand ${pct1(m.pub)}; items add up to ${fmt(m.sum)}; not explained ${fmt(m.gap, 3)} points.</caption>
+    <thead><tr>${head.map(([k, l]) => `<th data-k="${k}" tabindex="0" aria-sort="${k === sortKey ? (sortDir < 0 ? 'descending' : 'ascending') : 'none'}">${l}</th>`).join('')}</tr></thead>
+    <tbody>${rows.map(r => `<tr><td><span class="sw" style="background:${colorFor(r.yoy)}"></span>${r.name}</td><td>${r.group}</td><td>${r.yoy == null ? '' : fmt(r.yoy, 1)}</td><td>${r.w.toFixed(3)}</td><td>${fmt(r.contrib, 4)}</td><td>${r.filled}</td></tr>`).join('')}
+    <tr><td><span class="sw" style="background:${RAMP.gap}"></span>Not explained by the items</td><td></td><td></td><td></td><td>${fmt(m.gap, 4)}</td><td></td></tr></tbody>`;
+  $('#table').querySelectorAll('th').forEach(th => {
+    const go = () => { const k = th.dataset.k; sortDir = k === sortKey ? -sortDir : (k === 'name' || k === 'group' || k === 'filled' ? 1 : -1); sortKey = k; table(); };
+    th.onclick = go; th.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } };
+  });
+}
+const tip = $('#tip');
+cv.addEventListener('mousemove', e => {
+  const r = cv.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+  let hit = null;
+  for (let k = frameHits.length - 1; k >= 0; k--) { const h = frameHits[k]; if ((h.x - x) ** 2 + (h.y - y) ** 2 <= h.r * h.r) { hit = h; break; } }
+  hover = hit;
+  if (!hit) { tip.style.display = 'none'; return; }
+  const m = M[curIndex()];
+  if (hit.i < 0) {
+    tip.innerHTML = `<b>Not explained by the items</b><span class="k">Part of the 12-month change:</span> ${fmt(m.gap, 3)} points
+      <div class="note">The items add up to ${fmt(m.sum)} points; BLS's index gives ${fmt(m.pub)}. The difference comes from items whose prices BLS does not publish, which are estimated from their parent category, and from rounding.</div>`;
+  } else {
+    const row = m.r[hit.i], it = ITEMS[hit.i];
+    if (!row) { tip.style.display = 'none'; return; }
+    tip.innerHTML = `<b>${it[1]}</b><span class="k">${it[3]}</span><br>
+      <span class="k">Added to the 12-month change:</span> ${fmt(row[1], 3)} points<br>
+      <span class="k">Its own price change:</span> ${row[0] == null ? 'n/a' : pct1(row[0])}<br>
+      <span class="k">Weight:</span> ${row[2].toFixed(3)}% of final demand
+      ${row[3] >= 0 ? `<div class="note">BLS does not publish this item's index for these months. It uses the change for ${DATA.parents[row[3]]}.</div>` : ''}`;
+  }
+  tip.style.display = 'block';
+  const tw = tip.offsetWidth, th = tip.offsetHeight;
+  tip.style.left = Math.min(innerWidth - tw - 8, e.clientX + 14) + 'px';
+  tip.style.top = Math.min(innerHeight - th - 8, e.clientY + 14) + 'px';
+});
+cv.addEventListener('mouseleave', () => { hover = null; tip.style.display = 'none'; });
+
+// ---------- controls ----------
+function setPlaying(p) {
+  playing = p; $('#play').textContent = p ? 'Pause' : 'Play';
+  if (p && pos >= N - 1) { pos = target = 0; }
+}
+$('#play').onclick = () => setPlaying(!playing);
+$('#prev').onclick = () => { setPlaying(false); target = Math.max(0, Math.round(pos) - 1); };
+$('#next').onclick = () => { setPlaying(false); target = Math.min(N - 1, Math.round(pos) + 1); };
+document.querySelectorAll('#speed button').forEach(b => b.onclick = () => {
+  speed = +b.dataset.speed; document.querySelectorAll('#speed button').forEach(x => x.setAttribute('aria-pressed', x === b));
+});
+const slider = $('#slider'); slider.max = N - 1;
+slider.oninput = () => { setPlaying(false); target = +slider.value; };
+document.querySelectorAll('[data-mode]').forEach(b => b.onclick = () => {
+  const t = b.dataset.mode === 'table';
+  document.querySelectorAll('[data-mode]').forEach(x => x.setAttribute('aria-pressed', x === b));
+  $('#table-wrap').classList.toggle('on', t); $('#readout').style.display = t ? 'none' : '';
+  if (t) table();
+});
+document.addEventListener('keydown', e => {
+  if (e.target.closest && e.target.closest('input,th')) return;
+  if (e.key === ' ') { e.preventDefault(); setPlaying(!playing); }
+  if (e.key === 'ArrowLeft') $('#prev').click();
+  if (e.key === 'ArrowRight') $('#next').click();
+});
+
+readRamp(); legend(); resize();
+new ResizeObserver(() => { resize(); }).observe($('#stage'));
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { readRamp(); legend(); lastReadout = -1; });
+requestAnimationFrame(frame);
+document.body.setAttribute('data-ready', '1');
+</script>

@@ -29,3 +29,4 @@ None.
 ## Log
 
 - 2026-10-17 Step 1 opened. Topic: PPI version of the CPI hot air balloon. Animated scuba diver of PPI final demand (WPUFD4) 12-month change by item contribution, CPI_analysis method.
+- 2026-10-17 Built dist/index.html (PPI scuba diver), July 2022 to September 2026, 51 months; tie-out in TIEOUT.md.
