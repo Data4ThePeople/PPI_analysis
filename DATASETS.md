@@ -144,19 +144,33 @@ positive every month (+0.012 to +0.040); we have not identified a cause.
 
 ## Tie-out (`scripts/monthly.py`, `scripts/tieout.py`, `TIEOUT.md`)
 
-Rules fixed before looking at results. A month is shown when:
+Every month from October 2016 to September 2026 (120 months) is shown. The
+tool is educational, so months that miss our tie-out stay in and are flagged
+on the page with the reason (Eric, October 17, 2026).
+
+The strict tie-out, fixed before looking at results. A month passes when:
 1. both index values in its 12-month change were published to three decimals
    (base month July 2021 or later);
 2. the items add up to the published change within 0.05 points, half of the
    0.1 precision BLS publishes 12-month changes at;
 3. filled items carry 10% of weight or less.
 
-**Result.** July 2022 to September 2026, 51 months, all pass. Mean absolute
-gap 0.013 points, largest 0.040 (May 2026); 42 of 51 within 0.02.
+**Result.** 51 months pass, July 2022 to September 2026: mean absolute gap
+0.013 points, largest 0.040 (May 2026), 42 within 0.02. 69 months are flagged,
+October 2016 to June 2022, all for rule 1 (a one-decimal base month); 33 of
+them also miss by more than 0.05, up to 0.26 points (October 2019). In 50 of
+the 120 months the items round to a different one-decimal figure than BLS
+publishes; the page shows both.
 
-**Why the range stops at July 2022.** Earlier months compare against a
-one-decimal index. The weight history would allow October 2016, the ten-year
-limit. Of the 69 months from October 2016 to June 2022, 33 miss by more than
-0.05 (up to 0.26 in October 2019), and the ones that pass do so partly by
-rounding luck. July 2021 to June 2022 all land within 0.05, but their base
-month is one-decimal, so they are not shown.
+**Why the strict tie-out starts at July 2022.** Earlier months compare against
+a one-decimal index, which BLS never revised to three decimals. Rounding alone
+can move a 12-month change by up to about 0.09 points. The months from July
+2021 to June 2022 land within 0.05, but their base month is one-decimal, so a
+close match there can be luck. The weight files would allow going back to
+October 2016, the ten-year limit.
+
+**What the page shows for each month.** BLS's index values (one or three
+decimals, as published), the 12-month change they give, what the items add
+up to, the gray piece needed to reach BLS's figure, both rounded to one
+decimal, and whether the month passes. The date axis shades the one-decimal
+months and marks every flagged month with an amber dot.

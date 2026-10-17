@@ -1,6 +1,8 @@
 """Item contributions for every month from October 2016 to the release month.
 
-Every month is computed and checked; only months that pass go to the page.
+Every month is computed, checked, and goes to the page. Months that miss the
+strict tie-out rules stay in and are flagged, with the reason, so the page
+shows its work (Eric, October 17, 2026: the tool is educational).
 Writes:
 - data/processed/monthly.json: the passing months' items, for the animated page;
 - data/processed/monthly_summary.csv: one row per month with the published
@@ -8,7 +10,7 @@ Writes:
   whether the month passes;
 - data/processed/monthly_items.csv: one row per month and item, for checking.
 
-A month passes when (rules fixed before looking at the results):
+A month passes the strict tie-out when (rules fixed before looking at the results):
 1. both index values in its 12-month change (FD4 at T and at B) were published
    to three decimals. BLS published one decimal before July 2021 and did not
    revise that history, so rounding alone can move a 12-month change by up to
@@ -57,7 +59,7 @@ def main():
             reasons.append("filled weight over 10%")
         ok = not reasons
         summary.append({
-            "month": t, "status": "pass" if ok else "out",
+            "month": t, "status": "pass" if ok else "flagged",
             "published": round(r["published"], 4), "items": round(r["sum"], 4),
             "gap": round(gap, 4), "published_1dp": round(r["published"], 1),
             "fd_T": r["fd"]["T"], "fd_B": r["fd"]["B"], "preliminary": r["fd_note"] == "P",
@@ -66,12 +68,12 @@ def main():
             "weights": f"Dec {r['dec_prior'][:4]} rolled to {r['base']}, then Dec {r['dec_new'][:4]}",
             "why_out": "; ".join(reasons),
         })
-        if ok:
-            months[t] = {"base": r["base"], "published": r["published"], "sum": r["sum"],
-                         "preliminary": r["fd_note"] == "P",
-                         "items": [{k: i[k] for k in ("code", "name", "group", "major", "own_index",
-                                                      "filled_from", "yoy", "contrib", "w_base")}
-                                   for i in items]}
+        months[t] = {"base": r["base"], "published": r["published"], "sum": r["sum"],
+                     "preliminary": r["fd_note"] == "P", "pass": ok, "why_out": "; ".join(reasons),
+                     "precise": precise, "fd": r["fd"],
+                     "items": [{k: i[k] for k in ("code", "name", "group", "major", "own_index",
+                                                  "filled_from", "yoy", "contrib", "w_base")}
+                               for i in items]}
         for i in items:
             item_rows.append({"month": t, "code": i["code"], "old_code": i["old_code"] or "",
                               "name": i["name"], "group": i["group"], "own_index": i["own_index"],
@@ -81,12 +83,8 @@ def main():
                               "contrib_first": round(i["c1"], 6), "contrib_second": round(i["c2"], 6),
                               "contrib": round(i["contrib"], 6)})
 
-    order = [s["month"] for s in summary if s["status"] == "pass"]
-    # The page needs one unbroken run of months.
-    allm = month_list()
-    first = allm.index(order[0])
-    if order != allm[first:first + len(order)]:
-        raise SystemExit(f"passing months are not continuous: {order}")
+    order = [s["month"] for s in summary]
+    passing = [s["month"] for s in summary if s["status"] == "pass"]
 
     PROCESSED.mkdir(parents=True, exist_ok=True)
     (PROCESSED / "monthly.json").write_text(json.dumps(
@@ -99,7 +97,8 @@ def main():
         w = csv.DictWriter(fh, fieldnames=list(item_rows[0]))
         w.writeheader()
         w.writerows(item_rows)
-    print(f"{len(summary)} months computed, {len(order)} pass: {order[0]} to {order[-1]}")
+    print(f"{len(summary)} months computed and shown; {len(passing)} pass the strict tie-out "
+          f"({passing[0]} to {passing[-1]})")
 
 
 if __name__ == "__main__":

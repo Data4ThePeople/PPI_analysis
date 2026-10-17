@@ -76,7 +76,9 @@ def encode(m):
         gap = round(M["published"] - s, 5)          # the gray piece: what the items do not explain
         months[t] = {"label": label(t), "short": date(int(t[:4]), int(t[5:]), 1).strftime("%b %Y"),
                      "base": label(M["base"]), "pub": round(M["published"], 4), "sum": round(s, 4),
-                     "gap": gap, "prelim": M["preliminary"], "r": rows}
+                     "gap": gap, "prelim": M["preliminary"], "pass": M["pass"], "why": M["why_out"],
+                     "precise": M["precise"], "fdT": M["fd"]["T"], "fdB": M["fd"]["B"],
+                     "pub1": round(M["published"], 1), "r": rows}
     pubs = [months[t]["pub"] for t in order]
     lo = min(0, math.floor(min(pubs)))
     hi = 2 * math.ceil(max(pubs) / 2)
@@ -88,11 +90,14 @@ def encode(m):
         "title": "The PPI Scuba Diver",
         "dek": ("Each month, the diver sits as deep as wholesale inflation: the 12-month change in the "
                 "Producer Price Index for final demand. Items that pushed it up hang below as anchors. "
-                "Items that pulled it down float above."),
+                "Items that pulled it down float above. Every month shows our work, including the months "
+                "where the items miss BLS's headline."),
         "source": ("Source: BLS Producer Price Index for final demand (WPUFD4) and its commodity indexes, "
                    "not seasonally adjusted, and BLS relative importance tables. Contributions computed by "
                    "Data 4 The People. Items with no published index use their parent category's change. "
-                   "The gray piece is the part the items do not add up to."),
+                   "The gray piece is the part the items do not add up to. Before July 2021 BLS published its "
+                   "indexes to one decimal, so the items cannot match the headline as closely; those months "
+                   "are flagged."),
         "axis": {"lo": lo, "hi": hi, "step": 2}, "size": {"up": round(up, 4), "dn": round(dn, 4)},
         "color": {"steps": STEPS}, "items": items, "parents": parents,
         "order": order, "months": months, "checks": m["checks"],

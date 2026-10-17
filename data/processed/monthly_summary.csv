@@ -1,73 +1,73 @@
 month,status,published,items,gap,published_1dp,fd_T,fd_B,preliminary,items_n,filled_items,filled_share,weights,why_out
-2016-10,out,1.0929,1.062,-0.0309,1.1,111.0,109.8,False,860,140,9.151,"Dec 2014 rolled to 2015-10, then Dec 2015",one-decimal index at base month
-2016-11,out,1.2797,1.1196,-0.1601,1.3,110.8,109.4,False,860,140,9.202,"Dec 2014 rolled to 2015-11, then Dec 2015",one-decimal index at base month; gap over 0.05
-2016-12,out,1.7415,1.6142,-0.1273,1.7,111.0,109.1,False,860,141,9.362,"Dec 2014 rolled to 2015-12, then Dec 2015",one-decimal index at base month; gap over 0.05
-2017-01,out,1.732,1.8167,0.0847,1.7,111.6,109.7,False,851,131,6.756,"Dec 2015 rolled to 2016-01, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-02,out,2.0073,2.1002,0.0929,2.0,111.8,109.6,False,851,132,6.808,"Dec 2015 rolled to 2016-02, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-03,out,2.1878,2.31,0.1222,2.2,112.1,109.7,False,851,133,6.785,"Dec 2015 rolled to 2016-03, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-04,out,2.4545,2.5811,0.1266,2.5,112.7,110.0,False,851,133,6.721,"Dec 2015 rolled to 2016-04, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-05,out,2.2686,2.3507,0.0821,2.3,112.7,110.2,False,851,132,6.746,"Dec 2015 rolled to 2016-05, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-06,out,1.8953,1.9024,0.0071,1.9,112.9,110.8,False,851,133,6.725,"Dec 2015 rolled to 2016-06, then Dec 2016",one-decimal index at base month
-2017-07,out,1.9856,1.9733,-0.0123,2.0,113.0,110.8,False,851,134,6.676,"Dec 2015 rolled to 2016-07, then Dec 2016",one-decimal index at base month
-2017-08,out,2.4434,2.493,0.0495,2.4,113.2,110.5,False,851,134,6.671,"Dec 2015 rolled to 2016-08, then Dec 2016",one-decimal index at base month
-2017-09,out,2.6221,2.5677,-0.0544,2.6,113.5,110.6,False,851,134,6.664,"Dec 2015 rolled to 2016-09, then Dec 2016",one-decimal index at base month; gap over 0.05
-2017-10,out,2.7928,2.7431,-0.0497,2.8,114.1,111.0,False,851,133,6.685,"Dec 2015 rolled to 2016-10, then Dec 2016",one-decimal index at base month
-2017-11,out,2.9783,3.0073,0.0289,3.0,114.1,110.8,False,851,134,6.722,"Dec 2015 rolled to 2016-11, then Dec 2016",one-decimal index at base month
-2017-12,out,2.5225,2.6497,0.1271,2.5,113.8,111.0,False,851,135,6.746,"Dec 2015 rolled to 2016-12, then Dec 2016",one-decimal index at base month; gap over 0.05
-2018-01,out,2.5986,2.6408,0.0423,2.6,114.5,111.6,False,850,131,6.793,"Dec 2016 rolled to 2017-01, then Dec 2017",one-decimal index at base month
-2018-02,out,2.7728,2.845,0.0722,2.8,114.9,111.8,False,850,131,6.72,"Dec 2016 rolled to 2017-02, then Dec 2017",one-decimal index at base month; gap over 0.05
-2018-03,out,2.9438,2.9188,-0.025,2.9,115.4,112.1,False,850,131,6.752,"Dec 2016 rolled to 2017-03, then Dec 2017",one-decimal index at base month
-2018-04,out,2.6619,2.5998,-0.0622,2.7,115.7,112.7,False,850,131,6.786,"Dec 2016 rolled to 2017-04, then Dec 2017",one-decimal index at base month; gap over 0.05
-2018-05,out,3.1056,3.0355,-0.0701,3.1,116.2,112.7,False,850,132,6.835,"Dec 2016 rolled to 2017-05, then Dec 2017",one-decimal index at base month; gap over 0.05
-2018-06,out,3.2772,3.2796,0.0023,3.3,116.6,112.9,False,850,133,6.794,"Dec 2016 rolled to 2017-06, then Dec 2017",one-decimal index at base month
-2018-07,out,3.3628,3.3158,-0.047,3.4,116.8,113.0,False,850,133,6.786,"Dec 2016 rolled to 2017-07, then Dec 2017",one-decimal index at base month
-2018-08,out,3.0035,3.0214,0.0179,3.0,116.6,113.2,False,850,134,6.848,"Dec 2016 rolled to 2017-08, then Dec 2017",one-decimal index at base month
-2018-09,out,2.7313,2.7759,0.0447,2.7,116.6,113.5,False,850,137,6.876,"Dec 2016 rolled to 2017-09, then Dec 2017",one-decimal index at base month
-2018-10,out,3.0675,3.0453,-0.0222,3.1,117.6,114.1,False,850,136,6.849,"Dec 2016 rolled to 2017-10, then Dec 2017",one-decimal index at base month
-2018-11,out,2.6293,2.6979,0.0686,2.6,117.1,114.1,False,850,137,6.879,"Dec 2016 rolled to 2017-11, then Dec 2017",one-decimal index at base month; gap over 0.05
-2018-12,out,2.6362,2.6134,-0.0228,2.6,116.8,113.8,False,850,137,6.828,"Dec 2016 rolled to 2017-12, then Dec 2017",one-decimal index at base month
-2019-01,out,1.9214,1.9453,0.0239,1.9,116.7,114.5,False,849,131,6.036,"Dec 2017 rolled to 2018-01, then Dec 2018",one-decimal index at base month
-2019-02,out,1.9147,1.8702,-0.0445,1.9,117.1,114.9,False,849,132,6.029,"Dec 2017 rolled to 2018-02, then Dec 2018",one-decimal index at base month
-2019-03,out,1.9931,2.0529,0.0598,2.0,117.7,115.4,False,849,131,6.071,"Dec 2017 rolled to 2018-03, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-04,out,2.4201,2.4821,0.0621,2.4,118.5,115.7,False,849,131,6.096,"Dec 2017 rolled to 2018-04, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-05,out,2.0654,2.189,0.1236,2.1,118.6,116.2,False,849,132,6.101,"Dec 2017 rolled to 2018-05, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-06,out,1.6295,1.7626,0.1331,1.6,118.5,116.6,False,849,131,6.104,"Dec 2017 rolled to 2018-06, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-07,out,1.6267,1.8355,0.2088,1.6,118.7,116.8,False,849,131,6.105,"Dec 2017 rolled to 2018-07, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-08,out,1.8868,1.9641,0.0773,1.9,118.8,116.6,False,849,131,6.049,"Dec 2017 rolled to 2018-08, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-09,out,1.458,1.6558,0.1979,1.5,118.3,116.6,False,849,132,6.041,"Dec 2017 rolled to 2018-09, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-10,out,1.0204,1.2774,0.257,1.0,118.8,117.6,False,849,131,6.097,"Dec 2017 rolled to 2018-10, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-11,out,1.0248,1.1979,0.1732,1.0,118.3,117.1,False,849,131,6.094,"Dec 2017 rolled to 2018-11, then Dec 2018",one-decimal index at base month; gap over 0.05
-2019-12,out,1.3699,1.5293,0.1594,1.4,118.4,116.8,False,849,131,6.114,"Dec 2017 rolled to 2018-12, then Dec 2018",one-decimal index at base month; gap over 0.05
-2020-01,out,1.9709,2.0652,0.0943,2.0,119.0,116.7,False,843,116,5.958,"Dec 2018 rolled to 2019-01, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-02,out,1.1102,1.3228,0.2126,1.1,118.4,117.1,False,843,120,5.968,"Dec 2018 rolled to 2019-02, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-03,out,0.3398,0.5021,0.1623,0.3,118.1,117.7,False,843,119,6.011,"Dec 2018 rolled to 2019-03, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-04,out,-1.519,-1.2936,0.2254,-1.5,116.7,118.5,False,843,119,6.026,"Dec 2018 rolled to 2019-04, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-05,out,-1.0961,-0.9101,0.186,-1.1,117.3,118.6,False,843,119,6.025,"Dec 2018 rolled to 2019-05, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-06,out,-0.6751,-0.5678,0.1073,-0.7,117.7,118.5,False,843,120,6.053,"Dec 2018 rolled to 2019-06, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-07,out,-0.2527,-0.1864,0.0664,-0.3,118.4,118.7,False,843,122,6.456,"Dec 2018 rolled to 2019-07, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-08,out,-0.2525,-0.1418,0.1107,-0.3,118.5,118.8,False,843,123,6.12,"Dec 2018 rolled to 2019-08, then Dec 2019",one-decimal index at base month; gap over 0.05
-2020-09,out,0.3381,0.3317,-0.0065,0.3,118.7,118.3,False,843,123,6.038,"Dec 2018 rolled to 2019-09, then Dec 2019",one-decimal index at base month
-2020-10,out,0.5892,0.6101,0.0208,0.6,119.5,118.8,False,843,122,5.99,"Dec 2018 rolled to 2019-10, then Dec 2019",one-decimal index at base month
-2020-11,out,0.8453,0.8197,-0.0256,0.8,119.3,118.3,False,843,123,6.014,"Dec 2018 rolled to 2019-11, then Dec 2019",one-decimal index at base month
-2020-12,out,0.8446,0.8549,0.0103,0.8,119.4,118.4,False,843,123,6.05,"Dec 2018 rolled to 2019-12, then Dec 2019",one-decimal index at base month
-2021-01,out,1.5966,1.6926,0.096,1.6,120.9,119.0,False,839,113,1.904,"Dec 2019 rolled to 2020-01, then Dec 2020",one-decimal index at base month; gap over 0.05
-2021-02,out,2.9561,2.8989,-0.0571,3.0,121.9,118.4,False,839,114,1.921,"Dec 2019 rolled to 2020-02, then Dec 2020",one-decimal index at base month; gap over 0.05
-2021-03,out,4.149,4.1536,0.0046,4.1,123.0,118.1,False,839,113,1.92,"Dec 2019 rolled to 2020-03, then Dec 2020",one-decimal index at base month
-2021-04,out,6.5124,6.5055,-0.0069,6.5,124.3,116.7,False,839,114,1.951,"Dec 2019 rolled to 2020-04, then Dec 2020",one-decimal index at base month
-2021-05,out,6.9906,6.9992,0.0086,7.0,125.5,117.3,False,839,114,1.942,"Dec 2019 rolled to 2020-05, then Dec 2020",one-decimal index at base month
-2021-06,out,7.5616,7.5598,-0.0018,7.6,126.6,117.7,False,839,116,1.959,"Dec 2019 rolled to 2020-06, then Dec 2020",one-decimal index at base month
-2021-07,out,7.9595,7.9822,0.0228,8.0,127.824,118.4,False,839,120,2.379,"Dec 2019 rolled to 2020-07, then Dec 2020",one-decimal index at base month
-2021-08,out,8.654,8.6606,0.0066,8.7,128.755,118.5,False,839,121,2.059,"Dec 2019 rolled to 2020-08, then Dec 2020",one-decimal index at base month
-2021-09,out,8.7751,8.8021,0.0271,8.8,129.116,118.7,False,839,123,2.105,"Dec 2019 rolled to 2020-09, then Dec 2020",one-decimal index at base month
-2021-10,out,8.8678,8.877,0.0092,8.9,130.097,119.5,False,839,118,1.99,"Dec 2019 rolled to 2020-10, then Dec 2020",one-decimal index at base month
-2021-11,out,9.8826,9.9154,0.0328,9.9,131.09,119.3,False,839,118,2.0,"Dec 2019 rolled to 2020-11, then Dec 2020",one-decimal index at base month
-2021-12,out,10.0034,10.0474,0.0441,10.0,131.344,119.4,False,839,119,1.997,"Dec 2019 rolled to 2020-12, then Dec 2020",one-decimal index at base month
-2022-01,out,10.0695,10.0397,-0.0297,10.1,133.074,120.9,False,837,118,1.941,"Dec 2020 rolled to 2021-01, then Dec 2021",one-decimal index at base month
-2022-02,out,10.4028,10.4326,0.0298,10.4,134.581,121.9,False,837,120,1.955,"Dec 2020 rolled to 2021-02, then Dec 2021",one-decimal index at base month
-2022-03,out,11.6593,11.6564,-0.003,11.7,137.341,123.0,False,837,121,2.006,"Dec 2020 rolled to 2021-03, then Dec 2021",one-decimal index at base month
-2022-04,out,11.1657,11.1341,-0.0317,11.2,138.179,124.3,False,837,121,2.01,"Dec 2020 rolled to 2021-04, then Dec 2021",one-decimal index at base month
-2022-05,out,11.0908,11.0772,-0.0136,11.1,139.419,125.5,False,837,122,2.009,"Dec 2020 rolled to 2021-05, then Dec 2021",one-decimal index at base month
-2022-06,out,11.2314,11.235,0.0036,11.2,140.819,126.6,False,837,125,2.049,"Dec 2020 rolled to 2021-06, then Dec 2021",one-decimal index at base month
+2016-10,flagged,1.0929,1.062,-0.0309,1.1,111.0,109.8,False,860,140,9.151,"Dec 2014 rolled to 2015-10, then Dec 2015",one-decimal index at base month
+2016-11,flagged,1.2797,1.1196,-0.1601,1.3,110.8,109.4,False,860,140,9.202,"Dec 2014 rolled to 2015-11, then Dec 2015",one-decimal index at base month; gap over 0.05
+2016-12,flagged,1.7415,1.6142,-0.1273,1.7,111.0,109.1,False,860,141,9.362,"Dec 2014 rolled to 2015-12, then Dec 2015",one-decimal index at base month; gap over 0.05
+2017-01,flagged,1.732,1.8167,0.0847,1.7,111.6,109.7,False,851,131,6.756,"Dec 2015 rolled to 2016-01, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-02,flagged,2.0073,2.1002,0.0929,2.0,111.8,109.6,False,851,132,6.808,"Dec 2015 rolled to 2016-02, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-03,flagged,2.1878,2.31,0.1222,2.2,112.1,109.7,False,851,133,6.785,"Dec 2015 rolled to 2016-03, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-04,flagged,2.4545,2.5811,0.1266,2.5,112.7,110.0,False,851,133,6.721,"Dec 2015 rolled to 2016-04, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-05,flagged,2.2686,2.3507,0.0821,2.3,112.7,110.2,False,851,132,6.746,"Dec 2015 rolled to 2016-05, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-06,flagged,1.8953,1.9024,0.0071,1.9,112.9,110.8,False,851,133,6.725,"Dec 2015 rolled to 2016-06, then Dec 2016",one-decimal index at base month
+2017-07,flagged,1.9856,1.9733,-0.0123,2.0,113.0,110.8,False,851,134,6.676,"Dec 2015 rolled to 2016-07, then Dec 2016",one-decimal index at base month
+2017-08,flagged,2.4434,2.493,0.0495,2.4,113.2,110.5,False,851,134,6.671,"Dec 2015 rolled to 2016-08, then Dec 2016",one-decimal index at base month
+2017-09,flagged,2.6221,2.5677,-0.0544,2.6,113.5,110.6,False,851,134,6.664,"Dec 2015 rolled to 2016-09, then Dec 2016",one-decimal index at base month; gap over 0.05
+2017-10,flagged,2.7928,2.7431,-0.0497,2.8,114.1,111.0,False,851,133,6.685,"Dec 2015 rolled to 2016-10, then Dec 2016",one-decimal index at base month
+2017-11,flagged,2.9783,3.0073,0.0289,3.0,114.1,110.8,False,851,134,6.722,"Dec 2015 rolled to 2016-11, then Dec 2016",one-decimal index at base month
+2017-12,flagged,2.5225,2.6497,0.1271,2.5,113.8,111.0,False,851,135,6.746,"Dec 2015 rolled to 2016-12, then Dec 2016",one-decimal index at base month; gap over 0.05
+2018-01,flagged,2.5986,2.6408,0.0423,2.6,114.5,111.6,False,850,131,6.793,"Dec 2016 rolled to 2017-01, then Dec 2017",one-decimal index at base month
+2018-02,flagged,2.7728,2.845,0.0722,2.8,114.9,111.8,False,850,131,6.72,"Dec 2016 rolled to 2017-02, then Dec 2017",one-decimal index at base month; gap over 0.05
+2018-03,flagged,2.9438,2.9188,-0.025,2.9,115.4,112.1,False,850,131,6.752,"Dec 2016 rolled to 2017-03, then Dec 2017",one-decimal index at base month
+2018-04,flagged,2.6619,2.5998,-0.0622,2.7,115.7,112.7,False,850,131,6.786,"Dec 2016 rolled to 2017-04, then Dec 2017",one-decimal index at base month; gap over 0.05
+2018-05,flagged,3.1056,3.0355,-0.0701,3.1,116.2,112.7,False,850,132,6.835,"Dec 2016 rolled to 2017-05, then Dec 2017",one-decimal index at base month; gap over 0.05
+2018-06,flagged,3.2772,3.2796,0.0023,3.3,116.6,112.9,False,850,133,6.794,"Dec 2016 rolled to 2017-06, then Dec 2017",one-decimal index at base month
+2018-07,flagged,3.3628,3.3158,-0.047,3.4,116.8,113.0,False,850,133,6.786,"Dec 2016 rolled to 2017-07, then Dec 2017",one-decimal index at base month
+2018-08,flagged,3.0035,3.0214,0.0179,3.0,116.6,113.2,False,850,134,6.848,"Dec 2016 rolled to 2017-08, then Dec 2017",one-decimal index at base month
+2018-09,flagged,2.7313,2.7759,0.0447,2.7,116.6,113.5,False,850,137,6.876,"Dec 2016 rolled to 2017-09, then Dec 2017",one-decimal index at base month
+2018-10,flagged,3.0675,3.0453,-0.0222,3.1,117.6,114.1,False,850,136,6.849,"Dec 2016 rolled to 2017-10, then Dec 2017",one-decimal index at base month
+2018-11,flagged,2.6293,2.6979,0.0686,2.6,117.1,114.1,False,850,137,6.879,"Dec 2016 rolled to 2017-11, then Dec 2017",one-decimal index at base month; gap over 0.05
+2018-12,flagged,2.6362,2.6134,-0.0228,2.6,116.8,113.8,False,850,137,6.828,"Dec 2016 rolled to 2017-12, then Dec 2017",one-decimal index at base month
+2019-01,flagged,1.9214,1.9453,0.0239,1.9,116.7,114.5,False,849,131,6.036,"Dec 2017 rolled to 2018-01, then Dec 2018",one-decimal index at base month
+2019-02,flagged,1.9147,1.8702,-0.0445,1.9,117.1,114.9,False,849,132,6.029,"Dec 2017 rolled to 2018-02, then Dec 2018",one-decimal index at base month
+2019-03,flagged,1.9931,2.0529,0.0598,2.0,117.7,115.4,False,849,131,6.071,"Dec 2017 rolled to 2018-03, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-04,flagged,2.4201,2.4821,0.0621,2.4,118.5,115.7,False,849,131,6.096,"Dec 2017 rolled to 2018-04, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-05,flagged,2.0654,2.189,0.1236,2.1,118.6,116.2,False,849,132,6.101,"Dec 2017 rolled to 2018-05, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-06,flagged,1.6295,1.7626,0.1331,1.6,118.5,116.6,False,849,131,6.104,"Dec 2017 rolled to 2018-06, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-07,flagged,1.6267,1.8355,0.2088,1.6,118.7,116.8,False,849,131,6.105,"Dec 2017 rolled to 2018-07, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-08,flagged,1.8868,1.9641,0.0773,1.9,118.8,116.6,False,849,131,6.049,"Dec 2017 rolled to 2018-08, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-09,flagged,1.458,1.6558,0.1979,1.5,118.3,116.6,False,849,132,6.041,"Dec 2017 rolled to 2018-09, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-10,flagged,1.0204,1.2774,0.257,1.0,118.8,117.6,False,849,131,6.097,"Dec 2017 rolled to 2018-10, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-11,flagged,1.0248,1.1979,0.1732,1.0,118.3,117.1,False,849,131,6.094,"Dec 2017 rolled to 2018-11, then Dec 2018",one-decimal index at base month; gap over 0.05
+2019-12,flagged,1.3699,1.5293,0.1594,1.4,118.4,116.8,False,849,131,6.114,"Dec 2017 rolled to 2018-12, then Dec 2018",one-decimal index at base month; gap over 0.05
+2020-01,flagged,1.9709,2.0652,0.0943,2.0,119.0,116.7,False,843,116,5.958,"Dec 2018 rolled to 2019-01, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-02,flagged,1.1102,1.3228,0.2126,1.1,118.4,117.1,False,843,120,5.968,"Dec 2018 rolled to 2019-02, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-03,flagged,0.3398,0.5021,0.1623,0.3,118.1,117.7,False,843,119,6.011,"Dec 2018 rolled to 2019-03, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-04,flagged,-1.519,-1.2936,0.2254,-1.5,116.7,118.5,False,843,119,6.026,"Dec 2018 rolled to 2019-04, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-05,flagged,-1.0961,-0.9101,0.186,-1.1,117.3,118.6,False,843,119,6.025,"Dec 2018 rolled to 2019-05, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-06,flagged,-0.6751,-0.5678,0.1073,-0.7,117.7,118.5,False,843,120,6.053,"Dec 2018 rolled to 2019-06, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-07,flagged,-0.2527,-0.1864,0.0664,-0.3,118.4,118.7,False,843,122,6.456,"Dec 2018 rolled to 2019-07, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-08,flagged,-0.2525,-0.1418,0.1107,-0.3,118.5,118.8,False,843,123,6.12,"Dec 2018 rolled to 2019-08, then Dec 2019",one-decimal index at base month; gap over 0.05
+2020-09,flagged,0.3381,0.3317,-0.0065,0.3,118.7,118.3,False,843,123,6.038,"Dec 2018 rolled to 2019-09, then Dec 2019",one-decimal index at base month
+2020-10,flagged,0.5892,0.6101,0.0208,0.6,119.5,118.8,False,843,122,5.99,"Dec 2018 rolled to 2019-10, then Dec 2019",one-decimal index at base month
+2020-11,flagged,0.8453,0.8197,-0.0256,0.8,119.3,118.3,False,843,123,6.014,"Dec 2018 rolled to 2019-11, then Dec 2019",one-decimal index at base month
+2020-12,flagged,0.8446,0.8549,0.0103,0.8,119.4,118.4,False,843,123,6.05,"Dec 2018 rolled to 2019-12, then Dec 2019",one-decimal index at base month
+2021-01,flagged,1.5966,1.6926,0.096,1.6,120.9,119.0,False,839,113,1.904,"Dec 2019 rolled to 2020-01, then Dec 2020",one-decimal index at base month; gap over 0.05
+2021-02,flagged,2.9561,2.8989,-0.0571,3.0,121.9,118.4,False,839,114,1.921,"Dec 2019 rolled to 2020-02, then Dec 2020",one-decimal index at base month; gap over 0.05
+2021-03,flagged,4.149,4.1536,0.0046,4.1,123.0,118.1,False,839,113,1.92,"Dec 2019 rolled to 2020-03, then Dec 2020",one-decimal index at base month
+2021-04,flagged,6.5124,6.5055,-0.0069,6.5,124.3,116.7,False,839,114,1.951,"Dec 2019 rolled to 2020-04, then Dec 2020",one-decimal index at base month
+2021-05,flagged,6.9906,6.9992,0.0086,7.0,125.5,117.3,False,839,114,1.942,"Dec 2019 rolled to 2020-05, then Dec 2020",one-decimal index at base month
+2021-06,flagged,7.5616,7.5598,-0.0018,7.6,126.6,117.7,False,839,116,1.959,"Dec 2019 rolled to 2020-06, then Dec 2020",one-decimal index at base month
+2021-07,flagged,7.9595,7.9822,0.0228,8.0,127.824,118.4,False,839,120,2.379,"Dec 2019 rolled to 2020-07, then Dec 2020",one-decimal index at base month
+2021-08,flagged,8.654,8.6606,0.0066,8.7,128.755,118.5,False,839,121,2.059,"Dec 2019 rolled to 2020-08, then Dec 2020",one-decimal index at base month
+2021-09,flagged,8.7751,8.8021,0.0271,8.8,129.116,118.7,False,839,123,2.105,"Dec 2019 rolled to 2020-09, then Dec 2020",one-decimal index at base month
+2021-10,flagged,8.8678,8.877,0.0092,8.9,130.097,119.5,False,839,118,1.99,"Dec 2019 rolled to 2020-10, then Dec 2020",one-decimal index at base month
+2021-11,flagged,9.8826,9.9154,0.0328,9.9,131.09,119.3,False,839,118,2.0,"Dec 2019 rolled to 2020-11, then Dec 2020",one-decimal index at base month
+2021-12,flagged,10.0034,10.0474,0.0441,10.0,131.344,119.4,False,839,119,1.997,"Dec 2019 rolled to 2020-12, then Dec 2020",one-decimal index at base month
+2022-01,flagged,10.0695,10.0397,-0.0297,10.1,133.074,120.9,False,837,118,1.941,"Dec 2020 rolled to 2021-01, then Dec 2021",one-decimal index at base month
+2022-02,flagged,10.4028,10.4326,0.0298,10.4,134.581,121.9,False,837,120,1.955,"Dec 2020 rolled to 2021-02, then Dec 2021",one-decimal index at base month
+2022-03,flagged,11.6593,11.6564,-0.003,11.7,137.341,123.0,False,837,121,2.006,"Dec 2020 rolled to 2021-03, then Dec 2021",one-decimal index at base month
+2022-04,flagged,11.1657,11.1341,-0.0317,11.2,138.179,124.3,False,837,121,2.01,"Dec 2020 rolled to 2021-04, then Dec 2021",one-decimal index at base month
+2022-05,flagged,11.0908,11.0772,-0.0136,11.1,139.419,125.5,False,837,122,2.009,"Dec 2020 rolled to 2021-05, then Dec 2021",one-decimal index at base month
+2022-06,flagged,11.2314,11.235,0.0036,11.2,140.819,126.6,False,837,125,2.049,"Dec 2020 rolled to 2021-06, then Dec 2021",one-decimal index at base month
 2022-07,pass,9.7478,9.7619,0.0141,9.7,140.284,127.824,False,837,125,2.043,"Dec 2020 rolled to 2021-07, then Dec 2021",
 2022-08,pass,8.7065,8.7213,0.0148,8.7,139.965,128.755,False,837,125,2.04,"Dec 2020 rolled to 2021-08, then Dec 2021",
 2022-09,pass,8.4807,8.4995,0.0188,8.5,140.066,129.116,False,837,127,2.092,"Dec 2020 rolled to 2021-09, then Dec 2021",

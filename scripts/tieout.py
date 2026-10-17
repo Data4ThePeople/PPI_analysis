@@ -34,9 +34,9 @@ def raw_fd4():
 def main():
     rows = list(csv.DictReader(open(PROCESSED / "monthly_summary.csv")))
     fd = raw_fd4()
-    lines = ["| Month | Published 12-mo % | Items sum | Gap (pts) | BLS rounds to | Filled weight % | Status | Why out |",
-             "|---|---:|---:|---:|---:|---:|---|---|"]
-    print(f"{'month':8} {'published':>9} {'items':>8} {'gap':>8} {'1dp':>5} {'filled%':>7}  status")
+    lines = ["| Month | Published 12-mo % | Items sum | Gap (pts) | BLS rounds to | Items round to | Filled weight % | Strict tie-out | Why it misses |",
+             "|---|---:|---:|---:|---:|---:|---:|---|---|"]
+    print(f"{'month':8} {'published':>9} {'items':>8} {'gap':>8} {'BLS1dp':>6} {'ours1dp':>7} {'filled%':>7}  strict tie-out")
     bad_raw = []
     for r in rows:
         t = r["month"]
@@ -46,14 +46,17 @@ def main():
             bad_raw.append(t)
         flag = r["status"] + (" (P)" if r["preliminary"] == "True" else "")
         print(f"{t:8} {float(r['published']):9.3f} {float(r['items']):8.3f} {float(r['gap']):+8.4f} "
-              f"{float(r['published_1dp']):5.1f} {float(r['filled_share']):7.2f}  {flag:9} {r['why_out']}")
+              f"{float(r['published_1dp']):6.1f} {round(float(r['items']), 1):7.1f} {float(r['filled_share']):7.2f}  {flag:12} {r['why_out']}")
         lines.append(f"| {t} | {float(r['published']):.3f} | {float(r['items']):.3f} | {float(r['gap']):+.4f} | "
-                     f"{float(r['published_1dp']):.1f} | {float(r['filled_share']):.2f} | {flag} | {r['why_out']} |")
+                     f"{float(r['published_1dp']):.1f} | {float(r['items']):.1f} | {float(r['filled_share']):.2f} | {flag} | {r['why_out']} |")
     passing = [r for r in rows if r["status"] == "pass"]
     gaps = [abs(float(r["gap"])) for r in passing]
     pre = [r for r in rows if r["why_out"].startswith("one-decimal")]
     pre_over = sum(abs(float(r["gap"])) > 0.05 for r in pre)
-    summary = (f"{len(passing)} of {len(rows)} months pass ({passing[0]['month']} to {passing[-1]['month']}). "
+    diff1 = sum(round(float(r["items"]), 1) != float(r["published_1dp"]) for r in rows)
+    summary = (f"All {len(rows)} months are shown. {len(passing)} pass the strict tie-out "
+               f"({passing[0]['month']} to {passing[-1]['month']}); {len(rows) - len(passing)} are flagged. "
+               f"In {diff1} months the items round to a different one-decimal figure than BLS's. "
                f"Passing months: mean absolute gap {sum(gaps)/len(gaps):.4f} points, largest {max(gaps):.4f}; "
                f"{sum(g <= 0.02 for g in gaps)} within 0.02. One-decimal months ({len(pre)}): "
                f"{pre_over} miss by more than 0.05.")

@@ -47,6 +47,9 @@ button:focus-visible,input:focus-visible{outline:2px solid var(--focus);outline-
 #readout .v{font-size:14.5px;line-height:1.35;margin-top:2px}
 #readout .v b{font-size:17px}
 #readout .g{font-size:12px;line-height:1.35;margin-top:3px;color:#d6e2ec}
+#readout .flag{margin-top:6px;background:#fab219;color:#1f1a0e;text-shadow:none;border-radius:6px;padding:5px 8px;font-size:12px;line-height:1.35}
+#readout .flag b{font-weight:700}
+#readout .ok{margin-top:5px;font-size:12px;color:#bfe6c4}
 #table-wrap{position:absolute;inset:0;overflow:auto;display:none;background:var(--page)}
 #table-wrap.on{display:block}
 table{border-collapse:collapse;width:100%;font-size:13px}
@@ -73,7 +76,9 @@ footer a{color:inherit}
   header h1{font-size:18px}
   header p{font-size:12.5px}
   #readout{max-width:62%}
-  #readout .g{display:none}
+  #readout .g,#readout .ok{display:none}
+  #readout .flag{font-size:11px;padding:4px 6px}
+  header p,#source{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   #readout .m{font-size:17px}
   #readout .v{font-size:12.5px}
   #legend .lbl{display:none}
@@ -156,7 +161,8 @@ function legend() {
                  ...s.map((v, j) => [20 * (j + 8), '+' + v])];
   $('#legend').innerHTML = `<span class="lbl">Color: the item's own price change over 12 months, %</span>
     <span style="position:relative;display:inline-block;padding-bottom:14px"><span class="bar">${bar}</span>${ticks.map(([x, l]) => `<span style="position:absolute;top:14px;left:${x - 12}px;width:24px;text-align:center;font-size:10.5px;color:var(--muted)">${l}</span>`).join('')}</span>
-    <span class="gapkey"><i></i>Not explained by the items</span>`;
+    <span class="gapkey"><i></i>Not explained by the items</span>
+    <span class="gapkey"><i style="background:#fab219"></i>Month misses our tie-out</span>`;
 }
 
 // ---------- geometry ----------
@@ -235,19 +241,24 @@ function resize() {
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   G = geom();
   // One size scale for all months, shrunk until every month's clusters fit
-  // between the surface and the date axis at that month's depth.
-  for (let pass = 0; pass < 4; pass++) {
-    LAYOUT = M.map((_, i) => layoutMonth(i));
-    let need = 1;
-    LAYOUT.forEach((L, i) => {
-      const y = depthY(M[i].pub);
-      const below = y + 34 + (L.up.bot - L.up.top), roomB = H - G.axisH - 6;
-      const above = y - 34 - (L.dn.bot - L.dn.top), roomA = G.sky * 0.4;
-      if (below > roomB) need = Math.min(need, (roomB - y - 34) / (below - y - 34));
-      if (above < roomA) need = Math.min(need, (y - 34 - roomA) / (y - 34 - above));
-    });
-    if (need >= 0.999) break;
-    G.k *= need * need * 0.98;
+  // between the surface and the date axis at that month's depth. Packing does
+  // not depend on scale, so pack once and shrink the coordinates.
+  LAYOUT = M.map((_, i) => layoutMonth(i));
+  let need = 1;
+  LAYOUT.forEach((L, i) => {
+    const y = depthY(M[i].pub);
+    const hB = L.up.bot - L.up.top, hA = L.dn.bot - L.dn.top;
+    const roomB = H - G.axisH - 6 - y - 34, roomA = y - 34 - G.sky * 0.4;
+    if (hB > roomB) need = Math.min(need, roomB / hB);
+    if (hA > roomA) need = Math.min(need, roomA / hA);
+  });
+  if (need < 1) {
+    const f = Math.max(0.05, need * 0.99);
+    G.k *= f * f;
+    for (const L of LAYOUT) for (const side of ['up', 'dn']) {
+      const P = L[side]; P.top *= f; P.bot *= f; P.R *= f;
+      for (const c of P.list) { c.x *= f; c.y *= f; c.r *= f; }
+    }
   }
 }
 
@@ -355,11 +366,11 @@ function drawAxes(scroll, mi) {
   ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle';
   for (let d = DATA.axis.lo; d <= DATA.axis.hi + 1e-9; d += DATA.axis.step) {
     const y = depthY(d);
-    ctx.strokeStyle = 'rgba(220,235,245,.16)'; ctx.setLineDash([3, 5]); ctx.beginPath(); ctx.moveTo(40, y); ctx.lineTo(W, y); ctx.stroke(); ctx.setLineDash([]);
-    ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.textAlign = 'left'; ctx.fillText(d + '%', 8, y);
+    ctx.strokeStyle = 'rgba(220,235,245,.16)'; ctx.setLineDash([3, 5]); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W - 40, y); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.textAlign = 'right'; ctx.fillText((d < 0 ? '−' : '') + Math.abs(d) + '%', W - 8, y);
   }
-  ctx.textAlign = 'left'; ctx.fillStyle = 'rgba(230,240,248,.7)';
-  ctx.fillText('PPI, 12-month change (deeper = more inflation)', 8, G.yTop - 16);
+  ctx.textAlign = 'right'; ctx.fillStyle = 'rgba(230,240,248,.7)';
+  ctx.fillText('PPI, 12-month change (deeper = more inflation)', W - 8, G.yBot + 18);
   // trail: the diver's path through past months (real values only, at month points)
   ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2; ctx.beginPath();
   let started = false;
@@ -372,6 +383,25 @@ function drawAxes(scroll, mi) {
   // date axis at the bottom: months scroll past under the diver
   const y0 = H - G.axisH;
   ctx.fillStyle = 'rgba(4,16,28,.82)'; ctx.fillRect(0, y0, W, G.axisH);
+  const lastRough = M.reduce((k, m, i) => m.precise ? k : i, -1);
+  if (lastRough >= 0) {
+    const xa = G.cx + (0 - scroll) * G.monthPx - G.monthPx / 2, xb = G.cx + (lastRough - scroll) * G.monthPx + G.monthPx / 2;
+    if (xb > 0 && xa < W) {
+      ctx.fillStyle = 'rgba(250,178,25,.16)'; ctx.fillRect(Math.max(0, xa), y0, Math.min(W, xb) - Math.max(0, xa), G.axisH);
+      ctx.strokeStyle = 'rgba(250,178,25,.8)'; ctx.beginPath(); ctx.moveTo(xb, y0 - 30); ctx.lineTo(xb, H); ctx.stroke();
+      ctx.font = '600 11px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle';
+      ctx.fillStyle = '#fab219'; ctx.textAlign = 'right';
+      if (xb > 260) ctx.fillText('\u2190 BLS index rounded to 1 decimal', xb - 6, y0 - 12);
+      ctx.textAlign = 'left';
+      if (xb < W - 220) ctx.fillText('3 decimals \u2192', xb + 6, y0 - 12);
+      ctx.font = '11px -apple-system,Helvetica,Arial,sans-serif';
+    }
+  }
+  for (let i = 0; i < N; i++) {
+    if (M[i].pass) continue;
+    const x = G.cx + (i - scroll) * G.monthPx; if (x < -10 || x > W + 10) continue;
+    ctx.fillStyle = '#fab219'; ctx.beginPath(); ctx.arc(x, y0 + 3, 2.2, 0, Math.PI * 2); ctx.fill();
+  }
   ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
   for (let i = 0; i < N; i++) {
     const x = G.cx + (i - scroll) * G.monthPx; if (x < -40 || x > W + 40) continue;
@@ -456,8 +486,9 @@ function drawClusters(dx, dy) {
       const yoy = c.i >= 0 ? (row ? row[0] : (M[i0].r[c.i] || M[i1].r[c.i] || [null])[0]) : null;
       ctx.fillStyle = c.i < 0 ? RAMP.gap : colorFor(yoy);
       ctx.beginPath(); ctx.arc(X, Y, c.r, 0, Math.PI * 2); ctx.fill();
-      ctx.strokeStyle = (hover && hover.i === c.i && hover.side === side) ? '#ffffff' : 'rgba(8,24,40,.55)';
-      ctx.lineWidth = (hover && hover.i === c.i && hover.side === side) ? 2 : 0.8; ctx.stroke();
+      const hov = hover && hover.i === c.i && hover.side === side, warn = c.i < 0 && !m.pass;
+      ctx.strokeStyle = hov ? '#ffffff' : warn ? '#fab219' : 'rgba(8,24,40,.55)';
+      ctx.lineWidth = hov ? 2 : warn ? 2.5 : 0.8; ctx.stroke();
       if (sgn > 0 && c.r > 11 && c.i >= 0) anchorGlyph(X, Y, c.r);
       if (sgn < 0 && c.r > 6) {                       // buoy highlight
         ctx.fillStyle = 'rgba(255,255,255,.55)'; ctx.beginPath(); ctx.arc(X - c.r * 0.35, Y - c.r * 0.35, c.r * 0.22, 0, Math.PI * 2); ctx.fill();
@@ -524,10 +555,18 @@ function frame(ts) {
 let lastReadout = -1;
 function updateReadout() {
   const mi = curIndex(); if (mi === lastReadout) return; lastReadout = mi;
-  const m = M[mi];
+  const m = M[mi], t = ORDER[mi], b = (+t.slice(0, 4) - 1) + t.slice(4);
+  const ix = (v, ym) => v.toFixed(ym >= '2021-07' ? 3 : 1);
+  const r1 = Math.round(m.sum * 10) / 10;
+  const work = `BLS index ${ix(m.fdT, t)} vs ${ix(m.fdB, b)} a year earlier = ${fmt(m.pub, 3)}%. Items add up to ${fmt(m.sum, 3)}, so the gray piece is ${fmt(m.gap, 3)} to reach BLS's figure. Rounded: BLS ${pct1(m.pub)}, items ${pct1(r1)}.`;
+  const flag = m.pass ? `<div class="ok">\u2713 Passes our tie-out (gap within 0.05 points).</div>`
+    : `<div class="flag">\u26A0 <b>Misses our tie-out.</b> ${m.precise ? 'The gap is over 0.05 points.'
+       : Math.abs(m.gap) <= 0.05
+         ? `The items land within 0.05 points, but BLS published the index for ${m.base} to one decimal (${ix(m.fdB, b)}), so the headline is rounded and a close match can be luck.`
+         : 'Before July 2021 BLS published its indexes to one decimal, so the headline itself is rounded and the items cannot match it closely.'}</div>`;
   $('#readout').innerHTML = `<div class="m">${m.label}</div>
     <div class="v">Final demand prices: <b>${pct1(m.pub)}</b> from ${m.base}</div>
-    <div class="g">Items add up to ${fmt(m.sum)} points; the gray piece (${fmt(m.gap, 3)}) is the part they do not explain.${m.prelim ? ' Preliminary: BLS revises the last four months.' : ''}</div>`;
+    <div class="g">${work}${m.prelim ? ' Preliminary: BLS revises the last four months.' : ''}</div>${flag}`;
   $('#when').textContent = m.short;
   $('#slider').value = mi;
   cv.setAttribute('aria-label', `${m.label}: PPI final demand ${pct1(m.pub)} over 12 months. Largest push up: ${topName(mi, 1)}. Largest pull down: ${topName(mi, -1)}.`);
