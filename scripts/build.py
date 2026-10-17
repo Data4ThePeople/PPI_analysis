@@ -155,7 +155,13 @@ def write_page(payload, filename, description):
                 err = re.search(r'data-err="([^"]*)"', dom)
                 assert dom and not err, f"page JavaScript error {mode}: {err.group(1) if err else 'no output'}"
                 assert 'data-ready="1"' in dom, f"page script did not finish {mode}"
-        print(f"dist/{filename}: runs in Chrome (full, embedded, July 2022) without errors")
+            # Real time, not virtual: the script must finish quickly or the page sits blank.
+            dom = subprocess.run([chrome, "--headless=new", "--disable-gpu", "--window-size=1100,800",
+                                  "--dump-dom", f"file://{tmp}/probe.html"],
+                                 capture_output=True, text=True, timeout=120).stdout
+            ms = int(re.search(r'data-ms="(\d+)"', dom).group(1))
+            assert ms < 1000, f"page script took {ms} ms before first draw"
+        print(f"dist/{filename}: runs in Chrome (full, embedded, July 2022) without errors; script ready in {ms} ms")
     return full
 
 

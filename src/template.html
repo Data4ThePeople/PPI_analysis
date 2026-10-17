@@ -123,6 +123,7 @@ footer a{color:inherit}
 </div>
 <div id="tip" role="tooltip"></div>
 <script>
+const T0 = performance.now();
 const DATA = /*DATA*/{};
 const EMBED = (() => { if (location.hash.includes('embed=0')) return false; if (location.hash.includes('embed=1')) return true;
   try { return window.self !== window.top; } catch (e) { return true; } })();
@@ -240,26 +241,30 @@ function resize() {
   cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
   ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
   G = geom();
-  // One size scale for all months, shrunk until every month's clusters fit
-  // between the surface and the date axis at that month's depth. Packing does
-  // not depend on scale, so pack once and shrink the coordinates.
-  LAYOUT = M.map((_, i) => layoutMonth(i));
+  // One size scale for all months, set so every month's clusters fit between
+  // the surface and the date axis at that month's depth. Estimated from each
+  // cluster's total area (packing fills about 62% of its circle); months are
+  // packed only when drawn, and the rest in the background.
   let need = 1;
-  LAYOUT.forEach((L, i) => {
-    const y = depthY(M[i].pub);
-    const hB = L.up.bot - L.up.top, hA = L.dn.bot - L.dn.top;
+  M.forEach((m, i) => {
+    let up = Math.max(m.gap, 0), dn = Math.max(-m.gap, 0);
+    for (const r of m.r) if (r) { if (r[1] > 0) up += r[1]; else dn -= r[1]; }
+    const y = depthY(m.pub);
+    const hB = 2.15 * Math.sqrt(G.k * up / (Math.PI * 0.62)), hA = 2.15 * Math.sqrt(G.k * dn / (Math.PI * 0.62));
     const roomB = H - G.axisH - 6 - y - 34, roomA = y - 34 - G.sky * 0.4;
     if (hB > roomB) need = Math.min(need, roomB / hB);
     if (hA > roomA) need = Math.min(need, roomA / hA);
   });
-  if (need < 1) {
-    const f = Math.max(0.05, need * 0.99);
-    G.k *= f * f;
-    for (const L of LAYOUT) for (const side of ['up', 'dn']) {
-      const P = L[side]; P.top *= f; P.bot *= f; P.R *= f;
-      for (const c of P.list) { c.x *= f; c.y *= f; c.r *= f; }
-    }
-  }
+  if (need < 1) G.k *= Math.max(0.05, need) ** 2;
+  LAYOUT = new Array(N).fill(null);
+  clearTimeout(bgTimer); bgNext = 0; bgTimer = setTimeout(background, 400);
+}
+let bgTimer = 0, bgNext = 0;
+function lay(i) { return LAYOUT[i] || (LAYOUT[i] = layoutMonth(i)); }
+function background() {          // pack the remaining months a few at a time
+  const t0 = performance.now();
+  while (bgNext < N && performance.now() - t0 < 12) lay(bgNext++);
+  if (bgNext < N) bgTimer = setTimeout(background, 30);
 }
 
 // ---------- scenery (world x in month units, deterministic) ----------
@@ -464,7 +469,7 @@ function drawClusters(dx, dy) {
   const sides = [['up', 1], ['dn', -1]];
   const labels = [];
   for (const [side, sgn] of sides) {
-    const A = LAYOUT[i0][side], B = LAYOUT[i1][side];
+    const A = lay(i0)[side], B = lay(i1)[side];
     const offA = sgn > 0 ? 34 - A.top : -34 - A.bot, offB = sgn > 0 ? 34 - B.top : -34 - B.bot;
     const mapB = new Map(B.list.map(c => [c.i, c]));
     const mapA = new Map(A.list.map(c => [c.i, c]));
@@ -498,7 +503,7 @@ function drawClusters(dx, dy) {
       frameHits.push({ side, i: c.i, x: X, y: Y, r: Math.max(c.r, 3) });
     }
     // labels: the five largest of the current month, real values only
-    const cur = W < 620 ? [] : LAYOUT[mi][side].list.filter(c => c.i >= 0).slice(0, 5);
+    const cur = W < 620 ? [] : lay(mi)[side].list.filter(c => c.i >= 0).slice(0, 5);
     if (cur.length) labels.push({ side, sgn, cy: dy + cy, R: Math.max(A.R, B.R) * (1 - f) + B.R * f, items: cur.map(c => c.i) });
   }
   drawLabels(labels, dx, mi);
@@ -518,7 +523,7 @@ function drawLabels(groups, dx, mi) {
     ctx.font = '12px -apple-system,Helvetica,Arial,sans-serif';
     lines.forEach((l, k) => {
       const yy = y + 26 + k * lh;
-      let name = l[0]; const maxw = w - 70;
+      let name = l[0]; const maxw = w - 18 - ctx.measureText(l[1]).width - 10;
       while (ctx.measureText(name).width > maxw && name.length > 4) name = name.slice(0, -2);
       if (name !== l[0]) name = name.trimEnd() + '…';
       ctx.fillStyle = '#f2f6fa'; ctx.textAlign = 'left'; ctx.fillText(name, x + 9, yy);
@@ -647,8 +652,13 @@ document.addEventListener('keydown', e => {
 });
 
 readRamp(); legend(); resize();
-new ResizeObserver(() => { resize(); }).observe($('#stage'));
+let lastSize = '';
+new ResizeObserver(() => {
+  const r = $('#stage').getBoundingClientRect(), k = Math.round(r.width) + 'x' + Math.round(r.height);
+  if (k !== lastSize) { lastSize = k; resize(); }
+}).observe($('#stage'));
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { readRamp(); legend(); lastReadout = -1; });
 requestAnimationFrame(frame);
 document.body.setAttribute('data-ready', '1');
+document.body.setAttribute('data-ms', Math.round(performance.now() - T0));
 </script>
