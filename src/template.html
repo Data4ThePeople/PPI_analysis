@@ -615,7 +615,7 @@ function updateReadout() {
   const m = M[mi], t = ORDER[mi], b = (+t.slice(0, 4) - 1) + t.slice(4);
   const ix = (v, ym) => v.toFixed(ym >= '2021-07' ? 3 : 1);
   const r1 = Math.round(m.sum * 10) / 10;
-  const work = `BLS index ${ix(m.fdT, t)} vs ${ix(m.fdB, b)} a year earlier = ${fmt(m.pub, 3)}%. Items add up to ${fmt(m.sum, 3)}, so the gray piece is ${fmt(m.gap, 3)} to reach BLS's figure. Rounded: BLS ${pct1(m.pub)}, items ${pct1(r1)}.`;
+  const work = `BLS index ${ix(m.fdT, t)} vs ${ix(m.fdB, b)} a year earlier = ${fmt(m.pub, 3)}%. Items add up to ${fmt(m.sum, 3)}. Rounded: BLS ${pct1(m.pub)}, items ${pct1(r1)}.`;
   const flag = m.pass ? `<div class="ok">\u2713 Passes our tie-out (gap within 0.05 points).</div>`
     : `<div class="flag">\u26A0 Misses our tie-out (see the note below)</div>`;
   $('#note').innerHTML = noteHtml(mi);
