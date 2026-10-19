@@ -113,7 +113,7 @@ def encode(m):
         "source": ("Source: BLS Producer Price Index for final demand (WPUFD4) and its commodity indexes, "
                    "not seasonally adjusted, and BLS relative importance tables. Contributions computed by "
                    "Data 4 The People. Items with no published index use their parent category's change. "
-                   "The gray piece is the part the items do not add up to. Before July 2021 BLS published its "
+                   "Before July 2021 BLS published its "
                    "indexes to one decimal, so the items cannot match the headline as closely; those months "
                    "are flagged."),
         "axis": {"lo": lo, "hi": hi, "step": 2}, "size": {"up": round(up, 4), "dn": round(dn, 4)},
