@@ -120,6 +120,25 @@ def main():
         ("Portfolio management, highest in the window", f"{max(pm, key=pm.get)} ({max(pm.values()):.1f}%)"),
         ("Preliminary months", ", ".join(m for m in summary.index if summary.loc[m, "preliminary"])),
     ]
+    g_share = {k: v / total * 100 for k, v in g.items()}
+    trade_codes = cur[cur.index.str.match(r"^5[78]")]
+    diesel = {m: yoy(raw({"WPU057303"})["WPU057303"], m) for m in summary.index}
+    d_before = [m for m in summary.index if m < MONTH and diesel[m] >= diesel[MONTH]][-1]
+    facts += [
+        ("September 2025 / March 2026 / April 2026", f"{pub['2025-09']:.2f}% / {pub['2026-03']:.2f}% / {pub['2026-04']:.2f}%"),
+        ("Share of item sum: services / goods / construction",
+         f"{g_share['Services']:.1f}% / {g_share['Goods']:.1f}% / {g_share['Construction']:.1f}%"),
+        ("Items: total / adding / subtracting", f"{len(cur)} / {(cur.contrib > 0).sum()} / {(cur.contrib < 0).sum()}"),
+        ("Regular gasoline base weight / share of item sum",
+         f"{cur.loc['057104', 'weight_base']:.2f}% / {cur.loc['057104', 'contrib'] / total * 100:.1f}%"),
+        ("Diesel, last month at or above its 12-month change", f"{d_before} ({diesel[d_before]:.1f}%)"),
+        ("Fuels and power base weight", f"{cur[cur.index.str.startswith('05')].weight_base.sum():.2f}%"),
+        ("Jet fuel September 2025 / base weight", f"{jet['2025-09']:.1f}% / {cur.loc['057203', 'weight_base']:.2f}%"),
+        ("Airline passenger services base weight", f"{cur.loc['302201', 'weight_base']:.2f}%"),
+        ("Trade items: count / base weight / share of item sum",
+         f"{len(trade_codes)} / {trade_codes.weight_base.sum():.1f}% / {trade_codes.contrib.sum() / total * 100:.1f}%"),
+        ("Filled (no published index) base weight", f"{summary.loc[MONTH, 'filled_share']:.2f}%"),
+    ]
     lines += ["", "## 3. Numbers for the text (recomputed from the raw index levels and monthly_items.csv)", "",
               "| Fact | Value |", "|---|---|"] + [f"| {a} | {b} |" for a, b in facts]
 
