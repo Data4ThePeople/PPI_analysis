@@ -8,3 +8,5 @@ data/processed/monthly.json
 data/processed/indexes.json
 data/processed/monthly_items.csv
 data/processed/page_data.json
+data/processed/gif_frames/
+data/processed/gif_frames_1080/
