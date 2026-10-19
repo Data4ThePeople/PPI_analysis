@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-scuba-diver
-Step: 2a
+Step: 2b (waiting for Eric)
 Since: 2026-10-19
 
 ## Steps
@@ -14,7 +14,7 @@ Since: 2026-10-19
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-19 | dist/index.html, Oct 2016-Sep 2026; 51 months pass the strict tie-out, 69 flagged and shown |
-| 2a | Draft with brackets resolved | | |
+| 2a | Draft with brackets resolved | 2026-10-19 | Claude-drafted viz page at Eric's request; title "Exploring the hidden depths of the Producer Price Index"; publish October 19, 2026, 7:00 a.m. EDT |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
@@ -35,3 +35,4 @@ None.
 - 2026-10-17 to 2026-10-19 Page polish per Eric: tie-out note moved below the visual, playback flash fixed, bubbles about 53% larger, "gray piece" wording and gray/amber legend keys removed.
 - 2026-10-19 Step 1 confirmed by Eric.
 - 2026-10-19 Step 2a opened: ppi-scuba-diver, a visualization-only page in the format of stress-test-viz and children-poverty-viz, drafted by Claude at Eric's request. GitHub Pages turned on for the repo. Five-takeaways post from September 2026 to follow separately.
+- 2026-10-19 Step 2a confirmed by Eric.
