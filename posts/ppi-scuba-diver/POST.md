@@ -49,23 +49,23 @@ Our items add up closely to BLS's published figure from July 2022 on. Before tha
 
 **2. Pick a month.** Drag the slider, use the ‹ and › buttons, or press the left and right arrow keys to move one month at a time.
 
-**3. Point at a piece.** On a computer, move your mouse over it. On a phone or tablet, tap it. A box shows the item's name, how many points it added to or took away from the 12-month change, its price change and its weight. If the item has no published index for those months, the box says so and names the category it was estimated from.
+**3. Point at a bubble.** On a computer, move your mouse over it. On a phone or tablet, tap it. A box shows the item's name, how many points it added to or took away from the 12-month change, its price change and its weight. If the item has no published index for those months, the box says so and names the category it was estimated from.
 
 **4. Read the numbers in the top left.** They show BLS's index for the month and a year earlier, the 12-month change those give, what our items add up to, and both figures rounded to one decimal place.
 
-**5. Read the note under the chart.** It says whether the month passes our tie-out test, and if it does not, why.
+**5. Read the note under the chart.** It says whether the month passes our tie-out test, and if it does not, why. Months that do not pass our strict tie-out requirements are still valuable, in our view, as they still show which items moved PPI that month using a consistent methodology.
 
-**6. Switch to the table.** The Table button lists every item for the month. Click a column heading to sort by it.
+**6. Switch to the table.** The Table button lists every item for the month. Click a column heading to sort by it. The table may not be as pretty as the visual, but it is where the most helpful data lives to see all of the roughly 820 items and their impact on PPI in each month.
 
 ### How to read it
 
 - **Depth.** The diver sits as deep as the 12-month change in PPI final demand, on the scale at the right. Deeper means more inflation. The scale runs from −2% to 12% and is the same in every month. The water gets darker as the diver goes deeper, and a shark swims by when the rate is above about 5%.
 - **Anchors.** Items that added to the 12-month change hang below the diver, pulling it deeper.
 - **Floats.** Items that took away from it float above the diver, lifting it up.
-- **Size.** The area of each piece is how many percentage points the item added or took away. One size scale is used for every month, so pieces can be compared across months.
+- **Size.** The area of each bubble is how many percentage points the item added or took away. One size scale is used for every month, so bubbles can be compared across months.
 - **Color.** The item's own price change over the 12 months, from blue (its price fell) to red (its price rose).
 - **Dashed ring.** BLS publishes no index for the item in those months, so we used its parent category's price change. Its color shows that estimated change.
-- **Gray circle.** The part of BLS's published change that our items do not add up to. Point at it to see its size.
+- **Gray circle.** The part of BLS's published change that our items do not add up to. Point at it to see its size. In recent months it is too small to see with the naked eye (which shows how closely our items match BLS's figure) but it is still there.
 - **Labels.** The five largest anchors and floats are labeled on wider screens.
 - **Date axis.** The shaded months are the ones where BLS published its index to one decimal place. An amber dot marks every month that misses our tie-out test.
 - **Preliminary months.** BLS revises the PPI for four months after it first comes out. June to September 2026 are preliminary and will change.
@@ -77,8 +77,6 @@ In September 2026, PPI final demand was 6.3% higher than a year earlier. BLS's i
 Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.
 
 Over the 10 years, the 12-month change peaked at 11.7% in March 2022. It was lowest in April 2020, at −1.5%, one of five months in 2020 when it was below zero.
-
-Tomorrow we will walk through five takeaways from the September numbers.
 
 ## What this page is
 
@@ -152,7 +150,7 @@ In 21 months, from November 2016 to January 2021, the miss is larger than roundi
 
 In 50 of the 120 months, our items round to a different one-decimal figure than BLS's. The chart shows both.
 
-A script recomputes BLS's published 12-month change from the raw data files and checks that the pieces drawn in the chart, including the gray circle, add up to it in every month. A second check, written separately from the raw files without using our scripts, reached the same totals within 0.0003 points, the same item contributions, and the same pass or fail result in all 120 months. It also found that estimated items were colored by a figure that was not a price change. We fixed that before publishing.
+A script recomputes BLS's published 12-month change from the raw data files and checks that the bubbles drawn in the chart, including the gray circle, add up to it in every month. A second check, written separately from the raw files without using our scripts, reached the same totals within 0.0003 points, the same item contributions, and the same pass or fail result in all 120 months. It also found that estimated items were colored by a figure that was not a price change. We fixed that before publishing.
 
 ### Step 7: Draw the chart
 
@@ -220,7 +218,7 @@ Before July 2021, BLS published its indexes rounded to one decimal place, which 
 
 ### What does the gray circle mean?
 
-It is the part of BLS's published change that our items do not add up to. With it, the pieces add up to BLS's figure exactly. It is small from July 2022 on.
+It is the part of BLS's published change that our items do not add up to. With it, the bubbles add up to BLS's figure exactly. It is small from July 2022 on.
 
 ### What does a dashed ring mean?
 

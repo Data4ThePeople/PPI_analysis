@@ -234,8 +234,9 @@ function layoutMonth(mi) {
     (row[1] > 0 ? up : dn).push({ i, r });
   });
   if (Math.abs(m.gap) > 0) {
-    const r = Math.sqrt(G.k * Math.abs(m.gap) / Math.PI);
-    if (r >= MIN_R) (m.gap > 0 ? up : dn).push({ i: -1, r });
+    // The unexplained part is always drawn, at least 1px across, even when tiny.
+    const r = Math.max(1, Math.sqrt(G.k * Math.abs(m.gap) / Math.PI));
+    (m.gap > 0 ? up : dn).push({ i: -1, r });
   }
   return { up: pack(up), dn: pack(dn) };
 }
