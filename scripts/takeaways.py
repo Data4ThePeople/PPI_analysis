@@ -180,9 +180,10 @@ def waterfall(items, summary, name):
     steps = ([(short(r["name"]), r.contrib, FUEL if fuel(r.code) else UP) for _, r in up.iterrows()]
              + [(f"The other {len(rest)} items, net", rest.contrib.sum(), MUTED)]
              + [(short(r["name"]), r.contrib, DOWN) for _, r in down.iterrows()])
-    f, top = fig(f"What added up to {pub:.1f}% wholesale inflation, {month_label(MONTH)}",
+    f, top = fig(f"What added up to wholesale inflation, {month_label(MONTH)}",
                  "Each bar is one item's share of the 12-month change in PPI final demand, in percentage points.\n"
-                 "Bars build from left to right; the bottom bar is the total. In parentheses, the item's 12-month price change.",
+                 "Bars build from left to right; the bottom bar is the total. In parentheses, the item's 12-month price change.\n"
+                 f"Our items add up to {total:.2f} points; BLS publishes {pub:.2f}%.",
                  h=8.6, legend=[("Fuels, pushed up", FUEL), ("Other items, pushed up", UP), ("Pulled down", DOWN),
                                 ("Everything else", MUTED)])
     ax = f.add_axes([0.33, 0.08, 0.61, top - 0.10])
@@ -249,7 +250,7 @@ def trade(items, name, n_up=6, n_down=4):
     sel = pd.concat([up, down.iloc[::-1]]).iloc[::-1]
     total = m.contrib.sum()
     f, top = fig(f"Store and wholesaler margins, {month_label(MONTH)}",
-                 "PPI trade prices are margins: what a store or wholesaler sells a good for, minus what it paid for it.\n"
+                 "PPI trade prices are margins: what a store or wholesaler sells a good for, minus what it costs them to buy it now.\n"
                  "Each bar is the item's share of the 12-month change in PPI final demand, in percentage points.\n"
                  f"In parentheses, the margin's 12-month change. All {len(m)} trade items together: {pts(total)} points.",
                  h=7.8, legend=[("Margins that rose", UP), ("Margins that fell", DOWN)])
