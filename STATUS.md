@@ -5,13 +5,24 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: (slug at 2a) September 2026 PPI, top 5 takeaways
-Step: 1
+Post: ppi-september-2026
+Step: 1 confirmed; next 2a
 Since: 2026-10-19
 
-Previous post: ppi-scuba-diver, complete 2026-10-19 (steps below)
-
 ## Steps
+
+| Step | What | Confirmed | Notes |
+|---|---|---|---|
+| 1  | Exploration and analysis | 2026-10-19 | five takeaways (headline, fuels, jet fuel, trade margins, portfolio management); charts/2026-09; TAKEAWAYS_TIEOUT.md 0 differences; independent tie-out matched |
+| 2a | Draft with brackets resolved | | |
+| 2b | Eric's edit, Claude's look-over | | |
+| 2c | Slice markup | | |
+| 2d | Hero 1680x1080 + alt text | | |
+| 2e | SEO | | |
+| 2f | Pushed to Prismic (draft) | | |
+| 2g | Mailchimp teaser | | |
+
+## Previous post: ppi-scuba-diver (complete 2026-10-19)
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
@@ -47,3 +58,5 @@ None.
 - 2026-10-19 Step 2g confirmed by Eric. Post ppi-scuba-diver complete.
 - 2026-10-19 Social posts: one X/LinkedIn post with the diver GIF, and an Instagram version (MP4) written for readers new to the data. SOCIAL.md.
 - 2026-10-19 Step 1 opened for the next post. Topic: top 5 takeaways from the September 2026 PPI data, using the scuba diver viz.
+- 2026-10-19 Five charts and tie-out for the September 2026 takeaways; independent tie-out matched every number; wording fixes on charts 2 and 4.
+- 2026-10-19 Step 1 confirmed by Eric. Slug: ppi-september-2026.
