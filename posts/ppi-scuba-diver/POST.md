@@ -216,6 +216,10 @@ The code, the build steps and the published files are at [github.com/Data4ThePeo
 
 An animated chart of every item in the Producer Price Index for final demand. The diver sits as deep as the 12-month change. Items that added to it hang below as anchors, and items that took away from it float above. It covers every month from October 2016 to September 2026.
 
+### What is the Producer Price Index (PPI)?
+
+The Producer Price Index (PPI) measures the prices U.S. businesses receive for the goods, services and construction they sell. The Bureau of Labor Statistics publishes it each month. Its headline measure is final demand, the part sold to final buyers. In September 2026, PPI final demand was 6.3% higher than a year earlier.
+
 ### What is PPI final demand?
 
 The Producer Price Index for final demand measures the prices U.S. businesses receive for goods, services and construction sold to final buyers: households, businesses buying equipment, governments and buyers overseas. BLS publishes it each month as series WPUFD4.
