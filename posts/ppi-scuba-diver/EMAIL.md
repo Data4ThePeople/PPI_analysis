@@ -5,7 +5,7 @@ Post URL: https://www.data4thepeople.com/p/ppi-scuba-diver/
 Claude's draft from the post text, October 19, 2026, with Eric's edits and bracketed requests resolved.
 
 ```
-Subject:  Meet the PPI Scuba Diver
+Subject:  Exploring the hidden depths of the PPI
 Preview:  Every item in wholesale prices, every month since 2016, in one free animated chart.
 ```
 
