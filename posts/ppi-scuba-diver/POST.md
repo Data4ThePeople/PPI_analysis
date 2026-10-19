@@ -4,6 +4,7 @@ subtitle: A free, animated chart of every item in the Producer Price Index for f
 slug: ppi-scuba-diver
 date: 2026-10-19
 time: 07:00:00-04:00
+prismic_id: atXuuhIAACgAouk0
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
 hero_alt: A cartoon scuba diver swims in a deep blue ocean. Above the diver, a small cluster of blue floats lifts it up. Below, a much larger ball of red bubbles marked with anchors pulls it down. Each bubble is one item in U.S. wholesale prices, sized by how much it added to or took away from the 12-month change, drawn from the September 2026 data. A shark swims nearby. Titled The PPI Scuba Diver, every item in U.S. wholesale prices, built by Data 4 The People.
