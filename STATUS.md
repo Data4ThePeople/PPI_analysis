@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-scuba-diver
-Step: 2g
+Step: complete (social posts in progress)
 Since: 2026-10-19
 
 ## Steps
@@ -20,7 +20,7 @@ Since: 2026-10-19
 | 2d | Hero 1680x1080 + alt text | 2026-10-19 | zoomed diver from the page's #hero=1 mode, September 2026 data; alt 456 characters |
 | 2e | SEO | 2026-10-19 | broad PPI targets; dataset schema; FAQ "What is the Producer Price Index (PPI)?" added |
 | 2f | Pushed to Prismic (draft) | 2026-10-19 | draft atXuuhIAACgAouk0 in the Migration Release; 83 slices; tags and author empty |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-10-19 | subject "Exploring the hidden depths of the PPI"; Eric's edits, brackets resolved |
 
 ## Stale
 
@@ -42,3 +42,4 @@ None.
 - 2026-10-19 Step 2e confirmed by Eric.
 - 2026-10-19 Step 2f confirmed by Eric.
 - 2026-10-19 During 2g, at Eric's request: one sentence added to the post's "What it shows right now" (largest increase since December 2022; 16 items up more than 50%) so the email's numbers are in the post. 2c reconverted and the Prismic draft re-pushed; 2b, 2c and 2f otherwise unchanged.
+- 2026-10-19 Step 2g confirmed by Eric. Post ppi-scuba-diver complete.
