@@ -6,14 +6,14 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: none yet
-Step: 1
-Since: 2026-10-17
+Step: 2a (waiting for Eric)
+Since: 2026-10-19
 
 ## Steps
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
-| 1  | Exploration and analysis | | |
+| 1  | Exploration and analysis | 2026-10-19 | dist/index.html, Oct 2016-Sep 2026; 51 months pass the strict tie-out, 69 flagged and shown |
 | 2a | Draft with brackets resolved | | |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
@@ -32,3 +32,5 @@ None.
 - 2026-10-17 Built dist/index.html (PPI scuba diver), July 2022 to September 2026, 51 months; tie-out in TIEOUT.md.
 - 2026-10-17 Extended to all 120 months (Oct 2016-Sep 2026); months that miss the strict tie-out are shown and flagged, per Eric.
 - 2026-10-17 Independent tie-out (fresh agent): all 120 months match. Fixed what it raised: estimated items now show their borrowed change with a dashed ring (was contribution / weight), seasonal items show their own change, DATASETS.md defines the merge, color, filled share and DN.
+- 2026-10-17 to 2026-10-19 Page polish per Eric: tie-out note moved below the visual, playback flash fixed, bubbles about 53% larger, "gray piece" wording and gray/amber legend keys removed.
+- 2026-10-19 Step 1 confirmed by Eric.
