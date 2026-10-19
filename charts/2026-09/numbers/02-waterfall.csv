@@ -1,0 +1,15 @@
+step,contrib_pts,running_total_pts
+Regular gasoline,0.764905,0.764905
+Long-distance trucking,0.449643,1.214548
+Portfolio management,0.423985,1.638533
+No. 2 diesel fuel,0.392647,2.03118
+Other goods wholesaling,0.347976,2.379156
+Airline passenger services,0.188983,2.568139
+Hospital inpatient care,0.187975,2.756114
+Premium gasoline,0.184225,2.940339
+"The other 811 items, net",3.751191,6.69153
+Fuel retailing (gas stations),-0.122286,6.569244
+Car dealers,-0.112878,6.456366
+Eggs,-0.059271,6.397095
+Pork,-0.047099,6.349996
+All items,6.349996,6.349996

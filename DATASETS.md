@@ -224,3 +224,36 @@ also rounded to one decimal in those years, which adds to the gap on the
 items side, so we attribute the excess to estimated items and item rounding
 together, not to either alone. The date axis shades the one-decimal
 months and marks every flagged month with an amber dot.
+
+## What some PPI items measure (for the September 2026 takeaways)
+
+**Trade services are margins.** The wholesale and retail items (codes 57x and
+58x, 33 items in September 2026) do not price the goods sold. BLS treats
+stores and wholesalers as sellers of a service and prices the margin: selling
+price minus the acquisition price of the same good. A margin can fall when the
+price of the good rises, if the store's cost rises faster. Sources: BLS,
+"Wholesale and retail Producer Price Indexes: margin prices," Beyond the
+Numbers, vol. 1 (https://www.bls.gov/opub/btn/volume-1/wholesale-and-retail-producer-price-indexes-margin-prices.htm);
+BLS 2026 notice on final demand commodity weight allocations, which describes
+trade services as "measured as the difference between selling and acquisition
+price." BLS leaves zero or negative margins out of the calculation (BLS working
+paper EC200070, 2020).
+
+**Portfolio management follows asset values.** BLS prices it mostly from
+management fees charged as a share of assets under management (fee = basis
+points times fund value). The assets are held fixed at the start of the
+period, with no inflows or outflows, and updated by the portfolio's rate of
+return. So the index moves with market returns as well as fee rates. Source:
+BLS factsheet, "Producer Price Index for Portfolio Management and Investment
+Advice - NAICS 523940" (https://www.bls.gov/ppi/factsheets/producer-price-index-for-portfolio-management-and-investment-advice-naics-523940.htm).
+
+**Airline passenger services** is what airlines receive for passenger
+flights, a producer price, not the consumer fare in the CPI.
+
+**Preliminary months.** June to September 2026 carry BLS's "P" footnote and
+will be revised; every September 2026 number in the takeaways is preliminary.
+
+**Charts and tie-out.** `scripts/takeaways.py` draws the five charts into
+`charts/2026-09/` (the numbers behind each in `charts/2026-09/numbers/`);
+`scripts/takeaways_tieout.py` recomputes every 12-month change from the raw
+flat files and every contribution and total, and writes `TAKEAWAYS_TIEOUT.md`.
