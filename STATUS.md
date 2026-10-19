@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 1 confirmed; next 2a
+Step: 2a
 Since: 2026-10-19
 
 ## Steps
@@ -60,3 +60,4 @@ None.
 - 2026-10-19 Step 1 opened for the next post. Topic: top 5 takeaways from the September 2026 PPI data, using the scuba diver viz.
 - 2026-10-19 Five charts and tie-out for the September 2026 takeaways; independent tie-out matched every number; wording fixes on charts 2 and 4.
 - 2026-10-19 Step 1 confirmed by Eric. Slug: ppi-september-2026.
+- 2026-10-19 Step 2a opened: posts/ppi-september-2026/ with POST.md from the template and the five charts in images/.
