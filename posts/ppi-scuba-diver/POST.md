@@ -2,7 +2,8 @@
 title: "The PPI Scuba Diver: What Is Driving Wholesale Prices, Every Month Since 2016"
 subtitle: A free, animated chart of every item in the Producer Price Index for final demand, sized by how much it added to or took away from the 12-month change, every month from October 2016 to September 2026.
 slug: ppi-scuba-diver
-date: 2026-10-20
+date: 2026-10-19
+time: 07:00:00-04:00
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
 hero_alt:
