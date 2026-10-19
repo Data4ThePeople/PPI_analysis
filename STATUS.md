@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-scuba-diver
-Step: 2f
+Step: 2g (waiting for Eric)
 Since: 2026-10-19
 
 ## Steps
@@ -19,7 +19,7 @@ Since: 2026-10-19
 | 2c | Slice markup | 2026-10-19 | 81 slices; embed, blurbs, divider before Common questions; 12 FAQ entries |
 | 2d | Hero 1680x1080 + alt text | 2026-10-19 | zoomed diver from the page's #hero=1 mode, September 2026 data; alt 456 characters |
 | 2e | SEO | 2026-10-19 | broad PPI targets; dataset schema; FAQ "What is the Producer Price Index (PPI)?" added |
-| 2f | Pushed to Prismic (draft) | | |
+| 2f | Pushed to Prismic (draft) | 2026-10-19 | draft atXuuhIAACgAouk0 in the Migration Release; 83 slices; tags and author empty |
 | 2g | Mailchimp teaser | | |
 
 ## Stale
@@ -40,3 +40,4 @@ None.
 - 2026-10-19 Step 2c confirmed by Eric.
 - 2026-10-19 Step 2d confirmed by Eric.
 - 2026-10-19 Step 2e confirmed by Eric.
+- 2026-10-19 Step 2f confirmed by Eric.
