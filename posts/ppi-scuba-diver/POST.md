@@ -89,7 +89,7 @@ Our items add up closely to BLS's published figure from July 2022 on. Before tha
 
 ### What it shows right now
 
-In September 2026, PPI final demand was 6.3% higher than a year earlier. BLS's index was 159.613, against 150.100 in September 2025. Our 823 items add up to 6.350%, which is 0.012 points more than BLS's figure, so the month passes our tie-out test. Of those items, 117 had no published index for the months needed, and they carried 1.6% of final demand.
+In September 2026, PPI final demand was 6.3% higher than a year earlier. It was the largest 12-month increase since December 2022, and 16 items with their own published index rose more than 50%. BLS's index was 159.613, against 150.100 in September 2025. Our 823 items add up to 6.350%, which is 0.012 points more than BLS's figure, so the month passes our tie-out test. Of those items, 117 had no published index for the months needed, and they carried 1.6% of final demand.
 
 Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.
 
