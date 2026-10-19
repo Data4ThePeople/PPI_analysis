@@ -26,6 +26,15 @@ html,body{margin:0;padding:0;background:var(--page);color:var(--ink);
 body{container:page / inline-size}
 #app{width:100%;min-width:0;max-width:1180px;margin:0 auto;padding:16px 16px 8px;height:780px;display:flex;flex-direction:column;container-type:inline-size}
 body.is-embed #app{max-width:none;padding:10px 16px 6px;overflow:hidden}
+/* hero mode (#hero=1): the scene alone, for the 1680x1080 post image */
+body.is-hero #app{max-width:none;padding:0;height:100vh}
+body.is-hero header,body.is-hero #controls,body.is-hero #timeline,body.is-hero #note,body.is-hero footer{display:none}
+body.is-hero #stage{border-radius:0}
+body.is-hero #readout{top:calc(7% + 10px);max-width:40%}
+#herocap{display:none;position:absolute;right:16px;top:calc(7% + 12px);text-align:right;color:#f2f6fa;text-shadow:0 1px 3px rgba(0,20,40,.7);pointer-events:none}
+body.is-hero #herocap{display:block}
+#herocap .t{font-size:24px;font-weight:700;line-height:1.15}
+#herocap .s{font-size:13.5px;line-height:1.4;color:#d6e2ec;margin-top:2px}
 header h1{font-size:22px;line-height:1.2;margin:0 0 4px;font-weight:700}
 header p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.4;max-width:860px}
 #controls{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:8px 0 6px}
@@ -106,6 +115,7 @@ footer a{color:inherit}
   <div id="stage">
     <canvas id="scene" role="img"></canvas>
     <div id="readout" aria-live="polite"></div>
+    <div id="herocap" aria-hidden="true"><div class="t">The PPI Scuba Diver</div><div class="s">Every item in U.S. wholesale prices<br>Built by Data 4 The People</div></div>
     <div id="table-wrap"><table id="table"></table></div>
   </div>
   <div id="timeline">
@@ -133,6 +143,8 @@ const DATA = /*DATA*/{};
 const EMBED = (() => { if (location.hash.includes('embed=0')) return false; if (location.hash.includes('embed=1')) return true;
   try { return window.self !== window.top; } catch (e) { return true; } })();
 if (EMBED) { document.documentElement.setAttribute('data-theme', 'light'); document.body.classList.add('is-embed'); }
+const HERO = location.hash.includes('hero=1');
+if (HERO) document.body.classList.add('is-hero');
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const $ = s => document.querySelector(s);
@@ -346,7 +358,7 @@ function drawFish(scroll, depthNow) {
   const deepAt = DATA.axis.lo + (DATA.axis.hi - DATA.axis.lo) * 0.5;
   const a = Math.max(0, Math.min(1, (depthNow - deepAt) / 1.5));
   if (a > 0.01) {
-    const period = 14000, ph = (clock % period) / period;
+    const period = 14000, ph = HERO ? (0.8 * W + 160) / (W + 320) : (clock % period) / period;   // hero: parked at the left
     const x = W + 160 - ph * (W + 320);
     const y = G.yBot + (G.floorTop - G.yBot) * 0.35 + Math.sin(clock * 0.0012) * 6;
     ctx.save(); ctx.globalAlpha = 0.75 * a; ctx.translate(x, y); ctx.scale(-1, 1);
@@ -393,7 +405,7 @@ function drawAxes(scroll, mi) {
     ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.textAlign = 'right'; ctx.fillText((d < 0 ? '−' : '') + Math.abs(d) + '%', W - 8, y);
   }
   ctx.textAlign = 'right'; ctx.fillStyle = 'rgba(230,240,248,.7)';
-  ctx.fillText('PPI, 12-month change (deeper = more inflation)', W - 8, G.yBot + 18);
+  ctx.fillText('PPI, 12-month change (deeper = more inflation)', W - 8, G.yTop - 18);   // above the scale, clear of the label boxes
   // trail: the diver's path through past months (real values only, at month points)
   ctx.strokeStyle = 'rgba(255,255,255,.45)'; ctx.lineWidth = 2; ctx.beginPath();
   let started = false;

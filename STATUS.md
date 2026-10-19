@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-scuba-diver
-Step: 2d (waiting for Eric)
+Step: 2d
 Since: 2026-10-19
 
 ## Steps
