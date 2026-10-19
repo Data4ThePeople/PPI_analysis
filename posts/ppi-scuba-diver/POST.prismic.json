@@ -1,0 +1,1751 @@
+{
+  "page_title": "Exploring the hidden depths of the Producer Price Index",
+  "page_subtitle": "A free, animated chart of every item in the Producer Price Index for final demand, sized by how much it added to or took away from the 12-month change, every month from October 2016 to September 2026.",
+  "published_date": "2026-10-19",
+  "updated_date": "2026-10-19",
+  "make_this_main_post": false,
+  "slices": [
+    {
+      "slice_type": "html_embed",
+      "slice_label": null,
+      "variation": "fullWidth",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "html_content": [
+          {
+            "type": "preformatted",
+            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1\" width=\"100%\" height=\"780\" loading=\"lazy\" style=\"border:0\" title=\"The PPI Scuba Diver: every item in PPI final demand, October 2016 to September 2026\"></iframe>",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "embed_height": "780px"
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "40px"
+      }
+    },
+    {
+      "slice_type": "highlited_page_blurb",
+      "slice_label": null,
+      "variation": "noTitle",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Open the full visualization for a larger view and dark mode.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 27,
+                "type": "strong"
+              },
+              {
+                "start": 0,
+                "end": 27,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://data4thepeople.github.io/PPI_analysis/dist/index.html",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 28,
+                "end": 60,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Purpose",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "This chart breaks the Producer Price Index for final demand into every item the Bureau of Labor Statistics (BLS) weights in it, about 820 in a typical month, and shows how much each one added to or took away from the 12-month change. It covers every month from October 2016 to September 2026. It is free to use and needs no sign-in. It is the companion to our CPI Hot Air Balloon, which does the same for consumer prices.",
+            "spans": [
+              {
+                "start": 360,
+                "end": 379,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/what-is-driving-cpi",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. \"Final demand\" is the part sold to final buyers: households, businesses buying equipment, governments and buyers overseas. It covers goods, services and construction. It is not what consumers pay at the register, and it includes the margins that wholesalers and retailers earn, which is why items such as \"car dealers' margins\" appear in the chart.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "highlited_page_blurb",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "title": "Read this first",
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Our items add up closely to BLS's published figure from July 2022 on. Before that, they miss by more, because BLS published its indexes rounded to one decimal place until July 2021. We show every month anyway. The note under the chart says whether each month passes our own tie-out test, and if not, why. About 1% to 2% of final demand has no published price index in recent years, and 6% to 9% did before 2021. We estimate those items from their parent category, and the chart marks them.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Using the visualization",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "1. Press Play. The diver moves through every month from October 2016 to September 2026. The 1x, 2x and 4x buttons set the speed. The space bar starts and stops it.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 14,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "2. Pick a month. Drag the slider, use the \u2039 and \u203a buttons, or press the left and right arrow keys to move one month at a time.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 16,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "3. Point at a bubble. On a computer, move your mouse over it. On a phone or tablet, tap it. A box shows the item's name, how many points it added to or took away from the 12-month change, its price change and its weight. If the item has no published index for those months, the box says so and names the category it was estimated from.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 21,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "4. Read the numbers in the top left. They show BLS's index for the month and a year earlier, the 12-month change those give, what our items add up to, and both figures rounded to one decimal place.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 36,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "5. Read the note under the chart. It says whether the month passes our tie-out test, and if it does not, why. Months that do not pass our strict tie-out requirements are still valuable, in our view, as they still show which items moved PPI that month using a consistent methodology.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 33,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "6. Switch to the table. The Table button lists every item for the month. Click a column heading to sort by it. The table may not be as pretty as the visual, but it is where the most helpful data lives to see all of the roughly 820 items and their impact on PPI in each month.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 23,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How to read it",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Depth. The diver sits as deep as the 12-month change in PPI final demand, on the scale at the right. Deeper means more inflation. The scale runs from \u22122% to 12% and is the same in every month. The water gets darker as the diver goes deeper, and a shark swims by when the rate is above about 5%.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 6,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Anchors. Items that added to the 12-month change hang below the diver, pulling it deeper.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 8,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Floats. Items that took away from it float above the diver, lifting it up.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 7,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Size. The area of each bubble is how many percentage points the item added or took away. One size scale is used for every month, so bubbles can be compared across months.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 5,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Color. The item's own price change over the 12 months, from blue (its price fell) to red (its price rose).",
+            "spans": [
+              {
+                "start": 0,
+                "end": 6,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Dashed ring. BLS publishes no index for the item in those months, so we used its parent category's price change. Its color shows that estimated change.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 12,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Gray circle. The part of BLS's published change that our items do not add up to. Point at it to see its size. In recent months it is too small to see with the naked eye (which shows how closely our items match BLS's figure) but it is still there.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 12,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Labels. The five largest anchors and floats are labeled on wider screens.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 7,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Date axis. The shaded months are the ones where BLS published its index to one decimal place. An amber dot marks every month that misses our tie-out test.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 10,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "list-item",
+            "text": "Preliminary months. BLS revises the PPI for four months after it first comes out. June to September 2026 are preliminary and will change.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 19,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What it shows right now",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In September 2026, PPI final demand was 6.3% higher than a year earlier. BLS's index was 159.613, against 150.100 in September 2025. Our 823 items add up to 6.350%, which is 0.012 points more than BLS's figure, so the month passes our tie-out test. Of those items, 117 had no published index for the months needed, and they carried 1.6% of final demand.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Over the 10 years, the 12-month change peaked at 11.7% in March 2022. It was lowest in April 2020, at \u22121.5%, one of five months in 2020 when it was below zero.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "What this page is",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "Every chart we publish should be something you can check, question and rebuild yourself. This page documents how we built this one: where the data comes from, every step we took, and the judgment calls we made. The code, the data and the built files are in a public repository, linked at the end.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "The data sources",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "Producer Price Index, U.S. Bureau of Labor Statistics. Monthly index values, not seasonally adjusted, for final demand (series WPUFD4) and for every commodity in it. We also use the indexes for final demand goods, services and construction for a few items with no category above them (Step 3). We download BLS's full PPI data files.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 54,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Relative importance of commodities in final demand, U.S. Bureau of Labor Statistics. Each commodity's share of final demand as of each December, in a spreadsheet BLS posts each year. We use the files for 2014 to 2026.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 84,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "How we built it",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 0: What BLS does before we get the data",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "We start from published figures, so their limits are our limits.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "BLS builds the PPI from prices that businesses report to it each month. It weights each commodity by how much of it is sold to final buyers, using census data on what businesses ship and government tables of who buys what. BLS updated those weights four times in these 10 years, each in January: 2018, 2021, 2023 and 2026.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "BLS revises each month's PPI for four months after it first comes out. It published index values to one decimal place until July 2021, and to three decimal places from then on. It did not go back and add decimals to the older figures.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "BLS does not publish an index for every commodity it weights. Some are withheld because too few companies report to publish one without revealing a company's prices. Others stopped being published partway through, such as processed eggs after January 2022 and military aircraft after May 2024.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 1: Use the same method as the CPI Hot Air Balloon",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "An item's contribution is its weight times its price change. BLS sets new weights each December, so we split each 12-month period at December. For the months before December, we use the previous December's weights, moved forward the way BLS does it as prices change. For the months after, we use the new December's weights. Added together, the two parts give each item's contribution to the 12-month change. If every item had a published index, the contributions would add up exactly to BLS's published change.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 2: Build the list of items each December",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The commodity codes nest inside each other. The most detailed codes, the ones BLS assigns weights to, are the items in the chart. The list changes from year to year: 848 items in December 2013 and 783 in December 2025. Each part of the 12-month period uses its own December's list, so a month shows between 808 and 860 items.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "When BLS gives an item a new code but keeps its name, the chart shows it as one item. We found 21 of these over the 10 years, including four leather items that BLS moved to a new group in its index files.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 3: Estimate the items with no published index",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "For an item with no index for the months it needs, we use the price change of the nearest category above it that has one. For example, other metal ores uses the change for nonferrous metal ores.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "This differs from the CPI Hot Air Balloon. There, a missing item gets the part of its category's change that the category's other items do not explain. That works in the CPI because a category's index is built from its items with the same weights the headline uses. In the PPI it is not. A PPI category's index is weighted by everything businesses sell, while final demand counts only the part sold to final buyers, and that part differs from item to item. When we tried the CPI approach, it gave results such as a 195% drop in processed egg prices in December 2025. So we chose the category's own change. We made that choice on method, not because it made the totals match better.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "A few items have no published category above them at all, such as finished leather and luggage. They use the change for final demand goods, services or construction. Using what final demand itself leaves unexplained would force every month to match and hide the error.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Some seasonal items, such as melons, have a published index in some months but not in December, which the method needs. Their contribution is estimated the same way, but their color shows their own published 12-month change.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 4: Fill weights BLS printed as zero",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In December 2019, December 2021 and December 2024, BLS printed 0.000 for a few items that had weight the year before, and the weights no longer added to 100%. They added to 99.78%, 99.80% and 99.96%. The missing items include farm tractors, locomotives and ships. For those items we carried the previous December's weight forward, moved by price change the way BLS does it. We checked these against what BLS printed for the same December a year later, where it did: farm tractors 0.120% (BLS later printed 0.116%), locomotives 0.073% (0.073%) and ships 0.022% (0.023%).",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 5: Pick the months",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The chart shows 10 years, October 2016 to September 2026. Before we looked at any results, we set three rules a month must meet to pass our tie-out test:",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "text": "Both of BLS's index values in the 12-month change were published to three decimal places.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "text": "Our items add up to BLS's published change within 0.05 points, half of the 0.1 point BLS rounds its 12-month changes to.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "o-list-item",
+            "text": "Items with no published index carry 10% of the weight or less.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "We show every month, including the ones that fail, and flag those that do.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 6: Check the numbers",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The 51 months from July 2022 to September 2026 pass. In those months, our items are off from BLS's figure by 0.013 points on average, and by 0.040 points at most (May 2026). In 42 of them, they are within 0.02 points.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The 69 months from October 2016 to June 2022 are flagged, all because the index a year earlier was published to one decimal place. Rounding to one decimal can move a 12-month change by up to about 0.09 points by itself. Thirty-three of those months also miss by more than 0.05 points, by as much as 0.26 points in October 2019. The months from July 2021 to June 2022 land within 0.05 points, but because the earlier index was rounded, a close match there may be luck.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In 21 months, from November 2016 to January 2021, the miss is larger than rounding of BLS's headline index can explain by itself. The note under the chart says so in those months. The rest very likely comes from the estimated items, which carried 6% to 9% of the weight before 2021, together with rounding in the item indexes, which were also published to one decimal place then.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In 50 of the 120 months, our items round to a different one-decimal figure than BLS's. The chart shows both.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "A script recomputes BLS's published 12-month change from the raw data files and checks that the bubbles drawn in the chart, including the gray circle, add up to it in every month. A second check, written separately from the raw files without using our scripts, reached the same totals within 0.0003 points, the same item contributions, and the same pass or fail result in all 120 months. It also found that estimated items were colored by a figure that was not a price change. We fixed that before publishing.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Step 7: Draw the chart",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The depth scale and the size scale are fixed once, from all 120 months, so every month is drawn on the same scales. The chart is one self-contained web page with no outside code.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Updating",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "BLS releases the PPI each month and revises the last four months each time. We plan to add each new month when it comes out. Every number in the chart is computed by the build scripts.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Honest notes and limitations",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "A contribution is not a cause. It shows how much an item moved the published number. It does not explain why the item's price changed.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 30,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "This is not consumer inflation. The PPI measures prices businesses receive, including wholesale and retail margins, and it includes exports. It does not include imports. For prices consumers pay, see the CPI Hot Air Balloon.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 31,
+                "type": "strong"
+              },
+              {
+                "start": 204,
+                "end": 223,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/what-is-driving-cpi",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The months before July 2022 do not tie out as closely. BLS published one-decimal indexes then, and the estimated items carried more weight. We show those months and flag them rather than leave them out.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 54,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Estimated items are less reliable. About 1% to 2% of final demand had no published index in recent months, and 6% to 9% before 2021. Each of those items moves with its category, which may not match its own price.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 34,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The 2026 gap runs one way. In every month of 2026 so far, our items add up to a little more than BLS's figure, by 0.012 to 0.040 points. We have not found the cause.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 26,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Some weights are our estimates. The weights we filled in for December 2019, 2021 and 2024 are close to what BLS later printed but not the same.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 31,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Recent months will change. June to September 2026 are preliminary.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 26,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The data is not seasonally adjusted. Seasonal items, such as fresh fruit and vegetables, can swing widely from one month to the next.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 36,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "No error bars. We have not used any measure of sampling error, so small differences between items should not be read as real.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 14,
+                "type": "strong"
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Reproduce it yourself",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "paragraph",
+            "text": "The code, the build steps and the published files are at github.com/Data4ThePeople/PPI_analysis. You need BLS's PPI data files, the final demand relative importance files for 2014 to 2026, and Python. The README lists the steps in order, DATASETS.md explains every source and its limits, and TIEOUT.md lists the tie-out for every month. One row per month is free to download as monthly_summary.csv. If you get a different number from us, tell us, and we will look.",
+            "spans": [
+              {
+                "start": 57,
+                "end": 95,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/PPI_analysis",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 205,
+                "end": 211,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/PPI_analysis#readme",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 238,
+                "end": 249,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/PPI_analysis/blob/main/DATASETS.md",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 292,
+                "end": 301,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://github.com/Data4ThePeople/PPI_analysis/blob/main/TIEOUT.md",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 378,
+                "end": 397,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://raw.githubusercontent.com/Data4ThePeople/PPI_analysis/main/data/processed/monthly_summary.csv",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "divider_dots",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {}
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "Common questions",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What is the PPI Scuba Diver?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "An animated chart of every item in the Producer Price Index for final demand. The diver sits as deep as the 12-month change. Items that added to it hang below as anchors, and items that took away from it float above. It covers every month from October 2016 to September 2026.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What is PPI final demand?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The Producer Price Index for final demand measures the prices U.S. businesses receive for goods, services and construction sold to final buyers: households, businesses buying equipment, governments and buyers overseas. BLS publishes it each month as series WPUFD4.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How is the PPI different from the CPI?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The CPI measures prices consumers pay. The PPI measures prices businesses receive, including wholesalers' and retailers' margins and sales to businesses, governments and buyers overseas. Our CPI Hot Air Balloon shows the CPI the same way.",
+            "spans": [
+              {
+                "start": 191,
+                "end": 210,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://www.data4thepeople.com/p/what-is-driving-cpi",
+                  "target": "_blank"
+                }
+              }
+            ],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What is driving PPI right now?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "In September 2026, PPI final demand was 6.3% higher than a year earlier. Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Why do some months miss your tie-out test?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Before July 2021, BLS published its indexes rounded to one decimal place, which can move a 12-month change by up to about 0.09 points. More items also had no published index then. Every month from July 2022 on passes. We show the earlier months and flag them.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What does the gray circle mean?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "It is the part of BLS's published change that our items do not add up to. With it, the bubbles add up to BLS's figure exactly. It is small from July 2022 on.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "What does a dashed ring mean?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "BLS does not publish an index for that item in those months. We used the price change of the category above it, so its color is an estimate.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Why does the chart show \"margins\"?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Final demand includes the services that wholesalers and retailers provide, measured by their margins: what they sell an item for, less what they paid for it. When margins shrink, they pull the PPI down even if the goods themselves cost more.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Is the data seasonally adjusted?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "No. We use the data that is not seasonally adjusted, the same data BLS uses to move its weights forward from one December to the next.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "How often is the chart updated?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Each month, after BLS releases the PPI.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Can I embed the chart?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "Yes. It is free to use and embed. Add #embed=1 to the end of the full visualization's address for the 780-pixel version shown on this page.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading3",
+            "text": "Where does the data come from?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The U.S. Bureau of Labor Statistics: monthly PPI index values for final demand and every commodity in it, and the relative importance tables that give each commodity's share of final demand.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    }
+  ],
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Dataset\",\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-scuba-diver#dataset\",\n      \"name\": \"Exploring the hidden depths of the Producer Price Index\",\n      \"description\": \"\",\n      \"url\": \"https://www.data4thepeople.com/p/ppi-scuba-diver\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"isAccessibleForFree\": true,\n      \"creator\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"inLanguage\": \"en-US\",\n      \"datePublished\": \"2026-10-19T07:00:00-04:00\",\n      \"dateModified\": \"2026-10-19T07:00:00-04:00\"\n    },\n    {\n      \"@type\": \"WebPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-scuba-diver\",\n      \"url\": \"https://www.data4thepeople.com/p/ppi-scuba-diver\",\n      \"name\": \"\",\n      \"description\": \"\",\n      \"isPartOf\": {\n        \"@type\": \"WebSite\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://www.data4thepeople.com\"\n      },\n      \"about\": {\n        \"@id\": \"https://www.data4thepeople.com/p/ppi-scuba-diver#dataset\"\n      },\n      \"inLanguage\": \"en-US\",\n      \"datePublished\": \"2026-10-19T07:00:00-04:00\",\n      \"dateModified\": \"2026-10-19T07:00:00-04:00\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-scuba-diver#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is the PPI Scuba Diver?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"An animated chart of every item in the Producer Price Index for final demand. The diver sits as deep as the 12-month change. Items that added to it hang below as anchors, and items that took away from it float above. It covers every month from October 2016 to September 2026.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is PPI final demand?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The Producer Price Index for final demand measures the prices U.S. businesses receive for goods, services and construction sold to final buyers: households, businesses buying equipment, governments and buyers overseas. BLS publishes it each month as series WPUFD4.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How is the PPI different from the CPI?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The CPI measures prices consumers pay. The PPI measures prices businesses receive, including wholesalers' and retailers' margins and sales to businesses, governments and buyers overseas. Our CPI Hot Air Balloon shows the CPI the same way.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What is driving PPI right now?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"In September 2026, PPI final demand was 6.3% higher than a year earlier. Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why do some months miss your tie-out test?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Before July 2021, BLS published its indexes rounded to one decimal place, which can move a 12-month change by up to about 0.09 points. More items also had no published index then. Every month from July 2022 on passes. We show the earlier months and flag them.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What does the gray circle mean?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"It is the part of BLS's published change that our items do not add up to. With it, the bubbles add up to BLS's figure exactly. It is small from July 2022 on.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What does a dashed ring mean?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BLS does not publish an index for that item in those months. We used the price change of the category above it, so its color is an estimate.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why does the chart show \\\"margins\\\"?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Final demand includes the services that wholesalers and retailers provide, measured by their margins: what they sell an item for, less what they paid for it. When margins shrink, they pull the PPI down even if the goods themselves cost more.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is the data seasonally adjusted?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. We use the data that is not seasonally adjusted, the same data BLS uses to move its weights forward from one December to the next.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How often is the chart updated?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Each month, after BLS releases the PPI.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Can I embed the chart?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Yes. It is free to use and embed. Add #embed=1 to the end of the full visualization's address for the 780-pixel version shown on this page.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Where does the data come from?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"The U.S. Bureau of Labor Statistics: monthly PPI index values for final demand and every commodity in it, and the relative importance tables that give each commodity's share of final demand.\"\n          }\n        }\n      ]\n    },\n    {\n      \"@type\": \"BreadcrumbList\",\n      \"itemListElement\": [\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 1,\n          \"name\": \"Home\",\n          \"item\": \"https://www.data4thepeople.com\"\n        },\n        {\n          \"@type\": \"ListItem\",\n          \"position\": 2,\n          \"name\": \"Exploring the hidden depths of the Producer Price Index\",\n          \"item\": \"https://www.data4thepeople.com/p/ppi-scuba-diver\"\n        }\n      ]\n    }\n  ]\n}"
+}
