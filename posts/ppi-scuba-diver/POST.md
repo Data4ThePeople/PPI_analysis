@@ -7,10 +7,26 @@ time: 07:00:00-04:00
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
 hero_alt: A cartoon scuba diver swims in a deep blue ocean. Above the diver, a small cluster of blue floats lifts it up. Below, a much larger ball of red bubbles marked with anchors pulls it down. Each bubble is one item in U.S. wholesale prices, sized by how much it added to or took away from the 12-month change, drawn from the September 2026 data. A shark swims nearby. Titled The PPI Scuba Diver, every item in U.S. wholesale prices, built by Data 4 The People.
-meta_title:
-description:
-keywords:
+meta_title: "What's driving PPI? Every item, every month since 2016"
+description: "See which of about 820 items are driving PPI final demand inflation, every month since October 2016. A free, animated tool built from BLS data."
+keywords: what is driving PPI, PPI breakdown by item, PPI final demand components, producer price index contributions, wholesale inflation drivers, September 2026 PPI, PPI scuba diver
 schema_type: dataset
+dataset_name: Contributions of each commodity to the 12-month change in PPI final demand, October 2016 to September 2026
+dataset_description: "How many percentage points each of the roughly 820 most detailed commodities in the Producer Price Index for final demand (series WPUFD4, not seasonally adjusted) added to or took away from the 12-month change, every month from October 2016 to September 2026, from BLS commodity indexes and final demand relative importance tables. Items with no published index use their parent category's change. Each month is checked against the published change and flagged when it misses a strict tie-out; months before July 2022 are flagged because BLS published one-decimal indexes then."
+temporal: 2016-10/2026-09
+spatial: United States
+measured: Contribution to 12-month PPI final demand change|percentage points; 12-month price change by commodity|percent; Relative importance (share of final demand)|percent
+sources: https://www.bls.gov/ppi/|https://www.bls.gov/ppi/tables/
+distribution: text/html|https://data4thepeople.github.io/PPI_analysis/dist/index.html;text/csv|https://raw.githubusercontent.com/Data4ThePeople/PPI_analysis/main/data/processed/monthly_summary.csv
+measurement_technique: Chained contributions: each commodity's final demand relative importance, rolled forward by its price change, times its price change, split at BLS's December weight update; commodities with no published index take their nearest published parent's change.
+credit: Data 4 The People, from the U.S. Bureau of Labor Statistics
+license: https://www.data4thepeople.com/terms-of-use
+same_as: https://github.com/Data4ThePeople/PPI_analysis
+app_url: https://data4thepeople.github.io/PPI_analysis/dist/index.html
+app_name: The PPI Scuba Diver
+app_category: EducationalApplication
+app_description: Free animated chart of which items pushed U.S. wholesale prices (PPI final demand) up and down each month since October 2016, drawn as a scuba diver weighed down by anchors and lifted by floats.
+app_features: Every commodity in PPI final demand, sized by its contribution|Every month from October 2016 to September 2026|Play at 1x, 2x or 4x|Hover or tap any item for its price change and weight|Table view of every item, sortable|Tie-out shown for every month|Free, no sign-up
 drop_cap: false
 heading_spacer: 20px
 caption_spacer: 20px
