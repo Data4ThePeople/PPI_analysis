@@ -5,8 +5,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: none yet
-Step: 2a (waiting for Eric)
+Post: ppi-scuba-diver
+Step: 2a
 Since: 2026-10-19
 
 ## Steps
@@ -34,3 +34,4 @@ None.
 - 2026-10-17 Independent tie-out (fresh agent): all 120 months match. Fixed what it raised: estimated items now show their borrowed change with a dashed ring (was contribution / weight), seasonal items show their own change, DATASETS.md defines the merge, color, filled share and DN.
 - 2026-10-17 to 2026-10-19 Page polish per Eric: tie-out note moved below the visual, playback flash fixed, bubbles about 53% larger, "gray piece" wording and gray/amber legend keys removed.
 - 2026-10-19 Step 1 confirmed by Eric.
+- 2026-10-19 Step 2a opened: ppi-scuba-diver, a visualization-only page in the format of stress-test-viz and children-poverty-viz, drafted by Claude at Eric's request. GitHub Pages turned on for the repo. Five-takeaways post from September 2026 to follow separately.
