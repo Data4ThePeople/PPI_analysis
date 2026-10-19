@@ -167,9 +167,7 @@ function legend() {
                  ...s.map((v, j) => [20 * (j + 8), '+' + v])];
   $('#legend').innerHTML = `<span class="lbl">Color: the item's price change over 12 months, %</span>
     <span style="position:relative;display:inline-block;padding-bottom:14px"><span class="bar">${bar}</span>${ticks.map(([x, l]) => `<span style="position:absolute;top:14px;left:${x - 12}px;width:24px;text-align:center;font-size:10.5px;color:var(--muted)">${l}</span>`).join('')}</span>
-    <span class="gapkey"><i style="background:transparent;border:1.5px dashed var(--muted)"></i>Estimated: BLS publishes no index, so it uses its parent category's change</span>
-    <span class="gapkey"><i></i>Not explained by the items</span>
-    <span class="gapkey"><i style="background:#fab219"></i>Month misses our tie-out</span>`;
+    <span class="gapkey"><i style="background:transparent;border:1.5px dashed var(--muted)"></i>Estimated: BLS publishes no index, so it uses its parent category's change</span>`;
 }
 
 // ---------- geometry ----------
