@@ -7,9 +7,9 @@ time: 07:00:00-04:00
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
 hero_alt: A cartoon scuba diver swims in a deep blue ocean. Above the diver, a small cluster of blue floats lifts it up. Below, a much larger ball of red bubbles marked with anchors pulls it down. Each bubble is one item in U.S. wholesale prices, sized by how much it added to or took away from the 12-month change, drawn from the September 2026 data. A shark swims nearby. Titled The PPI Scuba Diver, every item in U.S. wholesale prices, built by Data 4 The People.
-meta_title: "What's driving PPI? Every item, every month since 2016"
-description: "See which of about 820 items are driving PPI final demand inflation, every month since October 2016. A free, animated tool built from BLS data."
-keywords: what is driving PPI, PPI breakdown by item, PPI final demand components, producer price index contributions, wholesale inflation drivers, September 2026 PPI, PPI scuba diver
+meta_title: "Producer Price Index (PPI) by Item, Every Month Since 2016"
+description: "Explore the Producer Price Index (PPI) item by item: what pushed wholesale prices up or down each month since 2016. A free, interactive tool."
+keywords: producer price index, PPI, PPI final demand, PPI by item, PPI components, PPI data, what is driving PPI, wholesale inflation
 schema_type: dataset
 dataset_name: Contributions of each commodity to the 12-month change in PPI final demand, October 2016 to September 2026
 dataset_description: "How many percentage points each of the roughly 820 most detailed commodities in the Producer Price Index for final demand (series WPUFD4, not seasonally adjusted) added to or took away from the 12-month change, every month from October 2016 to September 2026, from BLS commodity indexes and final demand relative importance tables. Items with no published index use their parent category's change. Each month is checked against the published change and flagged when it misses a strict tie-out; months before July 2022 are flagged because BLS published one-decimal indexes then."
