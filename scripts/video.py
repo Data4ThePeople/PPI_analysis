@@ -53,7 +53,9 @@ def main():
     lines.append(f"file '{paths[-1]}'")        # the last duration needs the file repeated
     lst.write_text("\n".join(lines) + "\n")
     out = ROOT / "posts" / SLUG / "social" / f"{SLUG}-diver.mp4"
+    # -t: the repeated last file would otherwise add a second hold.
     subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
+                    "-t", f"{sum(d) / 1000:.2f}",
                     "-vf", "fps=30,scale=1080:1350:flags=lanczos,format=yuv420p",
                     "-c:v", "libx264", "-preset", "slow", "-crf", "20", "-movflags", "+faststart",
                     str(out)], check=True)

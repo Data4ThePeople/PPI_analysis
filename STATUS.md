@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-scuba-diver
-Step: complete (social posts in progress)
+Step: complete
 Since: 2026-10-19
 
 ## Steps
@@ -43,3 +43,4 @@ None.
 - 2026-10-19 Step 2f confirmed by Eric.
 - 2026-10-19 During 2g, at Eric's request: one sentence added to the post's "What it shows right now" (largest increase since December 2022; 16 items up more than 50%) so the email's numbers are in the post. 2c reconverted and the Prismic draft re-pushed; 2b, 2c and 2f otherwise unchanged.
 - 2026-10-19 Step 2g confirmed by Eric. Post ppi-scuba-diver complete.
+- 2026-10-19 Social posts: one X/LinkedIn post with the diver GIF, and an Instagram version (MP4) written for readers new to the data. SOCIAL.md.
