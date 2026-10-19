@@ -48,7 +48,7 @@ The chart below shows the 12-month change in PPI final demand every month since 
 
 The rate was 3.0% in September 2025 and 3.4% in February 2026. It then rose to 4.3% in March, 5.7% in April and 6.3% in September. The peak in these 10 years was 11.7% in March 2022.
 
-Services added 3.33 points of the rise, or 52%. Goods added 2.88 points, or 45%. Construction added 0.14 points, or 2%.
+Services added 3.33 points of the rise, or 53%. Goods added 2.88 points, or 45%. Construction added 0.14 points, or 2%.
 
 Of the 823 items in September, 686 added to the 12-month change and 99 took away from it.
 
