@@ -6,7 +6,7 @@ date: 2026-10-19
 time: 07:00:00-04:00
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
-hero_alt: An ocean scene from September 2026. A scuba diver swims at the 6.3% mark on a depth scale that runs from −2% near the surface to 12% near the seafloor. Below the diver hangs a large cluster of red bubbles marked with anchors, the items that pushed wholesale prices up, led by gasoline, long-distance trucking and portfolio management. A small cluster of blue floats above lifts the diver. A shark swims nearby. Titled The PPI Scuba Diver, built by Data 4 The People.
+hero_alt: A cartoon scuba diver swims in a deep blue ocean. Above the diver, a small cluster of blue floats lifts it up. Below, a much larger ball of red bubbles marked with anchors pulls it down. Each bubble is one item in U.S. wholesale prices, sized by how much it added to or took away from the 12-month change, drawn from the September 2026 data. A shark swims nearby. Titled The PPI Scuba Diver, every item in U.S. wholesale prices, built by Data 4 The People.
 meta_title:
 description:
 keywords:

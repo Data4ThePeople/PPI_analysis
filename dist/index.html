@@ -35,11 +35,11 @@ body.is-embed #app{max-width:none;padding:10px 16px 6px;overflow:hidden}
 body.is-hero #app{max-width:none;padding:0;height:100vh}
 body.is-hero header,body.is-hero #controls,body.is-hero #timeline,body.is-hero #note,body.is-hero footer{display:none}
 body.is-hero #stage{border-radius:0}
-body.is-hero #readout{top:calc(7% + 10px);max-width:40%}
-#herocap{display:none;position:absolute;right:16px;top:calc(7% + 12px);text-align:right;color:#f2f6fa;text-shadow:0 1px 3px rgba(0,20,40,.7);pointer-events:none}
+body.is-hero #readout{display:none}
+#herocap{display:none;position:absolute;left:24px;top:calc(7% + 16px);text-align:left;color:#f2f6fa;text-shadow:0 1px 3px rgba(0,20,40,.7);pointer-events:none}
 body.is-hero #herocap{display:block}
-#herocap .t{font-size:24px;font-weight:700;line-height:1.15}
-#herocap .s{font-size:13.5px;line-height:1.4;color:#d6e2ec;margin-top:2px}
+#herocap .t{font-size:36px;font-weight:700;line-height:1.15}
+#herocap .s{font-size:18px;line-height:1.4;color:#d6e2ec;margin-top:4px}
 header h1{font-size:22px;line-height:1.2;margin:0 0 4px;font-weight:700}
 header p{margin:0;color:var(--ink-2);font-size:14px;line-height:1.4;max-width:860px}
 #controls{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;margin:8px 0 6px}
@@ -152,6 +152,7 @@ const EMBED = (() => { if (location.hash.includes('embed=0')) return false; if (
   try { return window.self !== window.top; } catch (e) { return true; } })();
 if (EMBED) { document.documentElement.setAttribute('data-theme', 'light'); document.body.classList.add('is-embed'); }
 const HERO = location.hash.includes('hero=1');
+const ZOOM = { k: 1, x: 0, y: 0 };      // hero only
 if (HERO) document.body.classList.add('is-hero');
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -355,6 +356,7 @@ function drawFish(scroll, depthNow) {
     const wx = (f.ph + clock * 0.00004 * f.sp * 60 - scroll * 0.5) ;
     let x = ((wx * 90) % (W + 120)); if (x < 0) x += W + 120; x -= 60;
     const y = G.sky + f.y * (H - G.sky) + Math.sin(clock * 0.002 + f.ph) * 4;
+    if (HERO && y * ZOOM.k + ZOOM.y < G.sky + 14) continue;      // zoomed out of the water
     ctx.save(); ctx.translate(x, y); ctx.scale(f.s, f.s);
     ctx.fillStyle = 'rgba(255,214,120,.85)';
     ctx.beginPath(); ctx.ellipse(0, 0, 9, 4.5, 0, 0, Math.PI * 2); ctx.fill();
@@ -366,9 +368,10 @@ function drawFish(scroll, depthNow) {
   const deepAt = DATA.axis.lo + (DATA.axis.hi - DATA.axis.lo) * 0.5;
   const a = Math.max(0, Math.min(1, (depthNow - deepAt) / 1.5));
   if (a > 0.01) {
-    const period = 14000, ph = HERO ? (0.8 * W + 160) / (W + 320) : (clock % period) / period;   // hero: parked at the left
-    const x = W + 160 - ph * (W + 320);
-    const y = G.yBot + (G.floorTop - G.yBot) * 0.35 + Math.sin(clock * 0.0012) * 6;
+    const period = 14000, ph = (clock % period) / period;
+    let x = W + 160 - ph * (W + 320);
+    let y = G.yBot + (G.floorTop - G.yBot) * 0.35 + Math.sin(clock * 0.0012) * 6;
+    if (HERO) { x = (0.17 * W - ZOOM.x) / ZOOM.k; y = (0.74 * H - ZOOM.y) / ZOOM.k; }   // hero: parked lower left on screen
     ctx.save(); ctx.globalAlpha = 0.75 * a; ctx.translate(x, y); ctx.scale(-1, 1);
     ctx.fillStyle = '#5c6f7d';
     ctx.beginPath(); ctx.moveTo(-60, 0); ctx.quadraticCurveTo(-10, -22, 55, -4); ctx.quadraticCurveTo(62, 0, 55, 5);
@@ -549,7 +552,7 @@ function drawClusters(dx, dy) {
     const cur = W < 620 ? [] : lay(mi)[side].list.filter(c => c.i >= 0).slice(0, 5);
     if (cur.length) labels.push({ side, sgn, cy: dy + cy, R: Math.max(A.R, B.R) * (1 - f) + B.R * f, items: cur.map(c => c.i) });
   }
-  drawLabels(labels, dx, mi);
+  if (!HERO) drawLabels(labels, dx, mi);
 }
 function drawLabels(groups, dx, mi) {
   ctx.font = '12px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle';
@@ -590,6 +593,17 @@ function frame(ts) {
   const depthNow = lerp(M[i0].pub, M[i1].pub, f);
   const dx = G.cx, dy = depthY(depthNow);
   drawBackground(pos, depthNow);
+  if (HERO) {
+    // Hero image: zoom in so the diver and its bubbles fill most of the height.
+    const L = lay(i0), top = dy - GAP - (L.dn.bot - L.dn.top), bot = dy + GAP + (L.up.bot - L.up.top);
+    ZOOM.k = Math.min(2.5, 0.84 * H / (bot - top));
+    ZOOM.x = W * 0.56 - dx * ZOOM.k; ZOOM.y = H * 0.53 - (top + bot) / 2 * ZOOM.k;
+    ctx.save(); ctx.translate(ZOOM.x, ZOOM.y); ctx.scale(ZOOM.k, ZOOM.k);
+    drawFish(pos, depthNow); drawFloor(pos); drawClusters(dx, dy); drawDiver(dx, dy);
+    ctx.restore();
+    requestAnimationFrame(frame);
+    return;
+  }
   drawFish(pos, depthNow);
   drawFloor(pos);
   drawAxes(pos, i0);
