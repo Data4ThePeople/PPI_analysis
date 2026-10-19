@@ -1,7 +1,7 @@
-"""Instagram video: the same animation as gif.py, as a 1080x1350 MP4.
+"""Instagram video: the same animation as gif.py, as a 1080x1920 (9:16) MP4.
 
 Instagram does not take GIF uploads. Frames come from dist/index.html in its
-#gif=1 mode at 1.8x, which is exactly 1080x1350, and keep gif.py's timing:
+#gif=1&ig=1 mode at 1.8x (1080x1920), and keep gif.py's timing:
 quick through the early years, slower over the last two, then the release month
 held for 5 seconds. Needs an ffmpeg binary: $FFMPEG, ffmpeg on the PATH, or the
 imageio-ffmpeg package. Writes posts/ppi-scuba-diver/social/ppi-scuba-diver-diver.mp4.
@@ -16,9 +16,13 @@ import sys
 from pathlib import Path
 
 from common import DIST, PROCESSED, ROOT
-from gif import CHROME, CSS_H, CSS_W, SLUG, durations
+from gif import CHROME, CSS_W, SLUG, durations
 
-SCALE = 1.8                                  # 600x750 CSS -> 1080x1350
+SCALE = 1.8                                  # 600 CSS px wide -> 1080
+# Instagram shows every video as a Reel: 9:16 full screen, about square on the
+# desktop site, 4:5 in the feed, 3:4 in the grid. The page's ig=1 mode keeps all
+# text, the diver and the bubbles inside the center square, so no crop cuts them.
+IG_CSS_H, OUT = 1067, (1080, 1920)
 
 
 def ffmpeg():
@@ -31,16 +35,16 @@ def ffmpeg():
 
 def main():
     order = json.loads((PROCESSED / "page_data.json").read_text())["order"]
-    cache = PROCESSED / "gif_frames_1080"
+    cache = PROCESSED / "gif_frames_ig"
     cache.mkdir(exist_ok=True)
     paths = []
     for m in order:
         p = cache / f"{m}.png"
         if not p.exists() or "--recapture" in sys.argv:
             subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
-                            f"--window-size={CSS_W},{CSS_H}", f"--force-device-scale-factor={SCALE}",
+                            f"--window-size={CSS_W},{IG_CSS_H}", f"--force-device-scale-factor={SCALE}",
                             "--virtual-time-budget=3000", f"--screenshot={p}",
-                            f"file://{DIST / 'index.html'}#gif=1&embed=0&month={m}"],
+                            f"file://{DIST / 'index.html'}#gif=1&ig=1&embed=0&month={m}"],
                            capture_output=True, timeout=120, check=True)
         paths.append(p)
         print(m, end=" ", flush=True)
@@ -56,7 +60,7 @@ def main():
     # -t: the repeated last file would otherwise add a second hold.
     subprocess.run([ffmpeg(), "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(lst),
                     "-t", f"{sum(d) / 1000:.2f}",
-                    "-vf", "fps=30,scale=1080:1350:flags=lanczos,format=yuv420p",
+                    "-vf", f"fps=30,scale={OUT[0]}:{OUT[1]}:flags=lanczos,format=yuv420p",
                     "-c:v", "libx264", "-preset", "slow", "-crf", "20", "-movflags", "+faststart",
                     str(out)], check=True)
     print("wrote", out.relative_to(ROOT), f"{out.stat().st_size / 1e6:.1f} MB,",

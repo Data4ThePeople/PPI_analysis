@@ -41,6 +41,8 @@ body.is-gif #readout .flag,body.is-gif #readout .ok,body.is-gif #readout .g{disp
 body.is-gif #herocap{left:auto;right:12px;text-align:right;top:calc(7% + 10px)}
 body.is-gif #herocap .t{font-size:18px}
 body.is-gif #herocap .s{font-size:11.5px;margin-top:2px}
+body.is-ig #readout{top:calc(21.875% + 10px);left:5%;max-width:56%}
+body.is-ig #herocap{top:calc(21.875% + 12px);right:5%}
 #herocap{display:none;position:absolute;left:24px;top:calc(7% + 16px);text-align:left;color:#f2f6fa;text-shadow:0 1px 3px rgba(0,20,40,.7);pointer-events:none}
 body.is-hero #herocap{display:block}
 #herocap .t{font-size:36px;font-weight:700;line-height:1.15}
@@ -158,9 +160,12 @@ const EMBED = (() => { if (location.hash.includes('embed=0')) return false; if (
 if (EMBED) { document.documentElement.setAttribute('data-theme', 'light'); document.body.classList.add('is-embed'); }
 const HERO = location.hash.includes('hero=1');
 const GIF = location.hash.includes('gif=1');      // social GIF frames: scene at normal scale, month readout
+const IG = GIF && location.hash.includes('ig=1'); // Instagram 9:16: everything kept inside the center square, which survives every Instagram crop
+const BAND = IG ? (1 - 9 / 16) / 2 : 0;            // share of height above (and below) that square
 const ZOOM = { k: 1, x: 0, y: 0, diverY: 0 };      // hero and GIF only
 if (HERO || GIF) document.body.classList.add('is-hero');
 if (GIF) document.body.classList.add('is-gif');
+if (IG) document.body.classList.add('is-ig');
 const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const $ = s => document.querySelector(s);
@@ -313,7 +318,7 @@ function resize() {
       upMax = Math.max(upMax, 2.15 * Math.sqrt(G.k * up / (Math.PI * 0.62)) / 1.08);
       dnMax = Math.max(dnMax, 2.15 * Math.sqrt(G.k * dn / (Math.PI * 0.62)) / 1.08);
     }
-    const top = G.sky + 70, bot = H - 30;
+    const top = Math.max(G.sky, BAND * H) + 70, bot = H * (1 - BAND) - 30;
     ZOOM.k = Math.min(3, (bot - top) / (dnMax + upMax + 2 * GAP));
     ZOOM.diverY = top + (dnMax + GAP) * ZOOM.k;
   }
@@ -393,7 +398,7 @@ function drawFish(scroll, depthNow) {
     const period = 14000, ph = (clock % period) / period;
     let x = W + 160 - ph * (W + 320);
     let y = G.yBot + (G.floorTop - G.yBot) * 0.35 + Math.sin(clock * 0.0012) * 6;
-    if (HERO || GIF) { x = (0.17 * W - ZOOM.x) / ZOOM.k; y = (0.74 * H - ZOOM.y) / ZOOM.k; }   // hero and GIF: parked lower left on screen
+    if (HERO || GIF) { x = (0.17 * W - ZOOM.x) / ZOOM.k; y = ((IG ? 0.64 : 0.74) * H - ZOOM.y) / ZOOM.k; }   // hero and GIF: parked lower left on screen
     ctx.save(); ctx.globalAlpha = 0.75 * a; ctx.translate(x, y); ctx.scale(-1, 1);
     ctx.fillStyle = '#5c6f7d';
     ctx.beginPath(); ctx.moveTo(-60, 0); ctx.quadraticCurveTo(-10, -22, 55, -4); ctx.quadraticCurveTo(62, 0, 55, 5);
@@ -408,13 +413,16 @@ function drawFish(scroll, depthNow) {
 }
 function drawFloor(scroll) {
   const baseY = G.floorTop;
+  // When zoomed (hero, GIF), cover the whole screen, not just the unzoomed scene.
+  const z = HERO || GIF, x0 = z ? Math.min(0, -ZOOM.x / ZOOM.k) : 0, x1 = z ? Math.max(W, (W - ZOOM.x) / ZOOM.k) : W;
+  const yB = z ? Math.max(H, (H - ZOOM.y) / ZOOM.k) : H;
   // sand
   ctx.fillStyle = '#2a3b3f';
-  ctx.beginPath(); ctx.moveTo(0, H);
-  for (let x = 0; x <= W + 8; x += 8) { const wx = (x - G.cx) / G.monthPx + scroll; ctx.lineTo(x, baseY + floorY(wx)); }
-  ctx.lineTo(W, H); ctx.closePath(); ctx.fill();
+  ctx.beginPath(); ctx.moveTo(x0, yB);
+  for (let x = x0; x <= x1 + 8; x += 8) { const wx = (x - G.cx) / G.monthPx + scroll; ctx.lineTo(x, baseY + floorY(wx)); }
+  ctx.lineTo(x1 + 8, yB); ctx.closePath(); ctx.fill();
   // rocks and kelp, one decoration slot per half month of world x
-  const left = scroll + (0 - G.cx) / G.monthPx - 1, right = scroll + (W - G.cx) / G.monthPx + 1;
+  const left = scroll + (x0 - G.cx) / G.monthPx - 1, right = scroll + (x1 - G.cx) / G.monthPx + 1;
   for (let s = Math.floor(left * 2); s <= right * 2; s++) {
     const wx = s / 2 + rnd(s) * 0.4, x = G.cx + (wx - scroll) * G.monthPx, y = baseY + floorY(wx);
     const r = rnd(s + 77);
@@ -434,14 +442,14 @@ function drawGifScale() {
   ctx.font = '600 13px -apple-system,Helvetica,Arial,sans-serif'; ctx.textBaseline = 'middle'; ctx.textAlign = 'right';
   for (let d = DATA.axis.lo; d <= DATA.axis.hi + 1e-9; d += DATA.axis.step) {
     const y = depthY(d) * ZOOM.k + ZOOM.y;
-    if (y < G.sky + 60 || y > H - 8) continue;
-    ctx.strokeStyle = 'rgba(220,235,245,.2)'; ctx.setLineDash([4, 6]); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W - 46, y); ctx.stroke(); ctx.setLineDash([]);
-    ctx.fillStyle = 'rgba(230,240,248,.9)'; ctx.fillText((d < 0 ? '−' : '') + Math.abs(d) + '%', W - 10, y);
+    if (y < Math.max(G.sky, BAND * H) + 60 || y > H * (1 - BAND) - 8) continue;
+    ctx.strokeStyle = 'rgba(220,235,245,.2)'; ctx.setLineDash([4, 6]); ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W * (IG ? 0.95 : 1) - 46, y); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(230,240,248,.9)'; ctx.fillText((d < 0 ? '−' : '') + Math.abs(d) + '%', W * (IG ? 0.95 : 1) - 10, y);
   }
 }
 function drawGifCaption() {
   ctx.font = '12px -apple-system,Helvetica,Arial,sans-serif'; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
-  ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.fillText('Deeper = more inflation', W - 10, H - 14);
+  ctx.fillStyle = 'rgba(230,240,248,.85)'; ctx.fillText('Deeper = more inflation', W * (IG ? 0.95 : 1) - 10, H * (1 - BAND) - 14);
 }
 function drawAxes(scroll, mi) {
   // depth scale on the left: fixed for every month

@@ -3,7 +3,7 @@
 Drawn from the post and the email (`EMAIL.md`). Every number is in the post.
 Post URL: https://www.data4thepeople.com/p/ppi-scuba-diver
 
-Animation: `social/ppi-scuba-diver-diver.gif` (560x700, 7.7 MB) for X and LinkedIn, and `social/ppi-scuba-diver-diver.mp4` (1080x1350, 4.3 MB, 14.8 seconds) for Instagram, which does not take GIFs. The diver moves through every month from October 2016 to September 2026, quickly through the early years and slowing over the last two, then holds September 2026 for 5 seconds. Every frame is a real month at one zoom level, so bubble sizes compare across months. The last frame matches the tool's September 2026 view. Built by `scripts/gif.py` and `scripts/video.py`.
+Animation: `social/ppi-scuba-diver-diver.gif` (560x700, 7.7 MB) for X and LinkedIn, and `social/ppi-scuba-diver-diver.mp4` (1080x1920, 9:16, 4.1 MB, 14.8 seconds) for Instagram, which does not take GIFs. Instagram crops video differently in each view (full 9:16 in Reels, about square on the desktop site, 4:5 in the feed, 3:4 in the grid), so the video keeps all text, the diver and the bubbles inside the center square; the water and seafloor fill the rest. The diver moves through every month from October 2016 to September 2026, quickly through the early years and slowing over the last two, then holds September 2026 for 5 seconds. Every frame is a real month at one zoom level, so bubble sizes compare across months. The last frame matches the tool's September 2026 view. Built by `scripts/gif.py` and `scripts/video.py`.
 
 ## X and LinkedIn, one post (269 of 280 characters on X with the link)
 
