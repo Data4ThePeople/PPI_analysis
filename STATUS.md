@@ -71,3 +71,4 @@ None.
 - 2026-10-20 Step 2e opened.
 - 2026-10-20 Step 2e confirmed by Eric.
 - 2026-10-20 Step 2f opened.
+- 2026-10-20 During 2f, per Eric: post restructured with the five takeaways first and the diver embedded at the end under "What are you finding in the data?". Reconverted (2c) and the Prismic draft updated; no images changed.

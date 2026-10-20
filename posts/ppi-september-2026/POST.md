@@ -24,19 +24,7 @@ Yesterday we released the [PPI Scuba Diver](https://www.data4thepeople.com/p/ppi
 
 The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, PPI final demand rose 6.3%. That is the largest 12-month increase since December 2022, up from 3.4% in the 12 months to February 2026.
 
-Below is the diver, set to September 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total.
-
-<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1&month=2026-09" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver, set to September 2026"></iframe>
-
-::: spacer 20px
-
-::: blurb
-**[Open the full visualization](https://data4thepeople.github.io/PPI_analysis/dist/index.html#month=2026-09)** **for a larger view and dark mode.**
-:::
-
-::: spacer
-
-Here are five findings that grabbed our attention.
+Here are five findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.
 
 Note: BLS revises PPI data for four months after it first publishes it. The figures for June to September 2026 are preliminary, so every September number in this post may change.
 
@@ -120,6 +108,24 @@ So the chart below compares the index with the stock market. The blue line is th
 *Portfolio management is the 12-month change in its PPI. The S&P 500 line is the 12-month change in its month-end close, to the end of the month before. Source: BLS; S&P Dow Jones Indices via FRED and Yahoo Finance.*
 
 The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio management fees in September were up 21.2%. The two lines rose and fell together through 2022 and 2023, and both have risen since. The portfolio management index usually moves less than the S&P 500. Not every fee BLS tracks here is set as a share of assets, and managed portfolios hold more than U.S. stocks.
+
+::: spacer
+
+## What are you finding in the data?
+
+These are the five things that stood out to us. There are about 820 items in the diver, and every month back to October 2016. Explore it yourself.
+
+The diver below is set to September 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total. Press Play to watch every month since October 2016, or pick a month and point at any bubble to see the item, its price change and how much it added.
+
+<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1&month=2026-09" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver, set to September 2026"></iframe>
+
+::: spacer 20px
+
+::: blurb
+**[Open the full visualization](https://data4thepeople.github.io/PPI_analysis/dist/index.html#month=2026-09)** **for a larger view and dark mode.**
+:::
+
+::: spacer 40px
 
 ::: divider
 

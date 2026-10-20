@@ -52,110 +52,7 @@
           },
           {
             "type": "paragraph",
-            "text": "Below is the diver, set to September 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total.",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ]
-      }
-    },
-    {
-      "slice_type": "spacer",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "spacer_value": "20px"
-      }
-    },
-    {
-      "slice_type": "html_embed",
-      "slice_label": null,
-      "variation": "fullWidth",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "html_content": [
-          {
-            "type": "preformatted",
-            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1&month=2026-09\" width=\"100%\" height=\"780\" loading=\"lazy\" style=\"border:0\" title=\"The PPI Scuba Diver, set to September 2026\"></iframe>",
-            "spans": [],
-            "direction": "ltr"
-          }
-        ],
-        "embed_height": "780px"
-      }
-    },
-    {
-      "slice_type": "spacer",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "spacer_value": "20px"
-      }
-    },
-    {
-      "slice_type": "highlited_page_blurb",
-      "slice_label": null,
-      "variation": "noTitle",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "content": [
-          {
-            "type": "paragraph",
-            "text": "Open the full visualization for a larger view and dark mode.",
-            "spans": [
-              {
-                "start": 0,
-                "end": 27,
-                "type": "strong"
-              },
-              {
-                "start": 0,
-                "end": 27,
-                "type": "hyperlink",
-                "data": {
-                  "link_type": "Web",
-                  "url": "https://data4thepeople.github.io/PPI_analysis/dist/index.html#month=2026-09",
-                  "target": "_blank"
-                }
-              },
-              {
-                "start": 28,
-                "end": 60,
-                "type": "strong"
-              }
-            ],
-            "direction": "ltr"
-          }
-        ]
-      }
-    },
-    {
-      "slice_type": "spacer",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "spacer_value": "20px"
-      }
-    },
-    {
-      "slice_type": "paragarph_text",
-      "slice_label": null,
-      "variation": "default",
-      "version": "initial",
-      "items": [],
-      "primary": {
-        "paragraph_text": [
-          {
-            "type": "paragraph",
-            "text": "Here are five findings that grabbed our attention.",
+            "text": "Here are five findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.",
             "spans": [],
             "direction": "ltr"
           },
@@ -209,8 +106,13 @@
       "items": [],
       "primary": {
         "image": {
+          "id": "ckUEIQ3F_2N5wAsG",
           "alt": "Line and bar chart titled Wholesale prices rose 6.3% over the 12 months to September 2026. The 12-month change in PPI final demand from October 2016 to September 2026 runs near 2% to 3% until 2020, dips below zero in 2020, peaks at 11.7% in March 2022, falls to about 0% in mid-2023, and climbs again in 2026 to 6.3% in September. Bars under the line show goods and services each adding a large share; construction adds little.",
-          "copyright": null
+          "copyright": null,
+          "dimensions": {
+            "width": 1800,
+            "height": 1170
+          }
         },
         "source_text": [
           {
@@ -308,8 +210,13 @@
       "items": [],
       "primary": {
         "image": {
+          "id": "E0hi9HcEpI4F3bZj",
           "alt": "A waterfall chart of what added up to wholesale inflation in September 2026. Regular gasoline, up 66.1%, added 0.76 percentage points. Long-distance trucking added 0.45, portfolio management 0.42, diesel fuel (up 115.2%) 0.39, other goods wholesaling 0.35, airline passenger services 0.19, hospital inpatient care 0.19 and premium gasoline 0.18. The other 811 items added 3.75. Gas station margins, car dealer margins, eggs and pork pulled it down. The total is 6.35.",
-          "copyright": null
+          "copyright": null,
+          "dimensions": {
+            "width": 1800,
+            "height": 1290
+          }
         },
         "source_text": [
           {
@@ -413,8 +320,13 @@
       "items": [],
       "primary": {
         "image": {
+          "id": "6xOnNMMKpHBdB57Z",
           "alt": "Line chart titled Long-distance trucking, 12-month price change, June 2010 to September 2026. The line stays between about minus 3% and plus 9% from 2010 to 2020, against an average of plus 3.6%. It climbs to a peak of plus 26.9% in May 2022, falls to about minus 14% in 2023, and climbs again in 2026 to plus 22.8% in September, the fifth-highest of 196 months. The four higher months are March to June 2022.",
-          "copyright": null
+          "copyright": null,
+          "dimensions": {
+            "width": 1800,
+            "height": 1125
+          }
         },
         "source_text": [
           {
@@ -523,8 +435,13 @@
       "items": [],
       "primary": {
         "image": {
+          "id": "gjzWJezRNI4_SB6m",
           "alt": "Line chart titled Jet fuel and airline fares, 12-month price change, October 2016 to September 2026. Jet fuel swings widely, from about minus 68% in 2020 to plus 170% in 2021 and plus 132% in 2022, falls below zero through most of 2023 to 2025, and climbs in 2026 to plus 104.4% in September. Airline fares in the CPI move in a much narrower range, between about minus 29% and plus 43%, and end at plus 22.4%. The fares line has a gap at October 2025.",
-          "copyright": null
+          "copyright": null,
+          "dimensions": {
+            "width": 1800,
+            "height": 1125
+          }
         },
         "source_text": [
           {
@@ -678,8 +595,13 @@
       "items": [],
       "primary": {
         "image": {
+          "id": "oPPwmn2Dn7yZ-flR",
           "alt": "Line chart titled Portfolio management fees and the stock market, 12-month change, October 2016 to September 2026. Portfolio management (PPI) and the S&P 500, shifted one month, rise and fall together. The S&P 500 swings more widely, from about minus 19% to plus 54%, while portfolio management runs from about minus 14% to plus 33%. In September 2026 portfolio management is up 21.2%, and the S&P 500 was up 19.0% over the 12 months to the end of August.",
-          "copyright": null
+          "copyright": null,
+          "dimensions": {
+            "width": 1800,
+            "height": 1125
+          }
         },
         "source_text": [
           {
@@ -719,6 +641,121 @@
             "type": "paragraph",
             "text": "The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio management fees in September were up 21.2%. The two lines rose and fell together through 2022 and 2023, and both have risen since. The portfolio management index usually moves less than the S&P 500. Not every fee BLS tracks here is set as a share of assets, and managed portfolios hold more than U.S. stocks.",
             "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "paragarph_text",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "paragraph_text": [
+          {
+            "type": "heading2",
+            "text": "What are you finding in the data?",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "These are the five things that stood out to us. There are about 820 items in the diver, and every month back to October 2016. Explore it yourself.",
+            "spans": [],
+            "direction": "ltr"
+          },
+          {
+            "type": "paragraph",
+            "text": "The diver below is set to September 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total. Press Play to watch every month since October 2016, or pick a month and point at any bubble to see the item, its price change and how much it added.",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ]
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "html_embed",
+      "slice_label": null,
+      "variation": "fullWidth",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "html_content": [
+          {
+            "type": "preformatted",
+            "text": "<style>html,body{margin:0;padding:0;overflow:hidden}iframe{display:block}</style><iframe src=\"https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1&month=2026-09\" width=\"100%\" height=\"780\" loading=\"lazy\" style=\"border:0\" title=\"The PPI Scuba Diver, set to September 2026\"></iframe>",
+            "spans": [],
+            "direction": "ltr"
+          }
+        ],
+        "embed_height": "780px"
+      }
+    },
+    {
+      "slice_type": "spacer",
+      "slice_label": null,
+      "variation": "default",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "spacer_value": "20px"
+      }
+    },
+    {
+      "slice_type": "highlited_page_blurb",
+      "slice_label": null,
+      "variation": "noTitle",
+      "version": "initial",
+      "items": [],
+      "primary": {
+        "content": [
+          {
+            "type": "paragraph",
+            "text": "Open the full visualization for a larger view and dark mode.",
+            "spans": [
+              {
+                "start": 0,
+                "end": 27,
+                "type": "strong"
+              },
+              {
+                "start": 0,
+                "end": 27,
+                "type": "hyperlink",
+                "data": {
+                  "link_type": "Web",
+                  "url": "https://data4thepeople.github.io/PPI_analysis/dist/index.html#month=2026-09",
+                  "target": "_blank"
+                }
+              },
+              {
+                "start": 28,
+                "end": 60,
+                "type": "strong"
+              }
+            ],
             "direction": "ltr"
           }
         ]
@@ -1055,5 +1092,23 @@
       }
     }
   ],
-  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"The PPI Scuba Diver: five takeaways from September 2026\",\n      \"description\": \"Wholesale prices rose 6.3% in the 12 months to September 2026, the most since December 2022. Fuels, long-haul trucking, jet fuel and investment fees stood out.\",\n      \"datePublished\": \"2026-10-20T08:15:00-04:00\",\n      \"dateModified\": \"2026-10-20T08:15:00-04:00\",\n      \"articleSection\": \"Data 4 Thought\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"inLanguage\": \"en-US\",\n      \"isAccessibleForFree\": true,\n      \"keywords\": [\n        \"September 2026 PPI\",\n        \"PPI report\",\n        \"producer price index September 2026\",\n        \"wholesale inflation\",\n        \"why did PPI rise\",\n        \"long-haul trucking prices\",\n        \"jet fuel prices\",\n        \"PPI final demand\"\n      ],\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026\"\n      },\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026#article\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What was the PPI in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"PPI final demand rose 6.3% in the 12 months to September 2026, not seasonally adjusted. That is the largest 12-month increase since December 2022. The figure is preliminary, and BLS will revise it.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why did the PPI rise so much in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"PPI final demand rose 6.3% in the 12 months to September 2026. Fuels added 1.93 points, about 30% of the rise. Regular gasoline, up 66.1%, added the most of any item, 0.76 points. Long-distance trucking, portfolio management and diesel fuel came next.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much did trucking prices rise in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Long-distance trucking prices in PPI final demand were 22.8% higher than a year earlier. That is the fifth-highest 12-month change since BLS began publishing it, behind only March to June 2022. The average before September 2026 was 3.6%.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much did jet fuel prices rise?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Jet fuel prices in PPI final demand were 104.4% higher in September 2026 than a year earlier, the largest 12-month increase since June 2022.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why are portfolio management fees in the PPI?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Portfolio management is a service sold to final buyers, so it is part of PPI final demand. BLS prices it mostly from fees charged as a share of assets managed, so it tends to move with financial markets.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is the September 2026 PPI final?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. BLS revises PPI data for four months after first release, so June to September 2026 are preliminary.\"\n          }\n        }\n      ]\n    }\n  ]\n}"
+  "featured_image": {
+    "id": "EYwNMrXEQL0newLw",
+    "alt": "A chart drawn as a mountain highway at dusk, titled Five takeaways from the September 2026 PPI data release. The ridge is the 12-month change in long-haul trucking prices, January 2019 to September 2026. Green signs mark the May 2022 peak at +26.9%, the July 2023 valley at -14.0%, the average since 2010 at +3.6% and September 2026 at +22.8%. A yellow sign on the steep drop after 2022 reads Trucks use engine brake. A small red semi truck climbs the last steep hill to the September summit.",
+    "copyright": null,
+    "dimensions": {
+      "width": 1680,
+      "height": 1080
+    }
+  },
+  "meta_image": {
+    "id": "EYwNMrXEQL0newLw",
+    "alt": "A chart drawn as a mountain highway at dusk, titled Five takeaways from the September 2026 PPI data release. The ridge is the 12-month change in long-haul trucking prices, January 2019 to September 2026. Green signs mark the May 2022 peak at +26.9%, the July 2023 valley at -14.0%, the average since 2010 at +3.6% and September 2026 at +22.8%. A yellow sign on the steep drop after 2022 reads Trucks use engine brake. A small red semi truck climbs the last steep hill to the September summit.",
+    "copyright": null,
+    "dimensions": {
+      "width": 1680,
+      "height": 1080
+    }
+  },
+  "schema": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Article\",\n      \"headline\": \"The PPI Scuba Diver: five takeaways from September 2026\",\n      \"description\": \"Wholesale prices rose 6.3% in the 12 months to September 2026, the most since December 2022. Fuels, long-haul trucking, jet fuel and investment fees stood out.\",\n      \"image\": \"https://images.prismic.io/data4thepeople/EYwNMrXEQL0newLw_ppi-september-2026-hero-1680x1080.png?auto=format,compress\",\n      \"datePublished\": \"2026-10-20T08:15:00-04:00\",\n      \"dateModified\": \"2026-10-20T08:15:00-04:00\",\n      \"articleSection\": \"Data 4 Thought\",\n      \"license\": \"https://www.data4thepeople.com/terms-of-use\",\n      \"inLanguage\": \"en-US\",\n      \"isAccessibleForFree\": true,\n      \"keywords\": [\n        \"September 2026 PPI\",\n        \"PPI report\",\n        \"producer price index September 2026\",\n        \"wholesale inflation\",\n        \"why did PPI rise\",\n        \"long-haul trucking prices\",\n        \"jet fuel prices\",\n        \"PPI final demand\"\n      ],\n      \"author\": {\n        \"@type\": \"Person\",\n        \"name\": \"Eric Pachman\",\n        \"url\": \"https://www.data4thepeople.com/authors/eric-pachman\"\n      },\n      \"publisher\": {\n        \"@type\": \"Organization\",\n        \"name\": \"Data 4 The People\",\n        \"url\": \"https://data4thepeople.com\"\n      },\n      \"mainEntityOfPage\": {\n        \"@type\": \"WebPage\",\n        \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026\"\n      },\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026#article\"\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"@id\": \"https://www.data4thepeople.com/p/ppi-september-2026#faq\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"What was the PPI in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"PPI final demand rose 6.3% in the 12 months to September 2026, not seasonally adjusted. That is the largest 12-month increase since December 2022. The figure is preliminary, and BLS will revise it.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why did the PPI rise so much in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"PPI final demand rose 6.3% in the 12 months to September 2026. Fuels added 1.93 points, about 30% of the rise. Regular gasoline, up 66.1%, added the most of any item, 0.76 points. Long-distance trucking, portfolio management and diesel fuel came next.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much did trucking prices rise in September 2026?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Long-distance trucking prices in PPI final demand were 22.8% higher than a year earlier. That is the fifth-highest 12-month change since BLS began publishing it, behind only March to June 2022. The average before September 2026 was 3.6%.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"How much did jet fuel prices rise?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Jet fuel prices in PPI final demand were 104.4% higher in September 2026 than a year earlier, the largest 12-month increase since June 2022.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Why are portfolio management fees in the PPI?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Portfolio management is a service sold to final buyers, so it is part of PPI final demand. BLS prices it mostly from fees charged as a share of assets managed, so it tends to move with financial markets.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Is the September 2026 PPI final?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"No. BLS revises PPI data for four months after first release, so June to September 2026 are preliminary.\"\n          }\n        }\n      ]\n    }\n  ]\n}"
 }
