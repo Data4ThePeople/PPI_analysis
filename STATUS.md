@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2b
+Step: 2b confirmed; next 2c
 Since: 2026-10-19
 
 ## Steps
@@ -15,7 +15,7 @@ Since: 2026-10-19
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-10-19 | five takeaways (headline, fuels, jet fuel, trade margins, portfolio management); charts/2026-09; TAKEAWAYS_TIEOUT.md 0 differences; independent tie-out matched |
 | 2a | Draft with brackets resolved | 2026-10-20 | Claude-drafted at Eric's request; takeaways: headline, fuels, trucking, jet fuel vs CPI airfares, portfolio management vs S&P 500; trade margins dropped; Eric's edits applied |
-| 2b | Eric's edit, Claude's look-over | | |
+| 2b | Eric's edit, Claude's look-over | 2026-10-20 | edits 1-6 accepted; publish October 20, 2026, 8:15 a.m. EDT |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
@@ -64,3 +64,4 @@ None.
 - 2026-10-20 During 2a, per Eric: trucking chart (full history since 2010) added as takeaway 3 with a link to the fuel surcharge calculator; jet fuel moved to 4 and paired with CPI airline fares, with BTS and IATA fuel-cost shares; portfolio management paired with the S&P 500 (one-month shift); trade margins removed. Second independent tie-out matched every number.
 - 2026-10-20 Step 2a confirmed by Eric.
 - 2026-10-20 Step 2b opened.
+- 2026-10-20 Step 2b confirmed by Eric.
