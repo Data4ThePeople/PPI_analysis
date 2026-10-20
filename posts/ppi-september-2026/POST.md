@@ -109,6 +109,8 @@ So the chart below compares the index with the stock market. The blue line is th
 
 The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio management fees in September were up 21.2%. The two lines rose and fell together through 2022 and 2023, and both have risen since. The portfolio management index usually moves less than the S&P 500. Not every fee BLS tracks here is set as a share of assets, and managed portfolios hold more than U.S. stocks.
 
+Long story short, if the market falls, the fees you pay your money manager tend to fall too. And when those fees fall, they put downward pressure on wholesale inflation. So this item can move wholesale inflation in either direction, depending on the market.
+
 ::: spacer
 
 ## What are you finding in the data?
