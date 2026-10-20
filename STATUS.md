@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2f confirmed; next 2g
+Step: 2g
 Since: 2026-10-19
 
 ## Steps
@@ -73,3 +73,4 @@ None.
 - 2026-10-20 Step 2f opened.
 - 2026-10-20 During 2f, per Eric: post restructured with the five takeaways first and the diver embedded at the end under "What are you finding in the data?". Reconverted (2c) and the Prismic draft updated; no images changed.
 - 2026-10-20 Step 2f confirmed by Eric.
+- 2026-10-20 Step 2g opened.
