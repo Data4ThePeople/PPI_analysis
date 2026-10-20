@@ -55,7 +55,7 @@ def main():
 
     wf = list(csv.DictReader(open(NUM / "02-waterfall.csv")))
     tr = list(csv.DictReader(open(NUM / "04-trade-margins.csv")))
-    lines_codes = {r["code"] for f in ("03-jet-fuel.csv",) for r in csv.DictReader(open(NUM / f))} | {"402101"}
+    lines_codes = {"057203", "402101"}
     name_to_code = {}
     from takeaways import short
     for code, r in cur.iterrows():
@@ -72,9 +72,6 @@ def main():
         check(f"WPUFD4 {r['month']}", yoy(lv["WPUFD4"], r["month"]), float(r["published_pct"]), 0.0001)
     for c in codes:
         check(f"{c} {cur.loc[c, 'name'][:45]} {MONTH}", yoy(lv[f"WPU{c}"], MONTH), cur.loc[c, "yoy"], TOL_YOY)
-    for f in ("03-jet-fuel.csv",):
-        for r in csv.DictReader(open(NUM / f)):
-            check(f"{r['code']} {r['month']}", yoy(lv[f"WPU{r['code']}"], r["month"]), float(r["yoy_pct"]), TOL_YOY)
     tk = list(csv.DictReader(open(NUM / "06-trucking.csv")))
     tlv = raw({"WPU301202"})["WPU301202"]
     tvals = []
@@ -86,11 +83,11 @@ def main():
             check(f"301202 {r['month']}", v, float(r["yoy_pct"]), TOL_YOY)
     import json
     cpi = json.loads(open("/Users/ericpachman/PycharmProjects/CPI_analysis/data/raw/indexes.json").read())["CUUR0000SETG01"]
-    for r in csv.DictReader(open(NUM / "03b-jet-fuel-cpi-airfares.csv")):
+    for r in csv.DictReader(open(NUM / "03-jet-fuel.csv")):
         if r["series"].startswith("CUUR"):
             check(f"CPI airline fares {r['month']} (CPI_analysis pull)", yoy(cpi, r["month"]), float(r["yoy_pct"]), TOL_YOY)
         else:
-            check(f"057203 {r['month']} (03b)", yoy(lv["WPU057203"], r["month"]), float(r["yoy_pct"]), TOL_YOY)
+            check(f"057203 {r['month']} (03)", yoy(lv["WPU057203"], r["month"]), float(r["yoy_pct"]), TOL_YOY)
     sp = json.loads((ROOT / "data" / "raw" / "sp500_month_end.json").read_text())
     for r in csv.DictReader(open(NUM / "05-portfolio.csv")):
         if r["month"] == "correlation":

@@ -420,14 +420,10 @@ def main():
     headline(items, summary, "01-headline.png")
     waterfall(items, summary, "02-waterfall.png")
     first = month_label(sorted(items.month.unique())[0])
-    two_lines(items, (JET, AIR), "Jet fuel and airline passenger services, 12-month price change",
-              f"{first} to {month_label(MONTH)}. Both are items in PPI final demand. Airline passenger services is what\n"
-              "airlines receive for passenger flights. June to September 2026 are preliminary.",
-              "03-jet-fuel.png", ("Jet fuel", "Airline passenger services"))
     trade(items, "04-trade-margins.png")
     portfolio_sp(items, "05-portfolio.png")
     trucking("06-trucking.png")
-    jet_cpi(items, "03b-jet-fuel-cpi-airfares.png")
+    jet_cpi(items, "03-jet-fuel.png")
 
 
 if __name__ == "__main__":

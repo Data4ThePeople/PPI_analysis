@@ -88,16 +88,16 @@ Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freig
 
 ## 4. Jet fuel more than doubled
 
-The chart below shows the 12-month change in the price of jet fuel since October 2016, along with airline passenger services, which is what airlines receive for passenger flights.
+The chart below shows the 12-month change in the price of jet fuel since October 2016, along with airline fares, which is what travelers pay, from the Consumer Price Index (CPI).
 
-![Line chart titled Jet fuel and airline passenger services, 12-month price change, October 2016 to September 2026. Jet fuel swings widely, from about minus 68% in 2020 to plus 170% in 2021 and plus 132% in 2022, falls below zero through most of 2023 to 2025, and climbs in 2026 to plus 104.4% in September. Airline passenger services moves in a much narrower range, between about minus 24% and plus 32%, and ends at plus 16.6%.](images/03-jet-fuel.png)
-*12-month price change. Both are items in PPI final demand. June to September 2026 are preliminary. Source: BLS.*
+![Line chart titled Jet fuel and airline fares, 12-month price change, October 2016 to September 2026. Jet fuel swings widely, from about minus 68% in 2020 to plus 170% in 2021 and plus 132% in 2022, falls below zero through most of 2023 to 2025, and climbs in 2026 to plus 104.4% in September. Airline fares in the CPI move in a much narrower range, between about minus 29% and plus 43%, and end at plus 22.4%. The fares line has a gap at October 2025.](images/03-jet-fuel.png)
+*12-month price change. Jet fuel is from PPI final demand; June to September 2026 are preliminary. Airline fares are from the CPI for All Urban Consumers, U.S. city average; BLS did not collect CPI data for October 2025. Both not seasonally adjusted. Source: BLS.*
 
-Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year before that, in September 2025, they were up 3.2%. The last time jet fuel rose faster over 12 months was June 2022, when it was up 120.5%.
+Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year before that, in September 2025, they were up 3.2%. The last time jet fuel rose faster over 12 months was June 2022, when it was up 120.5%. Jet fuel is a small share of final demand, about 0.2% by weight, so it added 0.15 points.
 
-Jet fuel is a small share of final demand, about 0.2% by weight, so it added 0.15 points. Airline passenger services is a much larger share, about 1.2%, and rose 16.6%, adding 0.19 points.
+Airline fares in the CPI were 22.4% higher than a year earlier. In 2022, fares peaked at 42.9% in September, while jet fuel peaked at 132.1% in May.
 
-The two lines tend to rise and fall in the same years. This chart does not show how much of one passes into the other.
+The two lines tend to rise and fall in the same years, with fares moving in a much narrower range. This chart does not show how much of the cost of jet fuel passes into fares.
 
 ::: spacer
 
