@@ -2,7 +2,7 @@
 
 Post URL: https://www.data4thepeople.com/p/ppi-september-2026/
 
-Claude's draft from the post text, October 20, 2026. Short version at Eric's request: the hero and the five takeaways, no charts.
+Claude's draft from the post text, October 20, 2026. Short version at Eric's request: the hero and the five takeaways with a line of context each, no charts.
 
 ```
 Subject:  Five takeaways from the September PPI
@@ -24,13 +24,17 @@ The PPI Scuba Diver: five takeaways from September 2026
 ## 3. Body
 
 ```
-Wholesale prices rose 6.3% in the 12 months to September 2026. Here are five things that stood out to us.
+The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, it rose 6.3%. Here are five things that stood out to us.
 
-1. The largest 12-month increase since December 2022.
-2. Fuels made up about 30% of the rise.
-3. Long-distance trucking prices rose 22.8%, the most since 2022.
-4. Jet fuel more than doubled, up 104.4%.
-5. Portfolio management fees rose 21.2%, and they follow the stock market.
+1. The largest 12-month increase since December 2022. As recently as February 2026, the rate was 3.4%.
+
+2. Fuels made up about 30% of the rise. Regular gasoline, up 66.1%, added more than any other item, and diesel rose 115.2%.
+
+3. Long-distance trucking prices rose 22.8%, the most since 2022. Of the 196 months since June 2010, only four were higher, all in 2022.
+
+4. Jet fuel more than doubled, up 104.4%. Airline fares in the Consumer Price Index rose 22.4%, and fuel made up 21.7% of U.S. airlines' domestic operating costs in the second quarter, up from 15.0% a year earlier.
+
+5. Portfolio management fees rose 21.2%, the third-largest addition of any item. BLS prices these fees from the value of the assets managed, so they tend to move with the stock market.
 
 The full piece has the charts behind each one, and the PPI Scuba Diver so you can explore the data yourself.
 ```
