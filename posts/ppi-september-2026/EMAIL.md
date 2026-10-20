@@ -26,7 +26,7 @@ The PPI Scuba Diver: five takeaways from September 2026
 ```
 The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, it rose 6.3%, the fastest pace since December 2022. Here are five things that stood out to us.
 
-1. Up from 3.4% as recently as February 2026.
+1. The largest 12-month increase since December 2022. As recently as February 2026, the rate was 3.4%.
 
 2. Fuels made up about 30% of the rise. Regular gasoline, up 66.1%, added more than any other item, and diesel rose 115.2%.
 
