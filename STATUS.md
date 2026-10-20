@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2d confirmed; next 2e
+Step: 2e
 Since: 2026-10-19
 
 ## Steps
@@ -68,3 +68,4 @@ None.
 - 2026-10-20 Step 2c opened.
 - 2026-10-20 Step 2c confirmed (Eric moved on to the hero). Step 2d opened: hero from the trucking chart drawn as a mountain range with a semi truck and highway signs.
 - 2026-10-20 Step 2d confirmed by Eric.
+- 2026-10-20 Step 2e opened.

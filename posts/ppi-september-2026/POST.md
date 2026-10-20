@@ -7,9 +7,9 @@ time: 08:15:00-04:00
 section: Data 4 Thought
 hero: images/ppi-september-2026-hero-1680x1080.png
 hero_alt: A chart drawn as a mountain highway at dusk, titled Five takeaways from the September 2026 PPI data release. The ridge is the 12-month change in long-haul trucking prices, January 2019 to September 2026. Green signs mark the May 2022 peak at +26.9%, the July 2023 valley at -14.0%, the average since 2010 at +3.6% and September 2026 at +22.8%. A yellow sign on the steep drop after 2022 reads Trucks use engine brake. A small red semi truck climbs the last steep hill to the September summit.
-meta_title:
-description:
-keywords:
+meta_title: "September 2026 PPI: 5 Takeaways on Wholesale Prices"
+description: "Wholesale prices rose 6.3% in the 12 months to September 2026, the most since December 2022. Fuels, long-haul trucking, jet fuel and investment fees stood out."
+keywords: September 2026 PPI, PPI report, producer price index September 2026, wholesale inflation, why did PPI rise, long-haul trucking prices, jet fuel prices, PPI final demand
 schema_type: article
 drop_cap: true
 heading_spacer: 20px
