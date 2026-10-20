@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2a confirmed; next 2b
+Step: 2b
 Since: 2026-10-19
 
 ## Steps
@@ -63,3 +63,4 @@ None.
 - 2026-10-19 Step 2a opened: posts/ppi-september-2026/ with POST.md from the template and the five charts in images/.
 - 2026-10-20 During 2a, per Eric: trucking chart (full history since 2010) added as takeaway 3 with a link to the fuel surcharge calculator; jet fuel moved to 4 and paired with CPI airline fares, with BTS and IATA fuel-cost shares; portfolio management paired with the S&P 500 (one-month shift); trade margins removed. Second independent tie-out matched every number.
 - 2026-10-20 Step 2a confirmed by Eric.
+- 2026-10-20 Step 2b opened.
