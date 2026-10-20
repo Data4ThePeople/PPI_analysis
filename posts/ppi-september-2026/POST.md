@@ -65,7 +65,7 @@ Regular gasoline added the most, 0.76 points. Its price was 66.1% higher than a 
 
 Diesel fuel came next among fuels. Its price rose 115.2%, the largest 12-month increase since June 2021, and it added 0.39 points.
 
-Taken together, the fuels and power group, which includes gasoline, diesel, jet fuel, heating oil, electricity and natural gas, added 1.93 points. That is 30% of the 6.35 points our items add up to. The group is about 5.4% of final demand by weight.
+Taken together, the fuels and power group, which includes gasoline, diesel, jet fuel, heating oil, electricity and natural gas, added 1.93 points. That is 30% of the 6.35 points our items add up to. For context, the group is just 5.4% of final demand by weight.
 
 ::: spacer
 
@@ -82,7 +82,7 @@ September 2026 ranks fifth of the 196 months. The only higher months are March t
 
 The rise came quickly. The rate was 0.4% in January 2026 and 1.9% in February. It reached 9.2% in March and 16.1% in April, and stayed between 14.5% and 17.9% from May to August.
 
-Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freight that moves under contract carries a fuel surcharge that is reset each week from the diesel price, and BLS has noted that its transportation price indexes follow those surcharges up and down. Our [Diesel Fuel Surcharge Calculator](https://www.data4thepeople.com/p/fuel-surcharge-impact-viz) shows how a diesel price becomes a surcharge on a truckload, LTL or rail bill. This chart does not show how much of the 22.8% came from surcharges and how much from base rates.
+Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freight that moves under contract carries a fuel surcharge that is reset each week from the diesel price, and BLS has noted that its transportation price indexes follow those surcharges up and down. Our [Diesel Fuel Surcharge Calculator](https://www.data4thepeople.com/p/fuel-surcharge-impact-viz) shows how a diesel price becomes a surcharge on a truckload, LTL or rail bill.
 
 ::: spacer
 
@@ -93,7 +93,7 @@ The chart below shows the 12-month change in the price of jet fuel since October
 ![Line chart titled Jet fuel and airline fares, 12-month price change, October 2016 to September 2026. Jet fuel swings widely, from about minus 68% in 2020 to plus 170% in 2021 and plus 132% in 2022, falls below zero through most of 2023 to 2025, and climbs in 2026 to plus 104.4% in September. Airline fares in the CPI move in a much narrower range, between about minus 29% and plus 43%, and end at plus 22.4%. The fares line has a gap at October 2025.](images/03-jet-fuel.png)
 *12-month price change. Jet fuel is from PPI final demand; June to September 2026 are preliminary. Airline fares are from the CPI for All Urban Consumers, U.S. city average; BLS did not collect CPI data for October 2025. Both not seasonally adjusted. Source: BLS.*
 
-Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year before that, in September 2025, they were up 3.2%. The last time jet fuel rose faster over 12 months was June 2022, when it was up 120.5%. Jet fuel is a small share of final demand, about 0.2% by weight, so it added 0.15 points.
+Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year before that, in September 2025, they were up 3.2%. The last time jet fuel rose faster over 12 months was June 2022, when it was up 120.5%.
 
 Airline fares in the CPI were 22.4% higher than a year earlier. In 2022, fares peaked at 42.9% in September, while jet fuel peaked at 132.1% in May.
 
