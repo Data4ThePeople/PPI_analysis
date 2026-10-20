@@ -34,7 +34,7 @@ The Producer Price Index (PPI) measures the prices U.S. businesses receive for w
 
 4. Jet fuel more than doubled, up 104.4%. Airline fares in the Consumer Price Index rose 22.4%, and fuel made up 21.7% of U.S. airlines' domestic operating costs in the second quarter, up from 15.0% a year earlier.
 
-5. Portfolio management fees rose 21.2%. Weighted by their share of final demand, they added 0.42 points to the 6.3%, the third-largest impact of any item. BLS prices these fees from the value of the assets managed, so they tend to move with the stock market.
+5. Portfolio management fees rose 21.2%. Weighted by its share of final demand, portfolio management added 0.42 points to the 6.3%, the third-largest impact of any item. BLS prices these fees from the value of the assets managed, so they tend to move with the stock market.
 
 The full piece has the charts behind each one, and the PPI Scuba Diver so you can explore the data yourself.
 ```
