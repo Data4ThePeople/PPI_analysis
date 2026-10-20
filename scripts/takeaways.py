@@ -358,6 +358,57 @@ def jet_cpi(items, name):
                   "(airline fares, CPI-U, U.S. city average), both not seasonally adjusted")
 
 
+SP_LAG = 1   # months: BLS holds a portfolio's assets fixed from the start of the period
+
+
+def shift_month(ym, k):
+    y, m = map(int, ym.split("-"))
+    n = y * 12 + m - 1 - k
+    return f"{n // 12}-{n % 12 + 1:02d}"
+
+
+def portfolio_sp(items, name):
+    """Portfolio management (PPI) against the S&P 500's 12-month change, lagged SP_LAG months."""
+    months = sorted(items.month.unique())
+    pm = list(items[items.code == PORTFOLIO].set_index("month").reindex(months).yoy)
+    sp = json.loads((RAW / "sp500_month_end.json").read_text())
+    spy = []
+    for m in months:
+        a = shift_month(m, SP_LAG)
+        spy.append((sp[a] / sp[shift_month(a, 12)] - 1) * 100)
+    n = len(months)
+    mp, ms = sum(pm) / n, sum(spy) / n
+    corr = (sum((a - mp) * (b - ms) for a, b in zip(pm, spy))
+            / (sum((a - mp) ** 2 for a in pm) * sum((b - ms) ** 2 for b in spy)) ** 0.5)
+    f, top = fig("Portfolio management fees and the stock market, 12-month change",
+                 f"{month_label(months[0])} to {month_label(MONTH)}. The blue line is the S&P 500's 12-month change to the end of the\n"
+                 "month before, because BLS prices these fees from the value of the assets at the start of each period.\n"
+                 "June to September 2026 PPI figures are preliminary.",
+                 h=7.5, legend=[("Portfolio management (PPI)", LINE_A), ("S&P 500, one month earlier", LINE_B)])
+    ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
+    xs = [xpos(m) for m in months]
+    for ys, color in ((pm, LINE_A), (spy, LINE_B)):
+        ax.plot(xs, ys, color=color, lw=2)
+        ax.scatter([xs[-1]], [ys[-1]], s=36, color=color, zorder=4)
+    off = 1.2 if pm[-1] > spy[-1] else -1.2
+    ax.text(xs[-1] + 0.12, pm[-1] + off, f"{pm[-1]:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+    ax.text(xs[-1] + 0.12, spy[-1] - off, f"{spy[-1]:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+    ax.axhline(0, color=MUTED, lw=0.8)
+    lo, hi = min(pm + spy), max(pm + spy)
+    lo_t, hi_t = int(lo // 10) * 10, (int(hi // 10) + 1) * 10
+    ax.set_ylim(lo_t - 2, hi_t + 2)
+    ticks = list(range(lo_t, hi_t + 1, 10))
+    ax.set_yticks(ticks)
+    ax.set_yticklabels([f"{t:+d}%" if t else "0%" for t in ticks])
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    year_axis(ax, months)
+    rows = [(m, round(a, 4), shift_month(m, SP_LAG), round(b, 4)) for m, a, b in zip(months, pm, spy)]
+    rows.append(("correlation", round(corr, 4), "", ""))
+    finish(f, ax, name, rows, ["month", "portfolio_mgmt_yoy_pct", "sp500_month", "sp500_yoy_pct"],
+           source="Data 4 The People  ·  Source: BLS Producer Price Index (portfolio management, not seasonally adjusted); "
+                  "S&P 500 month-end closes, S&P Dow Jones Indices via FRED and Yahoo Finance")
+
+
 def main():
     items = pd.read_csv(PROCESSED / "monthly_items.csv", dtype={"code": str, "old_code": str})
     summary = pd.read_csv(PROCESSED / "monthly_summary.csv")
@@ -369,10 +420,7 @@ def main():
               "airlines receive for passenger flights. June to September 2026 are preliminary.",
               "03-jet-fuel.png", ("Jet fuel", "Airline passenger services"))
     trade(items, "04-trade-margins.png")
-    two_lines(items, (PORTFOLIO, BROKERAGE), "Investment fees, 12-month price change",
-              f"{first} to {month_label(MONTH)}. BLS prices portfolio management mostly from fees charged as a share\n"
-              "of the assets managed, so the index moves with the value of those assets.",
-              "05-portfolio.png", ("Portfolio management", "Securities brokerage and advice"))
+    portfolio_sp(items, "05-portfolio.png")
     trucking("06-trucking.png")
     jet_cpi(items, "03b-jet-fuel-cpi-airfares.png")
 

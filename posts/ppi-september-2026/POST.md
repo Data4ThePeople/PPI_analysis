@@ -103,14 +103,16 @@ The two lines tend to rise and fall in the same years. This chart does not show 
 
 ## 5. Portfolio management fees rose 21.2%
 
-The chart below shows the 12-month change in the price of portfolio management and of securities brokerage and investment advice since October 2016.
+Portfolio management rose 21.2% and added 0.42 points, the third-largest addition of any item.
 
-![Line chart titled Investment fees, 12-month price change, October 2016 to September 2026. Portfolio management and securities brokerage move together, rising to about plus 33% and plus 27% in 2021, falling to about minus 14% and minus 21% in 2022, and rising again from 2023. In September 2026 portfolio management is up 21.2% and securities brokerage and advice is up 13.3%.](images/05-portfolio.png)
-*12-month price change. Source: BLS.*
+BLS prices portfolio management mostly from the fees firms charge as a share of the assets they manage. It holds each portfolio's assets fixed at the start of the period and updates their value by the portfolio's return. When the value of those assets rises, the fee rises with it, even if the fee rate stays the same.
 
-Portfolio management rose 21.2% and added 0.42 points, the third-largest addition of any item. Securities brokerage and investment advice rose 13.3%.
+So the chart below compares the index with the stock market. The blue line is the S&P 500's 12-month change to the end of the month before. Over these 10 years, a one-month shift is where the two lines match most closely.
 
-BLS prices portfolio management mostly from the fees firms charge as a share of the assets they manage. When the value of those assets rises, the fee rises with it, even if the fee rate stays the same. So this index tends to move with financial markets. It fell in 2022 and has risen since 2023.
+![Line chart titled Portfolio management fees and the stock market, 12-month change, October 2016 to September 2026. Portfolio management (PPI) and the S&P 500, shifted one month, rise and fall together. The S&P 500 swings more widely, from about minus 19% to plus 54%, while portfolio management runs from about minus 14% to plus 33%. In September 2026 portfolio management is up 21.2%, and the S&P 500 was up 19.0% over the 12 months to the end of August.](images/05-portfolio.png)
+*Portfolio management is the 12-month change in its PPI. The S&P 500 line is the 12-month change in its month-end close, to the end of the month before. Source: BLS; S&P Dow Jones Indices via FRED and Yahoo Finance.*
+
+The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio management fees in September were up 21.2%. The two lines rose and fell together through 2022 and 2023, and both have risen since. The portfolio management index usually moves less than the S&P 500. Not every fee BLS tracks here is set as a share of assets, and managed portfolios hold more than U.S. stocks.
 
 ::: divider
 
