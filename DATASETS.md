@@ -265,3 +265,28 @@ surcharges; BLS, "The Impact of Fuel Surcharges on the PPI" (Current Price
 Topics, second quarter 2011), describes transportation PPIs falling as
 surcharges fell in 2009. BLS does not split surcharges from base rates in
 this index.
+
+## S&P 500 month-end closes (takeaway 5 chart only)
+
+**What it is.** The S&P 500 index (S&P Dow Jones Indices), the close on the
+last trading day of each month, January 2015 on. Price index, not total return.
+**Where it comes from.** `scripts/fetch_sp500.py`: daily closes from Yahoo
+Finance (^GSPC), because FRED's SP500 series reaches back only ten years
+(October 20, 2016). Every full month in FRED's window is checked against FRED;
+the 120 month-end closes match within 0.0002. Writes
+`data/raw/sp500_month_end.json`.
+**The one-month shift.** The chart plots, at month T, the S&P 500's 12-month
+change to the end of month T-1, since BLS holds a portfolio's assets fixed from
+the start of the period and updates them by the rate of return. Over October
+2016 to September 2026, the correlation between portfolio management's 12-month
+change and the S&P 500's is 0.81 with no shift, 0.90 with one month, 0.83 with
+two and 0.70 with three; one month is the closest match. A monthly-average
+close gives the same answer (0.90 at one month).
+**License.** S&P Dow Jones Indices data; used here for a chart with credit.
+
+## CPI airline fares (alternate jet fuel chart only)
+
+`CUUR0000SETG01`, CPI-U airline fares, U.S. city average, not seasonally
+adjusted, from the BLS API (`scripts/fetch_cpi.py`), 2015 on. Matches the
+CPI_analysis project's earlier pull in every month. No October 2025 value:
+BLS published no CPI that month, so the chart has a gap.
