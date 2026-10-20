@@ -17,7 +17,7 @@ Since: 2026-10-19
 | 2a | Draft with brackets resolved | 2026-10-20 | Claude-drafted at Eric's request; takeaways: headline, fuels, trucking, jet fuel vs CPI airfares, portfolio management vs S&P 500; trade margins dropped; Eric's edits applied |
 | 2b | Eric's edit, Claude's look-over | 2026-10-20 | edits 1-6 accepted; publish October 20, 2026, 8:15 a.m. EDT |
 | 2c | Slice markup | 2026-10-20 | 47 slices; spacer after the blurb added; 5 FAQ entries; confirmed by Eric moving to the hero |
-| 2d | Hero 1680x1080 + alt text | 2026-10-20 | trucking line as a mountain highway, Jan 2019-Sep 2026, semi truck on the latest climb, signs with real values (scripts/hero_trucking.py); alt 473 characters |
+| 2d | Hero 1680x1080 + alt text | 2026-10-20 | trucking line as a mountain highway, Jan 2019-Sep 2026, semi truck on the latest climb, signs with real values, engine-brake sign on the 2022 descent (scripts/hero_trucking.py); alt 473 characters |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |

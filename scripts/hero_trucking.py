@@ -155,6 +155,13 @@ def main():
             fontweight="bold", color="#1b1b1b", zorder=7, linespacing=1.1,
             bbox=dict(boxstyle="round,pad=0.55", fc="#F2C94C", ec="#1b1b1b", lw=2))
 
+    # Yellow engine-brake sign on the steep descent out of 2022.
+    d = months.index("2022-12")
+    ax.plot([xs[d]] * 2, [ys[d], ys[d] + 9.5], color="#8a8a8a", lw=2.2, zorder=3.9)
+    ax.text(xs[d] + 0.22, ys[d] + 9.5, "TRUCKS\nUSE ENGINE\nBRAKE", ha="center", va="center", fontsize=10.5,
+            fontweight="bold", color="#1b1b1b", zorder=7, linespacing=1.1,
+            bbox=dict(boxstyle="round,pad=0.55", fc="#F2C94C", ec="#1b1b1b", lw=2))
+
     # The truck on the latest hill, rear wheels in April 2026, pointed at September.
     a = months.index("2026-04")
     truck(ax, fig, xs[a], ys[a], xs[-1], ys[-1])
