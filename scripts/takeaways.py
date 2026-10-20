@@ -290,7 +290,7 @@ def raw_levels(sid):
     return out
 
 
-def trucking(name):
+def trucking(name, upto=None):
     """Long-distance trucking's 12-month change over its whole published history, against its average."""
     lv = raw_levels(f"WPU{TRUCK}")
     months = [m for m in sorted(lv) if f"{int(m[:4]) - 1}{m[4:]}" in lv and m <= MONTH]
@@ -306,9 +306,13 @@ def trucking(name):
                  h=7.5, legend=[("Long-distance trucking", LINE_A), ("Average", MUTED)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]
-    ax.plot(xs, ys, color=LINE_A, lw=2)
-    ax.scatter([xs[-1]], [last], s=36, color=LINE_A, zorder=4)
-    ax.text(xs[-1] + 0.15, last, f"{last:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+    k = upto or len(months)                       # animation frames draw the first k months
+    ax.plot(xs[:k], ys[:k], color=LINE_A, lw=2)
+    ax.scatter([xs[k - 1]], [ys[k - 1]], s=36, color=LINE_A, zorder=4)
+    ax.text(xs[k - 1] + 0.15, ys[k - 1], f"{ys[k - 1]:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+    if k < len(months):                           # month tag while drawing; the last frame matches the chart
+        ax.text(xs[k - 1], ys[k - 1] + (3.2 if ys[k - 1] >= avg else -3.2), month_label(months[k - 1]),
+                color=MUTED, fontsize=10.5, ha="center", va="center")
     ax.plot([xs[0], xs[-1]], [avg, avg], color=MUTED, lw=1.2, ls=(0, (4, 3)))
     ax.text(xs[-1] + 0.15, avg, f"average {avg:+.1f}%", color=INK, fontsize=10.5, va="center")
     ax.axhline(0, color=MUTED, lw=0.8)
@@ -323,6 +327,13 @@ def trucking(name):
     ax.set_xlim(xs[0] - 0.15, xs[-1] + 1.3)
     ax.set_xticks(range(y0 + 1, y1 + 1, 2))
     ax.set_xticklabels([str(y) for y in range(y0 + 1, y1 + 1, 2)])
+    if upto is not None:
+        for s in ("top", "right", "left"):
+            ax.spines[s].set_visible(False)
+        ax.tick_params(length=0)
+        f.text(0.04, 0.02, "Data 4 The People  ·  Source: BLS Producer Price Index, long-distance motor carrying "
+               f"(WPU{TRUCK}), not seasonally adjusted", fontsize=8.5, color=MUTED)
+        return f, len(months)
     finish(f, ax, name, [(TRUCK, m, round(v, 4)) for m, v in zip(months, ys)]
            + [(TRUCK, "average_before_" + MONTH, round(avg, 4))], ["code", "month", "yoy_pct"],
            source="Data 4 The People  ·  Source: BLS Producer Price Index, long-distance motor carrying "
