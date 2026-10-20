@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2e
+Step: 2e confirmed; next 2f
 Since: 2026-10-19
 
 ## Steps
@@ -18,7 +18,7 @@ Since: 2026-10-19
 | 2b | Eric's edit, Claude's look-over | 2026-10-20 | edits 1-6 accepted; publish October 20, 2026, 8:15 a.m. EDT |
 | 2c | Slice markup | 2026-10-20 | 47 slices; spacer after the blurb added; 5 FAQ entries; confirmed by Eric moving to the hero |
 | 2d | Hero 1680x1080 + alt text | 2026-10-20 | trucking line as a mountain highway, Jan 2019-Sep 2026, semi truck on the latest climb, signs with real values, engine-brake sign on the 2022 descent (scripts/hero_trucking.py); alt 473 characters |
-| 2e | SEO | | |
+| 2e | SEO | 2026-10-20 | meta title "September 2026 PPI: 5 Takeaways on Wholesale Prices"; Article schema; CPI link and FAQ "What was the PPI in September 2026?" added (6 FAQ) |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
 
@@ -69,3 +69,4 @@ None.
 - 2026-10-20 Step 2c confirmed (Eric moved on to the hero). Step 2d opened: hero from the trucking chart drawn as a mountain range with a semi truck and highway signs.
 - 2026-10-20 Step 2d confirmed by Eric.
 - 2026-10-20 Step 2e opened.
+- 2026-10-20 Step 2e confirmed by Eric.

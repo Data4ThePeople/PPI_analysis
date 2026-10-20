@@ -97,7 +97,7 @@ The chart below shows the 12-month change in the price of jet fuel since October
 
 Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year before that, in September 2025, they were up 3.2%. The last time jet fuel rose faster over 12 months was June 2022, when it was up 120.5%.
 
-Airline fares in the CPI were 22.4% higher than a year earlier. In 2022, fares peaked at 42.9% in September, while jet fuel peaked at 132.1% in May.
+Airline fares in the [CPI](https://www.data4thepeople.com/p/what-is-driving-cpi) were 22.4% higher than a year earlier. In 2022, fares peaked at 42.9% in September, while jet fuel peaked at 132.1% in May.
 
 The two lines tend to rise and fall in the same years, with fares moving in a much narrower range.
 
@@ -135,6 +135,10 @@ The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio manag
 **Checking our work.** We recomputed every 12-month change in this post from the raw BLS files, and a second check, run separately from scratch, matched every number in the charts.
 
 ## Common questions
+
+### What was the PPI in September 2026?
+
+PPI final demand rose 6.3% in the 12 months to September 2026, not seasonally adjusted. That is the largest 12-month increase since December 2022. The figure is preliminary, and BLS will revise it.
 
 ### Why did the PPI rise so much in September 2026?
 
