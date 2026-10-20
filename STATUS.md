@@ -75,3 +75,4 @@ None.
 - 2026-10-20 Step 2f confirmed by Eric.
 - 2026-10-20 Step 2g opened.
 - 2026-10-20 Step 2g confirmed by Eric. Post ppi-september-2026 complete.
+- 2026-10-20 After completion, per Eric: hero peak and valley sign poles moved onto May 2022 and July 2023; email JPG re-exported; Prismic draft hero replaced.

@@ -141,10 +141,10 @@ def main():
 
     # Signs, each carrying a real value from the series.
     i_pk = int(ys.argmax())
-    sign(ax, xs[i_pk] - 0.45, ys[i_pk - 4], 29.5,
+    sign(ax, xs[i_pk], ys[i_pk], 29.5,                     # pole stands on the peak month
          ["PEAK", f"{month_label(months[i_pk]).upper()}", f"{ys[i_pk]:+.1f}%"])
     i_lo = int(np.argmin(np.where(np.array([m.startswith("2023") for m in months]), ys, 99)))
-    sign(ax, xs[i_lo] + 0.55, ys[i_lo + 7], ys[i_lo + 7] + 9,
+    sign(ax, xs[i_lo], ys[i_lo], -6,                       # pole stands on the low month
          ["VALLEY", f"{month_label(months[i_lo]).upper()}", f"{ys[i_lo]:+.1f}%"], fs=12)
     sign(ax, 2019.55, avg, avg + 9, ["AVERAGE SINCE", f"{first[:4]}: {avg:+.1f}%"], fs=12)
     sign(ax, xs[-1] + 0.02, ys[-1] + 3.5, 29.5, [month_label(MONTH).upper(), f"{ys[-1]:+.1f}%"], fc="#1F6B3A")
