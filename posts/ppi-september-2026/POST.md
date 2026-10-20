@@ -3,7 +3,7 @@ title: "The PPI Scuba Diver: five takeaways from September 2026"
 subtitle: Wholesale prices rose 6.3% in the 12 months to September 2026, the most since December 2022. Here are five things we found when we took the diver down to look.
 slug: ppi-september-2026
 date: 2026-10-20
-time: 07:00:00-04:00
+time: 08:15:00-04:00
 section: Data 4 Thought
 hero: images/ppi-september-2026-hero-1680x1080.png
 hero_alt:
@@ -21,7 +21,7 @@ dividers: false
 
 Yesterday we released the [PPI Scuba Diver](https://www.data4thepeople.com/p/ppi-scuba-diver), a free animated chart of every item in the Producer Price Index for final demand. Today we use it to look at the September 2026 data, which the Bureau of Labor Statistics (BLS) released on October 15, 2026.
 
-The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, PPI final demand rose 6.3%. That is the largest 12-month increase since December 2022, and nearly double the 3.4% rise in the 12 months to February 2026.
+The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, PPI final demand rose 6.3%. That is the largest 12-month increase since December 2022, up from 3.4% in the 12 months to February 2026.
 
 Below is the diver, set to September 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total.
 
@@ -46,7 +46,7 @@ The chart below shows the 12-month change in PPI final demand every month since 
 ![Line and bar chart titled Wholesale prices rose 6.3% over the 12 months to September 2026. The 12-month change in PPI final demand from October 2016 to September 2026 runs near 2% to 3% until 2020, dips below zero in 2020, peaks at 11.7% in March 2022, falls to about 0% in mid-2023, and climbs again in 2026 to 6.3% in September. Bars under the line show goods and services each adding a large share; construction adds little.](images/01-headline.png)
 *12-month change in PPI final demand, not seasonally adjusted. Bars are the sum of our item contributions for goods, services and construction. Source: BLS; contributions computed by Data 4 The People.*
 
-The rate was 3.0% in September 2025 and 3.4% in February 2026. It then rose to 4.3% in March, 5.7% in April and 6.3% in September. The peak in these 10 years was 11.7% in March 2022.
+The rate was 3.0% in September 2025 and 3.4% in February 2026. It then rose to 4.3% in March and 5.7% in April, dipped to 4.9% in July, and reached 6.3% in September. The peak in these 10 years was 11.7% in March 2022.
 
 Services added 3.33 points of the rise, or 53%. Goods added 2.88 points, or 45%. Construction added 0.14 points, or 2%.
 
@@ -61,7 +61,7 @@ The chart below starts at zero and adds the eight items that pushed the 12-month
 ![A waterfall chart of what added up to wholesale inflation in September 2026. Regular gasoline, up 66.1%, added 0.76 percentage points. Long-distance trucking added 0.45, portfolio management 0.42, diesel fuel (up 115.2%) 0.39, other goods wholesaling 0.35, airline passenger services 0.19, hospital inpatient care 0.19 and premium gasoline 0.18. The other 811 items added 3.75. Gas station margins, car dealer margins, eggs and pork pulled it down. The total is 6.35.](images/02-waterfall.png)
 *Each bar is the item's contribution to the 12-month change in PPI final demand, in percentage points. Our items add up to 6.35 points; BLS publishes 6.34%. Source: BLS; contributions computed by Data 4 The People.*
 
-Regular gasoline added the most, 0.76 points. Its price was 66.1% higher than a year earlier. Gasoline is about 1.2% of final demand by weight, but it added 12% of the rise.
+Regular gasoline added the most, 0.76 points. Its price was 66.1% higher than a year earlier. Regular gasoline is about 1.2% of final demand by weight, but it added 12% of the rise.
 
 Diesel fuel came next among fuels. Its price rose 115.2%, the largest 12-month increase since June 2021, and it added 0.39 points.
 
@@ -73,7 +73,7 @@ Taken together, the fuels and power group, which includes gasoline, diesel, jet 
 
 Long-distance trucking added 0.45 points, the second-largest addition of any item, after regular gasoline. Its price rose 22.8% over the 12 months to September 2026.
 
-To see how unusual that is, the chart below goes back further than the diver, to June 2010, the first month BLS published a 12-month change for this item. The dashed line is the average of every month before September 2026.
+To see how unusual that is, the chart below goes back further than the diver, to June 2010, the first 12-month change available since BLS began publishing this index in June 2009. The dashed line is the average of every month before September 2026.
 
 ![Line chart titled Long-distance trucking, 12-month price change, June 2010 to September 2026. The line stays between about minus 3% and plus 9% from 2010 to 2020, against an average of plus 3.6%. It climbs to a peak of plus 26.9% in May 2022, falls to about minus 14% in 2023, and climbs again in 2026 to plus 22.8% in September, the fifth-highest of 196 months. The four higher months are March to June 2022.](images/06-trucking.png)
 *12-month price change in long-distance motor carrying, every month BLS has published. The dashed line is the average of all months before September 2026. June to September 2026 are preliminary. Source: BLS.*
@@ -122,7 +122,7 @@ The S&P 500 closed August 2026 19.0% higher than a year earlier. Portfolio manag
 
 ## How we built this, and its limits
 
-**Data.** Every number in this post comes from the PPI Scuba Diver, except the trucking chart, which uses the full BLS history of that index back to 2010. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
+**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010; airline fares come from the BLS Consumer Price Index; the S&P 500 comes from S&P Dow Jones Indices, via FRED and Yahoo Finance; and the airline fuel cost shares come from BTS and IATA, as linked. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
 
 **Preliminary data.** BLS revises PPI for four months after first release. June to September 2026 are preliminary.
 
