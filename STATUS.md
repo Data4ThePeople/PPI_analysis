@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2g
+Step: complete
 Since: 2026-10-19
 
 ## Steps
@@ -20,7 +20,7 @@ Since: 2026-10-19
 | 2d | Hero 1680x1080 + alt text | 2026-10-20 | trucking line as a mountain highway, Jan 2019-Sep 2026, semi truck on the latest climb, signs with real values, engine-brake sign on the 2022 descent (scripts/hero_trucking.py); alt 473 characters |
 | 2e | SEO | 2026-10-20 | meta title "September 2026 PPI: 5 Takeaways on Wholesale Prices"; Article schema; CPI link and FAQ "What was the PPI in September 2026?" added (6 FAQ) |
 | 2f | Pushed to Prismic (draft) | 2026-10-20 | draft atdVpREAACgA_Dcz in the Migration Release; 49 slices; takeaways first, diver at the end; tags and author empty |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-10-20 | subject "Five takeaways from the September PPI"; short version, hero and five takeaways with context, no charts |
 
 ## Previous post: ppi-scuba-diver (complete 2026-10-19)
 
@@ -74,3 +74,4 @@ None.
 - 2026-10-20 During 2f, per Eric: post restructured with the five takeaways first and the diver embedded at the end under "What are you finding in the data?". Reconverted (2c) and the Prismic draft updated; no images changed.
 - 2026-10-20 Step 2f confirmed by Eric.
 - 2026-10-20 Step 2g opened.
+- 2026-10-20 Step 2g confirmed by Eric. Post ppi-september-2026 complete.
