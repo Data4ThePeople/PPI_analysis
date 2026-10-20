@@ -1,0 +1,44 @@
+{
+  "images/01-headline.png": {
+    "id": "ckUEIQ3F_2N5wAsG",
+    "width": 1800,
+    "height": 1170,
+    "url": "https://images.prismic.io/data4thepeople/ckUEIQ3F_2N5wAsG_01-headline.png?auto=format,compress",
+    "stamp": "167492:1792435162"
+  },
+  "images/02-waterfall.png": {
+    "id": "E0hi9HcEpI4F3bZj",
+    "width": 1800,
+    "height": 1290,
+    "url": "https://images.prismic.io/data4thepeople/E0hi9HcEpI4F3bZj_02-waterfall.png?auto=format,compress",
+    "stamp": "191474:1792435162"
+  },
+  "images/06-trucking.png": {
+    "id": "6xOnNMMKpHBdB57Z",
+    "width": 1800,
+    "height": 1125,
+    "url": "https://images.prismic.io/data4thepeople/6xOnNMMKpHBdB57Z_06-trucking.png?auto=format,compress",
+    "stamp": "146591:1792490227"
+  },
+  "images/03-jet-fuel.png": {
+    "id": "gjzWJezRNI4_SB6m",
+    "width": 1800,
+    "height": 1125,
+    "url": "https://images.prismic.io/data4thepeople/gjzWJezRNI4_SB6m_03-jet-fuel.png?auto=format,compress",
+    "stamp": "179848:1792490404"
+  },
+  "images/05-portfolio.png": {
+    "id": "oPPwmn2Dn7yZ-flR",
+    "width": 1800,
+    "height": 1125,
+    "url": "https://images.prismic.io/data4thepeople/oPPwmn2Dn7yZ-flR_05-portfolio.png?auto=format,compress",
+    "stamp": "213746:1792490227"
+  },
+  "images/ppi-september-2026-hero-1680x1080.png": {
+    "id": "EYwNMrXEQL0newLw",
+    "width": 1680,
+    "height": 1080,
+    "url": "https://images.prismic.io/data4thepeople/EYwNMrXEQL0newLw_ppi-september-2026-hero-1680x1080.png?auto=format,compress",
+    "stamp": "173924:1792494017"
+  }
+}
