@@ -84,6 +84,13 @@ def main():
         else:
             v = yoy(tlv, r["month"]); tvals.append(v)
             check(f"301202 {r['month']}", v, float(r["yoy_pct"]), TOL_YOY)
+    import json
+    cpi = json.loads(open("/Users/ericpachman/PycharmProjects/CPI_analysis/data/raw/indexes.json").read())["CUUR0000SETG01"]
+    for r in csv.DictReader(open(NUM / "03b-jet-fuel-cpi-airfares.csv")):
+        if r["series"].startswith("CUUR"):
+            check(f"CPI airline fares {r['month']} (CPI_analysis pull)", yoy(cpi, r["month"]), float(r["yoy_pct"]), TOL_YOY)
+        else:
+            check(f"057203 {r['month']} (03b)", yoy(lv["WPU057203"], r["month"]), float(r["yoy_pct"]), TOL_YOY)
     n_hist = len(lines)
 
     lines += ["", "## 2. Contributions and totals", "", "| Check | Chart / CSV | Recompute | |", "|---|---:|---:|---|"]

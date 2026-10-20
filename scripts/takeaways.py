@@ -15,7 +15,9 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from common import PROCESSED, ROOT, TARGET, WP
+import json
+
+from common import PROCESSED, RAW, ROOT, TARGET, WP
 
 MONTH = f"{TARGET[0]}-{TARGET[1]:02d}"
 CHARTS = ROOT / "charts" / MONTH
@@ -97,11 +99,11 @@ def fig(title, sub, h=7.5, legend=None):
     return f, y - 22 * px
 
 
-def finish(f, ax, name, rows, header):
+def finish(f, ax, name, rows, header, source=SOURCE):
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.tick_params(length=0)
-    f.text(0.04, 0.02, SOURCE, fontsize=8.5, color=MUTED)
+    f.text(0.04, 0.02, source, fontsize=8.5, color=MUTED)
     CHARTS.mkdir(parents=True, exist_ok=True)
     f.savefig(CHARTS / name, facecolor=BG)
     plt.close(f)
@@ -323,6 +325,39 @@ def trucking(name):
            + [(TRUCK, "average_before_" + MONTH, round(avg, 4))], ["code", "month", "yoy_pct"])
 
 
+def jet_cpi(items, name):
+    """Jet fuel (PPI) against airline fares in the CPI, 12-month change."""
+    months = sorted(items.month.unique())
+    jet = items[items.code == JET].set_index("month").reindex(months).yoy
+    cpi = json.loads((RAW / "cpi_airline_fares.json").read_text())
+    fares = [(cpi[m] / cpi[f"{int(m[:4]) - 1}{m[4:]}"] - 1) * 100
+             if m in cpi and f"{int(m[:4]) - 1}{m[4:]}" in cpi else float("nan") for m in months]
+    f, top = fig("Jet fuel and airline fares, 12-month price change",
+                 f"{month_label(months[0])} to {month_label(MONTH)}. Jet fuel is the producer price in PPI final demand. Airline\n"
+                 "fares are what travelers pay, from the Consumer Price Index. The gap is October 2025, when BLS\n"
+                 "published no CPI. June to September 2026 PPI figures are preliminary.",
+                 h=7.5, legend=[("Jet fuel (PPI)", LINE_A), ("Airline fares (CPI)", LINE_B)])
+    ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
+    xs = [xpos(m) for m in months]
+    rows = []
+    for ys, color, code, lab in ((list(jet), LINE_A, "WPU" + JET, "Jet fuel (PPI)"),
+                                 (fares, LINE_B, "CUUR0000SETG01", "Airline fares (CPI)")):
+        ax.plot(xs, ys, color=color, lw=2)
+        ax.scatter([xs[-1]], [ys[-1]], s=36, color=color, zorder=4)
+        ax.text(xs[-1] + 0.12, ys[-1], f"{ys[-1]:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+        rows += [(code, lab, m, round(v, 4)) for m, v in zip(months, ys) if v == v]
+    ax.axhline(0, color=MUTED, lw=0.8)
+    ax.set_ylim(-110, 210)
+    ticks = list(range(-100, 201, 50))
+    ax.set_yticks(ticks)
+    ax.set_yticklabels([f"{t:+d}%" if t else "0%" for t in ticks])
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    year_axis(ax, months)
+    finish(f, ax, name, rows, ["series", "item", "month", "yoy_pct"],
+           source="Data 4 The People  ·  Source: BLS Producer Price Index (jet fuel) and Consumer Price Index "
+                  "(airline fares, CPI-U, U.S. city average), both not seasonally adjusted")
+
+
 def main():
     items = pd.read_csv(PROCESSED / "monthly_items.csv", dtype={"code": str, "old_code": str})
     summary = pd.read_csv(PROCESSED / "monthly_summary.csv")
@@ -339,6 +374,7 @@ def main():
               "of the assets managed, so the index moves with the value of those assets.",
               "05-portfolio.png", ("Portfolio management", "Securities brokerage and advice"))
     trucking("06-trucking.png")
+    jet_cpi(items, "03b-jet-fuel-cpi-airfares.png")
 
 
 if __name__ == "__main__":
