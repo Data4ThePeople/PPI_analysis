@@ -241,7 +241,9 @@ def two_lines(items, codes, title, sub, name, labels):
     ax.set_yticklabels([f"{t:+d}%" if t else "0%" for t in ticks])
     ax.grid(axis="y", color=GRID, lw=0.6)
     year_axis(ax, months)
-    finish(f, ax, name, rows, ["code", "item", "month", "yoy_pct"])
+    finish(f, ax, name, rows, ["code", "item", "month", "yoy_pct"],
+           source="Data 4 The People  ·  Source: BLS Producer Price Index commodity indexes "
+                  f"(WPU{codes[0]}, WPU{codes[1]}), not seasonally adjusted")
 
 
 def trade(items, name, n_up=6, n_down=4):
@@ -322,7 +324,9 @@ def trucking(name):
     ax.set_xticks(range(y0 + 1, y1 + 1, 2))
     ax.set_xticklabels([str(y) for y in range(y0 + 1, y1 + 1, 2)])
     finish(f, ax, name, [(TRUCK, m, round(v, 4)) for m, v in zip(months, ys)]
-           + [(TRUCK, "average_before_" + MONTH, round(avg, 4))], ["code", "month", "yoy_pct"])
+           + [(TRUCK, "average_before_" + MONTH, round(avg, 4))], ["code", "month", "yoy_pct"],
+           source="Data 4 The People  ·  Source: BLS Producer Price Index, long-distance motor carrying "
+                  f"(WPU{TRUCK}), not seasonally adjusted")
 
 
 def jet_cpi(items, name):
@@ -334,8 +338,8 @@ def jet_cpi(items, name):
              if m in cpi and f"{int(m[:4]) - 1}{m[4:]}" in cpi else float("nan") for m in months]
     f, top = fig("Jet fuel and airline fares, 12-month price change",
                  f"{month_label(months[0])} to {month_label(MONTH)}. Jet fuel is the producer price in PPI final demand. Airline\n"
-                 "fares are what travelers pay, from the Consumer Price Index. The gap is October 2025, when BLS\n"
-                 "published no CPI. June to September 2026 PPI figures are preliminary.",
+                 "fares are what travelers pay, from the Consumer Price Index. The gap is October 2025: BLS did not\n"
+                 "collect CPI data during the lapse in appropriations. June to September 2026 PPI figures are preliminary.",
                  h=7.5, legend=[("Jet fuel (PPI)", LINE_A), ("Airline fares (CPI)", LINE_B)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]
@@ -382,7 +386,8 @@ def portfolio_sp(items, name):
             / (sum((a - mp) ** 2 for a in pm) * sum((b - ms) ** 2 for b in spy)) ** 0.5)
     f, top = fig("Portfolio management fees and the stock market, 12-month change",
                  f"{month_label(months[0])} to {month_label(MONTH)}. The blue line is the S&P 500's 12-month change to the end of the\n"
-                 "month before, because BLS prices these fees from the value of the assets at the start of each period.\n"
+                 "month before. BLS holds the assets fixed from the start of the period and updates them by the rate of\n"
+                 "return; a one-month shift matches best. "
                  "June to September 2026 PPI figures are preliminary.",
                  h=7.5, legend=[("Portfolio management (PPI)", LINE_A), ("S&P 500, one month earlier", LINE_B)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
