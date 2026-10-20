@@ -290,3 +290,15 @@ close gives the same answer (0.90 at one month).
 adjusted, from the BLS API (`scripts/fetch_cpi.py`), 2015 on. Matches the
 CPI_analysis project's earlier pull in every month. No October 2025 value:
 BLS published no CPI that month, so the chart has a gap.
+
+## Airline fuel cost shares (takeaway 4 text only)
+
+Cited, not computed. BTS, "US Airlines Gained $16 Million in Second Quarter
+2026" (Form 41 data filed as of August 28, 2026): fuel was $11.7 billion, 21.7%
+of domestic operating expenses (15.0% in 2Q 2025), and $5.8 billion, 31.1% of
+international operating expenses (20.9%). bts.gov blocks scripted downloads;
+figures read from the release text as indexed and from the AJOT reprint.
+IATA press release No. 26, June 7, 2026: fuel 31.4% of total airline operating
+expenses in 2026 (forecast), 25.4% in 2025; North American airlines "have
+largely moved away from fuel hedging"; "airlines are still absorbing part of
+the hike in their bottom lines."

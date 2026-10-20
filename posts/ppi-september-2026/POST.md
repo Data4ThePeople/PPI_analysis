@@ -97,7 +97,11 @@ Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year
 
 Airline fares in the CPI were 22.4% higher than a year earlier. In 2022, fares peaked at 42.9% in September, while jet fuel peaked at 132.1% in May.
 
-The two lines tend to rise and fall in the same years, with fares moving in a much narrower range. This chart does not show how much of the cost of jet fuel passes into fares.
+The two lines tend to rise and fall in the same years, with fares moving in a much narrower range.
+
+Fuel is one of an airline's largest costs, and its share grows when fuel prices rise. On U.S. airlines' domestic flights, fuel was 21.7% of operating expenses in the second quarter of 2026, up from 15.0% a year earlier, according to the [Bureau of Transportation Statistics](https://www.bts.gov/newsroom/us-airlines-gained-16-million-second-quarter-2026-decrease-over-second-quarter-2025). On their international flights, it was 31.1%, up from 20.9%. Worldwide, the International Air Transport Association (IATA) [expects](https://www.iata.org/en/pressroom/2026-releases/06-07-middle-east-disruptions-high-fuel-prices-halve-airline-industry-profitability/) fuel to make up 31.4% of airline operating costs in 2026, up from 25.4% in 2025.
+
+IATA also says that North American airlines have largely stopped hedging their fuel costs, so changes in the price of jet fuel reach their costs more directly and quickly. It reports that fares are rising as airlines try to recover some of the higher cost, but that "airlines are still absorbing part of the hike in their bottom lines."
 
 ::: spacer
 
