@@ -32,7 +32,7 @@ Wholesale prices rose 6.3% in the 12 months to September 2026. Here are five thi
 4. Jet fuel more than doubled, up 104.4%.
 5. Portfolio management fees rose 21.2%, and they follow the stock market.
 
-The full piece has the charts behind each one, including trucking drawn as a mountain highway, and the PPI Scuba Diver so you can explore the data yourself.
+The full piece has the charts behind each one, and the PPI Scuba Diver so you can explore the data yourself.
 ```
 
 ## 4. Call to action
