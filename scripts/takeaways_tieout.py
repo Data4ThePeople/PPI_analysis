@@ -149,6 +149,11 @@ def main():
         ("Long-distance trucking: rank of " + MONTH + " / months / higher months",
          f"{sorted(tvals, reverse=True).index(tvals[-1]) + 1} / {len(tvals)} / "
          + ", ".join(r['month'] for r, v in zip([r for r in tk if not r['month'].startswith('average')], tvals) if v > tvals[-1])),
+        ("Trucking Jan / Feb / Mar / Apr 2026", " / ".join(f"{yoy(tlv, m):.1f}%" for m in ("2026-01", "2026-02", "2026-03", "2026-04"))),
+        ("Trucking May-Aug 2026 range", f"{min(yoy(tlv, m) for m in ('2026-05','2026-06','2026-07','2026-08')):.1f}% to {max(yoy(tlv, m) for m in ('2026-05','2026-06','2026-07','2026-08')):.1f}%"),
+        ("Trucking peak / low in 2023", f"{max(tvals):.1f}% / {min(yoy(tlv, m) for m in tlv if m.startswith('2023')):.1f}%"),
+        ("Trucking range Jun 2010-Dec 2020", f"{min(v for r, v in zip(tk, tvals) if r['month'] <= '2020-12'):.1f}% to {max(v for r, v in zip(tk, tvals) if r['month'] <= '2020-12'):.1f}%"),
+        ("Trucking contribution", f"{cur.loc['301202', 'contrib']:.3f} points, rank {rank.index('301202') + 1}"),
         ("Filled (no published index) base weight", f"{summary.loc[MONTH, 'filled_share']:.2f}%"),
     ]
     lines += ["", "## 3. Numbers for the text (recomputed from the raw index levels and monthly_items.csv)", "",

@@ -69,7 +69,24 @@ Taken together, the fuels and power group, which includes gasoline, diesel, jet 
 
 ::: spacer
 
-## 3. Jet fuel more than doubled
+## 3. Long-distance trucking rose the most since 2022
+
+Long-distance trucking added 0.45 points, the second-largest addition of any item, after regular gasoline. Its price rose 22.8% over the 12 months to September 2026.
+
+To see how unusual that is, the chart below goes back further than the diver, to June 2010, the first month BLS published a 12-month change for this item. The dashed line is the average of every month before September 2026.
+
+![Line chart titled Long-distance trucking, 12-month price change, June 2010 to September 2026. The line stays between about minus 3% and plus 9% from 2010 to 2020, against an average of plus 3.6%. It climbs to a peak of plus 26.9% in May 2022, falls to about minus 14% in 2023, and climbs again in 2026 to plus 22.8% in September, the fifth-highest of 196 months. The four higher months are March to June 2022.](images/06-trucking.png)
+*12-month price change in long-distance motor carrying, every month BLS has published. The dashed line is the average of all months before September 2026. June to September 2026 are preliminary. Source: BLS.*
+
+September 2026 ranks fifth of the 196 months. The only higher months are March to June 2022, when the rate peaked at 26.9%. The average before this month was 3.6%.
+
+The rise came quickly. The rate was 0.4% in January 2026 and 1.9% in February. It reached 9.2% in March and 16.1% in April, and stayed between 14.5% and 17.9% from May to August.
+
+Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freight that moves under contract carries a fuel surcharge that is reset each week from the diesel price, and BLS has noted that its transportation price indexes follow those surcharges up and down. Our [Diesel Fuel Surcharge Calculator](https://www.data4thepeople.com/p/fuel-surcharge-impact-viz) shows how a diesel price becomes a surcharge on a truckload, LTL or rail bill. This chart does not show how much of the 22.8% came from surcharges and how much from base rates.
+
+::: spacer
+
+## 4. Jet fuel more than doubled
 
 The chart below shows the 12-month change in the price of jet fuel since October 2016, along with airline passenger services, which is what airlines receive for passenger flights.
 
@@ -81,23 +98,6 @@ Jet fuel prices were 104.4% higher in September 2026 than a year earlier. A year
 Jet fuel is a small share of final demand, about 0.2% by weight, so it added 0.15 points. Airline passenger services is a much larger share, about 1.2%, and rose 16.6%, adding 0.19 points.
 
 The two lines tend to rise and fall in the same years. This chart does not show how much of one passes into the other.
-
-::: spacer
-
-## 4. Store and wholesaler margins pulled in both directions
-
-PPI measures stores and wholesalers differently from other businesses. It does not track the price of the goods they sell. It tracks their margin: what they sell a good for, minus what it costs them to buy that good now. The chart below shows the trade items that moved the 12-month change the most, up and down.
-
-![Bar chart titled Store and wholesaler margins, September 2026. Margins that rose most: other goods wholesaling (up 14.4%, adding 0.35 points), food retailing (up 9.2%, 0.16) and machinery parts wholesaling (up 16.6%, 0.13). Margins that fell most: gas stations (down 27.8%, minus 0.12 points) and car dealers (down 14.9%, minus 0.11). All 33 trade items together added 0.93 points.](images/04-trade-margins.png)
-*Each bar is the item's contribution to the 12-month change in PPI final demand, in percentage points. In parentheses, the margin's 12-month change. Source: BLS; contributions computed by Data 4 The People.*
-
-The 33 trade items together are about 19.4% of final demand by weight and added 0.93 points, or 15% of the rise.
-
-Margins for wholesalers of other goods rose 14.4% and added 0.35 points. Margins at food stores rose 9.2% and added 0.16 points.
-
-Two margins fell, and they were the two items that pulled the total down the most. Gas station margins fell 27.8% and took 0.12 points off. Car dealer margins fell 14.9% and took 0.11 points off.
-
-The gas station margin fell in the same 12 months that the wholesale price of gasoline rose 66.1%. These two numbers can move in opposite directions: a margin shrinks when what a station pays for fuel rises faster than what it charges.
 
 ::: spacer
 
@@ -116,7 +116,7 @@ BLS prices portfolio management mostly from the fees firms charge as a share of 
 
 ## How we built this, and its limits
 
-**Data.** Every number in this post comes from the PPI Scuba Diver: the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
+**Data.** Every number in this post comes from the PPI Scuba Diver, except the trucking chart, which uses the full BLS history of that index back to 2010. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
 
 **Preliminary data.** BLS revises PPI for four months after first release. June to September 2026 are preliminary.
 
@@ -132,13 +132,13 @@ BLS prices portfolio management mostly from the fees firms charge as a share of 
 
 PPI final demand rose 6.3% in the 12 months to September 2026. Fuels added 1.93 points, about 30% of the rise. Regular gasoline, up 66.1%, added the most of any item, 0.76 points. Long-distance trucking, portfolio management and diesel fuel came next.
 
+### How much did trucking prices rise in September 2026?
+
+Long-distance trucking prices in PPI final demand were 22.8% higher than a year earlier. That is the fifth-highest 12-month change since BLS began publishing it, behind only March to June 2022. The average before September 2026 was 3.6%.
+
 ### How much did jet fuel prices rise?
 
 Jet fuel prices in PPI final demand were 104.4% higher in September 2026 than a year earlier, the largest 12-month increase since June 2022.
-
-### What are trade margins in the PPI?
-
-For stores and wholesalers, PPI measures the margin: what the business sells a good for, minus what it costs to buy that good now. A margin can fall while the price of the good rises, if the cost rises faster.
 
 ### Why are portfolio management fees in the PPI?
 

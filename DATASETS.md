@@ -257,3 +257,11 @@ will be revised; every September 2026 number in the takeaways is preliminary.
 `charts/2026-09/` (the numbers behind each in `charts/2026-09/numbers/`);
 `scripts/takeaways_tieout.py` recomputes every 12-month change from the raw
 flat files and every contribution and total, and writes `TAKEAWAYS_TIEOUT.md`.
+
+**Long-distance trucking (WPU301202)** starts June 2009 in the flat files, so
+its 12-month change starts June 2010. The takeaways chart uses that full
+history, not only the diver's window. Trucking prices often carry fuel
+surcharges; BLS, "The Impact of Fuel Surcharges on the PPI" (Current Price
+Topics, second quarter 2011), describes transportation PPIs falling as
+surcharges fell in 2009. BLS does not split surcharges from base rates in
+this index.
