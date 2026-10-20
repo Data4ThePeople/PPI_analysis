@@ -6,7 +6,7 @@ date: 2026-10-20
 time: 08:15:00-04:00
 section: Data 4 Thought
 hero: images/ppi-september-2026-hero-1680x1080.png
-hero_alt:
+hero_alt: A chart drawn as a mountain highway at dusk, titled Five takeaways from the September 2026 PPI data release. The ridge is the 12-month change in long-haul trucking prices, January 2019 to September 2026, with a road and a yellow center line along it. Green highway signs mark the May 2022 peak at +26.9%, the July 2023 valley at -14.0%, the average since 2010 at +3.6% and September 2026 at +22.8%. A small red semi truck climbs the last steep hill to the September summit.
 meta_title:
 description:
 keywords:
