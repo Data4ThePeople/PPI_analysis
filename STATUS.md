@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2d
+Step: 2d confirmed; next 2e
 Since: 2026-10-19
 
 ## Steps
@@ -17,7 +17,7 @@ Since: 2026-10-19
 | 2a | Draft with brackets resolved | 2026-10-20 | Claude-drafted at Eric's request; takeaways: headline, fuels, trucking, jet fuel vs CPI airfares, portfolio management vs S&P 500; trade margins dropped; Eric's edits applied |
 | 2b | Eric's edit, Claude's look-over | 2026-10-20 | edits 1-6 accepted; publish October 20, 2026, 8:15 a.m. EDT |
 | 2c | Slice markup | 2026-10-20 | 47 slices; spacer after the blurb added; 5 FAQ entries; confirmed by Eric moving to the hero |
-| 2d | Hero 1680x1080 + alt text | | |
+| 2d | Hero 1680x1080 + alt text | 2026-10-20 | trucking line as a mountain highway, Jan 2019-Sep 2026, semi truck on the latest climb, signs with real values (scripts/hero_trucking.py); alt 473 characters |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
@@ -67,3 +67,4 @@ None.
 - 2026-10-20 Step 2b confirmed by Eric.
 - 2026-10-20 Step 2c opened.
 - 2026-10-20 Step 2c confirmed (Eric moved on to the hero). Step 2d opened: hero from the trucking chart drawn as a mountain range with a semi truck and highway signs.
+- 2026-10-20 Step 2d confirmed by Eric.
