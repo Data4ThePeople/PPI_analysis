@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2c
+Step: 2d
 Since: 2026-10-19
 
 ## Steps
@@ -16,7 +16,7 @@ Since: 2026-10-19
 | 1  | Exploration and analysis | 2026-10-19 | five takeaways (headline, fuels, jet fuel, trade margins, portfolio management); charts/2026-09; TAKEAWAYS_TIEOUT.md 0 differences; independent tie-out matched |
 | 2a | Draft with brackets resolved | 2026-10-20 | Claude-drafted at Eric's request; takeaways: headline, fuels, trucking, jet fuel vs CPI airfares, portfolio management vs S&P 500; trade margins dropped; Eric's edits applied |
 | 2b | Eric's edit, Claude's look-over | 2026-10-20 | edits 1-6 accepted; publish October 20, 2026, 8:15 a.m. EDT |
-| 2c | Slice markup | | |
+| 2c | Slice markup | 2026-10-20 | 47 slices; spacer after the blurb added; 5 FAQ entries; confirmed by Eric moving to the hero |
 | 2d | Hero 1680x1080 + alt text | | |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
@@ -66,3 +66,4 @@ None.
 - 2026-10-20 Step 2b opened.
 - 2026-10-20 Step 2b confirmed by Eric.
 - 2026-10-20 Step 2c opened.
+- 2026-10-20 Step 2c confirmed (Eric moved on to the hero). Step 2d opened: hero from the trucking chart drawn as a mountain range with a semi truck and highway signs.
