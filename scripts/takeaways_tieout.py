@@ -75,6 +75,15 @@ def main():
     for f in ("03-jet-fuel.csv", "05-portfolio.csv"):
         for r in csv.DictReader(open(NUM / f)):
             check(f"{r['code']} {r['month']}", yoy(lv[f"WPU{r['code']}"], r["month"]), float(r["yoy_pct"]), TOL_YOY)
+    tk = list(csv.DictReader(open(NUM / "06-trucking.csv")))
+    tlv = raw({"WPU301202"})["WPU301202"]
+    tvals = []
+    for r in tk:
+        if r["month"].startswith("average"):
+            check("301202 average before " + MONTH, sum(tvals[:-1]) / len(tvals[:-1]), float(r["yoy_pct"]), TOL_YOY)
+        else:
+            v = yoy(tlv, r["month"]); tvals.append(v)
+            check(f"301202 {r['month']}", v, float(r["yoy_pct"]), TOL_YOY)
     n_hist = len(lines)
 
     lines += ["", "## 2. Contributions and totals", "", "| Check | Chart / CSV | Recompute | |", "|---|---:|---:|---|"]
@@ -137,6 +146,9 @@ def main():
         ("Airline passenger services base weight", f"{cur.loc['302201', 'weight_base']:.2f}%"),
         ("Trade items: count / base weight / share of item sum",
          f"{len(trade_codes)} / {trade_codes.weight_base.sum():.1f}% / {trade_codes.contrib.sum() / total * 100:.1f}%"),
+        ("Long-distance trucking: rank of " + MONTH + " / months / higher months",
+         f"{sorted(tvals, reverse=True).index(tvals[-1]) + 1} / {len(tvals)} / "
+         + ", ".join(r['month'] for r, v in zip([r for r in tk if not r['month'].startswith('average')], tvals) if v > tvals[-1])),
         ("Filled (no published index) base weight", f"{summary.loc[MONTH, 'filled_share']:.2f}%"),
     ]
     lines += ["", "## 3. Numbers for the text (recomputed from the raw index levels and monthly_items.csv)", "",

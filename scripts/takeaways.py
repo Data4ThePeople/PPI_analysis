@@ -15,7 +15,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from common import PROCESSED, ROOT, TARGET
+from common import PROCESSED, ROOT, TARGET, WP
 
 MONTH = f"{TARGET[0]}-{TARGET[1]:02d}"
 CHARTS = ROOT / "charts" / MONTH
@@ -29,7 +29,7 @@ LINE_A, LINE_B = "#f37952", "#5598e7"
 SOURCE = ("Data 4 The People  ·  Source: BLS Producer Price Index for final demand (not seasonally adjusted) "
           "and relative importance tables; contributions computed by Data 4 The People")
 
-JET, AIR = "057203", "302201"
+JET, AIR, TRUCK = "057203", "302201", "301202"
 PORTFOLIO, BROKERAGE = "402101", "401101"
 
 SHORT = {
@@ -274,6 +274,55 @@ def trade(items, name, n_up=6, n_down=4):
            ["code", "item", "yoy_pct", "contrib_pts"])
 
 
+def raw_levels(sid):
+    """Monthly index levels for one series, straight from the BLS flat files (full history)."""
+    out = {}
+    for p in sorted(WP.glob("wp.data.*")):
+        for line in open(p):
+            if line.split("\t", 1)[0].strip() == sid:
+                f = line.rstrip("\n").split("\t")
+                if f[2].startswith("M") and f[2] != "M13":
+                    out[f"{f[1]}-{f[2][1:]}"] = float(f[3])
+    return out
+
+
+def trucking(name):
+    """Long-distance trucking's 12-month change over its whole published history, against its average."""
+    lv = raw_levels(f"WPU{TRUCK}")
+    months = [m for m in sorted(lv) if f"{int(m[:4]) - 1}{m[4:]}" in lv and m <= MONTH]
+    ys = [(lv[m] / lv[f"{int(m[:4]) - 1}{m[4:]}"] - 1) * 100 for m in months]
+    last = ys[-1]
+    avg = sum(ys[:-1]) / len(ys[:-1])
+    rank = sorted(ys, reverse=True).index(last) + 1
+    higher = [m for m, v in zip(months, ys) if v > last]
+    f, top = fig("Long-distance trucking, 12-month price change",
+                 f"{month_label(months[0])} to {month_label(MONTH)}, every month BLS has published. The dashed line is the average of\n"
+                 f"all months before {month_label(MONTH)}. {month_label(MONTH)} ranks {rank} of {len(ys)} months; the {len(higher)} higher months "
+                 f"are all in {sorted({m[:4] for m in higher})[0]}.\nJune to September 2026 are preliminary.",
+                 h=7.5, legend=[("Long-distance trucking", LINE_A), ("Average", MUTED)])
+    ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
+    xs = [xpos(m) for m in months]
+    ax.plot(xs, ys, color=LINE_A, lw=2)
+    ax.scatter([xs[-1]], [last], s=36, color=LINE_A, zorder=4)
+    ax.text(xs[-1] + 0.15, last, f"{last:+.1f}%", color=INK, fontsize=12, fontweight="bold", va="center")
+    ax.plot([xs[0], xs[-1]], [avg, avg], color=MUTED, lw=1.2, ls=(0, (4, 3)))
+    ax.text(xs[-1] + 0.15, avg, f"average {avg:+.1f}%", color=INK, fontsize=10.5, va="center")
+    ax.axhline(0, color=MUTED, lw=0.8)
+    lo, hi = min(ys), max(ys)
+    lo_t, hi_t = int(lo // 10) * 10, (int(hi // 10) + 1) * 10
+    ax.set_ylim(lo_t - 2, hi_t + 2)
+    ticks = list(range(lo_t, hi_t + 1, 10))
+    ax.set_yticks(ticks)
+    ax.set_yticklabels([f"{t:+d}%" if t else "0%" for t in ticks])
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    y0, y1 = int(months[0][:4]), int(MONTH[:4])
+    ax.set_xlim(xs[0] - 0.15, xs[-1] + 1.3)
+    ax.set_xticks(range(y0 + 1, y1 + 1, 2))
+    ax.set_xticklabels([str(y) for y in range(y0 + 1, y1 + 1, 2)])
+    finish(f, ax, name, [(TRUCK, m, round(v, 4)) for m, v in zip(months, ys)]
+           + [(TRUCK, "average_before_" + MONTH, round(avg, 4))], ["code", "month", "yoy_pct"])
+
+
 def main():
     items = pd.read_csv(PROCESSED / "monthly_items.csv", dtype={"code": str, "old_code": str})
     summary = pd.read_csv(PROCESSED / "monthly_summary.csv")
@@ -289,6 +338,7 @@ def main():
               f"{first} to {month_label(MONTH)}. BLS prices portfolio management mostly from fees charged as a share\n"
               "of the assets managed, so the index moves with the value of those assets.",
               "05-portfolio.png", ("Portfolio management", "Securities brokerage and advice"))
+    trucking("06-trucking.png")
 
 
 if __name__ == "__main__":
