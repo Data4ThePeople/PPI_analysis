@@ -33,6 +33,8 @@ Below is the diver, set to September 2026. Each anchor below the diver is an ite
 **[Open the full visualization](https://data4thepeople.github.io/PPI_analysis/dist/index.html#month=2026-09)** **for a larger view and dark mode.**
 :::
 
+::: spacer
+
 Here are five findings that grabbed our attention.
 
 Note: BLS revises PPI data for four months after it first publishes it. The figures for June to September 2026 are preliminary, so every September number in this post may change.

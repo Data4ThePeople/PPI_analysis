@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-september-2026
-Step: 2b confirmed; next 2c
+Step: 2c
 Since: 2026-10-19
 
 ## Steps
@@ -65,3 +65,4 @@ None.
 - 2026-10-20 Step 2a confirmed by Eric.
 - 2026-10-20 Step 2b opened.
 - 2026-10-20 Step 2b confirmed by Eric.
+- 2026-10-20 Step 2c opened.
