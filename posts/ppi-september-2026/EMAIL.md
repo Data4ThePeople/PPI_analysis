@@ -2,7 +2,7 @@
 
 Post URL: https://www.data4thepeople.com/p/ppi-september-2026/
 
-Claude's draft from the post text, October 20, 2026.
+Claude's draft from the post text, October 20, 2026. Short version at Eric's request: the hero and the five takeaways, no charts.
 
 ```
 Subject:  Five takeaways from the September PPI
@@ -21,36 +21,20 @@ A chart drawn as a mountain highway at dusk, titled Five takeaways from the Sept
 
 The PPI Scuba Diver: five takeaways from September 2026
 
-## 3. Body, part one
+## 3. Body
 
 ```
-Yesterday we released the PPI Scuba Diver, a free animated chart of every item in the Producer Price Index for final demand. Today we use it to look at the September 2026 data, which the Bureau of Labor Statistics released on October 15, 2026.
+Wholesale prices rose 6.3% in the 12 months to September 2026. Here are five things that stood out to us.
 
-The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to September 2026, PPI final demand rose 6.3%. That is the largest 12-month increase since December 2022, up from 3.4% in the 12 months to February 2026.
+1. The largest 12-month increase since December 2022.
+2. Fuels made up about 30% of the rise.
+3. Long-distance trucking prices rose 22.8%, the most since 2022.
+4. Jet fuel more than doubled, up 104.4%.
+5. Portfolio management fees rose 21.2%, and they follow the stock market.
+
+The full piece has the charts behind each one, including trucking drawn as a mountain highway, and the PPI Scuba Diver so you can explore the data yourself.
 ```
 
-## 4. Chart
-
-`images/06-trucking.png`, linked to the post.
-Alt:
-```
-Line chart titled Long-distance trucking, 12-month price change, June 2010 to September 2026. The line stays between about minus 3% and plus 9% from 2010 to 2020, against an average of plus 3.6%. It climbs to a peak of plus 26.9% in May 2022, falls to about minus 14% in 2023, and climbs again in 2026 to plus 22.8% in September, the fifth-highest of 196 months. The four higher months are March to June 2022.
-```
-
-## 5. Body, part two
-
-```
-Fuels made up about 30% of the rise. Regular gasoline added the most of any item, with a price 66.1% higher than a year earlier.
-
-Long-distance trucking came next. Its price rose 22.8%, the fifth-highest 12-month change since June 2010. The only higher months were March to June 2022.
-
-Jet fuel more than doubled, up 104.4%. We set it next to airline fares in the Consumer Price Index, and next to what airlines say fuel now costs them.
-
-And the third-largest addition of any item was one you might not expect: the fees investors pay their portfolio managers, up 21.2%. We show why that line moves with the stock market.
-
-Those are the five things that stood out to us. The diver is at the end of the post. What are you finding in the data?
-```
-
-## 6. Call to action
+## 4. Call to action
 
 **[Read the five takeaways](https://www.data4thepeople.com/p/ppi-september-2026/)**
