@@ -312,6 +312,18 @@ stays the highest raw monthly reading by count and by weight in all of them.
 June to September 2026 are preliminary. Each calendar month's average in view 2
 rests on about 15 readings and includes the month being judged.
 
+## Federal funds target rate (12-month breadth chart only)
+
+**What it is.** `DFEDTARU`, the upper limit of the Federal Reserve's federal
+funds target range, daily, from FRED (`scripts/fetch_fedfunds.py`, pulled
+November 1, 2026; last value in the chart September 30, 2026). A change is dated
+the day it took effect, usually the day after the Fed's decision: FRED shows
+March 17, 2022 for the first increase of that cycle. The chart
+(`scripts/item_breadth_fed.py`) shows it on its own panel under the breadth
+lines, on the same time axis, with no second y-scale. It shows timing only and
+does not test whether one moved the other. **License.** Federal Reserve data via
+FRED, public.
+
 ## S&P 500 month-end closes (takeaway 5 chart only)
 
 **What it is.** The S&P 500 index (S&P Dow Jones Indices), the close on the
