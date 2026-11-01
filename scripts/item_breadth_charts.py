@@ -15,7 +15,7 @@ DIR = ROOT / "charts" / f"{LAST}-breadth"
 BG, INK, MUTED, GRID = "#181A1B", "#BBBDC0", "#8C9094", "#2A2E31"
 LINE, SHADE, NOW = "#5598e7", "#3A2A24", "#f37952"
 SOURCE = ("Data 4 The People  ·  Source: BLS Producer Price Index for final demand, not seasonally adjusted, and "
-          "relative importance tables. September 2026 is preliminary.")
+          "relative importance tables. June to September 2026 are preliminary.")
 ROWS = [("sd1", "More than 1 SD above the item's average"),
         ("sd2", "More than 2 SD above the item's average"),
         ("top10", "In the item's top 10% of months")]
@@ -26,7 +26,7 @@ FIGS = [("monthly", "01-monthly-as-asked",
          "The same test, adjusted for the time of year",
          "Each item's monthly change compared with its own average for that calendar month"),
         ("yoy", "03-twelve-month",
-         "How many items had an unusually large 12-month price increase?",
+         "What share of items had a 12-month increase well above their own average?",
          "Each item's 12-month change compared with its own average since 2013")]
 
 

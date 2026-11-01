@@ -279,19 +279,23 @@ latest; the next release had not posted on November 1, 2026) and
 is judged only if it has its own index for the month and at least 60 months of
 history in the baseline. Items with no index are left out, not filled: a
 borrowed parent change says nothing about the item's own history. Items judged
-carry 93% to 98% of final demand weight, and shares are of the weight judged.
-The number judged moves (691 in September 2026, 711 in January 2026) as BLS
-stops publishing or starts publishing series.
+carry 90.6% to 98.2% of final demand weight in the 12-month view (lowest in
+2014-2015), and shares are of the weight judged. The number judged moves (688 in
+September 2026, 708 in January 2026, in the 12-month view) as BLS stops or starts
+publishing series. The 60 months count the whole baseline, including months
+after the one judged. The leather items use the 8-digit 159F series
+(`chain.SERIES_ALIAS`) through the December 2024 tree and the 6-digit series that
+carry their own codes after that, so these tiny items change series in 2025.
 
 **Weights.** In all three views, each month T uses the December relative
 importance for T's year (restored items included, as under Suppressed values),
 rolled forward to the month before T with BLS's formula: RI x (I_T-1/I_DN) /
 (FD_T-1/FD_DN). The 12-month view uses this same recent weight, not the weight a
 year earlier, so its shares describe today's basket. An item with no index at DN
-or T-1 keeps its December weight unrolled. Weight-file codes with no series of
+or T-1 is treated as flat since December: RI / (FD_T-1/FD_DN). Weight-file codes with no series of
 their own use the recoded series listed under Recoded items.
 
-**The three tests.** Change greater than the item's average plus 1 standard
+**The three tests.** Percent change, sample standard deviation. Change greater than the item's average plus 1 standard
 deviation; plus 2; and top 10% of the item's months, meaning at most 10% of the
 baseline months were equal to or above this one. Counting ties against the
 month keeps a run of zero changes from reaching the top 10%.
@@ -302,13 +306,18 @@ year: the same, after subtracting the item's own average for that calendar
 month. This matters because many items reprice in January and October, and
 September tends to be quiet: on view 1 January averages 19.6% of items over
 1 SD and September 7.8%. (3) 12-month change, average and SD over January 2013
-to September 2026; overlapping months make this series smooth.
+to September 2026; overlapping months make this series smooth, and one price jump stays in it
+for 12 readings, so it measures how long increases last as well as how many
+items had them.
 
 **Limits.** The baseline includes every month shown, including 2021-2022 and
 September 2026. The check files `monthly_pre2020.csv` and `yoy_pre2020.csv` use
 a baseline ending December 2019, and `monthly_from2021.csv` one starting July
-2021, when BLS moved to three decimals. These change the levels; January 2022
-stays the highest raw monthly reading by count and by weight in all of them.
+2021, when BLS moved to three decimals. These change the levels a lot. In the 12-month view,
+September 2026 goes from 22.2% to 50.2% of items over 1 SD and from 6.4% to 32.6%
+over 2 SD, because the full baseline lets 2021-2022 widen each item's SD. Its
+rank moves much less (28 to 26, and 29 to 27, of 153). January 2022 stays the
+highest monthly reading by count and by weight in all of them.
 June to September 2026 are preliminary. Each calendar month's average in view 2
 rests on about 15 readings and includes the month being judged.
 
