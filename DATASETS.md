@@ -283,9 +283,13 @@ carry 93% to 98% of final demand weight, and shares are of the weight judged.
 The number judged moves (691 in September 2026, 711 in January 2026) as BLS
 stops publishing or starts publishing series.
 
-**Weights.** The December relative importance rolled forward to the month
-before the change for the monthly views, BLS's formula as under Method. An item
-with no December index keeps its December weight unrolled.
+**Weights.** In all three views, each month T uses the December relative
+importance for T's year (restored items included, as under Suppressed values),
+rolled forward to the month before T with BLS's formula: RI x (I_T-1/I_DN) /
+(FD_T-1/FD_DN). The 12-month view uses this same recent weight, not the weight a
+year earlier, so its shares describe today's basket. An item with no index at DN
+or T-1 keeps its December weight unrolled. Weight-file codes with no series of
+their own use the recoded series listed under Recoded items.
 
 **The three tests.** Change greater than the item's average plus 1 standard
 deviation; plus 2; and top 10% of the item's months, meaning at most 10% of the
