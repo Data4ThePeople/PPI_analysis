@@ -266,6 +266,48 @@ Topics, second quarter 2011), describes transportation PPIs falling as
 surcharges fell in 2009. BLS does not split surcharges from base rates in
 this index.
 
+## Item breadth (exploration, November 2026)
+
+**The question.** How unusual was each month's price change at the item level,
+judged against each item's own history, and how does September 2026 compare
+with 2021-2022? `scripts/item_breadth.py` computes it from
+`data/processed/indexes.json` (the October 17, 2026 pull, which is still BLS's
+latest; the next release had not posted on November 1, 2026) and
+`scripts/item_breadth_charts.py` draws `charts/2026-09-breadth/`.
+
+**Items.** Each month, the six-digit leaves in that year's weight tree. An item
+is judged only if it has its own index for the month and at least 60 months of
+history in the baseline. Items with no index are left out, not filled: a
+borrowed parent change says nothing about the item's own history. Items judged
+carry 93% to 98% of final demand weight, and shares are of the weight judged.
+The number judged moves (691 in September 2026, 711 in January 2026) as BLS
+stops publishing or starts publishing series.
+
+**Weights.** The December relative importance rolled forward to the month
+before the change for the monthly views, BLS's formula as under Method. An item
+with no December index keeps its December weight unrolled.
+
+**The three tests.** Change greater than the item's average plus 1 standard
+deviation; plus 2; and top 10% of the item's months, meaning at most 10% of the
+baseline months were equal to or above this one. Counting ties against the
+month keeps a run of zero changes from reaching the top 10%.
+
+**Three views.** (1) Monthly: not seasonally adjusted one-month change, average
+and SD over February 2012 to September 2026. (2) Monthly adjusted for time of
+year: the same, after subtracting the item's own average for that calendar
+month. This matters because many items reprice in January and October, and
+September tends to be quiet: on view 1 January averages 19.6% of items over
+1 SD and September 7.8%. (3) 12-month change, average and SD over January 2013
+to September 2026; overlapping months make this series smooth.
+
+**Limits.** The baseline includes every month shown, including 2021-2022 and
+September 2026. The check files `monthly_pre2020.csv` and `yoy_pre2020.csv` use
+a baseline ending December 2019, and `monthly_from2021.csv` one starting July
+2021, when BLS moved to three decimals. These change the levels; January 2022
+stays the highest raw monthly reading by count and by weight in all of them.
+June to September 2026 are preliminary. Each calendar month's average in view 2
+rests on about 15 readings and includes the month being judged.
+
 ## S&P 500 month-end closes (takeaway 5 chart only)
 
 **What it is.** The S&P 500 index (S&P Dow Jones Indices), the close on the

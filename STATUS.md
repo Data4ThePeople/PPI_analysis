@@ -76,3 +76,4 @@ None.
 - 2026-10-20 Step 2g opened.
 - 2026-10-20 Step 2g confirmed by Eric. Post ppi-september-2026 complete.
 - 2026-10-20 After completion, per Eric: hero peak and valley sign poles moved onto May 2022 and July 2023; email JPG re-exported; Prismic draft hero replaced.
+- 2026-11-01 Exploration, no post yet: item breadth for September 2026 against 2014-2026 (1 SD, 2 SD, top 10%; by count and weight; monthly, monthly adjusted for time of year, 12-month). charts/2026-09-breadth; method in DATASETS.md. Independent tie-out not run yet.

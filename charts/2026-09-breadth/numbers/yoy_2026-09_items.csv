@@ -1,0 +1,689 @@
+month,code,w,z,top,name,change,avg,sd
+2026-09,115201,0.0531,6.1916,0.0121,"Computer storage devices (except parts, attachments and accessories)",87.7654,1.9803,13.855
+2026-09,117849,0.0152,5.547,0.0061,Bare printed circuit boards,45.7854,3.7196,7.5835
+2026-09,113501,0.0073,4.3649,0.0061,Small cutting tools,14.085,2.567,2.6388
+2026-09,117861,0.0517,3.9511,0.0364,"Printed circuit assemblies, loaded boards, modules and consumer external modems",130.0118,7.0911,31.1103
+2026-09,057801,0.0255,3.8153,0.0061,Lubricating oil base stocks,149.5421,5.0026,37.8838
+2026-09,471101,0.0187,3.7873,0.0121,Arrangement of international flights,7.7188,0.537,1.8963
+2026-09,116603,0.0286,3.7193,0.0061,Plastics-working and rubber-working machinery and equipment,6.4171,1.0907,1.4321
+2026-09,159407,0.0138,3.5429,0.0242,All other jewelry and personal goods (excluding costume),30.2028,3.2283,7.6137
+2026-09,107902,0.0022,3.5256,0.0068,"Farm service buildings and other prefabricated and portable buildings, steel and aluminum",32.9169,5.0368,7.9079
+2026-09,117606,0.3881,3.453,0.0545,"Search, detection, navigation & guidance systems and equipment",19.8518,4.4571,4.4584
+2026-09,131301,0.0131,3.1895,0.0364,Pressed and blown glassware,13.9382,3.1037,3.397
+2026-09,583102,0.1971,2.8677,0.0061,Jewelry retailing,17.051,3.62,4.6835
+2026-09,331101,0.0583,2.8046,0.0061,Sales of textbooks,11.9364,3.3869,3.0484
+2026-09,117601,0.0195,2.796,0.0182,Telephone and wireline data networking equipment,11.5586,0.1712,4.0727
+2026-09,022306,0.0715,2.7545,0.0061,Prepared fresh and frozen seafood,19.3423,3.2862,5.829
+2026-09,456101,0.2141,2.7407,0.0364,Information technology (IT) technical support and consulting services (partial),25.8172,3.9251,7.9878
+2026-09,301301,0.0417,2.7226,0.0121,Deep sea water transportation of freight,36.7944,5.2214,11.5966
+2026-09,102802,0.0011,2.7016,0.0061,Aluminum castings,15.033,2.8334,4.5157
+2026-09,586102,0.327,2.6548,0.0121,"Automotive parts, including tires, retailing",19.5617,4.3372,5.7348
+2026-09,057302,0.1015,2.6002,0.0121,Home heating oil and distillates,117.5443,7.6634,42.2592
+2026-09,084201,0.0011,2.5824,0.0061,Wood boxes,17.5727,2.0617,6.0065
+2026-09,393101,0.1106,2.5694,0.0182,"Other credit intermediation services, including trust services (partial)",12.3965,0.6139,4.5856
+2026-09,057303,0.565,2.5294,0.0242,No. 2 diesel fuel,115.2409,8.671,42.1319
+2026-09,102408,0.0099,2.5121,0.0061,"All other miscellaneous secondary nonferrous metals, including lead and zinc",28.5798,2.6344,10.3283
+2026-09,159301,0.019,2.4973,0.0182,Musical instruments,8.6056,3.0955,2.2064
+2026-09,087102,0.0,2.4906,0.0424,Contract wood preservation,13.0779,1.9053,4.4858
+2026-09,057202,0.0301,2.4594,0.0303,Kerosene,106.9393,6.5907,40.8022
+2026-09,301202,2.2075,2.4158,0.0303,Long-distance motor carrying,22.7669,3.4406,7.9998
+2026-09,156301,0.1406,2.3021,0.0364,Medical and surgical appliances and supplies,4.7057,1.419,1.4277
+2026-09,574101,0.1865,2.2564,0.0424,"Metals, minerals, and ores wholesaling",55.5778,8.4099,20.9042
+2026-09,117905,0.2778,2.1901,0.0909,X-ray and electromedical equipment,4.1939,0.7484,1.5732
+2026-09,024505,0.0409,2.1723,0.0606,"Frozen vegetables, other than potato products",15.1494,3.7052,5.2683
+2026-09,411103,0.7727,2.1722,0.0364,Health and medical insurance,6.9698,3.0744,1.7933
+2026-09,057203,0.2488,2.1655,0.0485,Jet fuel,104.3791,8.0714,44.4743
+2026-09,513101,0.0918,2.16,0.0303,"Sales of blood and blood products, organs, and tissues",7.0995,2.0452,2.34
+2026-09,136201,0.0011,2.1498,0.0182,"Roofing asphalts, pitches, coatings, and cement",16.1844,0.2712,7.4021
+2026-09,102403,0.0023,2.1405,0.0485,"Secondary copper, alloyed and unalloyed",35.8893,6.9025,13.5418
+2026-09,463201,0.0358,2.1357,0.0606,Co-employment staffing services,7.0717,1.8479,2.446
+2026-09,102301,0.0343,2.1285,0.0303,Copper base scrap,48.2903,4.5764,20.5372
+2026-09,139801,0.006,2.1051,0.0242,Gaskets and gasketing material,9.3515,2.9362,3.0476
+2026-09,012101,0.0163,2.0334,0.0606,Wheat,49.8413,0.8454,24.0951
+2026-09,057604,0.0887,2.027,0.0667,Lubricating and similar oils,18.5845,3.2386,7.5706
+2026-09,585101,0.0552,2.0237,0.0424,"TV, video, and photographic equipment and supplies retailing",37.7752,0.3841,18.4766
+2026-09,571102,0.8741,2.0208,0.0545,Parts and supplies for machinery and equipment wholesaling,16.5695,6.0747,5.1935
+2026-09,301603,0.1079,1.9688,0.0606,"Air mail and package delivery services, excluding by USPS",15.498,5.7611,4.9457
+2026-09,431101,0.026,1.9682,0.0242,"Office buildings, gross rents",7.7848,1.9924,2.943
+2026-09,552101,0.4579,1.9546,0.0606,Motor vehicle repair and maintenance (partial),8.0652,3.7897,2.1873
+2026-09,038106,0.0258,1.9502,0.0121,"Women's, girls', and infants' cut and sew apparel",3.4765,0.497,1.5278
+2026-09,011306,0.033,1.9315,0.0364,Potatoes,71.7275,6.0399,34.0078
+2026-09,107501,0.0567,1.9129,0.0606,Heat exchangers and steam condensers,14.2724,5.4777,4.5976
+2026-09,022301,0.0083,1.9073,0.0667,Unprocessed finfish,59.649,9.194,26.4532
+2026-09,091302,0.0011,1.9015,0.0485,Newsprint,29.6521,1.227,14.9487
+2026-09,057105,0.0342,1.8682,0.0545,Unleaded mid-premium gasoline,65.8114,3.8995,33.139
+2026-09,102603,0.0619,1.8582,0.0788,Nonferrous wire and cable,23.0078,4.2726,10.0824
+2026-09,159F11,0.0012,1.84,0.0485,"Hides, skins, and pelts, made in slaughtering plants",35.5976,-6.3061,22.7741
+2026-09,312101,0.0,1.8192,0.0424,"Other airport operations, excluding aircraft maintenance and repair",10.1247,2.9749,3.9301
+2026-09,102402,0.0039,1.7737,0.097,Secondary aluminum,46.4665,6.8663,22.3261
+2026-09,117205,0.0504,1.7414,0.0545,"Test equipment for electrical, radio, & communication circuits & motors",5.6505,1.4533,2.4102
+2026-09,102201,0.0249,1.7382,0.0727,Primary nonferrous metals,46.1318,8.4811,21.6604
+2026-09,113720,0.0261,1.7357,0.0909,Other metal-cutting machine tools,3.6278,1.455,1.2519
+2026-09,362101,0.0111,1.7347,0.0424,Broadcast and network television advertising time sales,15.9455,-2.5587,10.6673
+2026-09,024202,0.013,1.7117,0.0606,Frozen fruits,22.7009,3.1535,11.42
+2026-09,579101,2.5553,1.7088,0.0909,Other commodities wholesaling,14.4398,4.2415,5.9681
+2026-09,381103,0.1176,1.7011,0.0364,"Data management, information transformation and other services",0.8883,0.0467,0.4947
+2026-09,301303,0.0053,1.687,0.0629,Great Lakes-St Lawrence Seaway water transportation of freight,13.6308,2.5193,6.5866
+2026-09,102519,0.0104,1.6786,0.0303,Other nonferrous mill shapes,14.2199,4.0991,6.0293
+2026-09,431105,0.0136,1.6676,0.0424,"Other nonresidential buildings, gross rents",15.3022,2.2204,7.8446
+2026-09,057103,0.4333,1.6508,0.0848,Unleaded premium gasoline,56.8232,3.6059,32.2373
+2026-09,108905,0.0888,1.6278,0.097,Other metal products,7.7894,2.1823,3.4446
+2026-09,311101,0.0,1.6163,0.0364,"Towing, tugging, docking and related services",11.1964,3.6576,4.6644
+2026-09,114202,0.001,1.6005,0.103,Parts and attachments for elevators and moving stairs (sold separately),10.0393,3.4357,4.126
+2026-09,057104,1.6295,1.5895,0.0788,Unleaded regular gasoline,66.1123,4.4086,38.8196
+2026-09,117507,0.0543,1.5819,0.0848,Industrial controls and related parts and accessories,11.687,4.3516,4.6371
+2026-09,102502,0.0188,1.5797,0.0667,Copper and brass mill shapes,29.9781,5.3084,15.6164
+2026-09,391202,0.0623,1.5451,0.0545,Vehicle loans (partial),9.6867,-3.3274,8.4228
+2026-09,302201,1.2026,1.5384,0.097,Airline passenger services,16.6266,2.2657,9.3352
+2026-09,451101,1.9565,1.5267,0.1455,Legal services,7.4502,4.454,1.9625
+2026-09,067902,0.0074,1.5208,0.0848,Explosives and blasting accessories,10.607,3.7256,4.5248
+2026-09,431301,0.0107,1.5173,0.0788,Nonresidential property management fees,8.2942,1.7229,4.3309
+2026-09,033703,0.003,1.5143,0.103,"Greige manmade, silk, and other natural fiber (exc cotton/wool) broadwoven fabrics",7.1165,2.0673,3.3343
+2026-09,116705,0.044,1.5082,0.1212,"Packing, packaging, and bottling machinery and parts",10.4099,4.3196,4.0381
+2026-09,119104,0.0332,1.4977,0.087,Oil field and gas field production machinery (except pumps and parts sold separately),8.7601,2.8283,3.9605
+2026-09,432201,0.0158,1.4741,0.0848,Residential property management fees,4.6749,2.2428,1.6499
+2026-09,133401,0.0031,1.4704,0.1212,Precast concrete products,10.499,5.1244,3.6553
+2026-09,058103,0.0639,1.4656,0.103,"Other petroleum and coal products, including coke oven products, n.e.c.",46.4148,6.076,27.524
+2026-09,402101,2.2785,1.454,0.0545,Portfolio management,21.2199,8.2944,8.8895
+2026-09,056101,0.0892,1.437,0.0788,Crude petroleum (domestic production),71.146,6.3865,45.066
+2026-09,331102,0.0972,1.4321,0.0303,"Sales of technical, scientific, and professional books",12.4207,7.7703,3.2471
+2026-09,561101,0.3451,1.4053,0.0606,Membership dues,7.0257,2.7765,3.0237
+2026-09,107411,0.0074,1.39,0.0848,"Fabricated metal pipe, tube, and fittings",12.9125,3.5993,6.7
+2026-09,381101,0.3493,1.3895,0.1152,"Hosting, ASP and other IT infrastructure provisioning services",4.4576,1.3947,2.2044
+2026-09,391201,0.4838,1.3851,0.0424,Residential real estate loans (partial),8.1389,-0.6664,6.3573
+2026-09,023503,0.0214,1.3819,0.0848,Liquid milk products,14.304,1.7817,9.0615
+2026-09,018301,0.1057,1.3795,0.0667,Oilseeds,27.8099,0.0412,20.1293
+2026-09,022209,0.019,1.3778,0.14,Chicken hens and other poultry/small game,19.6643,4.5326,10.9823
+2026-09,119407,0.0211,1.3773,0.1753,"Diesel, semidiesel, and dual-fuel engines (except automotive)",10.698,5.2407,3.9624
+2026-09,374103,0.0177,1.3611,0.103,Business Internet access services,2.7138,0.3798,1.7148
+2026-09,011102,0.0806,1.3516,0.1091,Other fruits and berries,16.5055,2.2388,10.5556
+2026-09,091303,0.0591,1.3497,0.103,Packaging and industrial converting paper,11.0763,2.7742,6.151
+2026-09,126101,0.0041,1.3442,0.1212,"Vitreous china, porcelain, and earthenware table and kitchenware and other pottery products",8.1001,3.6225,3.3312
+2026-09,091301,0.1157,1.3263,0.1152,Writing and printing papers,10.1352,2.7934,5.5357
+2026-09,117839,0.0584,1.3249,0.097,"Integrated circuit packages, including microprocessors",1.8074,-2.8873,3.5434
+2026-09,141205,0.4692,1.3246,0.1273,Motor vehicles parts,3.2593,1.2001,1.5546
+2026-09,027A01,0.0239,1.3201,0.1152,Other oilseed processing,31.0156,3.8312,20.5931
+2026-09,301602,0.1653,1.307,0.0909,"Courier and messenger services, except air",8.1021,4.7731,2.5471
+2026-09,301401,0.058,1.2994,0.103,Air transportation of freight,6.3503,0.7588,4.3031
+2026-09,113605,0.006,1.2988,0.1515,"Nonmetallic coated abrasive products and buffing wheels, polishing wheels, and laps",7.227,3.1967,3.1032
+2026-09,025503,0.2671,1.2895,0.1333,Candy and nuts,7.1473,2.5223,3.5867
+2026-09,401101,1.226,1.279,0.103,"Securities brokerage, dealing, and investment advice",13.2629,2.3331,8.5459
+2026-09,102501,0.0564,1.2761,0.1576,Aluminum mill shapes,25.2053,6.0475,15.0124
+2026-09,159404,0.0117,1.2719,0.1515,Costume jewelry and novelties,6.6727,3.6841,2.3497
+2026-09,117828,0.006,1.2698,0.1394,"Filters, crystals, and transducers",4.7412,1.758,2.3493
+2026-09,067201,0.0492,1.2672,0.1515,Polish and other sanitation goods,5.7085,2.688,2.3836
+2026-09,061302,0.0885,1.2659,0.097,"Inorganic chemicals, other than alkalies and chlorine",9.7054,1.5156,6.4695
+2026-09,102807,0.0,1.2606,0.1152,"Castings, nonferrous (except aluminum)",11.2675,4.2072,5.6009
+2026-09,114305,0.001,1.2578,0.1576,Parts for fluid power valves,10.8875,4.4839,5.0912
+2026-09,117853,0.0072,1.2503,0.1636,"Electronic coils, transformers, and other inductors",7.5812,3.5902,3.192
+2026-09,301304,0.023,1.2473,0.1515,Inland waterways transportation of freight,12.5672,1.6182,8.7782
+2026-09,057407,0.0859,1.2397,0.0848,"Residual fuels (heavy fuel oils, incl. #5, #6, & other residual fuels)",66.1084,6.4537,48.1213
+2026-09,442102,0.0811,1.2396,0.103,"Truck, truck trailer and RV leasing",4.0203,2.0141,1.6185
+2026-09,511102,0.2671,1.2096,0.1091,Medical laboratory and diagnostic imaging center care,0.9619,-0.1099,0.886
+2026-09,018101,0.0014,1.2033,0.1212,Hay and hayseeds,26.7255,1.8766,20.6513
+2026-09,491101,0.0564,1.2006,0.1576,Janitorial services,5.4927,2.4506,2.5338
+2026-09,029301,0.017,1.1997,0.1576,Formula feeds,12.7309,1.0204,9.761
+2026-09,152101,0.6046,1.1835,0.2303,"Cigarettes, excluding electronic",11.4144,7.819,3.0381
+2026-09,375101,1.0591,1.1824,0.1273,Bundled wired telecommunications access services,6.5399,3.0366,2.9628
+2026-09,012205,0.0021,1.1751,0.0788,Sorghum,41.077,0.8543,34.2293
+2026-09,117522,0.1012,1.1626,0.1333,Switchgear and switchboard apparatus,12.7599,5.3051,6.4121
+2026-09,034701,0.0169,1.1581,0.1333,Screen printed textile and apparel materials and embroideries,7.0718,2.979,3.5341
+2026-09,512101,4.5752,1.1507,0.1455,Hospital inpatient care,4.063,2.8113,1.0878
+2026-09,301201,0.6835,1.1495,0.103,Local motor carrying,9.0571,2.3987,5.7924
+2026-09,067905,0.0186,1.1459,0.1273,Surface active agents,9.9058,2.7945,6.2059
+2026-09,143202,0.007,1.1376,0.103,"Inboard motorboats, including commercial and military (except sailboats and lifeboats)",6.5739,3.7093,2.518
+2026-09,072205,0.0458,1.1338,0.1333,"Unsupported plastics film, sheet, and other shapes",10.3774,2.6954,6.7754
+2026-09,108809,0.0205,1.1311,0.1333,Other fabricated ferrous wire products,14.3798,4.8521,8.4231
+2026-09,551101,0.1688,1.1271,0.1697,Commercial machinery repair and maintenance,7.5477,4.0261,3.1243
+2026-09,091506,0.0465,1.1153,0.103,Office supplies and accessories,11.8595,4.2394,6.8321
+2026-09,591101,0.001,1.1027,0.1455,Metal plating and polishing,5.6303,2.5467,2.7965
+2026-09,038303,0.0405,1.0934,0.1939,Industrial and other fabricated products,6.7853,3.3919,3.1036
+2026-09,139902,0.0051,1.0933,0.1212,Clay and stone mining and quarrying,6.8088,3.3603,3.1541
+2026-09,038104,0.0199,1.0892,0.1576,Miscellaneous apparel and accessories,5.3026,2.996,2.1176
+2026-09,062103,0.0148,1.0669,0.1152,"Special purpose coatings, incl. marine, industrial & construction coatings",10.7781,3.8184,6.5231
+2026-09,159F23,0.002,1.0582,0.1301,"Other footwear, excluding rubber and plastic soled footwear",3.4382,1.8501,1.5007
+2026-09,462101,0.001,1.0571,0.1879,Executive search services,4.4572,1.1857,3.0948
+2026-09,156401,0.0475,1.0542,0.1758,Ophthalmic goods,4.6114,2.1966,2.2907
+2026-09,331103,0.0121,1.0519,0.1394,Sales of religious books,5.6425,1.6028,3.8405
+2026-09,103103,0.0104,1.0366,0.103,Aluminum cans and can components,11.5903,3.0947,8.1955
+2026-09,142501,0.1645,1.0345,0.1333,Other aircraft parts and equipment,3.162,1.8484,1.2698
+2026-09,067906,0.0042,1.0288,0.1273,"Gum and wood chemicals, including wood distillation products",10.0065,2.8825,6.9244
+2026-09,012202,0.053,1.023,0.1091,Corn,29.9538,0.0683,29.215
+2026-09,118601,0.0087,1.016,0.1091,"Sighting, tracking, and fire-control equipment, optical type",3.8029,0.8048,2.951
+2026-09,124403,0.0,1.009,0.1509,"Parts and attachments for small electric household appliances, including fan parts",6.5964,2.7405,3.8214
+2026-09,58I101,0.8964,1.0025,0.1818,Other merchandise retailing (partial),7.1532,3.1906,3.9527
+2026-09,121401,0.0698,0.9974,0.1758,Bedding,5.7184,2.5052,3.2217
+2026-09,023502,0.072,0.9914,0.1212,"Dry milk products, including feed grade",17.6736,1.435,16.3793
+2026-09,011301,0.0064,0.9832,0.1212,Dry vegetables,23.8419,0.0524,24.1963
+2026-09,471201,0.0094,0.9811,0.1333,Arrangement of domestic flights (partial),13.885,-0.654,14.8191
+2026-09,072601,0.026,0.9804,0.1939,Parts for transportation equipment,5.7766,2.0696,3.781
+2026-09,342104,0.156,0.9777,0.162,"Application software publishing, game software",11.1177,1.0831,10.2638
+2026-09,119408,0.0298,0.9625,0.2303,"Diesel, semidiesel, and dual-fuel engines for automobiles, trucks, and buses",3.6612,1.0716,2.6905
+2026-09,115101,0.0523,0.9534,0.1212,Electronic computers,3.3167,-2.0692,5.649
+2026-09,581102,1.7821,0.9459,0.1091,Food retailing,9.2112,4.4039,5.0823
+2026-09,591102,0.001,0.9203,0.1273,Metal coating and allied services,6.1827,2.6104,3.8819
+2026-09,083501,0.002,0.9014,0.1515,Hardwood veneer and plywood,8.9037,3.6351,5.8451
+2026-09,104201,0.0327,0.8964,0.2121,Hand and edge tools,5.008,2.8898,2.363
+2026-09,301601,0.1208,0.8889,0.2303,U.S. Postal Service,7.4372,4.4665,3.3418
+2026-09,061401,0.0977,0.8857,0.0909,Primary basic organic chemicals,34.3073,2.1322,36.3268
+2026-09,157108,0.0098,0.8779,0.1636,Personal safety equipment and clothing,6.4605,3.3655,3.5254
+2026-09,443101,0.0166,0.8657,0.1758,"Construction, mining, and forestry machinery and equipment rental and leasing",3.3806,0.4012,3.4415
+2026-09,139501,0.0216,0.8646,0.1394,Cut stone and stone products,7.7446,4.1664,4.1383
+2026-09,154206,0.0248,0.8613,0.2061,Photographic supplies,6.4428,2.7532,4.2839
+2026-09,102504,0.0062,0.8469,0.1394,Nickel and nickel-base alloy mill shapes,10.5927,1.1901,11.1027
+2026-09,113304,0.003,0.8404,0.1818,"Gas welding and cutting equipment, parts, attachments, and accessories",4.501,2.0202,2.952
+2026-09,156201,0.1821,0.8322,0.2424,Surgical and medical instruments,2.3845,1.2424,1.3723
+2026-09,113901,0.0729,0.8275,0.2182,"Special tools, dies, jigs, and fixtures",4.4451,2.375,2.5017
+2026-09,371201,0.0235,0.8242,0.0848,Local business wired telephone service,6.3753,2.4408,4.774
+2026-09,114802,0.0279,0.8241,0.1394,"Unitary air-conditioners, except air source heat pumps",8.5611,4.5417,4.877
+2026-09,064101,0.0237,0.8241,0.1455,"Fats and oils, inedible",24.628,4.377,24.5745
+2026-09,108103,0.0009,0.8176,0.2303,"Internally threaded fasteners, except aircraft types",5.0327,2.5174,3.0765
+2026-09,053201,0.1257,0.8005,0.1576,Natural gas liquids,50.8765,7.0175,54.7885
+2026-09,072901,0.0613,0.7997,0.1576,Other plastics products,7.1073,3.1277,4.9763
+2026-09,071102,0.0204,0.7965,0.2364,Synthetic rubber,9.6262,0.71,11.1937
+2026-09,342101,0.2349,0.7912,0.1939,Desktop and portable device application software publishing,2.9099,0.8814,2.5639
+2026-09,139802,0.004,0.7911,0.2061,Packing and sealing,5.5639,3.2257,2.9556
+2026-09,118603,0.1136,0.79,0.1636,Laboratory analytical instruments,3.8947,2.5928,1.648
+2026-09,139401,0.0472,0.786,0.1394,Paving mixtures and blocks,7.1393,2.3343,6.1134
+2026-09,433101,0.0424,0.7845,0.1576,Real estate appraisal fees,3.8424,1.2847,3.2602
+2026-09,58A101,0.245,0.7729,0.1818,"Lawn, garden, and farm equipment and supplies retailing",10.8777,4.7808,7.8884
+2026-09,113306,0.0038,0.7637,0.2182,"Other welding equipment, components, and accessories (excluding arc, resistance, and gas)",5.3631,3.1994,2.8333
+2026-09,575101,0.9977,0.756,0.2242,Chemicals and allied products wholesaling,6.3134,2.2466,5.3796
+2026-09,021203,0.0151,0.7507,0.1333,Wheat flour,9.4268,1.1103,11.0781
+2026-09,141302,0.0453,0.7501,0.1333,Complete vehicles on purchased chassis,6.0815,3.4884,3.457
+2026-09,117603,0.1793,0.7277,0.277,"Other communications and related equipment, including broadcast and wireless",3.0975,1.6269,2.0207
+2026-09,114902,0.0441,0.7162,0.2,"Metal valves, except fluid power",6.6923,4.4175,3.1764
+2026-09,114501,0.012,0.7143,0.1576,"Speed changers, drives, gears",6.1661,3.6109,3.5773
+2026-09,58D101,0.2097,0.7115,0.1091,Hardware and building materials and supplies retailing,13.6414,5.0649,12.0541
+2026-09,114701,0.0258,0.6706,0.1333,"Fan, blower, air purification equipment",5.5928,3.3249,3.382
+2026-09,091504,0.0062,0.6705,0.2061,"Other corrugated and solid fiber products, including containers, pallets, pads, etc.",8.0879,4.683,5.0781
+2026-09,101704,0.0228,0.6641,0.1939,"Hot rolled steel bars, plates, and structural shapes",15.0173,3.6682,17.0906
+2026-09,511105,1.1596,0.663,0.3091,Dental care,3.2489,2.4349,1.2278
+2026-09,091502,0.036,0.6455,0.1576,"Paper, plastic, and foil bags",5.2603,2.2707,4.6316
+2026-09,454103,0.1012,0.6371,0.2121,Marketing consulting services,1.9165,-2.5804,7.0582
+2026-09,121301,0.1201,0.6363,0.1879,Upholstered household furniture,5.8743,3.1676,4.2536
+2026-09,032604,0.014,0.6246,0.1394,Textured and twisted yarns,6.4783,2.2005,6.8484
+2026-09,094701,0.0087,0.6159,0.1273,Magazine and periodical printing,5.786,2.2342,5.7664
+2026-09,118201,0.074,0.6064,0.2303,Industrial process control instruments,5.3162,3.4484,3.0802
+2026-09,023307,0.0022,0.6056,0.2545,Raw liquid whey,30.8647,9.1124,35.9195
+2026-09,512102,1.2446,0.6014,0.2424,Nursing home care,3.721,2.8621,1.4283
+2026-09,061402,0.0195,0.6012,0.1515,Cyclic intermediate chemicals and dyes,9.5336,2.1536,12.2756
+2026-09,071306,0.0628,0.5987,0.1455,"Miscellaneous rubber products, n.e.c.",5.0284,2.4089,4.3753
+2026-09,102303,0.0287,0.597,0.2667,"Other nonferrous scrap (including lead, zinc and precious metals)",20.2551,7.5747,21.2418
+2026-09,58B101,0.422,0.5937,0.1636,Furniture retailing,7.296,2.358,8.3168
+2026-09,117704,0.0059,0.5937,0.297,"Electric lamp bulbs, tubes, and components",4.2796,-1.241,9.2987
+2026-09,141501,0.047,0.5901,0.2182,"Motor homes, built on purchased chassis",2.7657,2.0602,1.1957
+2026-09,015101,0.0133,0.5838,0.2121,Raw cotton,15.131,1.3157,23.6652
+2026-09,102302,0.0384,0.5823,0.2182,Aluminum base scrap,22.553,7.2232,26.326
+2026-09,023105,0.0655,0.5773,0.1636,Other milk products,4.2684,2.2965,3.4159
+2026-09,117824,0.0167,0.5724,0.2182,Connectors for electronic circuitry,5.6992,3.7049,3.4842
+2026-09,101212,0.005,0.5713,0.2485,Stainless and other alloy steel scrap,15.1853,0.9738,24.8743
+2026-09,126607,0.0547,0.5681,0.2022,"Consumer lawn, garden, and snow equipment",4.6048,2.9507,2.9116
+2026-09,113505,0.003,0.565,0.1939,Other machine tool attachments and accessories,5.7589,3.6692,3.6985
+2026-09,066306,0.026,0.5605,0.1939,Thermosetting resins and plastics materials,5.2276,1.2653,7.0688
+2026-09,026303,0.0095,0.5591,0.1455,"Tea in consumer packages, exc. canned ice tea",4.3477,2.0725,4.0694
+2026-09,156501,0.0267,0.5587,0.2025,Dental equipment and supplies,5.6832,3.8096,3.3532
+2026-09,122204,0.0344,0.544,0.1636,Nonwood partitions and fixtures,8.1876,4.2269,7.2808
+2026-09,038203,0.0196,0.538,0.2,Textile house furnishings,4.2333,2.4544,3.3062
+2026-09,105402,0.0019,0.5365,0.2242,"Plumbing fixtures, fittings, and trim",5.0858,3.529,2.9015
+2026-09,011303,0.0054,0.5341,0.2424,Sweet potatoes,11.4907,4.4069,13.2622
+2026-09,591103,0.001,0.532,0.2485,Metal heat treating,6.7104,3.879,5.3223
+2026-09,561102,0.1853,0.5256,0.2909,Admissions and recreational facilities use fees (partial),4.5068,3.3811,2.1418
+2026-09,141406,0.1267,0.5243,0.1273,Truck trailers,9.5207,4.7797,9.0431
+2026-09,102406,0.0195,0.5192,0.2515,Secondary precious metals,19.5545,8.6613,20.9806
+2026-09,061403,0.2904,0.5166,0.2,Other basic organics,7.1438,2.188,9.5925
+2026-09,576101,0.1264,0.5142,0.1939,Paper and plastics products wholesaling,9.5463,5.6744,7.5301
+2026-09,381102,0.0922,0.5126,0.1091,Business process management services (partial),0.5682,-0.2642,1.624
+2026-09,142102,0.8276,0.5116,0.1758,Civilian aircraft,3.4351,2.6668,1.5018
+2026-09,116401,0.0166,0.5089,0.2242,Paper industries machinery,4.2622,2.8714,2.7332
+2026-09,442101,0.0144,0.5043,0.297,"Truck, truck trailer and RV rental",3.3278,0.548,5.5121
+2026-09,021109,0.0039,0.5024,0.2595,"Pies (fruit, cream, and custard), excluding frozen",3.1222,1.0115,4.2008
+2026-09,101707,0.0223,0.5006,0.0848,Cold rolled steel sheet and strip,36.9293,11.3689,51.0626
+2026-09,071303,0.0078,0.4991,0.297,Rubber and plastic belts and belting,4.8487,3.0391,3.6259
+2026-09,029201,0.0135,0.4916,0.303,"Soybean cake, meal, and byproducts",4.2502,-2.1668,13.0519
+2026-09,011103,0.0076,0.4901,0.2193,Melons,29.2353,10.6203,37.983
+2026-09,113603,0.003,0.4861,0.297,Nonmetallic abrasive products (including diamond abrasives),5.8841,3.9399,3.9996
+2026-09,588101,0.0658,0.4858,0.1636,"RVs, trailers, and campers retailing",15.4267,4.5121,22.469
+2026-09,062102,0.008,0.4849,0.2061,OEM finishes excluding marine coatings,6.0166,3.2542,5.6974
+2026-09,065201,0.0211,0.4797,0.1758,Nitrogenates,20.675,5.6084,31.4087
+2026-09,067909,0.0909,0.4774,0.1576,Other miscellaneous chemical products,4.2971,2.2703,4.2452
+2026-09,122401,0.0222,0.4759,0.1576,"Commercial furniture and fixtures, n.e.c.",6.4608,4.3199,4.4987
+2026-09,472101,0.0114,0.4739,0.2788,Arrangement of vehicle rentals and lodging (partial),5.5652,2.0904,7.3316
+2026-09,802101,0.0872,0.4721,0.2,Maintenance and repair of nonresidential buildings (partial),4.8121,3.4332,2.9208
+2026-09,114905,0.0165,0.4658,0.2788,Ball and roller bearings,4.988,3.5507,3.0853
+2026-09,118905,0.041,0.4616,0.2121,Physical properties and kinematic testing equipment,5.1515,3.0389,4.5768
+2026-09,577101,0.3245,0.4606,0.1879,Apparel wholesaling,6.3175,3.015,7.1698
+2026-09,072A01,0.0315,0.4479,0.1879,Plastics packaging products,5.5422,2.3494,7.1285
+2026-09,452102,0.1018,0.4466,0.303,Tax preparation and planning,3.8885,2.4098,3.311
+2026-09,101706,0.0169,0.4444,0.1939,Steel pipe and tube,13.223,4.3127,20.0509
+2026-09,119505,0.0293,0.4431,0.2061,Machine shop products,2.6281,1.728,2.0311
+2026-09,058102,0.0102,0.4415,0.2727,Asphalt,17.115,3.6455,30.5109
+2026-09,114502,0.011,0.4223,0.2485,Other power transmission equipment,5.9686,4.2863,3.9835
+2026-09,091405,0.006,0.4221,0.303,"Corrugated paperboard in sheets and rolls, lined and unlined",7.9461,4.5941,7.9417
+2026-09,034203,0.0041,0.4216,0.1758,"Finished manmade, silk, and other natural fiber (exc. cotton and wool) broadwoven fabrics",7.3884,3.3343,9.617
+2026-09,132101,0.0142,0.4169,0.2727,"Construction sand, gravel and crushed stone",6.3174,5.2583,2.5403
+2026-09,038108,0.0106,0.4154,0.2667,Apparel made in knitting mills,1.7108,1.1829,1.2706
+2026-09,101506,0.0029,0.4128,0.2364,Steel investment castings,5.5145,3.4949,4.8929
+2026-09,091601,0.027,0.4115,0.2303,Pressure-sensitive products,4.1835,2.2257,4.758
+2026-09,141101,0.3372,0.4095,0.3515,Passenger cars and chassis,1.1418,0.5586,1.4242
+2026-09,091411,0.006,0.4067,0.2848,"Paperboard, excluding corrugated paperboard in sheets and rolls",6.8272,3.6192,7.8885
+2026-09,034802,0.001,0.4038,0.303,"Warp knit goods, knit and finished in the same establishment",5.9103,4.2194,4.1879
+2026-09,58E101,0.0422,0.3982,0.3576,Major household appliance retailing,6.4664,3.1356,8.3654
+2026-09,361201,0.0019,0.3949,0.2364,Print advertising space sales in directories and mailing lists,2.7575,1.2458,3.8281
+2026-09,116101,0.005,0.3949,0.1515,Dairy and milk products plant machinery and equipment,5.4654,3.9071,3.9466
+2026-09,441101,0.152,0.3944,0.1576,Passenger car rental,6.2492,1.5964,11.7981
+2026-09,067904,0.0413,0.3895,0.1576,Adhesives and sealants,5.4561,3.4972,5.0295
+2026-09,531101,1.1258,0.3894,0.1758,Guestroom or unit rental,6.7732,3.252,9.0417
+2026-09,091507,0.002,0.3882,0.2061,"Fiber cans, tubes, and similar fiber products",7.8097,5.1521,6.8457
+2026-09,133121,0.0,0.3745,0.2121,Decorative concrete block,5.2925,4.2212,2.8605
+2026-09,054121,2.0318,0.3667,0.2545,Residential electric power,4.4633,3.2972,3.1798
+2026-09,116104,0.0217,0.3628,0.2788,Commercial food products machinery (except packaging and cooking equipment),4.736,3.6149,3.0905
+2026-09,034503,0.0118,0.3587,0.2788,Nonwoven fabrics and felts,3.4554,1.815,4.5734
+2026-09,152501,0.0749,0.355,0.3394,Other tobacco products,5.5783,5.0867,1.3845
+2026-09,452105,0.0127,0.3487,0.2667,Bookkeeping and compilation (partial),4.1435,3.462,1.955
+2026-09,038107,0.0145,0.3465,0.1576,Men's and boys' cut and sew apparel,2.8177,1.8531,2.7842
+2026-09,092202,0.0,0.3432,0.2061,Hardboard products,7.7718,5.0659,7.8849
+2026-09,013301,0.0,0.3378,0.3212,Slaughter lambs,17.118,9.2256,23.3638
+2026-09,114301,0.0086,0.3306,0.2788,Fluid power pumps and parts,3.7148,2.8964,2.4758
+2026-09,063805,0.0226,0.3284,0.3818,Pharmaceuticals acting on the digestive or the genito-urinary systems,2.4738,1.1024,4.1757
+2026-09,361102,0.0019,0.3271,0.3879,Advertising space sales in newspapers,-0.7535,-1.6166,2.6383
+2026-09,012201,0.0009,0.3264,0.2485,Barley,6.461,-1.7879,25.2686
+2026-09,091509,0.0128,0.3233,0.1697,Miscellaneous converted paper and paperboard products,3.7791,2.6134,3.6055
+2026-09,084101,0.0182,0.3199,0.2121,Wood pallets and pallet containers,7.6578,4.1164,11.0715
+2026-09,103201,0.0041,0.3198,0.2,"Barrels, drums, pails and other metal containers",9.1073,5.6386,10.8473
+2026-09,029403,0.0259,0.3129,0.2606,Miscellaneous feedstuffs other than pet food,6.6872,1.6514,16.0937
+2026-09,119701,0.0739,0.3123,0.331,Turbines and turbine generator sets (excluding parts),3.6349,2.913,2.3119
+2026-09,114115,0.0661,0.3119,0.2242,Air and gas compressors and vacuum pumps,6.6056,5.1176,4.7715
+2026-09,028401,0.0544,0.3099,0.1576,Specialty canning,5.0427,2.9253,6.8324
+2026-09,066212,0.1864,0.307,0.2242,Thermoplastic resins and plastics materials,6.7048,2.0241,15.2464
+2026-09,012301,0.0039,0.3067,0.4303,Rough rice,4.4048,-0.1773,14.9404
+2026-09,511101,3.7665,0.2999,0.303,Physician care,1.3228,1.0283,0.982
+2026-09,072B01,0.2268,0.2942,0.1455,"All other consumer, institutional, and commercial products",5.9139,3.8228,7.1066
+2026-09,081106,0.0103,0.2927,0.2061,"Softwood lumber, not edge worked",15.5078,6.5519,30.5997
+2026-09,114119,0.0412,0.2874,0.2727,"Other pumps, including parts and attachments",3.7577,2.8342,3.2137
+2026-09,083103,0.0022,0.2865,0.2182,Softwood veneer and plywood,15.8535,6.2525,33.5151
+2026-09,143201,0.0844,0.2807,0.1939,"Outboard motorboats, including commercial and military (except sailboats and lifeboats)",5.2404,4.3494,3.1739
+2026-09,071301,0.0019,0.2779,0.1758,"Rubber and plastics footwear, including athletic footwear",1.1797,0.8426,1.2132
+2026-09,107301,0.0101,0.2774,0.1636,Sheet metal products,6.6861,4.3914,8.2722
+2026-09,431103,0.0068,0.2763,0.3273,"Industrial buildings, gross rents",3.2617,2.7575,1.8251
+2026-09,021102,0.0946,0.2749,0.2,"Bread (white, wheat, rye, etc.), including frozen",3.8678,2.8023,3.8756
+2026-09,101708,0.0042,0.2747,0.2848,Cold finished steel bars and bar shapes,5.7578,3.4558,8.3791
+2026-09,801105,0.4387,0.2691,0.1375,New health care building construction,5.2479,3.9074,4.9814
+2026-09,108807,0.0,0.2564,0.3091,"Ferrous wire cloth, other woven wire products",3.5039,1.9815,5.9385
+2026-09,801102,0.6177,0.2512,0.2061,New school building construction,5.1822,4.0376,4.557
+2026-09,113753,0.0049,0.251,0.303,Rebuilt metal-cutting machine tools and parts for metal-cutting machine tools,3.4035,2.4749,3.6997
+2026-09,144501,0.0039,0.2501,0.2182,Railway maintenance of way equipment and parts,2.6987,2.221,1.9099
+2026-09,106301,0.007,0.2445,0.1879,"Other heating equipment, non-electric, including parts",6.1169,4.8967,4.9914
+2026-09,117903,0.0094,0.2359,0.2364,Carbon and graphite products,9.778,4.6005,21.9465
+2026-09,122202,0.0212,0.2354,0.3049,"Nonwood commercial storage units, files, and tables",4.514,3.7459,3.2632
+2026-09,113409,0.003,0.2348,0.3019,Parts and attachments for industrial process furnaces and ovens,5.5066,4.2859,5.1986
+2026-09,801103,0.7329,0.2283,0.1576,New office building construction,6.0272,4.75,5.5949
+2026-09,028501,0.216,0.2281,0.1818,Frozen specialty food,2.8044,1.8251,4.2944
+2026-09,014201,0.001,0.2274,0.4485,Slaughter turkeys,11.0278,6.0946,21.6939
+2026-09,131107,0.0334,0.2221,0.3455,Specialty glass,3.901,3.303,2.6921
+2026-09,026210,0.206,0.2174,0.3455,"Soft drinks, carbonated, bottle/can, all types",5.5041,4.5836,4.2336
+2026-09,091501,0.2187,0.2157,0.1939,"Sanitary paper products, including stock",2.2227,1.3989,3.8201
+2026-09,107408,0.0051,0.213,0.2182,Ornamental and architectural metal work,10.2624,7.9482,10.8668
+2026-09,119253,0.001,0.2081,0.2848,Parts and attachments for mining machinery and equipment (sold separately),4.4441,3.5875,4.1163
+2026-09,107903,0.0032,0.2022,0.1758,"Panels, parts, and sections for prefabricated buildings, steel and aluminum",8.2215,5.0408,15.7294
+2026-09,541101,0.4146,0.2021,0.4303,Food and nonalcoholic beverages for immediate consumption (partial),2.2829,1.8515,2.1349
+2026-09,104101,0.0099,0.1927,0.2485,Builders' hardware,4.3339,3.5125,4.2637
+2026-09,084909,0.0158,0.1923,0.4242,All other miscellaneous wood products,2.9484,2.379,2.9614
+2026-09,117605,0.0376,0.1915,0.1818,"Electronic systems and equipment, n.e.c.",3.5412,2.7619,4.0691
+2026-09,101502,0.001,0.1902,0.2182,"Pressure and soil pipe and fittings, cast iron",5.0717,3.8267,6.5467
+2026-09,139202,0.003,0.1869,0.3091,"Mineral wool for industrial, equipment, and appliance insulation",4.29,3.6018,3.6827
+2026-09,101211,0.067,0.1855,0.3394,Carbon steel scrap,9.7592,4.2269,29.828
+2026-09,107201,0.0562,0.1832,0.3576,Metal tanks,7.8537,6.145,9.3283
+2026-09,091203,0.0087,0.1823,0.303,Corrugated recyclable paper,18.4452,8.8772,52.4715
+2026-09,108812,0.001,0.182,0.303,"Steel nails, staples, tacks, spikes and brads",5.8961,3.6979,12.0806
+2026-09,411102,0.1175,0.1811,0.5212,"Disability insurance, including accidental death",0.0,-0.1302,0.719
+2026-09,039401,0.0092,0.1808,0.3176,Miscellaneous textile products/services,7.4596,4.9372,13.9527
+2026-09,117102,0.0181,0.1785,0.2303,Noncurrent-carrying wiring devices,6.9242,4.822,11.7766
+2026-09,373101,0.5336,0.1784,0.4182,Cable and satellite subscriber services,5.2003,4.6347,3.17
+2026-09,801104,0.2696,0.1773,0.2121,New industrial building construction,5.7246,4.6639,5.9811
+2026-09,101213,0.002,0.1744,0.3476,Cast iron scrap,7.9217,3.0912,27.6916
+2026-09,501101,0.2077,0.1726,0.2727,Solid waste collection,4.6324,4.163,2.7192
+2026-09,108104,0.001,0.172,0.2727,"Nonthreaded metal fasteners, except aircraft types",5.0645,4.0584,5.8478
+2026-09,091503,0.0409,0.1714,0.303,Paper boxes and containers,4.6946,3.7979,5.2328
+2026-09,101702,0.0138,0.1681,0.1939,Semifinished steel mill products,8.2791,4.589,21.9549
+2026-09,133131,0.0,0.1645,0.3455,Concrete brick,5.6463,4.9962,3.953
+2026-09,011302,0.0761,0.1638,0.3515,"Fresh vegetables, except potatoes",17.841,12.3584,33.4787
+2026-09,114903,0.0147,0.1634,0.3212,"Metal pipe fittings, flanges, and unions",5.6732,4.6227,6.4301
+2026-09,301302,0.0259,0.1612,0.3455,Coastal and intercoastal water transportation of freight,4.3914,2.5789,11.2453
+2026-09,159705,0.0175,0.1611,0.3636,"Brooms, brushes and mops",2.8783,2.5119,2.2748
+2026-09,108303,0.0039,0.158,0.3455,"Commercial, institutional and industrial electric lighting fixtures",3.6472,3.1879,2.9059
+2026-09,116606,0.1982,0.1547,0.2,All other industrial machinery,4.9061,4.0111,5.7857
+2026-09,453101,0.0193,0.1462,0.5758,Architectural services,1.4026,1.2382,1.1247
+2026-09,108908,0.0181,0.1437,0.3212,Metal foil and leaf,4.6538,3.7156,6.527
+2026-09,101507,0.001,0.1434,0.2909,"Carbon steel castings, except investment",2.38,1.94,3.0673
+2026-09,114303,0.0169,0.1376,0.2424,"Fluid power cylinders, actuators, accumulators, cushions, & parts",4.7895,4.1933,4.3332
+2026-09,601104,0.4295,0.1372,0.3515,Support activities for oil and gas operations,1.6236,1.1064,3.7699
+2026-09,122301,0.0283,0.1357,0.2909,Public building furniture,5.39,4.7119,4.9984
+2026-09,111408,0.0611,0.1252,0.1515,"All other farm machinery and equipment, excluding parts, including attachments",4.4271,3.587,6.709
+2026-09,067104,0.1367,0.1221,0.2364,Soaps and other detergents,3.2921,2.7702,4.2746
+2026-09,123101,0.0602,0.1216,0.3818,Carpet and rugs,1.779,1.5282,2.0634
+2026-09,119801,0.0098,0.1174,0.2727,"Parts & accesories for turbines, turbine generators, and turbine generator sets",3.4461,2.8021,5.4863
+2026-09,573101,0.1591,0.1108,0.2909,"Building materials, paint, and hardware wholesaling",3.4919,2.6063,7.9952
+2026-09,101705,0.0,0.098,0.297,Steel wire,4.4541,3.2636,12.1468
+2026-09,141104,0.0356,0.0968,0.4,"Motorcycles, including three-wheel motorbikes, motorscooters, mopeds, and parts",1.4368,1.3083,1.3273
+2026-09,119106,0.0029,0.0903,0.3333,Parts and attachments for oil and gas field machinery and equipment,2.7827,2.4389,3.8081
+2026-09,114803,0.0662,0.0874,0.1818,Commercial refrigeration equipment,6.7105,5.9031,9.2415
+2026-09,062301,0.0048,0.0808,0.3212,Allied and miscellaneous paint products,2.6174,2.1828,5.3809
+2026-09,114911,0.0824,0.0787,0.3576,Other miscellaneous general purpose equipment,2.9964,2.8276,2.1455
+2026-09,331104,0.0827,0.0759,0.4303,Sales of general adult and juvenile books,0.9954,0.8508,1.9055
+2026-09,092201,0.0041,0.0735,0.3515,Particleboard and fiberboard,7.7839,5.4959,31.1176
+2026-09,141301,0.0119,0.0734,0.3455,Truck and bus bodies sold separately,4.3562,4.0314,4.4238
+2026-09,101505,0.0,0.0672,0.3525,Standard and pearlitic malleable iron castings,2.0576,1.6984,5.3487
+2026-09,601103,0.1712,0.0666,0.4909,Drilling oil and gas wells services,1.1965,0.5392,9.8674
+2026-09,159F21,0.0088,0.065,0.2727,"Men's footwear (size 6 and larger), excluding athletic",3.6608,3.437,3.4418
+2026-09,032607,0.0019,0.063,0.2485,Other spun noncellulosic and natural fiber (excluding cotton and wool) yarns,1.8714,1.3897,7.6447
+2026-09,101509,0.001,0.0536,0.3758,"Other alloy steel castings, except investment",3.0075,2.7508,4.7919
+2026-09,107405,0.0097,0.0502,0.2788,Fabricated structural metal,5.7975,5.174,12.4086
+2026-09,034601,0.0038,0.0482,0.297,"Coated fabrics, not rubberized",3.053,2.8709,3.7806
+2026-09,101504,0.0049,0.0449,0.2485,Other gray and ductile iron castings,2.3448,2.1794,3.6812
+2026-09,512103,0.3095,0.0445,0.3515,Intellectual and developmental disability center care,5.0665,4.9693,2.1813
+2026-09,578101,1.2028,0.0381,0.5091,Food wholesaling,3.3564,3.1396,5.6941
+2026-09,152402,0.0,0.0348,0.4242,Stemmed and redried tobacco,1.45,1.3287,3.4804
+2026-09,055221,0.071,0.0293,0.4121,Commercial natural gas,4.8556,4.4628,13.3869
+2026-09,101712,0.0021,0.0284,0.4255,Electrometallurgical ferroalloy products,5.1878,4.3363,30.023
+2026-09,149111,0.0782,0.028,0.303,"Other transportation equipment, incl. golf carts, vehicle trailers, and all-terrain vehicles",2.0374,1.9481,3.1923
+2026-09,58G101,0.056,0.0239,0.4788,Cleaning supplies and paper products retailing,4.9005,4.6853,9.0182
+2026-09,452101,0.033,0.0224,0.3758,Financial auditing,2.1982,2.1168,3.6313
+2026-09,582101,1.5911,0.0221,0.4727,"Health and beauty care retailing, including optical goods",2.3523,2.2807,3.2393
+2026-09,104104,0.001,0.0215,0.3241,Furniture hardware,4.1974,4.0217,8.1695
+2026-09,094711,0.0604,0.0178,0.3818,"Other commercial printing, incl. screen, engraving, digital, & general job exc. labels/wrappers",3.8853,3.7962,5.0172
+2026-09,065105,0.0159,0.015,0.3212,Mixed fertilizers,3.1,2.9391,10.7222
+2026-09,117309,0.004,0.0143,0.3273,Parts and supplies for motors and generators,5.3378,5.2271,7.7318
+2026-09,141601,0.1176,0.0113,0.2364,Travel trailers,4.5214,4.4549,5.8869
+2026-09,055121,0.4599,0.0098,0.4545,Residential natural gas,4.8107,4.7077,10.5132
+2026-09,114403,0.0769,0.0096,0.3212,"Industrial trucks, trailers, and stackers",4.1176,4.0825,3.6582
+2026-09,126605,0.0059,0.0071,0.2545,"Parts and attachments for consumer lawn, garden, and snow equipment",2.9234,2.8893,4.778
+2026-09,087101,0.003,0.0063,0.3455,Treated wood,3.4845,3.4288,8.8077
+2026-09,012203,0.0,0.0023,0.3879,Oats,4.2267,4.1567,30.1601
+2026-09,473101,0.0138,-0.0008,0.5091,Arrangement of cruises and tours,0.8745,0.8852,12.8663
+2026-09,082201,0.0062,-0.0012,0.3758,Prefabricated structural members,7.1803,7.2015,17.439
+2026-09,032601,0.0089,-0.0029,0.3152,Spun cotton yarns,3.1588,3.2028,15.2215
+2026-09,118602,0.0222,-0.0063,0.3818,All other miscellaneous optical instruments and lenses,1.4686,1.481,1.9564
+2026-09,117821,0.0088,-0.0139,0.4788,"Relays for electronic circuitry, industrial control overload, and switchgear type",1.9276,1.9604,2.3622
+2026-09,033803,0.0,-0.0169,0.6319,"Weft (circular) knit fabrics, greige goods (excluding hosiery)",0.0,0.0531,3.1429
+2026-09,403101,0.3629,-0.0193,0.5273,Investment banking,7.3534,7.4974,7.4605
+2026-09,391203,0.0721,-0.0201,0.3758,"Credit cards, overdraft credit, and related plans (partial)",2.524,2.6618,6.8434
+2026-09,101508,0.001,-0.0229,0.3152,"High alloy steel castings, excluding investment",4.5794,4.8353,11.1809
+2026-09,122203,0.0676,-0.023,0.503,Nonwood commercial furniture,3.6893,3.8061,5.0892
+2026-09,021402,0.0293,-0.0271,0.2667,"Dry macaroni, spaghetti, and egg noodle products, made from purchased flour",2.1962,2.4447,9.1685
+2026-09,313101,0.0019,-0.0283,0.2364,Arrangement of freight and cargo,3.5826,4.1842,21.2229
+2026-09,801101,0.4615,-0.0297,0.2182,New warehouse building construction,4.5048,4.7281,7.5263
+2026-09,082101,0.0127,-0.0301,0.1636,General millwork,3.3824,3.5016,3.9611
+2026-09,023104,0.005,-0.0342,0.4788,Cottage cheese,2.2984,2.4967,5.7935
+2026-09,054221,0.2176,-0.0359,0.4303,Commercial electric power,2.9129,3.0433,3.636
+2026-09,065202,0.0212,-0.0376,0.4364,Phosphates,4.0154,5.0249,26.8393
+2026-09,139903,0.0039,-0.0423,0.4364,All other nonmetallic mineral products,2.8933,3.0071,2.689
+2026-09,021108,0.0304,-0.0425,0.4606,"Soft cakes, excluding frozen",3.4031,3.6037,4.7211
+2026-09,026102,0.0449,-0.0483,0.4485,"Distilled and bottled liquor, excluding brandy",-0.0663,0.1115,3.6827
+2026-09,553101,0.0501,-0.0495,0.5576,"Ship repair, military",0.9737,1.0635,1.813
+2026-09,112A03,0.0149,-0.0506,0.3091,"Construction machinery for mounting (excluding parts, winches, snow clearing attachments)",2.9597,3.1804,4.3646
+2026-09,126501,0.01,-0.0567,0.4667,"Mirrors (decorated and undecorated), made from purchased glass",2.8417,3.5096,11.7881
+2026-09,141105,1.5454,-0.0578,0.4788,"Trucks, truck tractors, & bus chassis 14,000 lb or less, incl. minivans & suvs",1.8575,1.9537,1.666
+2026-09,114402,0.088,-0.0604,0.297,"Conveying equipment, except parts and accessories",3.8743,4.1399,4.3994
+2026-09,114404,0.0199,-0.0779,0.3394,"Hoists, overhead cranes, and monorail systems",4.132,4.4801,4.4665
+2026-09,455101,0.0357,-0.0796,0.4545,Advertising agency services,1.0916,1.2663,2.1944
+2026-09,081205,0.0048,-0.0822,0.5394,"Hardwood lumber, not edge worked",1.2775,2.8602,19.2565
+2026-09,108907,0.0134,-0.0863,0.3394,Metal stampings n.e.c.,2.4283,2.9318,5.8319
+2026-09,067903,0.0341,-0.0877,0.4182,Industrial gases,5.3434,5.8743,6.0544
+2026-09,102505,0.0096,-0.0881,0.4909,Titanium and titanium-base alloy mill shapes,1.1743,1.7353,6.3676
+2026-09,024401,0.0955,-0.0933,0.4364,Canned vegetables and juices,2.7381,3.298,6.0026
+2026-09,372101,1.045,-0.0934,0.6788,Cellular phone and other wireless telecommunication services,-2.5103,-2.1769,3.5691
+2026-09,141602,0.0217,-0.0938,0.4364,"Camping trailers, campers, pick-up covers, and parts",3.9037,4.2467,3.6571
+2026-09,063804,0.0876,-0.0959,0.6606,Pharmaceuticals acting on the respiratory system,0.8327,1.3659,5.5605
+2026-09,028601,0.0336,-0.0987,0.2667,"Prepared sauces, excluding tomato-based sauces and sauces comprised of 20 percent or more meat",2.1182,2.5361,4.2344
+2026-09,461101,0.0029,-0.1062,0.5818,Employment placement services,2.328,2.6449,2.9844
+2026-09,138101,0.0167,-0.1064,0.297,Glass containers (including value of packaging),3.2868,3.6854,3.7451
+2026-09,021204,0.0805,-0.1095,0.2182,Flour base mixes and doughs,1.9121,2.5578,5.8977
+2026-09,091207,0.0022,-0.1109,0.4606,High grade recyclable paper (including pulp substitutes and deinking),-1.5629,3.0143,41.2609
+2026-09,453201,1.0071,-0.1117,0.5152,Engineering services,2.3909,2.5299,1.2443
+2026-09,101105,0.0135,-0.1147,0.6242,Iron ores,0.3819,1.7606,12.0216
+2026-09,108801,0.001,-0.1172,0.3152,"Ferrous wire rope, cable, forms and strand",2.9116,4.3221,12.0331
+2026-09,091105,0.0287,-0.1178,0.4727,Wood pulp,0.2824,2.406,18.0265
+2026-09,112J03,0.0502,-0.1196,0.4364,Other construction machinery and equipment (excluding parts),2.6721,2.9163,2.0421
+2026-09,023103,0.1127,-0.1205,0.5576,Packaged fluid milk and related products,1.7128,2.7372,8.498
+2026-09,331201,0.0966,-0.1215,0.6727,Sales and subscriptions of periodicals,0.1564,0.518,2.9755
+2026-09,311201,0.0,-0.1309,0.4545,Operation of port waterfront terminals,3.0563,3.3297,2.0882
+2026-09,026206,0.1265,-0.1321,0.3697,"Soft drinks, non-carbonated and bottled water",1.7045,2.3222,4.6755
+2026-09,159402,0.0435,-0.1437,0.5455,Jewelry (gold and platinum) and silverware,2.696,3.6495,6.6365
+2026-09,086101,0.0,-0.1455,0.3818,Prefabricated wood buildings and components,3.6555,4.6458,6.8036
+2026-09,117101,0.0188,-0.1462,0.3455,Current-carrying wiring devices,2.8687,3.8531,6.7354
+2026-09,061303,0.0284,-0.1536,0.4545,"Alkalies and chlorine, including natural sodium carbonate and sulfate",0.8665,3.5111,17.2157
+2026-09,134501,0.0,-0.154,0.5273,"Structural clay products, n.e.c.",3.794,4.2341,2.8575
+2026-09,124101,0.0637,-0.1542,0.4606,Household cooking appliances,1.8851,2.6653,5.0585
+2026-09,107901,0.001,-0.1573,0.3681,"Prefabricated metal building systems (excl. farm service bldgs, residential bldgs, and parts)",4.6825,6.5913,12.1332
+2026-09,321101,0.0258,-0.1582,0.4303,"Warehousing, storage, and related services",2.4899,3.1299,4.0465
+2026-09,118401,0.0185,-0.159,0.3818,Fluid meters and counting devices,3.585,4.1584,3.607
+2026-09,114302,0.0157,-0.1605,0.4848,Fluid power valves,3.206,3.6007,2.4597
+2026-09,063807,0.133,-0.1608,0.4424,"Vitamin, nutrient, and hematinic preparations",1.9017,2.2673,2.2734
+2026-09,033804,0.0,-0.1626,0.297,"Warp knit fabrics, greige goods (excluding hosiery)",2.2974,3.3055,6.2009
+2026-09,143103,0.0136,-0.1632,0.5455,"Nonmilitary self-propelled ships, new construction",2.8477,3.5886,4.5409
+2026-09,136101,0.007,-0.1681,0.4364,Prepared asphalt and tar roofing and siding products,2.7351,3.7346,5.9457
+2026-09,115406,0.0176,-0.1719,0.6848,Computer terminals (including POS and funds-transfer devices) and other computer peripherals,-2.7193,-1.5701,6.6843
+2026-09,113301,0.0326,-0.1743,0.3333,"Arc welding machines, components, and accessories, excluding electrodes and stud welding equip",5.0582,6.0014,5.4105
+2026-09,112K01,0.0069,-0.1749,0.3394,"Parts for construction machinery and equipment, sold separately",4.7537,6.4837,9.8905
+2026-09,134202,0.0,-0.1787,0.4485,"Glazed brick and other brick (paving, floor, and sewer)",3.7669,4.3927,3.5016
+2026-09,117304,0.0099,-0.1795,0.3636,Integral horsepower motors and generators (excluding land transportation types),3.4938,4.9402,8.0579
+2026-09,112A05,0.0292,-0.18,0.4909,"Construction wheel and crawler tractors, dozers, self-propelled log skidders, etc.",2.283,3.0415,4.2132
+2026-09,111409,0.0029,-0.1815,0.3333,"Parts for farm machinery, for sale separately",1.8026,2.9319,6.2234
+2026-09,104103,0.0058,-0.1897,0.297,Transportation equipment hardware,1.7454,3.025,6.7458
+2026-09,025201,0.001,-0.1941,0.6182,Raw cane sugar and sugarcane mill products and byproducts,-0.4583,1.4133,9.644
+2026-09,081204,0.0,-0.1948,0.4545,Hardwood flooring,2.5203,4.1227,8.227
+2026-09,111401,0.0268,-0.2028,0.4242,"Commercial turf and grounds care equipment, including parts and attachments",1.8429,2.4236,2.8639
+2026-09,331105,0.0223,-0.2105,0.5697,Sales of general reference books,0.1883,1.6829,7.1007
+2026-09,117411,0.0104,-0.2121,0.3576,Other transformers and parts for transformers,2.4647,4.418,9.2092
+2026-09,071201,0.1067,-0.2165,0.4909,Tires,0.7306,1.7383,4.6544
+2026-09,072602,0.0067,-0.2175,0.3091,Other parts and components for manufacturing,1.3515,2.1891,3.8505
+2026-09,108909,0.0059,-0.2185,0.3091,Heavy gauge springs,3.7253,6.3293,11.9152
+2026-09,584101,0.2815,-0.2205,0.6424,"Computer hardware, software, and supplies retailing",-0.6231,3.8478,20.272
+2026-09,589101,0.1727,-0.2218,0.6606,"Sporting goods, including boats, retailing",0.1734,1.1268,4.2987
+2026-09,106101,0.0039,-0.2227,0.4088,Steam and hot water equipment,3.6094,4.9025,5.8071
+2026-09,053101,0.0167,-0.2341,0.5273,Natural gas,-1.7471,11.3262,55.8475
+2026-09,062202,0.0259,-0.2346,0.6364,Paint colors,-0.5248,1.2958,7.7595
+2026-09,021301,0.0152,-0.2352,0.4848,Head rice,0.9203,2.8622,8.2577
+2026-09,114809,0.0069,-0.2357,0.4121,Parts and accessories for air conditioning and heat transfer equipment,3.3822,4.7555,5.8273
+2026-09,134401,0.0029,-0.242,0.5394,"Clay floor and wall tile, glazed and unglazed (including quarry tile and ceramic mosaic tile)",0.78,1.5247,3.0781
+2026-09,563101,0.3148,-0.2421,0.6748,Gaming receipts (partial),-0.2898,0.3566,2.6694
+2026-09,067515,0.1236,-0.2456,0.4,Other cosmetics and toilet preparations,1.2779,1.7462,1.9062
+2026-09,118504,0.0246,-0.2488,0.4099,Hospital beds and specialized hospital furniture,2.8371,4.0004,4.6755
+2026-09,062101,0.036,-0.2556,0.4727,Architectural coatings,2.415,4.2913,7.3399
+2026-09,118105,0.001,-0.2591,0.5455,"Automatic environmental controls for monitoring residential, commercial, and appliance use",2.0067,2.7182,2.746
+2026-09,391301,0.0959,-0.2643,0.6424,Other loans and loan services (partial),-0.7715,0.9038,6.34
+2026-09,371202,0.0221,-0.2656,0.5758,Long distance business wired telephone and other toll service,-0.8702,0.4949,5.1399
+2026-09,118501,0.0974,-0.2698,0.6242,"Aeronautical, nautical, and navigational instruments",3.6869,4.6334,3.5085
+2026-09,118904,0.0079,-0.2737,0.503,Nuclear radiation detection & monitoring instruments,3.0424,3.8961,3.1192
+2026-09,431201,0.3502,-0.2762,0.6061,"Nonresidential property sales and leases including land, brokerage fees and commissions",1.6871,2.4959,2.9284
+2026-09,094705,0.0231,-0.2762,0.3394,Advertising printing,0.5925,1.4651,3.1596
+2026-09,352101,0.0317,-0.2771,0.2403,"Affiliate agreements, programming sales, and network compensation for radio",0.4408,5.6301,18.7242
+2026-09,094401,0.0119,-0.2848,0.4182,Books printing,3.1327,4.9364,6.3339
+2026-09,107102,0.002,-0.2861,0.4121,Metal doors and frames (except storm),3.3145,5.8491,8.8607
+2026-09,021409,0.1044,-0.2883,0.4788,"Cereal and mill products, other than flour",0.0177,1.5991,5.4856
+2026-09,091305,0.0079,-0.2899,0.4667,All other coated and processed papers,1.3569,2.4759,3.8592
+2026-09,301101,0.2938,-0.2927,0.6667,Rail transportation of freight and mail,1.3073,2.3618,3.6032
+2026-09,021105,0.0951,-0.2932,0.5818,"Rolls (bread-type), muffins, bagels, and croissants",1.4889,2.7435,4.2795
+2026-09,112C01,0.0284,-0.3055,0.3939,"Mixers, pavers, and related equipment (excluding parts)",3.1407,4.7689,5.3289
+2026-09,117901,0.0329,-0.3107,0.4303,Storage batteries,1.5178,2.7589,3.9951
+2026-09,094706,0.023,-0.313,0.4182,Other general job printing,1.3332,2.731,4.4662
+2026-09,155303,0.0445,-0.3146,0.4667,Manufactured mobile homes and nonresidential mobile buildings,3.0931,5.5524,7.8173
+2026-09,572101,0.133,-0.3149,0.5879,Furnishings wholesaling,2.242,5.1255,9.1576
+2026-09,119413,0.0146,-0.3168,0.4909,"Parts & accessories for internal combustion engines, ex. aircraft & gasoline automotive engines",2.0295,2.7332,2.2213
+2026-09,071304,0.0087,-0.317,0.5455,Rubber and plastics hose,0.9096,2.0029,3.4489
+2026-09,135301,0.001,-0.3178,0.4848,Nonclay refractories (excluding dead-burned magnesia),2.0888,3.5505,4.5993
+2026-09,114107,0.0107,-0.32,0.6258,Parts and attachments for air and gas compressors and vacuum pumps,2.4471,5.3074,8.9372
+2026-09,58F102,0.0589,-0.3212,0.6121,Household fuels retailing,2.0564,5.5543,10.8911
+2026-09,578102,0.2012,-0.3224,0.5939,Alcohol wholesaling,1.8568,3.1428,3.9893
+2026-09,063806,0.0487,-0.3271,0.5758,Pharmaceuticals acting on the skin,-0.103,1.3366,4.4007
+2026-09,118901,0.002,-0.3292,0.6121,Aircraft engine instruments,2.2846,3.1544,2.6419
+2026-09,051301,0.0735,-0.3308,0.5879,Coal,-1.6174,3.0329,14.0584
+2026-09,113407,0.0194,-0.3309,0.503,"Industrial process furnaces and ovens, except parts and attachments",2.5751,3.4659,2.6923
+2026-09,116801,0.162,-0.3357,0.4667,Service industry machinery and parts,2.0432,3.1737,3.368
+2026-09,111402,0.0058,-0.3399,0.3758,"Farm plows, harrows, rollers, pulverizers, etc., and attachments",2.0362,4.517,7.2978
+2026-09,085105,0.0048,-0.3415,0.5939,"Logs, bolts, timber, pulpwood and wood chips",-0.4503,0.8498,3.8068
+2026-09,114406,0.002,-0.3423,0.4706,Parts and accessories for conveyors and conveying systems,4.423,6.0992,4.8966
+2026-09,122101,0.0812,-0.3441,0.5515,Wood office furniture and store fixtures,2.3276,3.4453,3.2483
+2026-09,114806,0.0135,-0.346,0.5394,All other miscellaneous refrigeration and air-conditioning equipment,1.609,4.7338,9.0304
+2026-09,103102,0.0067,-0.3464,0.5879,Steel cans and tinware end products,0.9138,4.6793,10.871
+2026-09,094702,0.0291,-0.3627,0.4788,Label and wrapper printing for packaging,1.7296,3.3558,4.4837
+2026-09,117311,0.015,-0.3641,0.6364,Other motors and generators,1.1812,2.5491,3.7573
+2026-09,116105,0.0166,-0.3689,0.497,"Industrial food products machinery for processing foods, beverages, & animal & fowl feed",2.4967,3.4924,2.6993
+2026-09,063718,0.0707,-0.369,0.5818,Diagnostics,1.8245,3.0095,3.2117
+2026-09,014102,0.0039,-0.3879,0.6121,Broilers and other meat type chickens,-5.0169,5.4683,27.0316
+2026-09,133501,0.001,-0.3909,0.5697,Prestressed concrete products,2.3817,5.4719,7.9057
+2026-09,106201,0.0177,-0.395,0.5212,"Furnaces and heaters, including parts",2.4518,4.4745,5.1206
+2026-09,124301,0.0048,-0.3981,0.7479,Household vacuum cleaners and other floor care machines (including parts and attachments),0.3503,1.8755,3.8311
+2026-09,583101,0.9472,-0.4004,0.6364,"Apparel, footwear, and accessories retailing",-1.0313,1.2889,5.7952
+2026-09,108102,0.0058,-0.4063,0.5091,"Externally threaded fasteners, except aircraft types",1.7285,3.8821,5.3
+2026-09,023402,0.0348,-0.4079,0.697,Ice cream and frozen desserts,1.0716,2.3982,3.252
+2026-09,026301,0.1211,-0.416,0.5576,"Coffee (whole bean, ground, & instant)",0.3948,4.2166,9.1879
+2026-09,111405,0.0216,-0.418,0.6485,"Planting, seeding, and fertilizing machinery and attachments",1.2229,3.0719,4.4237
+2026-09,135201,0.0019,-0.4181,0.6242,Clay refractories,1.5027,2.8291,3.1728
+2026-09,024101,0.0277,-0.4192,0.6121,"Canned fruits, excluding baby foods",1.6475,3.8729,5.3093
+2026-09,021302,0.0103,-0.4227,0.6121,"Milled rice (incl second heads, screenings, brewers, bran, sharps, rice flour, and byproducts)",-5.3352,-0.4222,11.6237
+2026-09,028201,0.0115,-0.4233,0.6242,Pickles and other pickled products,0.4983,2.7141,5.2343
+2026-09,115405,0.0049,-0.4244,0.5333,"Parts, attachments, and accessories for computer terminals and peripherals",2.2827,3.9359,3.895
+2026-09,112J01,0.0319,-0.4245,0.5333,"Winches, aerial work platforms, and automotive wrecker hoists, including parts and attachments",2.1454,3.8599,4.0391
+2026-09,133111,0.0,-0.4341,0.5636,Structural concrete block,2.9802,4.5829,3.6921
+2026-09,028101,0.0125,-0.437,0.5212,"Canned jams, jellies, and preserves",0.5028,2.347,4.2199
+2026-09,139201,0.0038,-0.437,0.6061,Mineral wool for thermal and acoustical envelope insulation,1.6475,4.519,6.5705
+2026-09,114807,0.0354,-0.4447,0.6242,"Heat transfer equipment, including heat pumps",2.1543,4.5351,5.3544
+2026-09,067514,0.068,-0.4463,0.6788,"Creams, lotions, and oils, excluding shaving, hair, and deodorant",0.2028,1.2945,2.4463
+2026-09,014301,0.0,-0.4504,0.5394,Slaughter ducks,0.4101,1.66,2.7751
+2026-09,034801,0.001,-0.4527,0.6364,"Weft (circular) knit fabrics, knit and finished in the same establishment (excluding hosiery)",0.6712,3.787,6.8832
+2026-09,142301,0.1952,-0.4531,0.6424,Aircraft engine and engine parts,1.233,1.7674,1.1793
+2026-09,531102,0.0929,-0.4532,0.5576,Other traveler accommodation services,2.4999,3.5463,2.3088
+2026-09,117856,0.0261,-0.4576,0.5818,"Microwave components, electron tubes, and other electronic components, n.e.c.",1.7475,3.0508,2.8485
+2026-09,029402,0.1814,-0.4581,0.5455,Pet food,1.2021,3.1293,4.2071
+2026-09,151201,0.1208,-0.4608,0.6485,Sporting and athletic goods,1.545,4.0965,5.5375
+2026-09,431102,0.0267,-0.4636,0.7636,"Retail properties, gross rents",0.7735,2.076,2.8095
+2026-09,114304,0.0291,-0.4646,0.4848,Fluid power hose and tube fittings,2.888,8.5764,12.2449
+2026-09,463101,0.0411,-0.4682,0.6121,Temporary help services,1.7724,2.8205,2.2387
+2026-09,571103,3.0095,-0.471,0.6104,Machinery and vehicle wholesaling,1.4,7.0058,11.9025
+2026-09,124104,0.0246,-0.4767,0.6667,Other major household appliances including room air-conditioners,0.8097,2.4412,3.4223
+2026-09,024502,0.0526,-0.4812,0.7455,"Frozen potato products (French-fried, patties, puffs, etc.)",0.0969,4.7825,9.7382
+2026-09,363101,0.005,-0.4856,0.6424,Radio advertising time sales,-4.348,-0.8973,7.1068
+2026-09,011901,0.0436,-0.4862,0.7152,Tree nuts,-3.8658,2.0739,12.2162
+2026-09,401102,0.4057,-0.4872,0.6848,Securities brokerage and dealing related services (partial),-3.7372,22.8803,54.6331
+2026-09,117303,0.0029,-0.4999,0.6364,Fractional horsepower motors and generators,0.8138,2.1858,2.7446
+2026-09,063717,0.0182,-0.5235,0.5939,"Biological products, excluding diagnostic, for veterinary, industrial, and all other misc. uses",1.1855,3.19,3.8292
+2026-09,021121,0.0869,-0.5326,0.5091,"Cookies, crackers, and related products",0.483,1.5543,2.0114
+2026-09,586101,0.6007,-0.5341,0.8061,Automobile retailing (Partial),-14.9462,3.682,34.8805
+2026-09,084904,0.0,-0.5365,0.9273,"Sawn wood fence stock, wood lath, and contract resawing and planing",0.0,7.4351,13.8596
+2026-09,108904,0.0,-0.5423,0.7212,Wire springs,0.7134,6.6624,10.9698
+2026-09,143102,0.0907,-0.5447,0.6606,"Military self-propelled ships, new construction",0.0092,0.3735,0.6689
+2026-09,391101,0.0802,-0.5456,0.7758,Business loans (partial),-9.3916,3.3921,23.4316
+2026-09,133141,0.0,-0.5596,0.703,Concrete pavers,2.1998,4.2337,3.6343
+2026-09,311301,0.001,-0.5599,0.7455,Marine cargo handling,1.3403,2.2224,1.5757
+2026-09,137101,0.0019,-0.5618,0.6606,Gypsum products,1.4178,5.7815,7.7673
+2026-09,541201,0.0802,-0.5638,0.6667,Alcoholic beverages for immediate consumption (partial),1.9316,3.5903,2.9418
+2026-09,111404,0.0115,-0.5672,0.7939,"Farm dairy equipment, sprayers and dusters, farm blowers, and attachments",0.1308,2.0275,3.3436
+2026-09,116306,0.0108,-0.5728,0.6182,Sawmill and woodworking machinery,3.1355,5.0537,3.3487
+2026-09,114611,0.0078,-0.5731,0.5636,Vehicle and industrial scales,1.7462,3.9601,3.8632
+2026-09,022101,0.4184,-0.5732,0.7515,"Beef and veal products, fresh or frozen",-3.6028,5.8434,16.4804
+2026-09,114102,0.0578,-0.5752,0.5758,"Industrial pumps, except hydraulic fluid power pumps",2.1815,4.5447,4.1083
+2026-09,114201,0.0039,-0.58,0.8545,Elevators and moving stairways,1.2316,3.8483,4.5113
+2026-09,342103,0.357,-0.5909,0.7697,"Application software publishing, cross-industry, vertical market, utilities, and other",-0.8849,1.2937,3.6871
+2026-09,119102,0.0525,-0.6015,0.7636,"Oil and gas field drilling, surveying, and cementing machinery (except parts sold separately)",0.0,1.2718,2.1143
+2026-09,026101,0.149,-0.6026,0.7697,Malt beverages,0.7998,1.5889,1.3093
+2026-09,361101,0.0067,-0.6119,0.7697,Advertising space sales in periodicals,0.0527,1.2261,1.9174
+2026-09,067505,0.0353,-0.6164,0.6303,"Toothpastes, denture cleaners, and mouthwashes",0.651,2.5632,3.1024
+2026-09,021130,0.0321,-0.6167,0.7426,"Retail bakery products, excluding retail trade",2.2492,4.7745,4.0951
+2026-09,023302,0.1256,-0.6311,0.7152,"Natural cheese, except cottage cheese",-4.8499,0.9853,9.2464
+2026-09,411101,0.7851,-0.6404,0.8727,Life insurance,-0.361,0.2953,1.0249
+2026-09,108305,0.0087,-0.6414,0.7515,Other lighting equipment,0.9532,2.5854,2.5448
+2026-09,159F22,0.0029,-0.6415,0.697,"Women's footwear (size 4 and larger), excluding athletic",1.2273,2.4283,1.8721
+2026-09,362103,0.0045,-0.6436,0.8242,Local cable system advertising time sales,-5.9305,-0.5805,8.312
+2026-09,013202,0.0,-0.6486,0.8,Slaughter sows,-24.8288,13.885,59.6866
+2026-09,106401,0.001,-0.6491,0.7152,Domestic heating stoves,0.7304,3.261,3.8989
+2026-09,027801,0.0334,-0.6511,0.8061,"Shortening, cooking oil, and margarine",-6.3721,2.5406,13.6886
+2026-09,411104,1.355,-0.6517,0.8242,Property and casualty insurance,1.2349,2.849,2.4771
+2026-09,111406,0.0325,-0.665,0.8182,Harvesting machinery (except hay and straw) and attachments,0.6403,3.7279,4.6432
+2026-09,023303,0.0257,-0.6668,0.7394,Processed cheese and related products,-5.3135,1.2005,9.7691
+2026-09,553102,0.0019,-0.6707,0.8667,"Ship repair, nonmilitary",0.6663,5.1934,6.7495
+2026-09,374102,0.3045,-0.6731,0.8303,Residential Internet access services,-2.1764,-0.0584,3.1465
+2026-09,371103,0.0048,-0.6746,0.8121,All-distance residential wired telephone service,2.092,4.1004,2.977
+2026-09,133301,0.0156,-0.6804,0.7939,Ready-mix concrete,2.3435,4.4573,3.1068
+2026-09,114908,0.0163,-0.6845,0.7758,Filters and strainers,0.5831,3.0794,3.6469
+2026-09,067504,0.0345,-0.6866,0.7091,Hair preparations (including shampoos),0.476,2.1137,2.3851
+2026-09,063802,0.3489,-0.6895,0.703,Pharmaceuticals acting on the central nervous system and the sense organs,2.933,4.8921,2.8412
+2026-09,58C101,0.1113,-0.6955,0.7576,Flooring and floor coverings retailing,-2.5313,3.5216,8.7031
+2026-09,021107,0.0333,-0.7054,0.8545,"Other sweet goods, excluding frozen",0.1195,3.4711,4.7515
+2026-09,065301,0.0341,-0.706,0.8485,Other agricultural chemicals,-6.1008,1.4222,10.6551
+2026-09,134201,0.0029,-0.7083,0.8242,Building or common brick,0.9705,2.8906,2.7107
+2026-09,112A04,0.0457,-0.7089,0.9091,"Tractor shovel loaders (skid steer, wheel, crawler, and integral design backhoes)",0.2235,3.0502,3.9875
+2026-09,111407,0.0096,-0.713,0.8424,Haying machinery and attachments,0.7224,4.0754,4.7029
+2026-09,119207,0.0372,-0.7222,0.6438,Mining machinery and equipment (except parts sold separately),3.4784,7.6905,5.8328
+2026-09,063719,0.0358,-0.7258,0.8788,"Biological products, excluding diagnostic, for human use",1.1928,2.7628,2.1631
+2026-09,028901,0.5587,-0.7384,0.8909,Other miscellaneous processed foods,0.5307,2.763,3.0231
+2026-09,562101,0.0393,-0.7416,0.7758,Recreational activity instruction fees (partial),-0.0622,1.809,2.5232
+2026-09,431104,0.1018,-0.7427,0.8364,"Self-service storage and miniwarehouses, gross rents",-0.3274,3.7607,5.5044
+2026-09,026104,0.1184,-0.7486,0.8424,"Wines, brandy, and brandy spirits",0.0628,1.6658,2.1413
+2026-09,511103,0.9221,-0.7631,0.8,Home health and hospice care,1.1069,2.3031,1.5675
+2026-09,023505,0.008,-0.7658,0.897,Ice cream mixes and related products,-9.0307,0.9999,13.0988
+2026-09,112B05,0.0888,-0.7704,0.9212,"Power cranes, draglines, & shovels (excavators) (incl. surface mining equip.) (excluding parts)",-0.3536,2.9022,4.2262
+2026-09,371102,0.0992,-0.7796,0.7939,Long distance residential wired telephone service,-0.2303,2.7875,3.8708
+2026-09,114113,0.0201,-0.7845,0.9576,Domestic water systems,0.4869,5.1681,5.9671
+2026-09,392101,0.6826,-0.7946,0.8182,Deposit services (partial),-3.2417,3.5913,8.599
+2026-09,112D03,0.0086,-0.802,0.897,"Graders, rollers & compactors, rough-terrain forklifts, scrapers, trenchers, etc. (excl. parts)",-0.3023,3.2837,4.4716
+2026-09,022208,0.0832,-0.8052,0.8848,"Canned, cooked, smoked or prepared poultry",-8.9058,0.163,11.2621
+2026-09,113826,0.0086,-0.8131,0.897,Metal-forming machine tools (except rebuilt and parts),0.0268,3.0434,3.7102
+2026-09,013201,0.0066,-0.8254,0.8424,Slaughter barrows and gilts,-20.8425,4.5469,30.7602
+2026-09,133201,0.0,-0.831,0.9091,Concrete pipe,0.7222,5.3627,5.5841
+2026-09,571104,0.7726,-0.8344,0.7792,Professional and commercial equipment wholesaling,-1.6442,2.1633,4.5629
+2026-09,511104,4.2853,-0.865,0.7879,Hospital outpatient care,1.4527,2.6677,1.4045
+2026-09,125707,0.0115,-0.8821,0.8727,Speakers and commercial sound equipment,-1.0024,2.3328,3.781
+2026-09,118906,0.0269,-0.8879,0.9515,"Commercial, geophysical, meteorological, surveying & all other measuring & controlling devices",-0.0511,2.4042,2.7653
+2026-09,022305,0.013,-0.8937,0.8727,Unprocessed shellfish,-6.6737,5.5601,13.6883
+2026-09,024801,0.0367,-0.8982,0.8848,Dried and dehydrated food,-0.7903,2.5565,3.7262
+2026-09,063801,0.195,-0.9026,0.9576,"Pharmaceuticals affecting neoplasms, the endocrine system, & metabolic diseases",0.0564,4.546,4.9738
+2026-09,104105,0.0009,-0.9037,0.9333,Other miscellaneous hardware,-5.582,4.5469,11.2085
+2026-09,125803,0.0124,-0.9102,0.7048,"Other home electronic equipment, including television receivers and automotive A/V equipment",0.004,2.5194,2.7636
+2026-09,159A04,0.1395,-0.9306,0.9152,Signs and advertising displays,-0.0733,3.7735,4.1335
+2026-09,114612,0.001,-0.9455,0.8424,"Retail, commercial, household, and mailing scales and balances",1.4831,3.9425,2.6012
+2026-09,301701,0.0694,-0.9727,0.8121,Pipeline transportation of petroleum products,1.0956,3.7251,2.7034
+2026-09,023106,0.005,-0.9904,0.8545,Bulk fluid milk and cream,-12.9031,2.3399,15.3902
+2026-09,481101,0.0746,-1.0384,0.9273,Security guard services,0.9354,3.7116,2.6735
+2026-09,063808,0.0957,-1.0603,0.9333,Pharmaceuticals affecting parasitic and infective diseases,0.1687,3.9036,3.5227
+2026-09,371204,0.0435,-1.0947,0.897,Private line wired telephone service,-3.6118,1.0763,4.2827
+2026-09,117902,0.0123,-1.1214,0.9455,Primary batteries,-2.4635,1.7497,3.7571
+2026-09,114613,0.001,-1.1287,0.9697,"Parts, attachments, and accessories for scales and balances",1.0489,5.9385,4.3323
+2026-09,454101,0.2887,-1.1318,1.0,Administrative and general management consulting services,-4.1156,2.6975,6.0199
+2026-09,017108,0.0003,-1.1574,0.9576,Breaker stock and checks and undergrades,-93.7994,43.3108,118.4605
+2026-09,025307,0.0257,-1.1666,0.8424,Refined sugar products and byproducts,-8.6239,1.1641,8.39
+2026-09,026401,0.0075,-1.1719,0.9939,Other beverage materials,-1.7223,3.3599,4.3366
+2026-09,581103,0.2568,-1.1812,0.9174,Alcohol retailing,-1.671,3.202,4.1254
+2026-09,022203,0.1629,-1.1947,0.9091,"Young chickens, including bulk, chilled, frozen, whole, and in parts",-12.4821,1.4738,11.6811
+2026-09,023201,0.0168,-1.2379,0.9273,Butter,-31.9836,3.6036,28.7478
+2026-09,143203,0.0086,-1.2397,0.9879,"Inboard-outdrive boats, including commercial and military (except sailboats and lifeboats)",0.6926,3.0318,1.8869
+2026-09,371101,0.1589,-1.2438,0.7152,Local residential wired telephone service,0.2107,3.1078,2.3293
+2026-09,351101,0.0585,-1.2558,0.938,"Affiliate agreements, programming sales, and retransmission fees for cable and broadcast tv",0.3913,2.7909,1.9109
+2026-09,017107,0.0428,-1.2668,0.9455,Eggs for fresh use,-66.0238,19.2047,67.2793
+2026-09,151401,0.0418,-1.2722,0.9455,Small arms,-0.5554,0.6427,0.9418
+2026-09,141106,0.1922,-1.2937,0.9091,"Trucks, over 14,000 lbs GVW",0.7748,1.6328,0.6633
+2026-09,302101,0.0105,-1.3476,0.9758,Rail transportation of passengers,0.0,1.4855,1.1023
+2026-09,022105,0.3046,-1.3658,0.9515,"Other meats, fresh, frozen, or canned",-4.7735,3.8707,6.3289
+2026-09,011101,0.0174,-1.4156,0.9273,Citrus fruits,-20.8513,7.3258,19.9047
+2026-09,113852,0.0038,-1.4552,0.9818,Rebuilt metal-forming machine tools and parts for metal-forming machine tools,0.0,2.5428,1.7473
+2026-09,331202,0.215,-1.4758,1.0,Newspaper subscription and single copy sales,0.0983,6.3805,4.2568
+2026-09,091508,0.0027,-1.5054,0.9741,"Molded pulp goods, including egg cartons, florists pots, food trays, etc.",-5.8653,4.4878,6.8771
+2026-09,432101,1.7186,-1.537,0.9939,"Residential property sales and rental, brokerage fees and commissions",1.3023,6.1858,3.1772
+2026-09,58H101,0.0412,-1.5412,0.9333,Book retailing,-7.0168,2.0227,5.8651
+2026-09,063803,0.0986,-1.545,0.9636,Pharmaceuticals acting on the cardiovascular system,-3.4973,6.503,6.4726
+2026-09,024102,0.0443,-1.6488,0.9697,"Canned and fresh fruit juices, nectars, and concentrates",-6.3164,2.9543,5.6226
+2026-09,022104,0.1922,-1.683,0.9394,"Pork products, fresh, frozen, or processed, except sausage",-19.3611,1.8813,12.6214
+2026-09,132201,0.001,-1.711,0.9939,"Cement, hydraulic",-1.1799,4.7155,3.4456
+2026-09,452104,0.0101,-1.7571,0.9818,"Other accounting services, including billing and review (partial)",-2.4434,2.4577,2.7893
+2026-09,025401,0.0252,-1.7645,0.9758,Confectionery materials,-16.5592,4.9189,12.172
+2026-09,022206,0.0361,-1.8324,0.9636,"Turkeys, including frozen, whole, and in parts",-36.3413,6.1116,23.1674
+2026-09,063102,0.0009,-2.0103,0.9818,"Medicinal and botanical chemicals, drugs, and other products",-4.1051,0.5185,2.2999
+2026-09,58F101,0.4341,-2.0769,1.0,Automotive fuels and lubricants retailing,-27.7688,10.4436,18.399
+2026-09,117929,0.0289,-2.0866,0.9939,Miscellaneous electrical industrial apparatus,-10.5751,2.508,6.2701
+2026-09,371301,0.0655,-2.1307,0.9939,Other wired telephone services,-2.3882,0.554,1.3809
+2026-09,117847,0.0413,-2.1975,0.9939,"Other semiconductor devices, incl. transistors, diodes, and semiconductor parts such as wafers",-8.1865,-0.5683,3.4667
+2026-09,412101,0.201,-2.3599,0.9939,Annuities,-5.0431,0.8244,2.4863
+2026-09,454102,0.0268,-2.4351,0.9879,Human resources consulting services,-8.4066,0.4802,3.6495
+2026-09,454104,0.035,-2.6688,0.9939,"Process, physical distribution, and logistics consulting services",-16.4734,1.3631,6.6833
+2026-09,474101,0.0173,-3.637,0.9938,Other travel arrangements (partial),-10.0885,0.9293,3.0294
