@@ -63,8 +63,8 @@ b.annotate(f"First increase\n{first:%b %Y}", (first, r[first]), xytext=(-10, 24)
            ha="right", color=INK, fontsize=12)
 b.annotate(f"First 0.75-point\nincrease {big:%b %Y}", (big, 6.3), xytext=(-6, 0), textcoords="offset points",
            ha="right", va="top", color=INK, fontsize=12)
-b.annotate(f"Peak {r[peak]:.2f}%\n{peak:%b %Y}", (peak, r[peak]), xytext=(8, -2), textcoords="offset points",
-           ha="left", va="top", color=INK, fontsize=12)
+b.annotate(f"Peak {r[peak]:.2f}%, {peak:%b %Y}", (peak, r[peak]), xytext=(8, 5), textcoords="offset points",
+           ha="left", va="bottom", color=INK, fontsize=12)
 b.annotate(f"{r.iloc[-1]:.2f}%", (r.index[-1], r.iloc[-1]), xytext=(8, 0), textcoords="offset points",
            va="center", color=INK, fontsize=12.5, annotation_clip=False)
 f.suptitle("Item-level price increases and the Fed's rate increases", color="#E6E7E8", fontsize=20,
