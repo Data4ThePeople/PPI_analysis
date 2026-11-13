@@ -4,6 +4,8 @@ subtitle: A free, animated chart of every item in the Producer Price Index for f
 slug: ppi-scuba-diver
 date: 2026-10-19
 time: 07:00:00-04:00
+updated: 2026-11-13
+updated_time: 08:45:00-05:00
 prismic_id: atXuuhIAACgAouk0
 section: Visualization
 hero: images/ppi-scuba-diver-hero-1680x1080.png
