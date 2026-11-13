@@ -16,6 +16,7 @@ from common import PROCESSED, ROOT, month_add
 from takeaways import short
 from takeaways_tieout import raw, yoy
 from drivers import label as dlabel
+from weights import december
 
 from common import TARGET_STR as MONTH
 
@@ -135,8 +136,10 @@ def main():
         m = r["month"]
         if m.startswith("mom_"):
             check("341101 monthly change", (s[MONTH] / s[prev] - 1) * 100, r["yoy_pct"])
-        elif m.startswith("weight_"):
-            check("341101 weight", cur.loc["341101", "weight_base"], r["yoy_pct"], 1e-5)
+        elif m.startswith("relative_importance_dec"):
+            y = int(m[-4:])
+            ri = december(y)["341101"].weight
+            check(f"341101 relative importance December {y}", ri, r["yoy_pct"], 1e-6)
         elif m.startswith("contrib_"):
             check("341101 contribution", cur.loc["341101", "contrib"], r["yoy_pct"], 1e-5)
         else:
@@ -184,12 +187,12 @@ def main():
 | all | "{prelim} are preliminary" | BLS "P" footnote on July to October 2026 in the flat files | supported |
 | 01 | "the highest since November 2022" | section 1 recompute | supported |
 | 02 | "Items ending in retailing or wholesaling measure the margin sellers keep" | BLS, "Wholesale and retail Producer Price Indexes: margin prices," Beyond the Numbers vol. 1: the price of a trade service is the selling price less the acquisition price (DATASETS.md "What some PPI items measure") | supported |
-| 02 | "Our items add up to +0.228; BLS's rate moves +0.235" | section 2 recompute | supported |
+| 02 | "Our items add up to +0.228; BLS's rate moves +0.234" | section 2 recompute | supported |
 | 03 | "every month BLS has published" | WPU301202 12-month changes start June 2010 (index June 2009) | supported |
 | 03 | "highest of all 197 months; earlier high +26.9% in May 2022" | section 3 recompute | supported |
 | 04 | "BLS began this index in May 2022" | WPU341101 first value 2022-05 (100.000) in wp.series and flat file | supported |
 | 04 | "lowest of all 42 months; fell 6.1% from September" | section 4 recompute | supported |
-| 04 | "carries about 1.1% of final demand" | weight_base, the December 2025 relative importance rolled to the base month | supported |
+| 04 | "BLS's December 2025 weights put it at 0.92% of final demand" | December 2025 column of final-demand-relative-importance-of-commodities-2026.xlsx, 341101 = 0.919 | supported |
 | 05 | "group 05, fuels and related products and power, which includes electricity and natural gas" | wp.series: WPU05 "Fuels and related products and power"; 053101 natural gas and 054121 residential electric power are group 05 items in the October data | supported |
 | 05 | "29.5% of our item total, the most points since July 2022" | section 5 recompute; share of our item sum, not of BLS's published rate | supported |
 """.format(prelim="July to October 2026")

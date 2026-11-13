@@ -23,6 +23,8 @@ EXTRA_SHORT = {
     "Computer hardware, software, and supplies retailing": "Computer retailing",
     "Machinery and vehicle wholesaling": "Machinery and vehicle wholesaling",
     "Beef and veal products, fresh or frozen": "Beef and veal",
+    "Automobile retailing (Partial)": "Car dealers (auto retailing)",
+    "Professional and commercial equipment wholesaling": "Professional equipment wholesaling",
 }
 
 
@@ -50,7 +52,7 @@ def main():
             + [(f"The other {len(rest)} items, net", None, None, rest.change.sum(), MUTED)]
             + [(label(r["name"]), r.prev_yoy, r.yoy, r.change, DOWN) for _, r in down.iloc[::-1].iterrows()])
     f, top = fig(f"What moved wholesale inflation from {pub_b:.1f}% to {pub_a:.1f}%",
-                 f"Change in each item's share of the 12-month change in PPI final demand, {month_label(prev)} to "
+                 f"Change in each item's contribution to the 12-month change in PPI final demand, {month_label(prev)} to "
                  f"{month_label(MONTH)}, in percentage\npoints. In parentheses, the item's 12-month price change in "
                  f"each month. Our items add up to {tot:+.3f} points; BLS's published\nrate moves "
                  f"{pub_a - pub_b:+.3f} ({pub_b:.2f}% to {pub_a:.2f}%). "

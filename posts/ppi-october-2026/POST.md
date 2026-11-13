@@ -84,7 +84,7 @@ Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freig
 
 ## 4. System software prices fell 18.7%
 
-System software publishing, which is about 1.1% of final demand by weight, fell 18.7% over the 12 months to October 2026. It took 0.18 points off the 12-month change, more than any other item.
+System software publishing, which is 0.9% of final demand in BLS's December 2025 weights, fell 18.7% over the 12 months to October 2026. It took 0.18 points off the 12-month change, more than any other item.
 
 BLS began this index in May 2022, so the chart below starts with its first 12-month change in May 2023.
 
@@ -97,14 +97,14 @@ October is the lowest of the 42 months. Most of the drop came in one month: the 
 
 ## 5. Fuels added 1.9 points
 
-The fuels and power group, which includes gasoline, diesel, jet fuel, heating oil, electricity and natural gas, added 1.92 points to the 12-month change. That is 29.5% of the 6.53 points our items add up to, from a group that is 5.2% of final demand by weight. The chart below compares the fuels group with every other item since November 2016.
+The fuels and power group, which includes gasoline, diesel, jet fuel, heating oil, electricity and natural gas, added 1.92 points to the 12-month change. That is 29.5% of the 6.53 points our items add up to, from a group that is 5.1% of final demand in BLS's December 2025 weights. The chart below compares the fuels group with every other item since November 2016.
 
 ![Line chart titled Fuels added 1.9 points to wholesale inflation in October 2026. Two lines show contributions to the 12-month change in PPI final demand, November 2016 to October 2026. Fuels stay between about minus 2 and plus 1 point most years, peak at plus 3.16 points in June 2022, and climb in 2026 to plus 1.92 in October. All other items peak above plus 9 points in 2022 and end at plus 4.60 in October 2026.](images/05-fuels.png)
 *Contribution to the 12-month change in PPI final demand, in percentage points. Fuels are BLS commodity group 05, fuels and related products and power. Source: BLS; contributions computed by Data 4 The People.*
 
 It is the most fuels have added since July 2022.
 
-Regular gasoline added the most of any item, 0.82 points, with a price 78.5% higher than a year earlier. It is about 1.1% of final demand by weight, but it added 12.6% of the rise. Diesel fuel rose 115.2%, the largest 12-month increase since June 2021, and added 0.37 points. Jet fuel rose 106.5%, the largest since June 2022.
+Regular gasoline added the most of any item, 0.82 points, with a price 78.5% higher than a year earlier. It is 1.0% of final demand in BLS's December 2025 weights, but it added 12.6% of the rise. Diesel fuel rose 115.2%, the largest 12-month increase since June 2021, and added 0.37 points. Jet fuel rose 106.5%, the largest since June 2022.
 
 A year ago, in October 2025, regular gasoline was 10.5% cheaper than the year before, and diesel was 6.1% cheaper.
 

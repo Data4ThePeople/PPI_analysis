@@ -9,7 +9,8 @@ from __future__ import annotations
 import pandas as pd
 
 import drivers
-from common import PRELIM, PROCESSED
+from common import PRELIM, PROCESSED, TARGET
+from weights import december
 from takeaways import (DOWN, FUEL, GRID, INK, LINE_B, MONTH, MUTED, fig, finish, headline,
                        month_label, raw_levels, trucking, xpos, year_axis)
 
@@ -28,12 +29,13 @@ def software(items, name):
     mom = (lv[MONTH] / lv[prev] - 1) * 100
     row = items[(items.month == MONTH) & (items.code == SOFTWARE)].iloc[0]
     low = min(ys) == ys[-1]
+    ri = december(TARGET[0] - 1)[SOFTWARE].weight
     f, top = fig("System software publishing, 12-month price change",
                  f"{month_label(months[0])} to {month_label(MONTH)}. BLS began this index in {month_label(first_index)}, so 12-month "
-                 f"changes start a year later.\n{month_label(MONTH)} is "
+                 f"changes start a year later. {month_label(MONTH)} is\n"
                  + (f"the lowest of all {len(ys)} months" if low else f"{ys[-1]:+.1f}%")
-                 + f"; the index fell {abs(mom):.1f}% from {month_label(prev)}. The item carries "
-                 f"about {row.weight_base:.1f}% of final demand\nand took {abs(row.contrib):.2f} points off the 12-month change. "
+                 + f"; the index fell {abs(mom):.1f}% from {month_label(prev)}. BLS's December {TARGET[0] - 1} weights\nput it at "
+                 f"{ri:.2f}% of final demand, and it took {abs(row.contrib):.2f} points off the 12-month change. "
                  f"{PRELIM} are preliminary.",
                  h=7.5, legend=[("System software publishing", DOWN)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
@@ -53,7 +55,7 @@ def software(items, name):
     ax.set_xlim(xs[0] - 0.1, xs[-1] + 0.45)
     ax.set_xticks(range(2024, int(MONTH[:4]) + 1))
     rows = [(SOFTWARE, m, round(v, 4)) for m, v in zip(months, ys)]
-    rows += [(SOFTWARE, f"mom_{MONTH}", round(mom, 4)), (SOFTWARE, f"weight_{MONTH}", round(row.weight_base, 5)),
+    rows += [(SOFTWARE, f"mom_{MONTH}", round(mom, 4)), (SOFTWARE, f"relative_importance_dec{TARGET[0] - 1}", ri),
              (SOFTWARE, f"contrib_{MONTH}", round(row.contrib, 6))]
     finish(f, ax, name, rows, ["code", "month", "yoy_pct"],
            source=f"{BLS}, system software publishing (WPU{SOFTWARE}), not seasonally adjusted")

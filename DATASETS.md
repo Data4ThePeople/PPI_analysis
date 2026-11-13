@@ -274,7 +274,7 @@ in the month before, both from the same pull (so the month before is as
 revised). The change mixes the new month's price move with the base month
 moving forward a year. The chart draws the 10 largest each way and nets the
 rest in one bar. Our items' change (+0.228 points, September to October 2026)
-differs from the published rate's (+0.235) by the change in the tie-out gap.
+differs from the published rate's (+0.234) by the change in the tie-out gap.
 The unweighted movers list keeps only items with their own published index.
 
 **Fuels** are BLS commodity group 05, fuels and related products and power
@@ -284,7 +284,10 @@ is fuels' contribution over our item total, not over BLS's published rate.
 
 **System software publishing (WPU341101)** starts May 2022 (index 100.000), so
 its 12-month change starts May 2023; before then the diver estimates it from
-its parent category. It is not seasonally adjusted.
+its parent category. It is not seasonally adjusted. Its December 2025 relative
+importance is 0.919% (the weight BLS publishes); the diver's contribution uses
+the October 2025 base weight rolled forward from December 2024 (1.086%), so
+the post quotes BLS's published December 2025 weights for item sizes.
 
 **Long-distance trucking (WPU301202)** starts June 2009 in the flat files, so
 its 12-month change starts June 2010. The takeaways chart uses that full
