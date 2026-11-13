@@ -5,11 +5,17 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: ppi-september-2026
-Step: complete
-Since: 2026-10-19
+Post: October 2026 PPI update (slug set at 2a)
+Step: 1
+Since: 2026-11-13
 
 ## Steps
+
+| Step | What | Confirmed | Notes |
+|---|---|---|---|
+| 1  | Exploration and analysis | | |
+
+## Previous post: ppi-september-2026 (complete 2026-10-20)
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
@@ -78,3 +84,4 @@ None.
 - 2026-10-20 After completion, per Eric: hero peak and valley sign poles moved onto May 2022 and July 2023; email JPG re-exported; Prismic draft hero replaced.
 - 2026-11-01 Exploration, no post yet: item breadth for September 2026 against 2014-2026 (1 SD, 2 SD, top 10%; by count and weight; monthly, monthly adjusted for time of year, 12-month). charts/2026-09-breadth; method in DATASETS.md. Independent tie-out not run yet.
 - 2026-11-01 Independent tie-out of the 12-month breadth view (fresh agent, new BLS pull): all counts match in all 153 months once the method text was corrected on two rules. Page and DATASETS wording fixed. Open: which baseline leads. Monthly views and Fed chart not covered by it.
+- 2026-11-13 Step 1 opened. Topic: October 2026 PPI update. BLS published October 2025 PPI (unlike the CPI), and all 4,341 item series with 2025 data have an October 2025 value, so October 2026 has a true 12-month change (headline 6.52%, preliminary). BLS revised June-September 2026; September 12-month change now 6.29% (was 6.34%).
