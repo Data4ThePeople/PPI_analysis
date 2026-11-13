@@ -89,7 +89,7 @@ Our items add up closely to BLS's published figure from July 2022 on. Before tha
 
 ### What it shows right now
 
-In September 2026, PPI final demand was 6.3% higher than a year earlier. It was the largest 12-month increase since December 2022, and 16 items with their own published index rose more than 50%. BLS's index was 159.613, against 150.100 in September 2025. Our 823 items add up to 6.350%, which is 0.012 points more than BLS's figure, so the month passes our tie-out test. Of those items, 117 had no published index for the months needed, and they carried 1.6% of final demand.
+In October 2026, PPI final demand was 6.5% higher than a year earlier. It was the largest 12-month increase since November 2022, and 14 items with their own published index rose more than 50%. BLS's index was 160.248, against 150.439 in October 2025. Our 823 items add up to 6.527%, which is 0.007 points more than BLS's figure, so the month passes our tie-out test. Of those items, 114 had no published index for the months needed, and they carried 1.5% of final demand.
 
 Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.
 
@@ -159,15 +159,15 @@ We show every month, including the ones that fail, and flag those that do.
 
 ### Step 6: Check the numbers
 
-The 51 months from July 2022 to September 2026 pass. In those months, our items are off from BLS's figure by 0.013 points on average, and by 0.040 points at most (May 2026). In 42 of them, they are within 0.02 points.
+The 52 months from July 2022 to October 2026 pass. In those months, our items are off from BLS's figure by 0.013 points on average, and by 0.040 points at most (May 2026). In 43 of them, they are within 0.02 points.
 
-The 69 months from October 2016 to June 2022 are flagged, all because the index a year earlier was published to one decimal place. Rounding to one decimal can move a 12-month change by up to about 0.09 points by itself. Thirty-three of those months also miss by more than 0.05 points, by as much as 0.26 points in October 2019. The months from July 2021 to June 2022 land within 0.05 points, but because the earlier index was rounded, a close match there may be luck.
+The 68 months from November 2016 to June 2022 are flagged, all because the index a year earlier was published to one decimal place. Rounding to one decimal can move a 12-month change by up to about 0.09 points by itself. Thirty-three of those months also miss by more than 0.05 points, by as much as 0.26 points in October 2019. The months from July 2021 to June 2022 land within 0.05 points, but because the earlier index was rounded, a close match there may be luck.
 
 In 21 months, from November 2016 to January 2021, the miss is larger than rounding of BLS's headline index can explain by itself. The note under the chart says so in those months. The rest very likely comes from the estimated items, which carried 6% to 9% of the weight before 2021, together with rounding in the item indexes, which were also published to one decimal place then.
 
-In 50 of the 120 months, our items round to a different one-decimal figure than BLS's. The chart shows both.
+In 49 of the 120 months, our items round to a different one-decimal figure than BLS's. The chart shows both.
 
-A script recomputes BLS's published 12-month change from the raw data files and checks that the bubbles drawn in the chart, including the gray circle, add up to it in every month. A second check, written separately from the raw files without using our scripts, reached the same totals within 0.0003 points, the same item contributions, and the same pass or fail result in all 120 months. It also found that estimated items were colored by a figure that was not a price change. We fixed that before publishing.
+A script recomputes BLS's published 12-month change from the raw data files and checks that the bubbles drawn in the chart, including the gray circle, add up to it in every month. A second check, written separately from the raw files without using our scripts, reached the same totals within 0.0003 points, the same item contributions, and the same pass or fail result in all 120 months from October 2016 to September 2026. It also found that estimated items were colored by a figure that was not a price change. We fixed that before publishing.
 
 ### Step 7: Draw the chart
 
@@ -191,7 +191,7 @@ BLS releases the PPI each month and revises the last four months each time. We p
 
 **Estimated items are less reliable.** About 1% to 2% of final demand had no published index in recent months, and 6% to 9% before 2021. Each of those items moves with its category, which may not match its own price.
 
-**The 2026 gap runs one way.** In every month of 2026 so far, our items add up to a little more than BLS's figure, by 0.012 to 0.040 points. We have not found the cause.
+**The 2026 gap runs one way.** In every month of 2026 so far, our items add up to a little more than BLS's figure, by 0.007 to 0.040 points. We have not found the cause.
 
 **Some weights are our estimates.** The weights we filled in for December 2019, 2021 and 2024 are close to what BLS later printed but not the same.
 
@@ -231,7 +231,7 @@ The CPI measures prices consumers pay. The PPI measures prices businesses receiv
 
 ### What is driving PPI right now?
 
-In September 2026, PPI final demand was 6.3% higher than a year earlier. Gasoline added the most, 0.76 points, with a price 66.1% higher than a year earlier. Fuel retailing margins took away the most, 0.12 points.
+In October 2026, PPI final demand was 6.5% higher than a year earlier. Gasoline added the most, 0.82 points, with a price 78.5% higher than a year earlier. System software publishing took away the most, 0.18 points.
 
 ### Why do some months miss your tie-out test?
 
