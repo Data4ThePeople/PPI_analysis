@@ -2,7 +2,7 @@
 
 Data 4 The People. Each commodity in the Producer Price Index for final demand
 (not seasonally adjusted), sized by how much it added to or took away from the
-12-month change, month by month from October 2016 to September 2026. Months that miss our
+12-month change, month by month from November 2016 to October 2026. Months that miss our
 strict tie-out (all before July 2022, when BLS published one-decimal indexes)
 are shown and flagged. The diver
 sits as deep as the headline rate; anchors pushed it up, floats pulled it down.
@@ -19,7 +19,7 @@ Python 3, standard library only (Chrome is used, if present, to test the page).
 cd scripts
 python fetch.py      # weight files and BLS flat files (--force to refresh)
 python indexes.py    # index cache
-python monthly.py    # every month, October 2016 to September 2026, with checks
+python monthly.py    # every month, November 2016 to October 2026, with checks
 python build.py      # dist/index.html
 python tieout.py     # prints the tie-out table, writes TIEOUT.md
 ```

@@ -1,4 +1,4 @@
-"""Static charts for the September 2026 takeaways post, in the dark house palette.
+"""Static charts for the monthly takeaways post (month set by common.TARGET), in the dark house palette.
 
 Every number drawn is read from data/processed/monthly_items.csv and
 monthly_summary.csv, the same numbers the scuba diver shows. The numbers behind
@@ -17,7 +17,7 @@ import pandas as pd  # noqa: E402
 
 import json
 
-from common import PROCESSED, RAW, ROOT, TARGET, WP
+from common import PRELIM, PROCESSED, RAW, ROOT, TARGET, WP
 
 MONTH = f"{TARGET[0]}-{TARGET[1]:02d}"
 CHARTS = ROOT / "charts" / MONTH
@@ -134,7 +134,7 @@ def headline(items, summary, name):
                  f"12-month change in PPI final demand, {month_label(months[0])} to {month_label(MONTH)}. "
                  f"The line is the rate BLS publishes, the\nhighest since {month_label(prev_higher)}. "
                  "The bars split our item contributions into goods, services and construction.\n"
-                 "June to September 2026 are preliminary and BLS will revise them.",
+                 f"{PRELIM} are preliminary and BLS will revise them.",
                  h=7.8, legend=[("Published by BLS", INK), ("Goods", GOODS), ("Services", SERVICES),
                                 ("Construction", CONSTRUCTION)])
     ax = f.add_axes([0.07, 0.10, 0.84, top - 0.12])
@@ -302,7 +302,7 @@ def trucking(name, upto=None):
     f, top = fig("Long-distance trucking, 12-month price change",
                  f"{month_label(months[0])} to {month_label(MONTH)}, every month BLS has published. The dashed line is the average of\n"
                  f"all months before {month_label(MONTH)}. {month_label(MONTH)} ranks {rank} of {len(ys)} months; the {len(higher)} higher months "
-                 f"are all in {sorted({m[:4] for m in higher})[0]}.\nJune to September 2026 are preliminary.",
+                 f"are all in {sorted({m[:4] for m in higher})[0]}.\n{PRELIM} are preliminary.",
                  h=7.5, legend=[("Long-distance trucking", LINE_A), ("Average", MUTED)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]
@@ -350,7 +350,7 @@ def jet_cpi(items, name):
     f, top = fig("Jet fuel and airline fares, 12-month price change",
                  f"{month_label(months[0])} to {month_label(MONTH)}. Jet fuel is the producer price in PPI final demand. Airline\n"
                  "fares are what travelers pay, from the Consumer Price Index. The gap is October 2025: BLS did not\n"
-                 "collect CPI data during the lapse in appropriations. June to September 2026 PPI figures are preliminary.",
+                 f"collect CPI data during the lapse in appropriations. {PRELIM} PPI figures are preliminary.",
                  h=7.5, legend=[("Jet fuel (PPI)", LINE_A), ("Airline fares (CPI)", LINE_B)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]
@@ -399,7 +399,7 @@ def portfolio_sp(items, name):
                  f"{month_label(months[0])} to {month_label(MONTH)}. The blue line is the S&P 500's 12-month change to the end of the\n"
                  "month before. BLS holds the assets fixed from the start of the period and updates them by the rate of\n"
                  "return; a one-month shift matches best. "
-                 "June to September 2026 PPI figures are preliminary.",
+                 f"{PRELIM} PPI figures are preliminary.",
                  h=7.5, legend=[("Portfolio management (PPI)", LINE_A), ("S&P 500, one month earlier", LINE_B)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]

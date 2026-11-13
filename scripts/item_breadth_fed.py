@@ -8,7 +8,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from common import RAW  # noqa: E402
+from common import RAW, TARGET_LABEL  # noqa: E402
 from item_breadth_charts import BG, DIR, GRID, INK, LINE, MUTED, NOW, SOURCE  # noqa: E402
 
 WEIGHT, RATE, SHADE = "#e8b04b", "#BBBDC0", "#2B3036"
@@ -69,7 +69,7 @@ b.annotate(f"{r.iloc[-1]:.2f}%", (r.index[-1], r.iloc[-1]), xytext=(8, 0), textc
            va="center", color=INK, fontsize=12.5, annotation_clip=False)
 f.suptitle("Item-level price increases and the Fed's rate increases", color="#E6E7E8", fontsize=20,
            x=.05, y=.965, ha="left", fontweight="bold")
-f.text(.05, .915, "January 2014 to September 2026. Shaded: first rate increase to the peak.", color=INK, fontsize=13.5)
+f.text(.05, .915, f"January 2014 to {TARGET_LABEL}. Shaded: first rate increase to the peak.", color=INK, fontsize=13.5)
 f.text(.05, .02, SOURCE + " Fed rate: FRED, DFEDTARU.", color=MUTED, fontsize=9)
 f.subplots_adjust(left=.05, right=.94, top=.855, bottom=.08)
 f.savefig(DIR / "04-twelve-month-fed.png", dpi=120, facecolor=BG)

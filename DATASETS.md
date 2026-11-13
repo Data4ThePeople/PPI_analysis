@@ -16,10 +16,12 @@ browser-like User-Agent with a contact address. No key or request limit.
 `data/processed/indexes.json`. The same series appears in more than one file;
 a repeated month must carry the same value or the build stops.
 
-**Version and vintage.** Pulled October 17, 2026, after the September 2026
-release. BLS revises PPI indexes for four months after first release; June to
-September 2026 carry the "P" (preliminary) footnote and will change. We pin
-the October 17 pull. A refresh is `fetch.py --force`.
+**Version and vintage.** Pulled November 13, 2026, after the October 2026
+release. BLS revises PPI indexes for four months after first release; July to
+October 2026 carry the "P" (preliminary) footnote and will change. This pull
+revised June to September 2026 (final demand's September 12-month change went
+from 6.34% to 6.29%). We pin the November 13 pull. A refresh is
+`fetch.py --force`.
 
 **Coverage and precision.** Index levels were published to one decimal
 before July 2021 and to three decimals from July 2021 on (BLS notice, "Producer
@@ -32,9 +34,9 @@ alone. This is what sets where the page starts (see Tie-out).
 demand but does not publish their index, usually because too few companies
 report to publish without revealing one of them. Others stopped being
 published partway through (military aircraft after May 2024, processed eggs
-after January 2022). In September 2026, items with no index for the months a
-term needs carried 1.55% of final demand weight; in the months shown it ranges
-from 1.04% to 2.20%. Before 2021 it was 6% to 9%, mostly machinery and
+after January 2022). In October 2026, items with no index for the months a
+term needs carried 1.49% of final demand weight (the filled share); from July
+2022 on it ranges from 1.04% to 2.20%. Before 2021 it was 6% to 9%, mostly machinery and
 equipment wholesaling (about 4% of weight, no published index 2014-2018).
 
 **Recoded items.** BLS moved group 04 (hides, skins, leather) to 159F in the
@@ -59,7 +61,8 @@ starts too late for the first term (027B01, 094A01, 101712, 131108, 336101,
 371205), so they are estimated for part of the year; the page says so.
 
 **Missing data.** None for FD4 in the window. October 2025 was published
-(unlike the CPI).
+(unlike the CPI): FD4 and all 4,341 commodity series with 2025 data have an
+October 2025 value, so October 2026 has a full 12-month change.
 
 **License.** U.S. government work, public domain.
 
@@ -181,7 +184,7 @@ positive every month (+0.012 to +0.040); we have not identified a cause.
 
 ## Tie-out (`scripts/monthly.py`, `scripts/tieout.py`, `TIEOUT.md`)
 
-Every month from October 2016 to September 2026 (120 months) is shown. The
+Every month from November 2016 to October 2026 (120 months) is shown. The
 tool is educational, so months that miss our tie-out stay in and are flagged
 on the page with the reason (Eric, October 17, 2026).
 
@@ -193,10 +196,10 @@ The strict tie-out, fixed before looking at results. A month passes when:
 3. filled items carry 10% of weight or less (the filled share, defined under
    Method).
 
-**Result.** 51 months pass, July 2022 to September 2026: mean absolute gap
-0.013 points, largest 0.040 (May 2026), 42 within 0.02. 69 months are flagged,
-October 2016 to June 2022, all for rule 1 (a one-decimal base month); 33 of
-them also miss by more than 0.05, up to 0.26 points (October 2019). In 50 of
+**Result.** 52 months pass, July 2022 to October 2026: mean absolute gap
+0.013 points, largest 0.040 (May 2026), 43 within 0.02. 68 months are flagged,
+November 2016 to June 2022, all for rule 1 (a one-decimal base month); 33 of
+them also miss by more than 0.05, up to 0.26 points (October 2019). In 49 of
 the 120 months the items round to a different one-decimal figure than BLS
 publishes; the page shows both.
 
@@ -204,8 +207,8 @@ publishes; the page shows both.
 a one-decimal index, which BLS never revised to three decimals. Rounding alone
 can move a 12-month change by up to about 0.09 points. The months from July
 2021 to June 2022 land within 0.05, but their base month is one-decimal, so a
-close match there can be luck. The weight files would allow going back to
-October 2016, the ten-year limit.
+close match there can be luck. The window starts at November 2016, ten
+years before the latest month.
 
 **What the page shows for each month.** BLS's index values (one or three
 decimals, as published), the 12-month change they give, what the items add

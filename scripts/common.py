@@ -31,8 +31,16 @@ WP_DIR_URL = "https://download.bls.gov/pub/time.series/wp/"
 
 HEADLINE = "WPUFD4"          # PPI final demand, not seasonally adjusted
 # The release month this analysis runs through, and the earliest month shown.
-TARGET = (2026, 9)
-START = (2016, 10)           # ten years of 12-month changes, through TARGET
+TARGET = (2026, 10)
+START = (2016, 11)           # ten years of 12-month changes, through TARGET
+_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August",
+           "September", "October", "November", "December"]
+TARGET_STR = f"{TARGET[0]}-{TARGET[1]:02d}"
+TARGET_LABEL = f"{_MONTHS[TARGET[1] - 1]} {TARGET[0]}"
+# BLS marks the latest four months preliminary and revises them.
+_p = TARGET[0] * 12 + TARGET[1] - 1 - 3
+PRELIM = (f"{_MONTHS[_p % 12]} to {TARGET_LABEL}" if _p // 12 == TARGET[0]
+          else f"{_MONTHS[_p % 12]} {_p // 12} to {TARGET_LABEL}")
 
 
 def download(url: str, dest: Path, force: bool = False) -> Path:

@@ -34,7 +34,7 @@ from __future__ import annotations
 import json
 import re
 
-from common import HEADLINE, PROCESSED, month_add
+from common import HEADLINE, PROCESSED, TARGET_STR, month_add
 from weights import december
 
 RESTORE_MIN = 0.03       # percent of final demand; smaller shortfalls are rounding
@@ -258,6 +258,6 @@ def compute_month(inp: Inputs, t: str):
 if __name__ == "__main__":
     import sys
     inp = Inputs()
-    t = sys.argv[1] if len(sys.argv) > 1 else "2026-09"
+    t = sys.argv[1] if len(sys.argv) > 1 else TARGET_STR
     r = compute_month(inp, t)
     print(t, "published %.4f items %.4f gap %.5f" % (r["published"], r["sum"], r["sum"] - r["published"]))

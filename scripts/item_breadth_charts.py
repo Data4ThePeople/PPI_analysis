@@ -8,14 +8,14 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt  # noqa: E402
 import pandas as pd  # noqa: E402
 
-from common import ROOT, TARGET  # noqa: E402
+from common import PRELIM, ROOT, TARGET, TARGET_LABEL  # noqa: E402
 
 LAST = f"{TARGET[0]}-{TARGET[1]:02d}"
 DIR = ROOT / "charts" / f"{LAST}-breadth"
 BG, INK, MUTED, GRID = "#181A1B", "#BBBDC0", "#8C9094", "#2A2E31"
 LINE, SHADE, NOW = "#5598e7", "#3A2A24", "#f37952"
 SOURCE = ("Data 4 The People  ·  Source: BLS Producer Price Index for final demand, not seasonally adjusted, and "
-          "relative importance tables. June to September 2026 are preliminary.")
+          f"relative importance tables. {PRELIM} are preliminary.")
 ROWS = [("sd1", "More than 1 SD above the item's average"),
         ("sd2", "More than 2 SD above the item's average"),
         ("top10", "In the item's top 10% of months")]
@@ -62,7 +62,7 @@ def fig(name, out, title, sub):
                 ax.annotate("2021-2022", (pd.Timestamp("2022-01-01"), top), xytext=(0, -14), textcoords="offset points",
                             ha="center", color=MUTED, fontsize=10.5)
     f.suptitle(title, color="#E6E7E8", fontsize=20, x=.04, y=.975, ha="left", fontweight="bold")
-    f.text(.04, .925, sub + ", January 2014 to September 2026", color=INK, fontsize=13.5)
+    f.text(.04, .925, sub + f", January 2014 to {TARGET_LABEL}", color=INK, fontsize=13.5)
     f.text(.04, .018, SOURCE, color=MUTED, fontsize=9.5)
     f.subplots_adjust(left=.05, right=.93, top=.865, bottom=.075, hspace=.3, wspace=.2)
     f.savefig(DIR / f"{out}.png", dpi=120, facecolor=BG)
