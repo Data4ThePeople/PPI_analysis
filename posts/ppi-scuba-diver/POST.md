@@ -1,6 +1,6 @@
 ---
 title: "Exploring the hidden depths of the Producer Price Index"
-subtitle: A free, animated chart of every item in the Producer Price Index for final demand, sized by how much it added to or took away from the 12-month change, every month from October 2016 to September 2026.
+subtitle: A free, animated chart of every item in the Producer Price Index for final demand, sized by how much it added to or took away from the 12-month change, every month from November 2016 to October 2026.
 slug: ppi-scuba-diver
 date: 2026-10-19
 time: 07:00:00-04:00
@@ -12,9 +12,9 @@ meta_title: "Producer Price Index (PPI) by Item, Every Month Since 2016"
 description: "Explore the Producer Price Index (PPI) item by item: what pushed wholesale prices up or down each month since 2016. A free, interactive tool."
 keywords: producer price index, PPI, PPI final demand, PPI by item, PPI components, PPI data, what is driving PPI, wholesale inflation
 schema_type: dataset
-dataset_name: Contributions of each commodity to the 12-month change in PPI final demand, October 2016 to September 2026
-dataset_description: "How many percentage points each of the roughly 820 most detailed commodities in the Producer Price Index for final demand (series WPUFD4, not seasonally adjusted) added to or took away from the 12-month change, every month from October 2016 to September 2026, from BLS commodity indexes and final demand relative importance tables. Items with no published index use their parent category's change. Each month is checked against the published change and flagged when it misses a strict tie-out; months before July 2022 are flagged because BLS published one-decimal indexes then."
-temporal: 2016-10/2026-09
+dataset_name: Contributions of each commodity to the 12-month change in PPI final demand, November 2016 to October 2026
+dataset_description: "How many percentage points each of the roughly 820 most detailed commodities in the Producer Price Index for final demand (series WPUFD4, not seasonally adjusted) added to or took away from the 12-month change, every month from November 2016 to October 2026, from BLS commodity indexes and final demand relative importance tables. Items with no published index use their parent category's change. Each month is checked against the published change and flagged when it misses a strict tie-out; months before July 2022 are flagged because BLS published one-decimal indexes then."
+temporal: 2016-11/2026-10
 spatial: United States
 measured: Contribution to 12-month PPI final demand change|percentage points; 12-month price change by commodity|percent; Relative importance (share of final demand)|percent
 sources: https://www.bls.gov/ppi/|https://www.bls.gov/ppi/tables/
@@ -26,8 +26,8 @@ same_as: https://github.com/Data4ThePeople/PPI_analysis
 app_url: https://data4thepeople.github.io/PPI_analysis/dist/index.html
 app_name: The PPI Scuba Diver
 app_category: EducationalApplication
-app_description: Free animated chart of which items pushed U.S. wholesale prices (PPI final demand) up and down each month since October 2016, drawn as a scuba diver weighed down by anchors and lifted by floats.
-app_features: Every commodity in PPI final demand, sized by its contribution|Every month from October 2016 to September 2026|Play at 1x, 2x or 4x|Hover or tap any item for its price change and weight|Table view of every item, sortable|Tie-out shown for every month|Free, no sign-up
+app_description: Free animated chart of which items pushed U.S. wholesale prices (PPI final demand) up and down each month since November 2016, drawn as a scuba diver weighed down by anchors and lifted by floats.
+app_features: Every commodity in PPI final demand, sized by its contribution|Every month from November 2016 to October 2026|Play at 1x, 2x or 4x|Hover or tap any item for its price change and weight|Table view of every item, sortable|Tie-out shown for every month|Free, no sign-up
 drop_cap: false
 heading_spacer: 20px
 caption_spacer: 20px
@@ -36,7 +36,7 @@ dividers: false
 
 # Exploring the hidden depths of the Producer Price Index
 
-<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver: every item in PPI final demand, October 2016 to September 2026"></iframe>
+<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver: every item in PPI final demand, November 2016 to October 2026"></iframe>
 
 ::: spacer 40px
 
@@ -50,7 +50,7 @@ dividers: false
 
 ::: spacer
 
-This chart breaks the Producer Price Index for final demand into every item the Bureau of Labor Statistics (BLS) weights in it, about 820 in a typical month, and shows how much each one added to or took away from the 12-month change. It covers every month from October 2016 to September 2026. It is free to use and needs no sign-in. It is the companion to our [CPI Hot Air Balloon](https://www.data4thepeople.com/p/what-is-driving-cpi), which does the same for consumer prices.
+This chart breaks the Producer Price Index for final demand into every item the Bureau of Labor Statistics (BLS) weights in it, about 820 in a typical month, and shows how much each one added to or took away from the 12-month change. It covers every month from November 2016 to October 2026. It is free to use and needs no sign-in. It is the companion to our [CPI Hot Air Balloon](https://www.data4thepeople.com/p/what-is-driving-cpi), which does the same for consumer prices.
 
 The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. "Final demand" is the part sold to final buyers: households, businesses buying equipment, governments and buyers overseas. It covers goods, services and construction. It is not what consumers pay at the register, and it includes the margins that wholesalers and retailers earn, which is why items such as "car dealers' margins" appear in the chart.
 
@@ -62,7 +62,7 @@ Our items add up closely to BLS's published figure from July 2022 on. Before tha
 
 ::: spacer
 
-**1. Press Play.** The diver moves through every month from October 2016 to September 2026. The 1x, 2x and 4x buttons set the speed. The space bar starts and stops it.
+**1. Press Play.** The diver moves through every month from November 2016 to October 2026. The 1x, 2x and 4x buttons set the speed. The space bar starts and stops it.
 
 **2. Pick a month.** Drag the slider, use the ‹ and › buttons, or press the left and right arrow keys to move one month at a time.
 
@@ -85,7 +85,7 @@ Our items add up closely to BLS's published figure from July 2022 on. Before tha
 - **Gray circle.** The part of BLS's published change that our items do not add up to. Point at it to see its size. In recent months it is too small to see with the naked eye (which shows how closely our items match BLS's figure) but it is still there.
 - **Labels.** The five largest anchors and floats are labeled on wider screens.
 - **Date axis.** The shaded months are the ones where BLS published its index to one decimal place. An amber dot marks every month that misses our tie-out test.
-- **Preliminary months.** BLS revises the PPI for four months after it first comes out. June to September 2026 are preliminary and will change.
+- **Preliminary months.** BLS revises the PPI for four months after it first comes out. July to October 2026 are preliminary and will change.
 
 ### What it shows right now
 
@@ -149,7 +149,7 @@ In December 2019, December 2021 and December 2024, BLS printed 0.000 for a few i
 
 ### Step 5: Pick the months
 
-The chart shows 10 years, October 2016 to September 2026. Before we looked at any results, we set three rules a month must meet to pass our tie-out test:
+The chart shows 10 years, November 2016 to October 2026. Before we looked at any results, we set three rules a month must meet to pass our tie-out test:
 
 1. Both of BLS's index values in the 12-month change were published to three decimal places.
 2. Our items add up to BLS's published change within 0.05 points, half of the 0.1 point BLS rounds its 12-month changes to.
@@ -195,7 +195,7 @@ BLS releases the PPI each month and revises the last four months each time. We p
 
 **Some weights are our estimates.** The weights we filled in for December 2019, 2021 and 2024 are close to what BLS later printed but not the same.
 
-**Recent months will change.** June to September 2026 are preliminary.
+**Recent months will change.** July to October 2026 are preliminary.
 
 **The data is not seasonally adjusted.** Seasonal items, such as fresh fruit and vegetables, can swing widely from one month to the next.
 
@@ -215,7 +215,7 @@ The code, the build steps and the published files are at [github.com/Data4ThePeo
 
 ### What is the PPI Scuba Diver?
 
-An animated chart of every item in the Producer Price Index for final demand. The diver sits as deep as the 12-month change. Items that added to it hang below as anchors, and items that took away from it float above. It covers every month from October 2016 to September 2026.
+An animated chart of every item in the Producer Price Index for final demand. The diver sits as deep as the 12-month change. Items that added to it hang below as anchors, and items that took away from it float above. It covers every month from November 2016 to October 2026.
 
 ### What is the Producer Price Index (PPI)?
 
