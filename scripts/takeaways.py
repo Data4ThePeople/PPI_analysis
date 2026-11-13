@@ -299,10 +299,16 @@ def trucking(name, upto=None):
     avg = sum(ys[:-1]) / len(ys[:-1])
     rank = sorted(ys, reverse=True).index(last) + 1
     higher = [m for m, v in zip(months, ys) if v > last]
+    if higher:
+        where = f"ranks {rank} of {len(ys)} months; the {len(higher)} higher months are all in {sorted({m[:4] for m in higher})[0]}."
+    else:
+        before = dict(zip(months[:-1], ys[:-1]))
+        pk = max(before, key=before.get)
+        where = (f"is the highest of all {len(ys)} months; the earlier high was\n"
+                 f"{before[pk]:+.1f}% in {month_label(pk)}.")
     f, top = fig("Long-distance trucking, 12-month price change",
                  f"{month_label(months[0])} to {month_label(MONTH)}, every month BLS has published. The dashed line is the average of\n"
-                 f"all months before {month_label(MONTH)}. {month_label(MONTH)} ranks {rank} of {len(ys)} months; the {len(higher)} higher months "
-                 f"are all in {sorted({m[:4] for m in higher})[0]}.\n{PRELIM} are preliminary.",
+                 f"all months before {month_label(MONTH)}. {month_label(MONTH)} {where} {PRELIM} are preliminary.",
                  h=7.5, legend=[("Long-distance trucking", LINE_A), ("Average", MUTED)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]

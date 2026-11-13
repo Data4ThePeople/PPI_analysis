@@ -74,19 +74,19 @@ def main():
     ax.set_ylim(-0.6, n - 0.4)
     ax.set_yticks([]); ax.set_xticks([])
     ax.spines["bottom"].set_visible(False)
-    finish(f, ax, "07-drivers.png", rows, ["item", f"yoy_{prev}", f"yoy_{MONTH}", "contrib_change_pts"],
+    finish(f, ax, "02-drivers.png", rows, ["item", f"yoy_{prev}", f"yoy_{MONTH}", "contrib_change_pts"],
            source="Data 4 The People  ·  Source: BLS Producer Price Index for final demand, not seasonally "
                   f"adjusted, and relative importance tables. {PRELIM} are preliminary.")
 
     own = a[a.own_index & a.filled_from.isna()]
-    with open(NUM / "07-movers-unweighted.csv", "w", newline="") as fh:
+    with open(NUM / "02-movers-unweighted.csv", "w", newline="") as fh:
         w = csv.writer(fh)
         w.writerow(["list", "code", "item", "weight", f"yoy_{prev}", f"yoy_{MONTH}"])
         for lst, df in (("rising", own.sort_values("yoy", ascending=False).head(15)),
                         ("falling", own.sort_values("yoy").head(15))):
             for code, r in df.iterrows():
                 w.writerow([lst, code, r["name"], round(r.weight_base, 4), round(r.prev_yoy, 4), round(r.yoy, 4)])
-    print("wrote 07-movers-unweighted.csv")
+    print("wrote 02-movers-unweighted.csv")
 
 
 if __name__ == "__main__":

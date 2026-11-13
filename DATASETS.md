@@ -228,7 +228,7 @@ items side, so we attribute the excess to estimated items and item rounding
 together, not to either alone. The date axis shades the one-decimal
 months and marks every flagged month with an amber dot.
 
-## What some PPI items measure (for the September 2026 takeaways)
+## What some PPI items measure (for the takeaways posts)
 
 **Trade services are margins.** The wholesale and retail items (codes 57x and
 58x, 33 items in September 2026) do not price the goods sold. BLS treats
@@ -253,13 +253,38 @@ Advice - NAICS 523940" (https://www.bls.gov/ppi/factsheets/producer-price-index-
 **Airline passenger services** is what airlines receive for passenger
 flights, a producer price, not the consumer fare in the CPI.
 
-**Preliminary months.** June to September 2026 carry BLS's "P" footnote and
-will be revised; every September 2026 number in the takeaways is preliminary.
+**Preliminary months.** BLS's "P" footnote covers the latest four months. The
+September 2026 post used the October 17 pull (June to September preliminary);
+the October 2026 post uses the November 13 pull (July to October preliminary),
+which revised June to September.
 
 **Charts and tie-out.** `scripts/takeaways.py` draws the five charts into
 `charts/2026-09/` (the numbers behind each in `charts/2026-09/numbers/`);
 `scripts/takeaways_tieout.py` recomputes every 12-month change from the raw
 flat files and every contribution and total, and writes `TAKEAWAYS_TIEOUT.md`.
+For October 2026, `scripts/october.py` draws `charts/2026-10/` (01 headline,
+02 drivers, 03 trucking, 04 software, 05 fuels) and `scripts/october_tieout.py`
+writes `TAKEAWAYS_TIEOUT_2026-10.md`, recomputing every 12-month change from
+the raw flat files, re-summing every contribution, and listing the words on
+each chart with their support.
+
+**Drivers, month to month (`scripts/drivers.py`).** For each item, its
+contribution to the 12-month change in the latest month minus its contribution
+in the month before, both from the same pull (so the month before is as
+revised). The change mixes the new month's price move with the base month
+moving forward a year. The chart draws the 10 largest each way and nets the
+rest in one bar. Our items' change (+0.228 points, September to October 2026)
+differs from the published rate's (+0.235) by the change in the tie-out gap.
+The unweighted movers list keeps only items with their own published index.
+
+**Fuels** are BLS commodity group 05, fuels and related products and power
+(codes starting 05): gasoline, diesel, jet fuel and other refined products,
+crude oil, natural gas, natural gas liquids and electric power. The fuels share
+is fuels' contribution over our item total, not over BLS's published rate.
+
+**System software publishing (WPU341101)** starts May 2022 (index 100.000), so
+its 12-month change starts May 2023; before then the diver estimates it from
+its parent category. It is not seasonally adjusted.
 
 **Long-distance trucking (WPU301202)** starts June 2009 in the flat files, so
 its 12-month change starts June 2010. The takeaways chart uses that full
@@ -274,8 +299,9 @@ this index.
 **The question.** How unusual was each month's price change at the item level,
 judged against each item's own history, and how does September 2026 compare
 with 2021-2022? `scripts/item_breadth.py` computes it from
-`data/processed/indexes.json` (the October 17, 2026 pull, which is still BLS's
-latest; the next release had not posted on November 1, 2026) and
+`data/processed/indexes.json` (the charts in `charts/2026-09-breadth/` were
+built from the October 17, 2026 pull; rerunning now uses the November 13 pull
+and writes `charts/2026-10-breadth/`) and
 `scripts/item_breadth_charts.py` draws `charts/2026-09-breadth/`.
 
 **Items.** Each month, the six-digit leaves in that year's weight tree. An item
