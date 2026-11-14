@@ -57,7 +57,7 @@ That small change hides a lot of movement underneath. Items that pushed the rate
 
 Long-distance trucking added the most, 0.11 points, as its 12-month price change rose from 23.1% to 28.8%.
 
-Several of the largest moves, both up and down, were trade margins. BLS does not price the goods that stores and wholesalers sell in these items. It prices the margin, what the seller charges minus what it paid for the same good. Several of these margins moved a lot this month. Health and beauty retailing margins went from 1.4% to 7.6% higher than a year earlier, and food wholesaling margins went from 2.0% to 9.6%. In the other direction, margins for other goods wholesaling went from 17.5% to 9.9%, which took 0.18 points off the rate, the largest pull of any item.
+Several of the largest moves, both up and down, were trade margins. BLS does not price the goods that stores and wholesalers sell in these items. It prices the margin, what the seller charges minus what it paid for the same good. That gap is measured in dollars, so it can grow when costs rise even if the seller's markup stays the same. A rising margin does not by itself mean higher profit. Several of these margins moved a lot this month. Health and beauty retailing margins went from 1.4% to 7.6% higher than a year earlier, and food wholesaling margins went from 2.0% to 9.6%. In the other direction, margins for other goods wholesaling went from 17.5% to 9.9%, which took 0.18 points off the rate, the largest pull of any item.
 
 Fuel retailing, the margin at gas stations, was still lower than a year earlier, but by much less. It went from 20.4% lower in September to 3.1% lower in October, which added 0.08 points.
 

@@ -234,7 +234,11 @@ months and marks every flagged month with an amber dot.
 58x, 33 items in September 2026) do not price the goods sold. BLS treats
 stores and wholesalers as sellers of a service and prices the margin: selling
 price minus the acquisition price of the same good. A margin can fall when the
-price of the good rises, if the store's cost rises faster. Sources: BLS,
+price of the good rises, if the store's cost rises faster. Because the margin
+is a dollar difference, it also rises when cost and price both rise at the same
+percentage markup (cost $6 to $8 at a 50% markup moves the margin from $3 to
+$4), so a rising margin index does not by itself show higher profit; the
+margin also has to cover the seller's own costs. Sources: BLS,
 "Wholesale and retail Producer Price Indexes: margin prices," Beyond the
 Numbers, vol. 1 (https://www.bls.gov/opub/btn/volume-1/wholesale-and-retail-producer-price-indexes-margin-prices.htm);
 BLS 2026 notice on final demand commodity weight allocations, which describes
