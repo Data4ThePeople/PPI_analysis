@@ -141,8 +141,8 @@ def data_centers(items, name):
     first = "rose the most" if rank == 1 else f"ranked {rank}"
     f, top = fig("Circuit boards and storage led price increases for data center items",
                  f"12-month price change for items used to build and run data centers, {month_label(a_month)} and "
-                 f"{month_label(MONTH)}.\nPrinted circuit assemblies and modules {first} of all {n_own} items with "
-                 f"their own BLS index. Its 12-month change has topped\n100% in {len(over100)} months, all from "
+                 f"{month_label(MONTH)}.\nPrinted circuit assemblies and modules {first} of all {n_own} final demand items "
+                 f"with their own BLS index. Its 12-month change has topped\n100% in {len(over100)} months, all from "
                  f"{month_label(over100[0])} on, in a record that starts in {month_label(min(lv0))}. Together these "
                  f"{len(codes)} items are\n{w_tot:.2f}% of final demand in BLS's December {TARGET[0] - 1} weights and "
                  f"added {c_tot:.2f} points to the {month_label(MONTH)} 12-month change.\n"

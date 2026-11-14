@@ -112,14 +112,14 @@ A year ago, in October 2025, regular gasoline was 10.5% cheaper than the year be
 
 ## 6. Prices for some data center hardware jumped
 
-We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS does not group these items together, and each is also sold to many other buyers. The chart below compares each item's 12-month price change in October 2025 and October 2026.
+We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS has no data center category for these items, and each is also sold to other buyers. The chart below compares each item's 12-month price change in October 2025 and October 2026.
 
 ![Bar chart titled Circuit boards and storage led price increases for data center items. Bars compare 12-month price changes in October 2025 and 2026. Hardware: printed circuit assemblies and modules 23.7% to 155.7%, computer storage devices 9.2% to 80.4%, bare printed circuit boards 3.7% to 46.4%, computers -0.2% to 3.5%, integrated circuits -2.5% to 0.8%. Power: wire and cable 9.2% to 19.6%, switchgear 12.0% to 14.0%, transformers 5.9% to 6.9%. Hosting services 6.4% to 2.8%.](images/06-data-centers.png)
 *12-month price change, not seasonally adjusted. July to October 2026 are preliminary. Source: BLS.*
 
-Printed circuit assemblies and modules rose 155.7%, the largest 12-month increase of the 709 items with their own index. A year earlier it was up 23.7%. Its 12-month change has been above 100% every month since April 2026 and peaked at 172.0% in June. Its record goes back to June 1982, and it never topped 100% before this year. Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the largest 12-month increase in a record that starts in 2000.
+Printed circuit assemblies and modules rose 155.7%, the largest 12-month increase of the 709 final demand items with their own index. A year earlier it was up 23.7%. Its 12-month change has been above 100% every month since April 2026 and peaked at 172.0% in June. Its index goes back to June 1982, and it never topped 100% before this year. Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the largest 12-month increase since its index began in 2000.
 
-The three power equipment items rose less, but each rose faster than a year earlier: nonferrous wire and cable 19.6%, switchgear 14.0% and power transformers 6.9%. Some items barely moved. Electronic computers rose 3.5%, and integrated circuits, including microprocessors, rose 0.8%. Hosting and IT infrastructure services rose 2.8%, down from 6.4% a year earlier.
+The three power equipment items rose less, but each rose faster than a year earlier: nonferrous wire and cable 19.6%, switchgear 14.0% and power and distribution transformers 6.9%. Some items barely moved. Electronic computers rose 3.5%, and integrated circuits, including microprocessors, rose 0.8%. Hosting and IT infrastructure services rose 2.8%, down from 6.4% a year earlier.
 
 These nine items are 0.74% of final demand in BLS's December 2025 weights. Together they added 0.11 points to the 12-month change.
 
@@ -181,7 +181,7 @@ The fuels and power group added 1.92 points to the 12-month change, 29.5% of the
 
 ### How much did data center hardware prices rise in October 2026?
 
-Printed circuit assemblies and modules were 155.7% more expensive than a year earlier, the largest increase of any item with its own index. Computer storage devices rose 80.4% and bare printed circuit boards 46.4%. Hosting and IT infrastructure services rose 2.8%.
+Printed circuit assemblies and modules were 155.7% more expensive than a year earlier, the largest increase of any final demand item with its own index. Computer storage devices rose 80.4% and bare printed circuit boards 46.4%. Hosting and IT infrastructure services rose 2.8%.
 
 ### Is the October 2026 PPI final?
 
