@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2a
+Step: 2a done; next 2b
 Since: 2026-11-14
 
 ## Steps
@@ -14,7 +14,7 @@ Since: 2026-11-14
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
 | 1  | Exploration and analysis | 2026-11-14 | six takeaways (headline, drivers, trucking, software, fuels, data centers); charts/2026-10; TAKEAWAYS_TIEOUT_2026-10.md 0 differences; independent tie-outs matched (charts 1-5 and chart 6) |
-| 2a | Draft with brackets resolved | | |
+| 2a | Draft with brackets resolved | 2026-11-14 | Claude-drafted at Eric's request, no brackets; six takeaways incl. data centers (charts 06 and 07 circuit assemblies history); margin sentence added; shutdown paragraph, FAQ, 8:15 a.m. EST Monday publish and title kept as drafted |
 | 2b | Eric's edit, Claude's look-over | | |
 | 2c | Slice markup | | |
 | 2d | Hero 1680x1080 + alt text | | |
@@ -102,3 +102,4 @@ None.
 - 2026-11-14 Step 1 confirmed by Eric. Next: 2a for ppi-october-2026 (draft already in posts/ppi-october-2026/POST.md). Publish target Monday, November 16, 2026.
 - 2026-11-14 2a opened for ppi-october-2026. Claude-drafted at Eric's request; no brackets. Subtitle now 'five more things'; data note covers the data center chart.
 - 2026-11-14 Eric asked for a long-run trend of printed circuit assemblies: charts/2026-10/07-circuit-history.png (12-month change June 1983-October 2026) placed in section 6 with an intro sentence; tie-out 0 differences (521 months and labels). Independent check of chart 7 started.
+- 2026-11-14 Independent check of chart 7 passed (BLS API; every value matched). 2a confirmed by Eric. Next: 2b. Side exploration for a possible later post (AI capex price vs real, imports, inventories, SPR) kept in scratchpad and memory notes, not in this repo.
