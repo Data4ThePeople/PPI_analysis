@@ -103,3 +103,4 @@ None.
 - 2026-11-14 2a opened for ppi-october-2026. Claude-drafted at Eric's request; no brackets. Subtitle now 'five more things'; data note covers the data center chart.
 - 2026-11-14 Eric asked for a long-run trend of printed circuit assemblies: charts/2026-10/07-circuit-history.png (12-month change June 1983-October 2026) placed in section 6 with an intro sentence; tie-out 0 differences (521 months and labels). Independent check of chart 7 started.
 - 2026-11-14 Independent check of chart 7 passed (BLS API; every value matched). 2a confirmed by Eric. Next: 2b. Side exploration for a possible later post (AI capex price vs real, imports, inventories, SPR) kept in scratchpad and memory notes, not in this repo.
+- 2026-11-14 Publish time changed by Eric to Sunday, November 15, 2026, 7:00 p.m. EST (was Monday 8:15 a.m.).
