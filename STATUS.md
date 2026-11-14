@@ -6,14 +6,21 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: October 2026 PPI update (slug set at 2a)
-Step: 1
-Since: 2026-11-13
+Step: 1 done; next 2a
+Since: 2026-11-14
 
 ## Steps
 
 | Step | What | Confirmed | Notes |
 |---|---|---|---|
-| 1  | Exploration and analysis | | |
+| 1  | Exploration and analysis | 2026-11-14 | six takeaways (headline, drivers, trucking, software, fuels, data centers); charts/2026-10; TAKEAWAYS_TIEOUT_2026-10.md 0 differences; independent tie-outs matched (charts 1-5 and chart 6) |
+| 2a | Draft with brackets resolved | | |
+| 2b | Eric's edit, Claude's look-over | | |
+| 2c | Slice markup | | |
+| 2d | Hero 1680x1080 + alt text | | |
+| 2e | SEO | | |
+| 2f | Pushed to Prismic (draft) | | |
+| 2g | Mailchimp teaser | | |
 
 ## Previous post: ppi-september-2026 (complete 2026-10-20)
 
@@ -92,3 +99,4 @@ None.
 - 2026-11-14 Eric asked for a takeaway on AI and data center build-out. Added section 6 and charts/2026-10/06-data-centers.png: nine items (computer hardware, power equipment, hosting), our grouping, defined in DATASETS.md. Printed circuit assemblies and modules +155.7%, highest of 709 own-index items. TAKEAWAYS_TIEOUT_2026-10.md 0 differences. Post title now six takeaways. Drivers chart alt text trimmed to under 500 characters. Independent tie-out of chart 6 started.
 - 2026-11-14 Independent tie-out of chart 6 (fresh agent, BLS API): 0 number differences; 709 count and top rank confirmed. Fixed its wording points: 'final demand items' with their own index (Other finfish WPU02230199, an unweighted sub-index, rose 156.3%); bare boards 'since its index began in 2000'; 'BLS has no data center category'; dropped 'many'; 'power and distribution transformers'. Could not re-download the weights file (403); used the raw local copy.
 - 2026-11-14 Section 2: added Eric-approved sentence that margins are dollar gaps and a rising margin does not by itself mean higher profit; DATASETS margin note extended to match.
+- 2026-11-14 Step 1 confirmed by Eric. Next: 2a for ppi-october-2026 (draft already in posts/ppi-october-2026/POST.md). Publish target Monday, November 16, 2026.
