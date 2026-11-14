@@ -101,3 +101,4 @@ None.
 - 2026-11-14 Section 2: added Eric-approved sentence that margins are dollar gaps and a rising margin does not by itself mean higher profit; DATASETS margin note extended to match.
 - 2026-11-14 Step 1 confirmed by Eric. Next: 2a for ppi-october-2026 (draft already in posts/ppi-october-2026/POST.md). Publish target Monday, November 16, 2026.
 - 2026-11-14 2a opened for ppi-october-2026. Claude-drafted at Eric's request; no brackets. Subtitle now 'five more things'; data note covers the data center chart.
+- 2026-11-14 Eric asked for a long-run trend of printed circuit assemblies: charts/2026-10/07-circuit-history.png (12-month change June 1983-October 2026) placed in section 6 with an intro sentence; tie-out 0 differences (521 months and labels). Independent check of chart 7 started.

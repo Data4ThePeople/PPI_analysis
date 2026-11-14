@@ -179,6 +179,52 @@ def data_centers(items, name):
            source=f"{BLS} commodity indexes, not seasonally adjusted, and relative importance tables")
 
 
+def circuit_history(name):
+    """Printed circuit assemblies and modules: 12-month change over the index's whole history."""
+    c = DATA_CENTER[0][1][0][0]
+    lv = raw_levels(f"WPU{c}")
+    base = lambda m: f"{int(m[:4]) - 1}{m[4:]}"
+    months = [m for m in sorted(lv) if base(m) in lv and m <= MONTH]
+    ys = [(lv[m] / lv[base(m)] - 1) * 100 for m in months]
+    yo = dict(zip(months, ys))
+    pk = max(yo, key=yo.get)
+    before = {m: v for m, v in yo.items() if m < f"{MONTH[:4]}-01"}
+    pre = max(before, key=before.get)
+    lo = min(yo, key=yo.get)
+    f, top = fig("Printed circuit assemblies and modules, 12-month price change",
+                 f"{month_label(months[0])} to {month_label(MONTH)}. BLS began this index in {month_label(min(lv))}, so "
+                 f"12-month changes start a year later. Before {MONTH[:4]},\nthe highest was {before[pre]:+.1f}% in "
+                 f"{month_label(pre)}. The peak is {yo[pk]:+.1f}% in {month_label(pk)}. {PRELIM} are preliminary.",
+                 h=7.2, legend=[("Printed circuit assemblies, loaded boards, modules and consumer external modems", UP)])
+    ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
+    xs = [xpos(m) for m in months]
+    ax.plot(xs, ys, color=UP, lw=1.8)
+    ax.scatter([xs[-1]], [ys[-1]], s=36, color=UP, zorder=4)
+    ax.text(xs[-1] + 0.4, ys[-1], f"{ys[-1]:+.1f}%\n{month_label(MONTH)}", color=INK, fontsize=11.5,
+            fontweight="bold", va="center")
+    ax.text(xpos(pk) - 0.4, yo[pk], f"{yo[pk]:+.1f}%\n{month_label(pk)}", color=INK, fontsize=10.5, ha="right",
+            va="center")
+    ax.annotate(f"{before[pre]:+.1f}%\n{month_label(pre)}", (xpos(pre), before[pre]), xytext=(xpos(pre) - 3, 60),
+                color=INK, fontsize=10.5, ha="center", va="bottom", arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.8))
+    ax.text(xpos(lo), yo[lo] - 4, f"{yo[lo]:+.1f}%\n{month_label(lo)}", color=INK, fontsize=10.5, ha="center",
+            va="top")
+    ax.axhline(0, color=MUTED, lw=0.8)
+    ax.set_ylim(-40, 190)
+    ticks = list(range(0, 181, 50))
+    ax.set_yticks(ticks)
+    ax.set_yticklabels([f"{t:+d}%" if t else "0%" for t in ticks])
+    ax.grid(axis="y", color=GRID, lw=0.6)
+    y0 = int(months[0][:4])
+    ax.set_xlim(xs[0] - 0.3, xs[-1] + 3.6)
+    yt = [y for y in range(1985, int(MONTH[:4]) + 1, 5)]
+    ax.set_xticks(yt)
+    rows = [(c, m, round(v, 4)) for m, v in zip(months, ys)]
+    rows += [(c, f"peak_{pk}", round(yo[pk], 4)), (c, f"high_before_{MONTH[:4]}_{pre}", round(before[pre], 4)),
+             (c, f"low_{lo}", round(yo[lo], 4)), (c, f"index_start_{min(lv)}", lv[min(lv)])]
+    finish(f, ax, name, rows, ["code", "month", "yoy_pct"],
+           source=f"{BLS}, printed circuit assemblies (WPU{c}), not seasonally adjusted")
+
+
 def main():
     items = pd.read_csv(PROCESSED / "monthly_items.csv", dtype={"code": str, "old_code": str}, low_memory=False)
     summary = pd.read_csv(PROCESSED / "monthly_summary.csv")
@@ -188,6 +234,7 @@ def main():
     software(items, "04-software.png")
     fuels(items, summary, "05-fuels.png")
     data_centers(items, "06-data-centers.png")
+    circuit_history("07-circuit-history.png")
 
 
 if __name__ == "__main__":

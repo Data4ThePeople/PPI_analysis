@@ -117,7 +117,14 @@ We looked at nine items used to build and run data centers: computer hardware, t
 ![Bar chart titled Circuit boards and storage led price increases for data center items. Bars compare 12-month price changes in October 2025 and 2026. Hardware: printed circuit assemblies and modules 23.7% to 155.7%, computer storage devices 9.2% to 80.4%, bare printed circuit boards 3.7% to 46.4%, computers -0.2% to 3.5%, integrated circuits -2.5% to 0.8%. Power: wire and cable 9.2% to 19.6%, switchgear 12.0% to 14.0%, transformers 5.9% to 6.9%. Hosting services 6.4% to 2.8%.](images/06-data-centers.png)
 *12-month price change, not seasonally adjusted. July to October 2026 are preliminary. Source: BLS.*
 
-Printed circuit assemblies and modules rose 155.7%, the largest 12-month increase of the 709 final demand items with their own index. A year earlier it was up 23.7%. Its 12-month change has been above 100% every month since April 2026 and peaked at 172.0% in June. Its index goes back to June 1982, and it never topped 100% before this year. Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the largest 12-month increase since its index began in 2000.
+Printed circuit assemblies and modules rose 155.7%, the largest 12-month increase of the 709 final demand items with their own index. A year earlier it was up 23.7%. Its 12-month change has been above 100% every month since April 2026 and peaked at 172.0% in June. Its index goes back to June 1982, and it never topped 100% before this year.
+
+Before 2024, its 12-month change never went above 9.9%. Before 2026, the highest was 25.6% in August 2025. The chart below shows every 12-month change since June 1983, the first month BLS can compare with a year earlier.
+
+![Line chart titled Printed circuit assemblies and modules, 12-month price change, June 1983 to October 2026. For about 40 years the line stays between about minus 13% and plus 10%. It falls to minus 15.8% in May 2023, rises to plus 25.6% in August 2025, then climbs above 100% in April 2026, peaks at plus 172.0% in June 2026 and is plus 155.7% in October 2026.](images/07-circuit-history.png)
+*12-month price change in printed circuit assemblies, loaded boards, modules and consumer external modems, not seasonally adjusted. July to October 2026 are preliminary. Source: BLS.*
+
+Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the largest 12-month increase since its index began in 2000.
 
 The three power equipment items rose less, but each rose faster than a year earlier: nonferrous wire and cable 19.6%, switchgear 14.0% and power and distribution transformers 6.9%. Some items barely moved. Electronic computers rose 3.5%, and integrated circuits, including microprocessors, rose 0.8%. Hosting and IT infrastructure services rose 2.8%, down from 6.4% a year earlier.
 
@@ -145,7 +152,7 @@ The diver below is set to October 2026. Each anchor below the diver is an item w
 
 ## How we built this, and its limits
 
-**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, the software chart uses that index's full history back to 2022, and the data center chart uses each item's own BLS index and BLS's December 2025 weights. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
+**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, the software chart uses that index's full history back to 2022, the data center chart uses each item's own BLS index and BLS's December 2025 weights, and the printed circuit assemblies chart uses that index's full history back to 1983. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
 
 **Preliminary data.** BLS revises PPI for four months after first release. July to October 2026 are preliminary. This release also revised June to September.
 

@@ -224,6 +224,39 @@ def main():
     lines.append(f"| post: 117849 October 2026 highest since index began July 2000 | {MONTH} 2000-07 | {pk8} {min(p8)} | "
                  f"{'ok' if (pk8, min(p8)) == (MONTH, '2000-07') else 'DIFF'} |")
 
+    head("7. Printed circuit assemblies history (07-circuit-history)")
+    ch = rd("07-circuit-history.csv")
+    pts = {r["month"]: float(r["yoy_pct"]) for r in ch if r["month"][:4].isdigit()}
+    for m, v in pts.items():
+        check(f"117861 {m}", y6[m], v)
+    lines.append(f"| months drawn | {len(pts)} | {len(y6)} | {'ok' if set(pts) == set(y6) else 'DIFF'} |")
+    if set(pts) != set(y6):
+        fails.append("07 month set")
+    pre6 = {m: v for m, v in y6.items() if m < f"{MONTH[:4]}-01"}
+    hb = max(pre6, key=pre6.get); lo6 = min(y6, key=y6.get)
+    for r in ch:
+        k = r["month"]
+        if k.startswith("peak_"):
+            ok = k == f"peak_{pk6}" and abs(float(r["yoy_pct"]) - y6[pk6]) < TOL
+            lines.append(f"| peak label | {k} {r['yoy_pct']} | peak_{pk6} {y6[pk6]:.4f} | {'ok' if ok else 'DIFF'} |")
+        elif k.startswith("high_before_"):
+            ok = k.endswith(hb) and abs(float(r["yoy_pct"]) - pre6[hb]) < TOL
+            lines.append(f"| high before {MONTH[:4]} label | {k} {r['yoy_pct']} | {hb} {pre6[hb]:.4f} | {'ok' if ok else 'DIFF'} |")
+        elif k.startswith("low_"):
+            ok = k == f"low_{lo6}" and abs(float(r["yoy_pct"]) - y6[lo6]) < TOL
+            lines.append(f"| low label | {k} {r['yoy_pct']} | low_{lo6} {y6[lo6]:.4f} | {'ok' if ok else 'DIFF'} |")
+        elif k.startswith("index_start_"):
+            ok = k == f"index_start_{min(p6)}"
+            lines.append(f"| index start | {k} | {min(p6)} | {'ok' if ok else 'DIFF'} |")
+        else:
+            continue
+        if not ok:
+            fails.append(f"07 {k}")
+    b24 = {m: v for m, v in y6.items() if m < "2024-01"}
+    h24 = max(b24, key=b24.get)
+    lines.append(f"| post: before 2024 never above 9.9% (1984) | 9.9 1984 | {b24[h24]:.1f} {h24} | "
+                 f"{'ok' if (round(b24[h24], 1), h24[:4]) == (9.9, '1984') else 'DIFF'} |")
+
     words = """
 ## Words on the charts
 
@@ -240,6 +273,7 @@ def main():
 | 04 | "BLS's December 2025 weights put it at 0.92% of final demand" | December 2025 column of final-demand-relative-importance-of-commodities-2026.xlsx, 341101 = 0.919 | supported |
 | 05 | "group 05, fuels and related products and power, which includes electricity and natural gas" | wp.series: WPU05 "Fuels and related products and power"; 053101 natural gas and 054121 residential electric power are group 05 items in the October data | supported |
 | 06 | "items used to build and run data centers" | Our grouping, not a BLS category. Each item is a published BLS commodity index; none is sold only to data centers (DATASETS.md "Data center items") | our grouping, stated |
+| 07 | "BLS began this index in June 1982" | WPU117861 first flat-file value 1982-06 (100.0) | supported |
 | 06 | "Printed circuit assemblies and modules" | WPU117861 "Printed circuit assemblies, loaded boards, modules and consumer external modems" | shortened |
 | 06 | "Hosting and IT infrastructure services" | WPU381101 "Hosting, ASP and other IT infrastructure provisioning services" | shortened |
 | 05 | "29.5% of our item total, the most points since July 2022" | section 5 recompute; share of our item sum, not of BLS's published rate | supported |
