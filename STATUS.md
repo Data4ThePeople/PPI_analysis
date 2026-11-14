@@ -5,8 +5,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 
 ## Current
 
-Post: October 2026 PPI update (slug set at 2a)
-Step: 1 done; next 2a
+Post: ppi-october-2026
+Step: 2a
 Since: 2026-11-14
 
 ## Steps
@@ -100,3 +100,4 @@ None.
 - 2026-11-14 Independent tie-out of chart 6 (fresh agent, BLS API): 0 number differences; 709 count and top rank confirmed. Fixed its wording points: 'final demand items' with their own index (Other finfish WPU02230199, an unweighted sub-index, rose 156.3%); bare boards 'since its index began in 2000'; 'BLS has no data center category'; dropped 'many'; 'power and distribution transformers'. Could not re-download the weights file (403); used the raw local copy.
 - 2026-11-14 Section 2: added Eric-approved sentence that margins are dollar gaps and a rising margin does not by itself mean higher profit; DATASETS margin note extended to match.
 - 2026-11-14 Step 1 confirmed by Eric. Next: 2a for ppi-october-2026 (draft already in posts/ppi-october-2026/POST.md). Publish target Monday, November 16, 2026.
+- 2026-11-14 2a opened for ppi-october-2026. Claude-drafted at Eric's request; no brackets. Subtitle now 'five more things'; data note covers the data center chart.

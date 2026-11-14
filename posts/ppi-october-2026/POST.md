@@ -1,6 +1,6 @@
 ---
 title: "The PPI Scuba Diver: six takeaways from October 2026"
-subtitle: Wholesale prices rose 6.5% in the 12 months to October 2026, the most since November 2022. Here is what moved the rate since September, and four more things we found in the data.
+subtitle: Wholesale prices rose 6.5% in the 12 months to October 2026, the most since November 2022. Here is what moved the rate since September, and five more things we found in the data.
 slug: ppi-october-2026
 date: 2026-11-16
 time: 08:15:00-05:00
@@ -145,7 +145,7 @@ The diver below is set to October 2026. Each anchor below the diver is an item w
 
 ## How we built this, and its limits
 
-**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, and the software chart uses that index's full history back to 2022. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
+**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, the software chart uses that index's full history back to 2022, and the data center chart uses each item's own BLS index and BLS's December 2025 weights. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
 
 **Preliminary data.** BLS revises PPI for four months after first release. July to October 2026 are preliminary. This release also revised June to September.
 
