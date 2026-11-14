@@ -263,7 +263,7 @@ which revised June to September.
 `scripts/takeaways_tieout.py` recomputes every 12-month change from the raw
 flat files and every contribution and total, and writes `TAKEAWAYS_TIEOUT.md`.
 For October 2026, `scripts/october.py` draws `charts/2026-10/` (01 headline,
-02 drivers, 03 trucking, 04 software, 05 fuels) and `scripts/october_tieout.py`
+02 drivers, 03 trucking, 04 software, 05 fuels, 06 data centers) and `scripts/october_tieout.py`
 writes `TAKEAWAYS_TIEOUT_2026-10.md`, recomputing every 12-month change from
 the raw flat files, re-summing every contribution, and listing the words on
 each chart with their support.
@@ -288,6 +288,22 @@ its parent category. It is not seasonally adjusted. Its December 2025 relative
 importance is 0.919% (the weight BLS publishes); the diver's contribution uses
 the October 2025 base weight rolled forward from December 2024 (1.086%), so
 the post quotes BLS's published December 2025 weights for item sizes.
+
+**Data center items** are our grouping, not a BLS category: nine published
+commodity indexes for items used to build and run data centers. Computer
+hardware: printed circuit assemblies, loaded boards, modules and consumer
+external modems (WPU117861), computer storage devices (WPU115201), bare printed
+circuit boards (WPU117849), electronic computers (WPU115101), integrated circuit
+packages including microprocessors (WPU117839). Power equipment: nonferrous
+wire and cable (WPU102603), switchgear and switchboard apparatus (WPU117522),
+power and distribution transformers (WPU117409). Services: hosting, ASP and
+other IT infrastructure provisioning (WPU381101). Each has its own published
+index (none estimated from a parent), and each is also sold to buyers other
+than data centers, so the group does not measure data center costs. Electric
+power is left out: final demand has only residential and commercial power, not
+the industrial rates many large data centers pay. 12-month changes come from
+each index's full flat-file history; weights are BLS's December 2025 relative
+importance; contributions are the diver's.
 
 **Long-distance trucking (WPU301202)** starts June 2009 in the flat files, so
 its 12-month change starts June 2010. The takeaways chart uses that full

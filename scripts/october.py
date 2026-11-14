@@ -11,7 +11,7 @@ import pandas as pd
 import drivers
 from common import PRELIM, PROCESSED, TARGET
 from weights import december
-from takeaways import (DOWN, FUEL, GRID, INK, LINE_B, MONTH, MUTED, fig, finish, headline,
+from takeaways import (DOWN, FUEL, GRID, INK, LINE_B, MONTH, MUTED, UP, fig, finish, headline,
                        month_label, raw_levels, trucking, xpos, year_axis)
 
 SOFTWARE = "341101"
@@ -104,6 +104,81 @@ def fuels(items, summary, name):
            source=f"{BLS} for final demand, not seasonally adjusted, and relative importance tables")
 
 
+DATA_CENTER = [
+    ("Computer hardware", [("117861", "Printed circuit assemblies and modules"),
+                           ("115201", "Computer storage devices"),
+                           ("117849", "Bare printed circuit boards"),
+                           ("115101", "Electronic computers"),
+                           ("117839", "Integrated circuits, including microprocessors")]),
+    ("Power equipment", [("102603", "Nonferrous wire and cable"),
+                         ("117522", "Switchgear and switchboard apparatus"),
+                         ("117409", "Power and distribution transformers")]),
+    ("Services", [("381101", "Hosting and IT infrastructure services")]),
+]
+
+
+def data_centers(items, name):
+    """Items used to build and run data centers: 12-month change a year ago and now."""
+    a_month = f"{int(MONTH[:4]) - 1}{MONTH[4:]}"
+    ri = december(TARGET[0] - 1)
+    now = items[items.month == MONTH].set_index("code")
+    codes = [c for _, g in DATA_CENTER for c, _ in g]
+    for c in codes:
+        if not now.loc[c, "own_index"] or isinstance(now.loc[c, "filled_from"], str):
+            raise RuntimeError(f"{c} has no published index of its own")
+    yoy = {}
+    for c in codes:
+        lv = raw_levels(f"WPU{c}")
+        yoy[c] = {m: (lv[m] / lv[f"{int(m[:4]) - 1}{m[4:]}"] - 1) * 100
+                  for m in lv if f"{int(m[:4]) - 1}{m[4:]}" in lv and m <= MONTH}
+    lead = codes[0]
+    lv0 = raw_levels(f"WPU{lead}")
+    over100 = sorted(m for m, v in yoy[lead].items() if v > 100)
+    rank = int((now.yoy[now.own_index & now.filled_from.isna()] > now.yoy[lead]).sum()) + 1
+    n_own = int((now.own_index & now.filled_from.isna()).sum())
+    w_tot = sum(ri[c].weight for c in codes)
+    c_tot = now.contrib[codes].sum()
+    first = "rose the most" if rank == 1 else f"ranked {rank}"
+    f, top = fig("Circuit boards and storage led price increases for data center items",
+                 f"12-month price change for items used to build and run data centers, {month_label(a_month)} and "
+                 f"{month_label(MONTH)}.\nPrinted circuit assemblies and modules {first} of all {n_own} items with "
+                 f"their own BLS index. Its 12-month change has topped\n100% in {len(over100)} months, all from "
+                 f"{month_label(over100[0])} on, in a record that starts in {month_label(min(lv0))}. Together these "
+                 f"{len(codes)} items are\n{w_tot:.2f}% of final demand in BLS's December {TARGET[0] - 1} weights and "
+                 f"added {c_tot:.2f} points to the {month_label(MONTH)} 12-month change.\n"
+                 f"{PRELIM} are preliminary.",
+                 h=8.9, legend=[(month_label(a_month), MUTED), (month_label(MONTH), UP)])
+    ax = f.add_axes([0.40, 0.07, 0.53, top - 0.09])
+    y, rows, ticks = 0, [], []
+    for group, members in DATA_CENTER:
+        ax.text(-0.02, y, group, transform=ax.get_yaxis_transform(), ha="right", va="center", fontsize=12.5,
+                fontweight="bold", color=INK)
+        y -= 1
+        for c, lab in members:
+            v0, v1 = yoy[c][a_month], yoy[c][MONTH]
+            ax.barh(y + 0.19, v0, height=0.36, color=MUTED)
+            ax.barh(y - 0.19, v1, height=0.36, color=UP)
+            for v, dy, bold in ((v0, 0.19, False), (v1, -0.19, True)):
+                ax.text(max(v, 0) + 2, y + dy, f"{v:+.1f}%", ha="left",
+                        va="center", fontsize=10.5, color=INK, fontweight="bold" if bold else None)
+            ax.text(-0.02, y, lab, transform=ax.get_yaxis_transform(), ha="right", va="center", fontsize=11.5,
+                    color=INK)
+            rows.append((c, lab, group, round(v0, 4), round(v1, 4), ri[c].weight, round(now.contrib[c], 6)))
+            y -= 1
+        y -= 0.4
+    rows += [("total", "", "", "", "", round(w_tot, 4), round(c_tot, 6)),
+             (f"{lead}_rank_{MONTH}", rank, n_own, "", "", "", ""),
+             (f"{lead}_months_over_100", len(over100), over100[0], over100[-1], min(lv0), "", "")]
+    ax.axvline(0, color=MUTED, lw=0.8)
+    ax.set_xlim(-12, 185)
+    ax.set_ylim(y + 0.6, 0.6)
+    ax.set_yticks([]); ax.set_xticks([])
+    ax.spines["bottom"].set_visible(False)
+    finish(f, ax, name, rows, ["code", "item", "group", f"yoy_{a_month}", f"yoy_{MONTH}",
+                               f"relative_importance_dec{TARGET[0] - 1}", f"contrib_{MONTH}"],
+           source=f"{BLS} commodity indexes, not seasonally adjusted, and relative importance tables")
+
+
 def main():
     items = pd.read_csv(PROCESSED / "monthly_items.csv", dtype={"code": str, "old_code": str}, low_memory=False)
     summary = pd.read_csv(PROCESSED / "monthly_summary.csv")
@@ -112,6 +187,7 @@ def main():
     trucking("03-trucking.png")
     software(items, "04-software.png")
     fuels(items, summary, "05-fuels.png")
+    data_centers(items, "06-data-centers.png")
 
 
 if __name__ == "__main__":

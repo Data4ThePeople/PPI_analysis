@@ -1,5 +1,5 @@
 ---
-title: "The PPI Scuba Diver: five takeaways from October 2026"
+title: "The PPI Scuba Diver: six takeaways from October 2026"
 subtitle: Wholesale prices rose 6.5% in the 12 months to October 2026, the most since November 2022. Here is what moved the rate since September, and four more things we found in the data.
 slug: ppi-october-2026
 date: 2026-11-16
@@ -17,7 +17,7 @@ caption_spacer: 20px
 dividers: false
 ---
 
-# The PPI Scuba Diver: five takeaways from October 2026
+# The PPI Scuba Diver: six takeaways from October 2026
 
 The Bureau of Labor Statistics (BLS) released the October 2026 Producer Price Index on November 13, 2026. We ran it through the [PPI Scuba Diver](https://www.data4thepeople.com/p/ppi-scuba-diver), our free animated chart of every item in the PPI for final demand, which now covers November 2016 to October 2026.
 
@@ -25,7 +25,7 @@ The Producer Price Index (PPI) measures the prices U.S. businesses receive for w
 
 Last year's government shutdown stopped BLS from collecting consumer prices for October 2025, so the Consumer Price Index has no 12-month change for October 2026. The PPI does. BLS published October 2025 producer prices, and every item in this post has a full 12-month comparison.
 
-Here are five findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.
+Here are six findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.
 
 Note: BLS revises PPI data for four months after it first publishes it. The figures for July to October 2026 are preliminary, so every October number in this post may change.
 
@@ -52,7 +52,7 @@ With BLS's revised indexes, September's 12-month change is 6.29%, down from 6.34
 
 That small change hides a lot of movement underneath. Items that pushed the rate up added 1.19 points between them, and items that pulled it down took away 0.96 points. The chart below shows the 10 items that moved it most in each direction, and the rest of the items netted in one bar.
 
-![Bar chart titled What moved wholesale inflation from 6.3% to 6.5%. Ten bars to the right show the items that pushed the 12-month rate up most from September to October 2026: long-distance trucking 0.109 points, health and beauty retailing 0.099, food wholesaling 0.095, fuel retailing 0.076, regular gasoline 0.075, car dealers 0.059, machinery and vehicle wholesaling 0.052, beef and veal 0.042, chemicals wholesaling 0.042 and natural gas liquids 0.033. The other 803 items together added 0.128. Ten bars to the left show the items that pulled it down most, led by other goods wholesaling at minus 0.179 and system software publishing at minus 0.122.](images/02-drivers.png)
+![Bar chart titled What moved wholesale inflation from 6.3% to 6.5%. Ten bars to the right show the items that pushed the 12-month rate up most from September to October 2026, led by long-distance trucking at 0.109 points, health and beauty retailing at 0.099 and food wholesaling at 0.095. The other 803 items together added 0.128. Ten bars to the left show the items that pulled it down most, led by other goods wholesaling at minus 0.179 and system software publishing at minus 0.122.](images/02-drivers.png)
 *Each bar is the change in the item's contribution to the 12-month change in PPI final demand from September to October 2026, in percentage points. September is as revised. Source: BLS; contributions computed by Data 4 The People.*
 
 Long-distance trucking added the most, 0.11 points, as its 12-month price change rose from 23.1% to 28.8%.
@@ -110,9 +110,24 @@ A year ago, in October 2025, regular gasoline was 10.5% cheaper than the year be
 
 ::: spacer
 
+## 6. Prices for some data center hardware jumped
+
+We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS does not group these items together, and each is also sold to many other buyers. The chart below compares each item's 12-month price change in October 2025 and October 2026.
+
+![Bar chart titled Circuit boards and storage led price increases for data center items. Bars compare 12-month price changes in October 2025 and 2026. Hardware: printed circuit assemblies and modules 23.7% to 155.7%, computer storage devices 9.2% to 80.4%, bare printed circuit boards 3.7% to 46.4%, computers -0.2% to 3.5%, integrated circuits -2.5% to 0.8%. Power: wire and cable 9.2% to 19.6%, switchgear 12.0% to 14.0%, transformers 5.9% to 6.9%. Hosting services 6.4% to 2.8%.](images/06-data-centers.png)
+*12-month price change, not seasonally adjusted. July to October 2026 are preliminary. Source: BLS.*
+
+Printed circuit assemblies and modules rose 155.7%, the largest 12-month increase of the 709 items with their own index. A year earlier it was up 23.7%. Its 12-month change has been above 100% every month since April 2026 and peaked at 172.0% in June. Its record goes back to June 1982, and it never topped 100% before this year. Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the largest 12-month increase in a record that starts in 2000.
+
+The three power equipment items rose less, but each rose faster than a year earlier: nonferrous wire and cable 19.6%, switchgear 14.0% and power transformers 6.9%. Some items barely moved. Electronic computers rose 3.5%, and integrated circuits, including microprocessors, rose 0.8%. Hosting and IT infrastructure services rose 2.8%, down from 6.4% a year earlier.
+
+These nine items are 0.74% of final demand in BLS's December 2025 weights. Together they added 0.11 points to the 12-month change.
+
+::: spacer
+
 ## What are you finding in the data?
 
-These are the five things that stood out to us. There are about 820 items in the diver, and every month back to November 2016. Explore it yourself.
+These are the six things that stood out to us. There are about 820 items in the diver, and every month back to November 2016. Explore it yourself.
 
 The diver below is set to October 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total. Press Play to watch every month since November 2016, or pick a month and point at any bubble to see the item, its price change and how much it added.
 
@@ -163,6 +178,10 @@ Long-distance trucking prices in PPI final demand were 28.8% higher than a year 
 ### How much did fuels add to the PPI in October 2026?
 
 The fuels and power group added 1.92 points to the 12-month change, 29.5% of the total, the most since July 2022. Regular gasoline, up 78.5%, added the most of any item, 0.82 points.
+
+### How much did data center hardware prices rise in October 2026?
+
+Printed circuit assemblies and modules were 155.7% more expensive than a year earlier, the largest increase of any item with its own index. Computer storage devices rose 80.4% and bare printed circuit boards 46.4%. Hosting and IT infrastructure services rose 2.8%.
 
 ### Is the October 2026 PPI final?
 

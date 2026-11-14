@@ -23,6 +23,7 @@ from common import TARGET_STR as MONTH
 NUM = ROOT / "charts" / MONTH / "numbers"
 OUT = ROOT / f"TAKEAWAYS_TIEOUT_{MONTH}.md"
 TOL = 0.0001
+DC_CODES = {"117861", "115201", "117849", "115101", "117839", "102603", "117522", "117409", "381101"}
 
 
 def rd(name):
@@ -52,7 +53,9 @@ def main():
     mv = rd("02-movers-unweighted.csv")
     fu = rd("05-fuels.csv")
     fu_top = [r["month"][4:] for r in fu if r["month"].startswith("top_")]
-    codes = set(dr_codes) | {r["code"] for r in mv} | set(fu_top) | {"301202", "341101"}
+    dc = rd("06-data-centers.csv")
+    dc_items = [r for r in dc if r["code"].isdigit()]
+    codes = set(dr_codes) | {r["code"] for r in mv} | set(fu_top) | {"301202", "341101"} | {r["code"] for r in dc_items}
     lv = raw({"WPUFD4"} | {f"WPU{c}" for c in codes})
     fd = lv["WPUFD4"]
 
@@ -179,6 +182,48 @@ def main():
     top4 = list(cur[cur.index.str.startswith("05")].contrib.sort_values(ascending=False).index[:4])
     lines.append(f"| four largest fuels named | {' '.join(fu_top)} | {' '.join(top4)} | {'ok' if top4 == fu_top else 'DIFF'} |")
 
+    head("6. Data center items (06-data-centers)")
+    own = cur[cur.own_index & cur.filled_from.isna()]
+    a_month = f"{int(MONTH[:4]) - 1}{MONTH[4:]}"
+    ri = december(int(MONTH[:4]) - 1)
+    lines.append(f"| codes on chart | {len(dc_items)} | {len(DC_CODES)} | "
+                 f"{'ok' if {r['code'] for r in dc_items} == DC_CODES else 'DIFF'} |")
+    for r in dc_items:
+        c = r["code"]; s6 = lv[f"WPU{c}"]
+        lines.append(f"| {c} own index, not filled | yes | {c in own.index} | {'ok' if c in own.index else 'DIFF'} |")
+        if c not in own.index:
+            fails.append(f"{c} not own index")
+        check(f"{c} 12-month {a_month}", yoy(s6, a_month), r[f"yoy_{a_month}"])
+        check(f"{c} 12-month {MONTH}", yoy(s6, MONTH), r[f"yoy_{MONTH}"])
+        check(f"{c} relative importance Dec", ri[c].weight, r[f"relative_importance_dec{int(MONTH[:4]) - 1}"], 1e-6)
+        check(f"{c} contribution", cur.loc[c, "contrib"], r[f"contrib_{MONTH}"], 1e-5)
+    tot = next(r for r in dc if r["code"] == "total")
+    check("data center weight total", sum(ri[c].weight for c in DC_CODES), tot[f"relative_importance_dec{int(MONTH[:4]) - 1}"], 1e-6)
+    check("data center contribution total", cur.contrib[list(DC_CODES)].sum(), tot[f"contrib_{MONTH}"], 1e-5)
+    p6 = lv["WPU117861"]
+    y6 = {m: yoy(p6, m) for m in p6 if f"{int(m[:4]) - 1}{m[4:]}" in p6 and m <= MONTH}
+    top_own = own.yoy.idxmax()
+    lines.append(f"| 117861 highest 12-month change of {len(own)} own-index items | 117861 of 709 | {top_own} of {len(own)} | "
+                 f"{'ok' if (top_own, len(own)) == ('117861', 709) else 'DIFF'} |")
+    o100 = sorted(m for m, v in y6.items() if v > 100)
+    lines.append(f"| 117861 over 100%: 7 months, April to October 2026; index starts June 1982 | 7 2026-04 2026-10 1982-06 | "
+                 f"{len(o100)} {o100[0]} {o100[-1]} {min(p6)} | "
+                 f"{'ok' if (len(o100), o100[0], o100[-1], min(p6)) == (7, '2026-04', MONTH, '1982-06') else 'DIFF'} |")
+    pk6 = max(y6, key=y6.get)
+    lines.append(f"| post: 117861 peak +172.0% June 2026 | 172.0 2026-06 | {y6[pk6]:.1f} {pk6} | "
+                 f"{'ok' if (round(y6[pk6], 1), pk6) == (172.0, '2026-06') else 'DIFF'} |")
+    check("post: 117861 monthly change", (p6[MONTH] / p6[prev] - 1) * 100, 11.9, 0.05)
+    p7 = lv["WPU115201"]
+    y7 = {m: yoy(p7, m) for m in p7 if f"{int(m[:4]) - 1}{m[4:]}" in p7 and m <= MONTH}
+    pk7 = max(y7, key=y7.get)
+    lines.append(f"| post: 115201 peak +88.5% July 2026 | 88.5 2026-07 | {y7[pk7]:.1f} {pk7} | "
+                 f"{'ok' if (round(y7[pk7], 1), pk7) == (88.5, '2026-07') else 'DIFF'} |")
+    p8 = lv["WPU117849"]
+    y8 = {m: yoy(p8, m) for m in p8 if f"{int(m[:4]) - 1}{m[4:]}" in p8 and m <= MONTH}
+    pk8 = max(y8, key=y8.get)
+    lines.append(f"| post: 117849 October 2026 highest since index began July 2000 | {MONTH} 2000-07 | {pk8} {min(p8)} | "
+                 f"{'ok' if (pk8, min(p8)) == (MONTH, '2000-07') else 'DIFF'} |")
+
     words = """
 ## Words on the charts
 
@@ -194,6 +239,9 @@ def main():
 | 04 | "lowest of all 42 months; fell 6.1% from September" | section 4 recompute | supported |
 | 04 | "BLS's December 2025 weights put it at 0.92% of final demand" | December 2025 column of final-demand-relative-importance-of-commodities-2026.xlsx, 341101 = 0.919 | supported |
 | 05 | "group 05, fuels and related products and power, which includes electricity and natural gas" | wp.series: WPU05 "Fuels and related products and power"; 053101 natural gas and 054121 residential electric power are group 05 items in the October data | supported |
+| 06 | "items used to build and run data centers" | Our grouping, not a BLS category. Each item is a published BLS commodity index; none is sold only to data centers (DATASETS.md "Data center items") | our grouping, stated |
+| 06 | "Printed circuit assemblies and modules" | WPU117861 "Printed circuit assemblies, loaded boards, modules and consumer external modems" | shortened |
+| 06 | "Hosting and IT infrastructure services" | WPU381101 "Hosting, ASP and other IT infrastructure provisioning services" | shortened |
 | 05 | "29.5% of our item total, the most points since July 2022" | section 5 recompute; share of our item sum, not of BLS's published rate | supported |
 """.format(prelim="July to October 2026")
     body = [f"# Takeaways tie-out, {MONTH}", "",
