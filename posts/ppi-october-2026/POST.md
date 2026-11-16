@@ -21,6 +21,8 @@ dividers: false
 
 The Bureau of Labor Statistics (BLS) released the October 2026 Producer Price Index on November 13, 2026. We ran it through the [PPI Scuba Diver](https://www.data4thepeople.com/p/ppi-scuba-diver), our free animated chart of every item in the PPI for final demand, which now covers November 2016 to October 2026.
 
+For last month's numbers, see our [five takeaways from September 2026](https://www.data4thepeople.com/p/ppi-september-2026).
+
 The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to October 2026, PPI final demand rose 6.5%. That is the largest 12-month increase since November 2022.
 
 Here are six findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.
@@ -33,7 +35,7 @@ Note: BLS revises PPI data for four months after it first publishes it. The figu
 
 ::: spacer 5px
 
-The chart below shows the 12-month change in PPI final demand every month since November 2016. The bars split each month into goods, services and construction.
+PPI final demand is the BLS index that covers goods, services and construction sold to final buyers. The chart below shows the 12-month change in PPI final demand every month since November 2016. The bars split each month into goods, services and construction.
 
 ![Line and bar chart titled Wholesale prices rose 6.5% over the 12 months to October 2026. The 12-month change in PPI final demand from November 2016 to October 2026 runs near 2% to 3% until 2020, dips below zero in 2020, peaks at 11.7% in March 2022, falls to near 0% in mid-2023, and climbs again in 2026 to 6.5% in October. Bars under the line show goods and services each adding a large share; construction adds little.](images/01-headline.png)
 *12-month change in PPI final demand, not seasonally adjusted. Bars are the sum of our item contributions for goods, services and construction. Source: BLS; contributions computed by Data 4 The People.*
@@ -140,7 +142,7 @@ These nine items add up to only 0.74% of final demand in BLS's December 2025 wei
 
 ::: spacer 5px
 
-These are the six things that stood out to us. There are about 820 items in the diver, and every month back to November 2016. Explore it yourself.
+These are the six things that stood out to us. There are about 820 items in the diver, and every month back to November 2016. Explore it yourself in the free PPI Scuba Diver.
 
 The diver below is set to October 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total. Press Play to watch every month since November 2016, or pick a month and point at any bubble to see the item, its price change and how much it added.
 
@@ -197,6 +199,10 @@ The fuels and power group added 1.92 points to the 12-month change, 29.5% of the
 ### How much did data center hardware prices rise in October 2026?
 
 Printed circuit assemblies and modules were 155.7% more expensive than a year earlier, the largest increase of any final demand item with its own index. Computer storage devices rose 80.4% and bare printed circuit boards 46.4%. Hosting and IT infrastructure services rose 2.8%.
+
+### What is the PPI?
+
+The Producer Price Index (PPI) is a set of price indexes from the Bureau of Labor Statistics that measure the prices U.S. businesses receive for what they sell. The headline number, PPI final demand, covers goods, services and construction. It is often called wholesale inflation. Our free [PPI Scuba Diver](https://www.data4thepeople.com/p/ppi-scuba-diver) shows every item in it.
 
 ### Is the October 2026 PPI final?
 

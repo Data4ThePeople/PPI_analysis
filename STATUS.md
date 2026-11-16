@@ -114,3 +114,4 @@ None.
 - 2026-11-16 2d confirmed by Eric. Next: 2e.
 - 2026-11-16 Hero padding increased at Eric's request: content about 4% further from each edge (title and line start ~145px from left, rocket ~190px from right, title ~100px from top).
 - 2026-11-16 2e opened: meta title, description, keywords written; Article schema with 6 FAQ entries; text proposals sent to Eric.
+- 2026-11-16 2e text proposals 1-4 accepted and applied (September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording).
