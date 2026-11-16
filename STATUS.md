@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 3
+Step: 4a (not started; waiting on Eric)
 Since: 2026-11-16
 
 ## Steps
@@ -21,7 +21,7 @@ Since: 2026-11-16
 | 2e | SEO | 2026-11-16 | meta title "October 2026 PPI: 6 Takeaways on Wholesale Prices"; Article schema; 7 FAQ; September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording added |
 | 2f | Pushed to Prismic (draft) | 2026-11-16 | draft avrmURIAAC4AKyGi in the Migration Release; 75 slices; 8 images; tags and author empty |
 | 2g | Mailchimp teaser | 2026-11-16 | subject "Six takeaways from the October PPI"; no chart; one line per finding (jet fuel 106.5% added to 5); teaser for 7 charts and the updated diver |
-| 3  | Social posts | | |
+| 3  | Social posts | 2026-11-16 | SOCIAL.md: X thread (8), Bluesky, LinkedIn + first comment, Instagram; chart 07 animation GIF + IG MP4 (scripts/animate_circuits.py) |
 | 4a | Outreach list | | |
 | 4b | Outreach emails (Gmail drafts) | | |
 
@@ -125,3 +125,4 @@ None.
 - 2026-11-16 2g: jet fuel (106.5%) added to finding 5 at Eric's request.
 - 2026-11-16 2g confirmed by Eric. Next: 3.
 - 2026-11-16 Step 3 opened. SOCIAL.md drafted: X thread (8), Bluesky, LinkedIn + first comment, Instagram; animation of chart 07 (circuit assemblies, 1983-2026) as GIF 1200x720 and IG MP4 1080x1920 via scripts/animate_circuits.py; last frame matches the published chart pixel for pixel.
+- 2026-11-16 Step 3 confirmed by Eric. Next: 4a.
