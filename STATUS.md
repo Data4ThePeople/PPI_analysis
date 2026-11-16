@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2g
+Step: 3 (not started; waiting on Eric)
 Since: 2026-11-16
 
 ## Steps
@@ -20,7 +20,10 @@ Since: 2026-11-16
 | 2d | Hero 1680x1080 + alt text | 2026-11-16 | rocket launch on the printed circuit assemblies line, June 1983-October 2026 (scripts/hero_october.py); no axis or small text; alt 420 characters; Eric: "i love it" |
 | 2e | SEO | 2026-11-16 | meta title "October 2026 PPI: 6 Takeaways on Wholesale Prices"; Article schema; 7 FAQ; September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording added |
 | 2f | Pushed to Prismic (draft) | 2026-11-16 | draft avrmURIAAC4AKyGi in the Migration Release; 75 slices; 8 images; tags and author empty |
-| 2g | Mailchimp teaser | | |
+| 2g | Mailchimp teaser | 2026-11-16 | subject "Six takeaways from the October PPI"; no chart; one line per finding (jet fuel 106.5% added to 5); teaser for 7 charts and the updated diver |
+| 3  | Social posts | | |
+| 4a | Outreach list | | |
+| 4b | Outreach emails (Gmail drafts) | | |
 
 ## Previous post: ppi-september-2026 (complete 2026-10-20)
 
@@ -119,3 +122,5 @@ None.
 - 2026-11-16 2f: dry run 75 slices, 8 images; pushed as draft avrmURIAAC4AKyGi in the Migration Release; tags and author empty.
 - 2026-11-16 2f confirmed by Eric. Next: 2g.
 - 2026-11-16 2g: EMAIL.md drafted per Eric (no chart, a line or two per finding, teaser for 7 charts and the updated diver); hero email JPG 106 KB.
+- 2026-11-16 2g: jet fuel (106.5%) added to finding 5 at Eric's request.
+- 2026-11-16 2g confirmed by Eric. Next: 3.
