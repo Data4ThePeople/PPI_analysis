@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2c done; next 2d
+Step: 2d
 Since: 2026-11-16
 
 ## Steps
@@ -110,3 +110,4 @@ None.
 - 2026-11-16 2b confirmed by Eric. Next: 2c.
 - 2026-11-16 2c: 5px spacer after all 9 section headings; embed ?v=20261113 cache-buster; embed height 780 kept (page fills its frame, 780 minimum at 360-1280px in headless Chrome). Convert-only: 73 slices.
 - 2026-11-16 2c confirmed by Eric. Next: 2d.
+- 2026-11-16 2d: Eric chose printed circuit assemblies over repeating last month's trucking road; rocket hero (scripts/hero_october.py), WPU117861 12-month change June 1983-October 2026, no axis or small text; alt 420 characters; hero check ok.
