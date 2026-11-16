@@ -79,7 +79,7 @@ def main():
     sx, sy = rng.random(140), rng.random(140)
     bg.scatter(sx, sy, s=rng.random(140) * 5 + 0.5, color="white", alpha=0.55, lw=0, zorder=1)
 
-    ax = fig.add_axes([0.045, 0.06, 0.87, 0.62])
+    ax = fig.add_axes([0.085, 0.11, 0.79, 0.56])
     ax.set_facecolor("none")
     x0, x1 = xs[0] - 0.3, xs[-1] + 1.2
     ax.set_xlim(x0, x1); ax.set_ylim(YLO, YHI)
@@ -91,7 +91,7 @@ def main():
         ax.plot(xs, ys, color=TRAIL, lw=lw, alpha=a, zorder=3, solid_joinstyle="round", solid_capstyle="round")
     ax.plot(xs, ys, color="#c9fff8", lw=2.2, zorder=4, solid_joinstyle="round")
 
-    rocket(ax, xs[-1], ys[-1], height_px=250)
+    rocket(ax, xs[-1], ys[-1], height_px=225)
 
     ax.text(xs[-1] - 2.2, ys[-1] - 6, f"{ys[-1]:+.1f}%", ha="right", va="center", fontsize=64,
             fontweight="bold", color="white", zorder=12)
@@ -100,9 +100,9 @@ def main():
     ax.text(xs[0], 16, f"{months[0][:4]} to 2023: between −{abs(before.min()):.0f}% and {before.max():+.0f}%",
             ha="left", va="bottom", fontsize=30, color="#cfd6ff", zorder=12)
 
-    fig.text(0.045, 0.94, "Printed circuit assembly prices", fontsize=62, color="white", fontweight="bold", va="top")
-    fig.text(0.045, 0.85, f"rose {ys[-1]:.1f}% in a year", fontsize=62, color=TRAIL, fontweight="bold", va="top")
-    fig.text(0.045, 0.765, f"Six takeaways from the {TARGET_LABEL} PPI", fontsize=34, color="#cfd6ff", va="top")
+    fig.text(0.085, 0.905, "Printed circuit assembly prices", fontsize=62, color="white", fontweight="bold", va="top")
+    fig.text(0.085, 0.815, f"rose {ys[-1]:.1f}% in a year", fontsize=62, color=TRAIL, fontweight="bold", va="top")
+    fig.text(0.085, 0.73, f"Six takeaways from the {TARGET_LABEL} PPI", fontsize=34, color="#cfd6ff", va="top")
 
     OUT.mkdir(parents=True, exist_ok=True)
     out = OUT / f"{SLUG}-hero-1680x1080.png"
