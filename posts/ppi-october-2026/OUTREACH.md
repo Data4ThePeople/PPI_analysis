@@ -31,19 +31,19 @@ Eric: the ones with an email. Confirmed: 1, 2, 3, 4, 5, 7, 8, 10, 18 (Lockridge,
 
 ## Drafts (4b)
 
-Written 2026-11-16. No URL in any draft: select the post title in each one, press Cmd+K and paste the link. Every number is in the post. Not saved to Gmail yet (no Gmail connector in this session).
+Written 2026-11-16. No URL in any draft: select the post title in each one, press Cmd+K and paste the link. Every number is in the post. Saved as Gmail drafts 2026-11-16 (eric@data4thepeople.com), plain text, no signature added. Not sent.
 
 | # | To | Subject | Body words | Saved to Gmail |
 |---|---|---|---|---|
-| 1 | Deborah Lockridge, dlockridge@truckinginfo.com | Trucking prices hit a record in the October PPI | 110 | not yet |
-| 2 | Larry Avila, lavila@industrydive.com | Fuels made up 29.5% of the October PPI rise | 116 | not yet |
-| 3 | David Taube, dtaube@industrydive.com | Long-distance trucking PPI hit a record in October | 121 | not yet |
-| 4 | Bill Cassidy, bill.cassidy@spglobal.com | Long-distance trucking PPI set a record in October | 112 | not yet |
-| 5 | Alex Leslie (ATRI), ALeslie@trucking.org | October PPI: trucking prices and diesel | 119 | not yet |
-| 7 | Prashant Rao, prao@semafor.com | Circuit assembly prices rose 155.7% in a year | 114 | not yet |
-| 8 | Thiago Guimaraes (Global Electronics Association), ThiagoGuimaraes@electronics.org | U.S. circuit assembly prices: a 1983-2026 chart | 130 | not yet |
-| 10 | Christa Marshall, cmarshall@eenews.net | October PPI: prices for grid equipment | 117 | not yet |
-| 18 | Ewelina Bednarz (via Evertiq), info@evertiq.com | For Ewelina Bednarz: U.S. circuit board prices | 135 | not yet |
+| 1 | Deborah Lockridge, dlockridge@truckinginfo.com | Trucking prices hit a record in the October PPI | 110 | yes, 2026-11-16 |
+| 2 | Larry Avila, lavila@industrydive.com | Fuels made up 29.5% of the October PPI rise | 116 | yes, 2026-11-16 |
+| 3 | David Taube, dtaube@industrydive.com | Long-distance trucking PPI hit a record in October | 121 | yes, 2026-11-16 |
+| 4 | Bill Cassidy, bill.cassidy@spglobal.com | Long-distance trucking PPI set a record in October | 112 | yes, 2026-11-16 |
+| 5 | Alex Leslie (ATRI), ALeslie@trucking.org | October PPI: trucking prices and diesel | 119 | yes, 2026-11-16 |
+| 7 | Prashant Rao, prao@semafor.com | Circuit assembly prices rose 155.7% in a year | 114 | yes, 2026-11-16 |
+| 8 | Thiago Guimaraes (Global Electronics Association), ThiagoGuimaraes@electronics.org | U.S. circuit assembly prices: a 1983-2026 chart | 130 | yes, 2026-11-16 |
+| 10 | Christa Marshall, cmarshall@eenews.net | October PPI: prices for grid equipment | 117 | yes, 2026-11-16 |
+| 18 | Ewelina Bednarz (via Evertiq), info@evertiq.com | For Ewelina Bednarz: U.S. circuit board prices | 135 | yes, 2026-11-16 |
 
 ### 1. Deborah Lockridge
 
