@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2d done; next 2e
+Step: 2e
 Since: 2026-11-16
 
 ## Steps
@@ -113,3 +113,4 @@ None.
 - 2026-11-16 2d: Eric chose printed circuit assemblies over repeating last month's trucking road; rocket hero (scripts/hero_october.py), WPU117861 12-month change June 1983-October 2026, no axis or small text; alt 420 characters; hero check ok.
 - 2026-11-16 2d confirmed by Eric. Next: 2e.
 - 2026-11-16 Hero padding increased at Eric's request: content about 4% further from each edge (title and line start ~145px from left, rocket ~190px from right, title ~100px from top).
+- 2026-11-16 2e opened: meta title, description, keywords written; Article schema with 6 FAQ entries; text proposals sent to Eric.
