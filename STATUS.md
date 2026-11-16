@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2d
+Step: 2d done; next 2e
 Since: 2026-11-16
 
 ## Steps
@@ -17,7 +17,7 @@ Since: 2026-11-16
 | 2a | Draft with brackets resolved | 2026-11-14 | Claude-drafted at Eric's request, no brackets; six takeaways incl. data centers (charts 06 and 07 circuit assemblies history); margin sentence added; shutdown paragraph, FAQ, 8:15 a.m. EST Monday publish and title kept as drafted |
 | 2b | Eric's edit, Claude's look-over | 2026-11-16 | Eric's edits; look-over items 1-10 accepted (brackets resolved, shutdown FAQ cut); publish November 16, 2026, 6:30 a.m. EST |
 | 2c | Slice markup | 2026-11-16 | 73 slices; 5px spacer under each section heading; embed 780px with ?v=20261113; 6 FAQ entries |
-| 2d | Hero 1680x1080 + alt text | | |
+| 2d | Hero 1680x1080 + alt text | 2026-11-16 | rocket launch on the printed circuit assemblies line, June 1983-October 2026 (scripts/hero_october.py); no axis or small text; alt 420 characters; Eric: "i love it" |
 | 2e | SEO | | |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
@@ -111,3 +111,4 @@ None.
 - 2026-11-16 2c: 5px spacer after all 9 section headings; embed ?v=20261113 cache-buster; embed height 780 kept (page fills its frame, 780 minimum at 360-1280px in headless Chrome). Convert-only: 73 slices.
 - 2026-11-16 2c confirmed by Eric. Next: 2d.
 - 2026-11-16 2d: Eric chose printed circuit assemblies over repeating last month's trucking road; rocket hero (scripts/hero_october.py), WPU117861 12-month change June 1983-October 2026, no axis or small text; alt 420 characters; hero check ok.
+- 2026-11-16 2d confirmed by Eric. Next: 2e.
