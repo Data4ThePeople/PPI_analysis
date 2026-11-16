@@ -1,0 +1,58 @@
+{
+  "images/01-headline.png": {
+    "id": "vg6RLrWYDrj5lgkb",
+    "width": 1800,
+    "height": 1170,
+    "url": "https://images.prismic.io/data4thepeople/vg6RLrWYDrj5lgkb_01-headline.png?auto=format,compress",
+    "stamp": "167799:1794578445"
+  },
+  "images/02-drivers.png": {
+    "id": "pfyFugZ8msDZvkPG",
+    "width": 1800,
+    "height": 1380,
+    "url": "https://images.prismic.io/data4thepeople/pfyFugZ8msDZvkPG_02-drivers.png?auto=format,compress",
+    "stamp": "302313:1794578445"
+  },
+  "images/03-trucking.png": {
+    "id": "iuvjJAk3_HhIVSHx",
+    "width": 1800,
+    "height": 1125,
+    "url": "https://images.prismic.io/data4thepeople/iuvjJAk3_HhIVSHx_03-trucking.png?auto=format,compress",
+    "stamp": "148580:1794578445"
+  },
+  "images/04-software.png": {
+    "id": "Wjn6g2gEn1Kt5FTD",
+    "width": 1800,
+    "height": 1125,
+    "url": "https://images.prismic.io/data4thepeople/Wjn6g2gEn1Kt5FTD_04-software.png?auto=format,compress",
+    "stamp": "145399:1794578445"
+  },
+  "images/05-fuels.png": {
+    "id": "20TynWISKog_cmv2",
+    "width": 1800,
+    "height": 1170,
+    "url": "https://images.prismic.io/data4thepeople/20TynWISKog_cmv2_05-fuels.png?auto=format,compress",
+    "stamp": "195606:1794578445"
+  },
+  "images/06-data-centers.png": {
+    "id": "WiupFR9jNvJlR9TC",
+    "width": 1800,
+    "height": 1335,
+    "url": "https://images.prismic.io/data4thepeople/WiupFR9jNvJlR9TC_06-data-centers.png?auto=format,compress",
+    "stamp": "220863:1794663792"
+  },
+  "images/07-circuit-history.png": {
+    "id": "H_pObsPyRYBNg0xb",
+    "width": 1800,
+    "height": 1080,
+    "url": "https://images.prismic.io/data4thepeople/H_pObsPyRYBNg0xb_07-circuit-history.png?auto=format,compress",
+    "stamp": "148810:1794665395"
+  },
+  "images/ppi-october-2026-hero-1680x1080.png": {
+    "id": "5M0O440OtQB9W5nR",
+    "width": 1680,
+    "height": 1080,
+    "url": "https://images.prismic.io/data4thepeople/5M0O440OtQB9W5nR_ppi-october-2026-hero-1680x1080.png?auto=format,compress",
+    "stamp": "174542:1794827223"
+  }
+}

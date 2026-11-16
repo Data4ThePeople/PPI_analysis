@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2e done; next 2f
+Step: 2f
 Since: 2026-11-16
 
 ## Steps
@@ -116,3 +116,4 @@ None.
 - 2026-11-16 2e opened: meta title, description, keywords written; Article schema with 6 FAQ entries; text proposals sent to Eric.
 - 2026-11-16 2e text proposals 1-4 accepted and applied (September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording).
 - 2026-11-16 2e confirmed by Eric. Next: 2f.
+- 2026-11-16 2f: dry run 75 slices, 8 images; pushed as draft avrmURIAAC4AKyGi in the Migration Release; tags and author empty.

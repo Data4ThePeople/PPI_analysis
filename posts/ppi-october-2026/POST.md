@@ -4,6 +4,7 @@ subtitle: Wholesale prices rose 6.5% in the 12 months to October 2026, the most 
 slug: ppi-october-2026
 date: 2026-11-16
 time: 06:30:00-05:00
+prismic_id: avrmURIAAC4AKyGi
 section: Data 4 Thought
 hero: images/ppi-october-2026-hero-1680x1080.png
 hero_alt: Hero image titled Printed circuit assembly prices rose 155.7% in a year, six takeaways from the October 2026 PPI. On a night sky, a glowing line shows the 12-month price change for printed circuit assemblies from June 1983 to October 2026. It stays near zero, between -16% and +10%, from 1983 to 2023, then shoots almost straight up in 2026. A cartoon rocket sits at the top of the line, labeled +155.7% in October 2026.
