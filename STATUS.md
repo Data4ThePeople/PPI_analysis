@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2e
+Step: 2e done; next 2f
 Since: 2026-11-16
 
 ## Steps
@@ -18,7 +18,7 @@ Since: 2026-11-16
 | 2b | Eric's edit, Claude's look-over | 2026-11-16 | Eric's edits; look-over items 1-10 accepted (brackets resolved, shutdown FAQ cut); publish November 16, 2026, 6:30 a.m. EST |
 | 2c | Slice markup | 2026-11-16 | 73 slices; 5px spacer under each section heading; embed 780px with ?v=20261113; 6 FAQ entries |
 | 2d | Hero 1680x1080 + alt text | 2026-11-16 | rocket launch on the printed circuit assemblies line, June 1983-October 2026 (scripts/hero_october.py); no axis or small text; alt 420 characters; Eric: "i love it" |
-| 2e | SEO | | |
+| 2e | SEO | 2026-11-16 | meta title "October 2026 PPI: 6 Takeaways on Wholesale Prices"; Article schema; 7 FAQ; September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording added |
 | 2f | Pushed to Prismic (draft) | | |
 | 2g | Mailchimp teaser | | |
 
@@ -115,3 +115,4 @@ None.
 - 2026-11-16 Hero padding increased at Eric's request: content about 4% further from each edge (title and line start ~145px from left, rocket ~190px from right, title ~100px from top).
 - 2026-11-16 2e opened: meta title, description, keywords written; Article schema with 6 FAQ entries; text proposals sent to Eric.
 - 2026-11-16 2e text proposals 1-4 accepted and applied (September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording).
+- 2026-11-16 2e confirmed by Eric. Next: 2f.
