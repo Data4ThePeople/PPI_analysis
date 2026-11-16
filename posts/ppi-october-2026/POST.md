@@ -31,6 +31,8 @@ Note: BLS revises PPI data for four months after it first publishes it. The figu
 
 ## 1. Wholesale prices rose 6.5%, the most since November 2022
 
+::: spacer 5px
+
 The chart below shows the 12-month change in PPI final demand every month since November 2016. The bars split each month into goods, services and construction.
 
 ![Line and bar chart titled Wholesale prices rose 6.5% over the 12 months to October 2026. The 12-month change in PPI final demand from November 2016 to October 2026 runs near 2% to 3% until 2020, dips below zero in 2020, peaks at 11.7% in March 2022, falls to near 0% in mid-2023, and climbs again in 2026 to 6.5% in October. Bars under the line show goods and services each adding a large share; construction adds little.](images/01-headline.png)
@@ -43,6 +45,8 @@ Of the 823 items in October, 676 added to the 12-month change, 109 took away fro
 ::: spacer
 
 ## 2. What moved the rate from 6.3% to 6.5%
+
+::: spacer 5px
 
 With BLS's revised indexes, September's 12-month change is 6.29%, down from 6.34% in the first release. October came in at 6.52%, so the 12-month rate rose 0.23 points in one month.
 
@@ -63,6 +67,8 @@ Fuel retailing, the margin at gas stations, was still lower than a year earlier,
 
 ## 3. Long-distance trucking hit its highest rate on record
 
+::: spacer 5px
+
 Long-distance trucking prices were 28.8% higher in October 2026 than a year earlier. It added 0.57 points to the 12-month change, the second-largest addition of any item, after regular gasoline.
 
 The chart below goes back further than the diver, to June 2010, the first 12-month change available since BLS began publishing this index in June 2009. The dashed line is the average of every month before October 2026.
@@ -78,6 +84,8 @@ Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freig
 
 ## 4. System software prices fell 18.7%
 
+::: spacer 5px
+
 System software publishing, which is software that runs computers and networks rather than doing a task for the user, such as operating systems, network software and database software, is 0.9% of final demand in BLS's December 2025 weights, fell 18.7% over the 12 months to October 2026. It took 0.18 points off the 12-month change, more than any other item.
 
 BLS began this index in May 2022, so the chart below starts with its first 12-month change in May 2023.
@@ -91,6 +99,8 @@ October is the lowest of the 42 months. Most of the drop came in one month: the 
 
 ## 5. Fuels added 1.9 points
 
+::: spacer 5px
+
 The fuels and power group, which includes gasoline, diesel, jet fuel, heating oil, electricity and natural gas, added 1.92 points to the 12-month change. That is 29.5% of the 6.53 points our items add up to, from a group that is 5.1% of final demand in BLS's December 2025 weights. The chart below compares the fuels group with every other item since November 2016.
 
 ![Line chart titled Fuels added 1.9 points to wholesale inflation in October 2026. Two lines show contributions to the 12-month change in PPI final demand, November 2016 to October 2026. Fuels stay between about minus 2 and plus 1 point most years, peak at plus 3.16 points in June 2022, and climb in 2026 to plus 1.92 in October. All other items peak above plus 9 points in 2022 and end at plus 4.60 in October 2026.](images/05-fuels.png)
@@ -103,6 +113,8 @@ Regular gasoline added the most of any item, 0.82 points, with a price 78.5% hig
 ::: spacer
 
 ## 6. Prices for some data center hardware jumped
+
+::: spacer 5px
 
 We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS has no data center category for these items. Each item is also sold to other buyers, so we can't isolate the data-center-only effect on prices. Still, the chart below, which compares each item's 12-month price change in October 2025 and October 2026, is telling:
 
@@ -126,11 +138,13 @@ These nine items add up to only 0.74% of final demand in BLS's December 2025 wei
 
 ## What are you finding in the data?
 
+::: spacer 5px
+
 These are the six things that stood out to us. There are about 820 items in the diver, and every month back to November 2016. Explore it yourself.
 
 The diver below is set to October 2026. Each anchor below the diver is an item whose price rose and pulled the total up. Each float above is an item whose price fell. The bigger the bubble, the more that item moved the total. Press Play to watch every month since November 2016, or pick a month and point at any bubble to see the item, its price change and how much it added.
 
-<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html#embed=1&month=2026-10" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver, set to October 2026"></iframe>
+<iframe src="https://data4thepeople.github.io/PPI_analysis/dist/index.html?v=20261113#embed=1&month=2026-10" width="100%" height="780" loading="lazy" style="border:0" title="The PPI Scuba Diver, set to October 2026"></iframe>
 
 ::: spacer 20px
 
@@ -143,6 +157,8 @@ The diver below is set to October 2026. Each anchor below the diver is an item w
 ::: divider
 
 ## How we built this, and its limits
+
+::: spacer 5px
 
 For the full method, see the [PPI Scuba Diver post](https://www.data4thepeople.com/p/ppi-scuba-diver) and our [method notes on GitHub](https://github.com/Data4ThePeople/PPI_analysis/blob/main/DATASETS.md).
 
@@ -159,6 +175,8 @@ For the full method, see the [PPI Scuba Diver post](https://www.data4thepeople.c
 **Checking our work.** We recomputed every 12-month change in this post from the raw BLS files, and a second check, run separately from scratch, matched every number in the charts.
 
 ## Common questions
+
+::: spacer 5px
 
 ### What was the PPI in October 2026?
 

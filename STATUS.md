@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2b done; next 2c
+Step: 2c
 Since: 2026-11-16
 
 ## Steps
@@ -108,3 +108,4 @@ None.
 - 2026-11-16 2b opened: Eric edits POST.md directly, then Claude looks it over.
 - 2026-11-16 2b look-over on Eric's edited draft: 10 items, all accepted and applied (software definition, methods links, gas station margin wording, data center lines, items count, shutdown FAQ cut).
 - 2026-11-16 2b confirmed by Eric. Next: 2c.
+- 2026-11-16 2c: 5px spacer after all 9 section headings; embed ?v=20261113 cache-buster; embed height 780 kept (page fills its frame, 780 minimum at 360-1280px in headless Chrome). Convert-only: 73 slices.
