@@ -179,8 +179,12 @@ def data_centers(items, name):
            source=f"{BLS} commodity indexes, not seasonally adjusted, and relative importance tables")
 
 
-def circuit_history(name):
-    """Printed circuit assemblies and modules: 12-month change over the index's whole history."""
+def circuit_history(name, upto=None):
+    """Printed circuit assemblies and modules: 12-month change over the index's whole history.
+
+    With upto=k (animation frames), draws only the first k months and returns (figure, number of
+    months) without saving. Each label appears once the line reaches its month; the k = all frame
+    matches the published chart."""
     c = DATA_CENTER[0][1][0][0]
     lv = raw_levels(f"WPU{c}")
     base = lambda m: f"{int(m[:4]) - 1}{m[4:]}"
@@ -198,16 +202,22 @@ def circuit_history(name):
                  h=7.2, legend=[("Printed circuit assemblies, loaded boards, modules and consumer external modems", UP)])
     ax = f.add_axes([0.07, 0.10, 0.80, top - 0.12])
     xs = [xpos(m) for m in months]
-    ax.plot(xs, ys, color=UP, lw=1.8)
-    ax.scatter([xs[-1]], [ys[-1]], s=36, color=UP, zorder=4)
-    ax.text(xs[-1] + 0.4, ys[-1], f"{ys[-1]:+.1f}%\n{month_label(MONTH)}", color=INK, fontsize=11.5,
-            fontweight="bold", va="center")
-    ax.text(xpos(pk) - 0.4, yo[pk], f"{yo[pk]:+.1f}%\n{month_label(pk)}", color=INK, fontsize=10.5, ha="right",
-            va="center")
-    ax.annotate(f"{before[pre]:+.1f}%\n{month_label(pre)}", (xpos(pre), before[pre]), xytext=(xpos(pre) - 3, 60),
-                color=INK, fontsize=10.5, ha="center", va="bottom", arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.8))
-    ax.text(xpos(lo), yo[lo] - 4, f"{yo[lo]:+.1f}%\n{month_label(lo)}", color=INK, fontsize=10.5, ha="center",
-            va="top")
+    k = upto or len(months)
+    seen = set(months[:k])
+    ax.plot(xs[:k], ys[:k], color=UP, lw=1.8)
+    ax.scatter([xs[k - 1]], [ys[k - 1]], s=36, color=UP, zorder=4)
+    ax.text(xs[k - 1] + 0.4, ys[k - 1], f"{ys[k - 1]:+.1f}%\n{month_label(months[k - 1])}", color=INK,
+            fontsize=11.5, fontweight="bold", va="center")
+    if pk in seen and pk != months[k - 1]:
+        ax.text(xpos(pk) - 0.4, yo[pk], f"{yo[pk]:+.1f}%\n{month_label(pk)}", color=INK, fontsize=10.5,
+                ha="right", va="center")
+    if pre in seen:
+        ax.annotate(f"{before[pre]:+.1f}%\n{month_label(pre)}", (xpos(pre), before[pre]), xytext=(xpos(pre) - 3, 60),
+                    color=INK, fontsize=10.5, ha="center", va="bottom",
+                    arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.8))
+    if lo in seen:
+        ax.text(xpos(lo), yo[lo] - 4, f"{yo[lo]:+.1f}%\n{month_label(lo)}", color=INK, fontsize=10.5, ha="center",
+                va="top")
     ax.axhline(0, color=MUTED, lw=0.8)
     ax.set_ylim(-40, 190)
     ticks = list(range(0, 181, 50))
@@ -218,6 +228,13 @@ def circuit_history(name):
     ax.set_xlim(xs[0] - 0.3, xs[-1] + 3.6)
     yt = [y for y in range(1985, int(MONTH[:4]) + 1, 5)]
     ax.set_xticks(yt)
+    if upto is not None:
+        for sp in ("top", "right", "left"):
+            ax.spines[sp].set_visible(False)
+        ax.tick_params(length=0)
+        f.text(0.04, 0.02, f"{BLS}, printed circuit assemblies (WPU{c}), not seasonally adjusted", fontsize=8.5,
+               color=MUTED)
+        return f, len(months)
     rows = [(c, m, round(v, 4)) for m, v in zip(months, ys)]
     rows += [(c, f"peak_{pk}", round(yo[pk], 4)), (c, f"high_before_{MONTH[:4]}_{pre}", round(before[pre], 4)),
              (c, f"low_{lo}", round(yo[lo], 4)), (c, f"index_start_{min(lv)}", lv[min(lv)])]

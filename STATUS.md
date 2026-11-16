@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 3 (not started; waiting on Eric)
+Step: 3
 Since: 2026-11-16
 
 ## Steps
@@ -124,3 +124,4 @@ None.
 - 2026-11-16 2g: EMAIL.md drafted per Eric (no chart, a line or two per finding, teaser for 7 charts and the updated diver); hero email JPG 106 KB.
 - 2026-11-16 2g: jet fuel (106.5%) added to finding 5 at Eric's request.
 - 2026-11-16 2g confirmed by Eric. Next: 3.
+- 2026-11-16 Step 3 opened. SOCIAL.md drafted: X thread (8), Bluesky, LinkedIn + first comment, Instagram; animation of chart 07 (circuit assemblies, 1983-2026) as GIF 1200x720 and IG MP4 1080x1920 via scripts/animate_circuits.py; last frame matches the published chart pixel for pixel.
