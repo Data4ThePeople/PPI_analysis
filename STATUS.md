@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 4a
+Step: 4b (not started; waiting on Eric)
 Since: 2026-11-16
 
 ## Steps
@@ -22,7 +22,7 @@ Since: 2026-11-16
 | 2f | Pushed to Prismic (draft) | 2026-11-16 | draft avrmURIAAC4AKyGi in the Migration Release; 75 slices; 8 images; tags and author empty |
 | 2g | Mailchimp teaser | 2026-11-16 | subject "Six takeaways from the October PPI"; no chart; one line per finding (jet fuel 106.5% added to 5); teaser for 7 charts and the updated diver |
 | 3  | Social posts | 2026-11-16 | SOCIAL.md: X thread (8), Bluesky, LinkedIn + first comment, Instagram; chart 07 animation GIF + IG MP4 (scripts/animate_circuits.py) |
-| 4a | Outreach list | | |
+| 4a | Outreach list | 2026-11-16 | 9 confirmed, those with a public work email: #1-5, 7, 8, 10, 18 |
 | 4b | Outreach emails (Gmail drafts) | | |
 
 ## Previous post: ppi-september-2026 (complete 2026-10-20)
@@ -128,3 +128,4 @@ None.
 - 2026-11-16 Step 3 confirmed by Eric. Next: 4a.
 - 2026-11-16 Step 4a opened; researching reporters and advocates.
 - 2026-11-16 4a: OUTREACH.md list of 18 (9 with a verified work email); waiting on Eric to confirm by number.
+- 2026-11-16 Step 4a confirmed by Eric: the 9 with an email (#1-5, 7, 8, 10, 18). Next: 4b.

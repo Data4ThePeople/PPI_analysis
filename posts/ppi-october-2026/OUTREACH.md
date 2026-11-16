@@ -25,6 +25,10 @@ Step 4a list, researched 2026-11-16. Every piece of work below was opened (or a 
 
 Left out: John Carney (Breitbart) wrote the most direct coverage of the PPI circuit assemblies item (May 13 and Aug 13, 2026), but the outlet is strongly partisan. Jeff Berman (Logistics Management) had nothing on this topic after March 2026. Transport Topics, Inbound Logistics, Tom's Hardware, Data Center Dynamics and Bloomberg pieces lacked a verifiable byline or contact.
 
+## Confirmed (2026-11-16)
+
+Eric: the ones with an email. Confirmed: 1, 2, 3, 4, 5, 7, 8, 10, 18 (Lockridge, Avila, Taube, Cassidy, Leslie, Rao, Guimaraes, Marshall, Evertiq). Dropped: 6, 9, 11-17 (no public email).
+
 ## Drafts (4b)
 
 Not started.
