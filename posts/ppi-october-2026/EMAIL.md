@@ -34,7 +34,7 @@ The Producer Price Index (PPI) measures the prices U.S. businesses receive for w
 
 4. System software prices fell 18.7%, the lowest of the 42 months BLS has published, and took more off the 12-month change than any other item.
 
-5. Fuels added 1.92 points, 29.5% of the total and the most since July 2022. Diesel fuel rose 115.2%.
+5. Fuels added 1.92 points, 29.5% of the total and the most since July 2022. Diesel fuel rose 115.2%, and jet fuel rose 106.5%.
 
 6. Printed circuit assemblies and modules rose 155.7%, the largest increase of any final demand item with its own index. Computer storage devices rose 80.4%.
 
