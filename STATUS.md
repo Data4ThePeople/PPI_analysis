@@ -106,3 +106,4 @@ None.
 - 2026-11-14 Publish time changed by Eric to Sunday, November 15, 2026, 7:00 p.m. EST (was Monday 8:15 a.m.).
 - 2026-11-16 Publish time changed by Eric to Monday, November 16, 2026, 6:30 a.m. EST (was Sunday 7:00 p.m.).
 - 2026-11-16 2b opened: Eric edits POST.md directly, then Claude looks it over.
+- 2026-11-16 2b look-over on Eric's edited draft: 10 items, all accepted and applied (software definition, methods links, gas station margin wording, data center lines, items count, shutdown FAQ cut).

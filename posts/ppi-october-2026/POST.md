@@ -23,8 +23,6 @@ The Bureau of Labor Statistics (BLS) released the October 2026 Producer Price In
 
 The Producer Price Index (PPI) measures the prices U.S. businesses receive for what they sell. It is often called wholesale inflation. In the 12 months to October 2026, PPI final demand rose 6.5%. That is the largest 12-month increase since November 2022.
 
-Last year's government shutdown stopped BLS from collecting consumer prices for October 2025, so the Consumer Price Index has no 12-month change for October 2026. The PPI does. BLS published October 2025 producer prices, and every item in this post has a full 12-month comparison.
-
 Here are six findings that grabbed our attention. The diver itself is at the end of the post, so you can explore the data yourself.
 
 Note: BLS revises PPI data for four months after it first publishes it. The figures for July to October 2026 are preliminary, so every October number in this post may change.
@@ -38,11 +36,9 @@ The chart below shows the 12-month change in PPI final demand every month since 
 ![Line and bar chart titled Wholesale prices rose 6.5% over the 12 months to October 2026. The 12-month change in PPI final demand from November 2016 to October 2026 runs near 2% to 3% until 2020, dips below zero in 2020, peaks at 11.7% in March 2022, falls to near 0% in mid-2023, and climbs again in 2026 to 6.5% in October. Bars under the line show goods and services each adding a large share; construction adds little.](images/01-headline.png)
 *12-month change in PPI final demand, not seasonally adjusted. Bars are the sum of our item contributions for goods, services and construction. Source: BLS; contributions computed by Data 4 The People.*
 
-The rate was 2.8% in October 2025 and 3.1% in January 2026. It rose to 4.3% in March and 5.9% in May, dipped to 4.9% in July, and reached 6.3% in September and 6.5% in October. The peak in these 10 years was 11.7% in March 2022.
-
 Services added 3.40 points of the rise, or 52%. Goods added 2.98 points, or 46%. Construction added 0.15 points, or 2%.
 
-Of the 823 items in October, 676 added to the 12-month change and 109 took away from it.
+Of the 823 items in October, 676 added to the 12-month change, 109 took away from it and 38 had no effect.
 
 ::: spacer
 
@@ -57,11 +53,11 @@ That small change hides a lot of movement underneath. Items that pushed the rate
 
 Long-distance trucking added the most, 0.11 points, as its 12-month price change rose from 23.1% to 28.8%.
 
-Several of the largest moves, both up and down, were trade margins. BLS does not price the goods that stores and wholesalers sell in these items. It prices the margin, what the seller charges minus what it paid for the same good. That gap is measured in dollars, so it can grow when costs rise even if the seller's markup stays the same. A rising margin does not by itself mean higher profit. Several of these margins moved a lot this month. Health and beauty retailing margins went from 1.4% to 7.6% higher than a year earlier, and food wholesaling margins went from 2.0% to 9.6%. In the other direction, margins for other goods wholesaling went from 17.5% to 9.9%, which took 0.18 points off the rate, the largest pull of any item.
+Note that several of the largest moves, both up and down, were trade margins. For these items, BLS prices the margin: what the seller charges minus what it paid for the same good. That gap is measured in dollars, so it can grow when costs rise even if the seller's markup stays the same. In other words, a rising margin does not by itself mean higher profit. 
 
-Fuel retailing, the margin at gas stations, was still lower than a year earlier, but by much less. It went from 20.4% lower in September to 3.1% lower in October, which added 0.08 points.
+That said, several of these margins moved a lot this month. Health and beauty retailing margins went from 1.4% to 7.6% higher than a year earlier, and food wholesaling margins went from 2.0% to 9.6%. In the other direction, margins for other goods wholesaling went from 17.5% to 9.9%, which took 0.18 points off the rate, the largest pull of any item.
 
-The other 803 items together added 0.13 points, more than any single item added.
+Fuel retailing, the margin at gas stations, was still lower than a year earlier, but by much less. It went from 20.4% lower in September to 3.1% lower in October, which added 0.08 points. Note what this is telling us. Even with wholesale gasoline prices 78.5% higher than a year earlier, gas stations kept a smaller margin per gallon in both September and October 2026 than they did a year before.
 
 ::: spacer
 
@@ -76,15 +72,13 @@ The chart below goes back further than the diver, to June 2010, the first 12-mon
 
 October 2026 is the highest of all 197 months. The earlier high was 26.9% in May 2022. The average before this month was 3.7%.
 
-The rate was 0.4% in January 2026. It reached 16.1% in April, stayed between 14.6% and 17.9% from May to August, then rose to 23.1% in September and 28.8% in October.
-
 Over the same 12 months, the price of diesel fuel rose 115.2%. Much of the freight that moves under contract carries a fuel surcharge that is reset each week from the diesel price, and BLS has noted that its transportation price indexes follow those surcharges up and down. Our [Diesel Fuel Surcharge Calculator](https://www.data4thepeople.com/p/fuel-surcharge-impact-viz) shows how a diesel price becomes a surcharge on a truckload, LTL or rail bill.
 
 ::: spacer
 
 ## 4. System software prices fell 18.7%
 
-System software publishing, which is 0.9% of final demand in BLS's December 2025 weights, fell 18.7% over the 12 months to October 2026. It took 0.18 points off the 12-month change, more than any other item.
+System software publishing, which is software that runs computers and networks rather than doing a task for the user, such as operating systems, network software and database software, is 0.9% of final demand in BLS's December 2025 weights, fell 18.7% over the 12 months to October 2026. It took 0.18 points off the 12-month change, more than any other item.
 
 BLS began this index in May 2022, so the chart below starts with its first 12-month change in May 2023.
 
@@ -106,13 +100,11 @@ It is the most fuels have added since July 2022.
 
 Regular gasoline added the most of any item, 0.82 points, with a price 78.5% higher than a year earlier. It is 1.0% of final demand in BLS's December 2025 weights, but it added 12.6% of the rise. Diesel fuel rose 115.2%, the largest 12-month increase since June 2021, and added 0.37 points. Jet fuel rose 106.5%, the largest since June 2022.
 
-A year ago, in October 2025, regular gasoline was 10.5% cheaper than the year before, and diesel was 6.1% cheaper.
-
 ::: spacer
 
 ## 6. Prices for some data center hardware jumped
 
-We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS has no data center category for these items, and each is also sold to other buyers. The chart below compares each item's 12-month price change in October 2025 and October 2026.
+We looked at nine items used to build and run data centers: computer hardware, the power equipment that feeds it, and hosting services. BLS has no data center category for these items. Each item is also sold to other buyers, so we can't isolate the data-center-only effect on prices. Still, the chart below, which compares each item's 12-month price change in October 2025 and October 2026, is telling:
 
 ![Bar chart titled Circuit boards and storage led price increases for data center items. Bars compare 12-month price changes in October 2025 and 2026. Hardware: printed circuit assemblies and modules 23.7% to 155.7%, computer storage devices 9.2% to 80.4%, bare printed circuit boards 3.7% to 46.4%, computers -0.2% to 3.5%, integrated circuits -2.5% to 0.8%. Power: wire and cable 9.2% to 19.6%, switchgear 12.0% to 14.0%, transformers 5.9% to 6.9%. Hosting services 6.4% to 2.8%.](images/06-data-centers.png)
 *12-month price change, not seasonally adjusted. July to October 2026 are preliminary. Source: BLS.*
@@ -128,7 +120,7 @@ Computer storage devices rose 80.4%. Bare printed circuit boards rose 46.4%, the
 
 The three power equipment items rose less, but each rose faster than a year earlier: nonferrous wire and cable 19.6%, switchgear 14.0% and power and distribution transformers 6.9%. Some items barely moved. Electronic computers rose 3.5%, and integrated circuits, including microprocessors, rose 0.8%. Hosting and IT infrastructure services rose 2.8%, down from 6.4% a year earlier.
 
-These nine items are 0.74% of final demand in BLS's December 2025 weights. Together they added 0.11 points to the 12-month change.
+These nine items add up to only 0.74% of final demand in BLS's December 2025 weights. But their prices rose so much that together they added 0.11 points to the 12-month change.
 
 ::: spacer
 
@@ -152,7 +144,9 @@ The diver below is set to October 2026. Each anchor below the diver is an item w
 
 ## How we built this, and its limits
 
-**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, the software chart uses that index's full history back to 2022, the data center chart uses each item's own BLS index and BLS's December 2025 weights, and the printed circuit assemblies chart uses that index's full history back to 1983. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. The [visualization post](https://www.data4thepeople.com/p/ppi-scuba-diver) explains the full method, and our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
+For the full method, see the [PPI Scuba Diver post](https://www.data4thepeople.com/p/ppi-scuba-diver) and our [method notes on GitHub](https://github.com/Data4ThePeople/PPI_analysis/blob/main/DATASETS.md).
+
+**Data.** Most numbers in this post come from the PPI Scuba Diver. The exceptions: the trucking chart uses the full BLS history of that index back to 2010, the software chart uses that index's full history back to 2022, the data center chart uses each item's own BLS index and BLS's December 2025 weights, and the printed circuit assemblies chart uses that index's full history back to 1983. The diver uses the BLS price index for each item in PPI final demand, not seasonally adjusted, and each item's weight from the relative importance tables BLS publishes each December. Our code and data are on [GitHub](https://github.com/Data4ThePeople/PPI_analysis).
 
 **Preliminary data.** BLS revises PPI for four months after first release. July to October 2026 are preliminary. This release also revised June to September.
 
@@ -169,10 +163,6 @@ The diver below is set to October 2026. Each anchor below the diver is an item w
 ### What was the PPI in October 2026?
 
 PPI final demand rose 6.5% in the 12 months to October 2026, not seasonally adjusted. That is the largest 12-month increase since November 2022. The figure is preliminary, and BLS will revise it.
-
-### Is there October 2026 PPI data despite the 2025 government shutdown?
-
-Yes. BLS did not collect consumer prices for October 2025, so the CPI has no 12-month change for October 2026. BLS did publish producer prices for October 2025, so the PPI has a full 12-month change for October 2026.
 
 ### Why did the PPI rise from September to October 2026?
 
