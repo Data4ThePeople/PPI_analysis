@@ -2,8 +2,8 @@
 title: "The PPI Scuba Diver: six takeaways from October 2026"
 subtitle: Wholesale prices rose 6.5% in the 12 months to October 2026, the most since November 2022. Here is what moved the rate since September, and five more things we found in the data.
 slug: ppi-october-2026
-date: 2026-11-15
-time: 19:00:00-05:00
+date: 2026-11-16
+time: 06:30:00-05:00
 section: Data 4 Thought
 hero: images/ppi-october-2026-hero-1680x1080.png
 hero_alt:
