@@ -55,7 +55,7 @@ Hi Deborah,
 
 I read your October 20 piece, "Trucking's Diesel Squeeze Isn't Letting Up," and thought this might help with a follow-up.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher in October than a year earlier, the highest of all 197 months BLS has published. Over the same 12 months, diesel fuel rose 115.2%. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher in October than a year earlier, the highest of all 197 months BLS has published. Over the same 12 months, diesel fuel rose 115.2%. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -73,7 +73,7 @@ Hi Larry,
 
 Your October 20 story on ATRI's survey, with diesel volatility as trucking's top issue, lines up closely with what we found in the new producer price data.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: fuels added 1.92 points to the 6.5% rise in wholesale prices, 29.5% of the total, the most since July 2022. Long-distance trucking prices rose 28.8%, the highest on record. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: fuels added 1.92 points to the 6.5% rise in wholesale prices, 29.5% of the total, the most since July 2022. Long-distance trucking prices rose 28.8%, the highest on record. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -91,7 +91,7 @@ Hi David,
 
 Your June 12 piece on LTL shipment weights noted how fast the long-distance trucking PPI was climbing. It has kept going.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in October, long-distance trucking prices were 28.8% higher than a year earlier, the highest of all 197 months since BLS began the index. The earlier high was 26.9% in May 2022. The post charts every month back to June 2010. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in October, long-distance trucking prices were 28.8% higher than a year earlier, the highest of all 197 months since BLS began the index. The earlier high was 26.9% in May 2022. The post charts every month back to June 2010. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -109,7 +109,7 @@ Hi Bill,
 
 JOC's July 6 Guide to Trucking, with your LTL coverage, flagged truckload pricing at a 41-month high in the BLS data in May. October went further.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher than a year earlier, the highest of all 197 months on record. The earlier high was 26.9% in May 2022. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher than a year earlier, the highest of all 197 months on record. The earlier high was 26.9% in May 2022. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -127,7 +127,7 @@ Hi Alex,
 
 ATRI's July update on the operational costs of trucking, and its October finding that fuel is the industry's top concern, made me think the team might find this useful.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher in October than a year earlier, the highest of all 197 months BLS has published. Over the same 12 months, diesel fuel rose 115.2%. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: long-distance trucking prices were 28.8% higher in October than a year earlier, the highest of all 197 months BLS has published. Over the same 12 months, diesel fuel rose 115.2%. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -145,7 +145,7 @@ Hi Prashant,
 
 Semafor's November 3 item on chip prices rising as makers prioritize data centers matches something we found in the new U.S. producer price data.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: printed circuit assemblies and modules rose 155.7% in the 12 months to October, the largest increase of any final demand item with its own index. Computer storage devices rose 80.4%. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: printed circuit assemblies and modules rose 155.7% in the 12 months to October, the largest increase of any final demand item with its own index. Computer storage devices rose 80.4%. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -163,7 +163,7 @@ Hi Thiago,
 
 Your team's October 26 release on North American PCB orders, with Shawn DuBravac's comments on data center demand, shows the order side. Our post looks at U.S. producer prices.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: printed circuit assemblies and modules rose 155.7% in the 12 months to October. Their index goes back to 1982, and it never topped 100% before this year. Bare printed circuit boards rose 46.4%, the most since that index began in 2000. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: printed circuit assemblies and modules rose 155.7% in the 12 months to October. Their index goes back to 1982, and it never topped 100% before this year. Bare printed circuit boards rose 46.4%, the most since that index began in 2000. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -181,7 +181,7 @@ Hi Christa,
 
 Your April piece on data centers tripling the U.S. power equipment market made me think you might want the latest price data on that equipment.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in the 12 months to October, producer prices rose 19.6% for nonferrous wire and cable, 14.0% for switchgear and 6.9% for power and distribution transformers. Each rose faster than a year earlier. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in the 12 months to October, producer prices rose 19.6% for nonferrous wire and cable, 14.0% for switchgear and 6.9% for power and distribution transformers. Each rose faster than a year earlier. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
@@ -201,7 +201,7 @@ Hi Ewelina,
 
 Your July 29 piece on the AI infrastructure boom reported sharp increases in circuit board prices. The U.S. producer price data shows a similar picture.
 
-I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in the 12 months to October, U.S. prices for bare printed circuit boards rose 46.4%, and printed circuit assemblies and modules rose 155.7%, the largest increase of any final demand item with its own index. It also has a free interactive chart of every item in the index.
+I run Data 4 The People, a small nonpartisan data site. Our new post, The PPI Scuba Diver: six takeaways from October 2026, looks inside the latest Producer Price Index from BLS. One finding: in the 12 months to October, U.S. prices for bare printed circuit boards rose 46.4%, and printed circuit assemblies and modules rose 155.7%, the largest increase of any final demand item with its own index. The post also has a free interactive chart of every item in the index.
 
 Thanks for taking a look.
 
