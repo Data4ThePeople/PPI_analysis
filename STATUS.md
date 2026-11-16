@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2f
+Step: 2f done; next 2g
 Since: 2026-11-16
 
 ## Steps
@@ -19,7 +19,7 @@ Since: 2026-11-16
 | 2c | Slice markup | 2026-11-16 | 73 slices; 5px spacer under each section heading; embed 780px with ?v=20261113; 6 FAQ entries |
 | 2d | Hero 1680x1080 + alt text | 2026-11-16 | rocket launch on the printed circuit assemblies line, June 1983-October 2026 (scripts/hero_october.py); no axis or small text; alt 420 characters; Eric: "i love it" |
 | 2e | SEO | 2026-11-16 | meta title "October 2026 PPI: 6 Takeaways on Wholesale Prices"; Article schema; 7 FAQ; September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording added |
-| 2f | Pushed to Prismic (draft) | | |
+| 2f | Pushed to Prismic (draft) | 2026-11-16 | draft avrmURIAAC4AKyGi in the Migration Release; 75 slices; 8 images; tags and author empty |
 | 2g | Mailchimp teaser | | |
 
 ## Previous post: ppi-september-2026 (complete 2026-10-20)
@@ -117,3 +117,4 @@ None.
 - 2026-11-16 2e text proposals 1-4 accepted and applied (September post link, PPI final demand sentence, What is the PPI? FAQ, free diver wording).
 - 2026-11-16 2e confirmed by Eric. Next: 2f.
 - 2026-11-16 2f: dry run 75 slices, 8 images; pushed as draft avrmURIAAC4AKyGi in the Migration Release; tags and author empty.
+- 2026-11-16 2f confirmed by Eric. Next: 2g.
