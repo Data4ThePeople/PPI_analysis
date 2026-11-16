@@ -6,8 +6,8 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2a done; next 2b
-Since: 2026-11-14
+Step: 2b
+Since: 2026-11-16
 
 ## Steps
 
@@ -105,3 +105,4 @@ None.
 - 2026-11-14 Independent check of chart 7 passed (BLS API; every value matched). 2a confirmed by Eric. Next: 2b. Side exploration for a possible later post (AI capex price vs real, imports, inventories, SPR) kept in scratchpad and memory notes, not in this repo.
 - 2026-11-14 Publish time changed by Eric to Sunday, November 15, 2026, 7:00 p.m. EST (was Monday 8:15 a.m.).
 - 2026-11-16 Publish time changed by Eric to Monday, November 16, 2026, 6:30 a.m. EST (was Sunday 7:00 p.m.).
+- 2026-11-16 2b opened: Eric edits POST.md directly, then Claude looks it over.
