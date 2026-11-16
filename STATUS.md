@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 2f done; next 2g
+Step: 2g
 Since: 2026-11-16
 
 ## Steps
@@ -118,3 +118,4 @@ None.
 - 2026-11-16 2e confirmed by Eric. Next: 2f.
 - 2026-11-16 2f: dry run 75 slices, 8 images; pushed as draft avrmURIAAC4AKyGi in the Migration Release; tags and author empty.
 - 2026-11-16 2f confirmed by Eric. Next: 2g.
+- 2026-11-16 2g: EMAIL.md drafted per Eric (no chart, a line or two per finding, teaser for 7 charts and the updated diver); hero email JPG 106 KB.
