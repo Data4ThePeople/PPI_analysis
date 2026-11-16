@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 4b (not started; waiting on Eric)
+Step: 4b
 Since: 2026-11-16
 
 ## Steps
@@ -129,3 +129,4 @@ None.
 - 2026-11-16 Step 4a opened; researching reporters and advocates.
 - 2026-11-16 4a: OUTREACH.md list of 18 (9 with a verified work email); waiting on Eric to confirm by number.
 - 2026-11-16 Step 4a confirmed by Eric: the 9 with an email (#1-5, 7, 8, 10, 18). Next: 4b.
+- 2026-11-16 Step 4b opened. Nine drafts written in OUTREACH.md (110-135 words, no URLs, every number in the post). Not saved to Gmail: no Gmail connector in this session.
