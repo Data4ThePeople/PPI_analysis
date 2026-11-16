@@ -6,7 +6,7 @@ Process: ~/.claude/d4tp-process/PROCESS.md
 ## Current
 
 Post: ppi-october-2026
-Step: 4a (not started; waiting on Eric)
+Step: 4a
 Since: 2026-11-16
 
 ## Steps
@@ -126,3 +126,5 @@ None.
 - 2026-11-16 2g confirmed by Eric. Next: 3.
 - 2026-11-16 Step 3 opened. SOCIAL.md drafted: X thread (8), Bluesky, LinkedIn + first comment, Instagram; animation of chart 07 (circuit assemblies, 1983-2026) as GIF 1200x720 and IG MP4 1080x1920 via scripts/animate_circuits.py; last frame matches the published chart pixel for pixel.
 - 2026-11-16 Step 3 confirmed by Eric. Next: 4a.
+- 2026-11-16 Step 4a opened; researching reporters and advocates.
+- 2026-11-16 4a: OUTREACH.md list of 18 (9 with a verified work email); waiting on Eric to confirm by number.
